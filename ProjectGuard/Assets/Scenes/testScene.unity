@@ -760,6 +760,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d81478c87fd438ea00dcdcc443c0aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanceAbovePlayer: 8
+  minDistanceAbovePlayer: 6.5
+  maxDistanceAbovePlayer: 12
+  distanceBehindPlayer: 4
 --- !u!81 &2124293288
 AudioListener:
   m_ObjectHideFlags: 0

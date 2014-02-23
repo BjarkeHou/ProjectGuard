@@ -4,13 +4,14 @@ using System.Collections;
 public class PlayerHealth : MonoBehaviour
 {
 		public int maxHealth = 100;
-		public int curHealth = 100;
+		private int curHealth;
 		
 		private float healthBarLength;
 
 		// Use this for initialization
 		void Start ()
 		{
+				curHealth = maxHealth;
 				healthBarLength = Screen.width / 2;
 		}
 	
@@ -37,6 +38,9 @@ public class PlayerHealth : MonoBehaviour
 
 		void OnGUI ()
 		{
+//				GUI.backgroundColor = Color.red;
+				GUI.color = Color.red;
 				GUI.Box (new Rect (10, 10, healthBarLength, 20), curHealth + " / " + maxHealth);
+				
 		}
 }

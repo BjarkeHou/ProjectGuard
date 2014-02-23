@@ -10,7 +10,7 @@ public class PlayerLook : MonoBehaviour
 	
 		void Start ()
 		{
-				cameraDistance = (int)(camera.transform.position.y - player.transform.position.y);
+				UpdateCameraDistance ();
 		}
 	
 		void FixedUpdate ()
@@ -21,4 +21,9 @@ public class PlayerLook : MonoBehaviour
 				player.transform.LookAt (worldPos);
 				player.transform.rotation = Quaternion.Euler (new Vector3 (0, player.transform.rotation.eulerAngles.y, 0));
 		}	
+		
+		public void UpdateCameraDistance ()
+		{
+				cameraDistance = (int)(camera.transform.position.y - player.transform.position.y);
+		}
 }
