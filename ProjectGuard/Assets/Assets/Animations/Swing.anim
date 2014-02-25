@@ -2518,8 +2518,22 @@ AnimationClip:
     classID: 4
     script: {fileID: 0}
   m_Events:
-  - time: 0
-    functionName: 
+  - time: .333333343
+    functionName: Attacking
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: .649999976
+    functionName: StopAttacking
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.33333337
+    functionName: ClearHits
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
