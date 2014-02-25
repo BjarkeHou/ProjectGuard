@@ -33,6 +33,7 @@ public class PlayerHealth : MonoBehaviour
 				if (maxHealth < 0) {
 						maxHealth = 1;
 				}
+                
 				healthBarLength = (Screen.width / 2) * (curHealth / (float)maxHealth);
 		}
 
