@@ -147,6 +147,7 @@ GameObject:
   - 33: {fileID: 651810146}
   - 65: {fileID: 651810145}
   - 23: {fileID: 651810144}
+  - 114: {fileID: 651810148}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -205,6 +206,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &651810148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 651810143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d29bd31ada95747e888cb7d41cef8975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  rotationSpeed: 1
+  minDistance: 2
 --- !u!1 &737549982
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,6 +231,7 @@ GameObject:
   - 33: {fileID: 737549985}
   - 65: {fileID: 737549984}
   - 23: {fileID: 737549983}
+  - 114: {fileID: 737549987}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -274,6 +290,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &737549987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 737549982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d29bd31ada95747e888cb7d41cef8975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  rotationSpeed: 1
+  minDistance: 2
 --- !u!1 &1138444270
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,6 +459,7 @@ GameObject:
   - 33: {fileID: 1518791355}
   - 65: {fileID: 1518791354}
   - 23: {fileID: 1518791353}
+  - 114: {fileID: 1518791357}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -487,6 +518,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &1518791357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1518791352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d29bd31ada95747e888cb7d41cef8975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  rotationSpeed: 1
+  minDistance: 2
 --- !u!1 &1652596900
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,6 +543,7 @@ GameObject:
   - 33: {fileID: 1652596903}
   - 65: {fileID: 1652596902}
   - 23: {fileID: 1652596901}
+  - 114: {fileID: 1652596905}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -556,6 +602,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &1652596905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1652596900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d29bd31ada95747e888cb7d41cef8975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  rotationSpeed: 1
+  minDistance: 2
 --- !u!1 &1868753561
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,6 +668,7 @@ GameObject:
   - 33: {fileID: 2008273345}
   - 65: {fileID: 2008273344}
   - 23: {fileID: 2008273343}
+  - 114: {fileID: 2008273347}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -666,6 +727,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &2008273347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2008273342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d29bd31ada95747e888cb7d41cef8975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  rotationSpeed: 1
+  minDistance: 2
 --- !u!1 &2055007309
 GameObject:
   m_ObjectHideFlags: 0
