@@ -29,12 +29,13 @@ public class WeaponStats : MonoBehaviour {
 	void OnCollisionEnter (Collision col) {
 		GameObject hit = col.collider.gameObject;
 		if (hit.GetComponent<MonsterHealth>() != null && !targetsHit.Contains(hit) && doesDamage) {
+			GameObject blood = (GameObject)Instantiate(Resources.Load("Prefabs/Blood"), hit.transform.position, Quaternion.LookRotation(transform.parent.position -hit.transform.position));
 			print ("HIT!: " +hit.name);
 			hit.GetComponent<MonsterHealth>().health -= damage;
 			targetsHit.Add(hit);
 		} else if (hit.GetComponent<MonsterHealth>() == null && hit.tag != "Player" && anim.GetBool("Attack")) {
-			print ("REBOUND!");
 			GameObject sparks = (GameObject)Instantiate(Resources.Load("Prefabs/Sparks"), col.contacts[0].point, Quaternion.LookRotation(col.contacts[0].normal));
+			print ("REBOUND!");
 			anim.SetBool("Attack", false);
 			anim.SetBool("Rebound", true);
 			NoDamage();
