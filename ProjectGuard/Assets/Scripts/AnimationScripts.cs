@@ -24,9 +24,11 @@ public class AnimationScripts : MonoBehaviour {
 	}
 	void CanMove () {
 		player.GetComponent<PlayerController>().SetCanMove(true);
+		GameObject.Find("Main Camera").GetComponent<PlayerLook>().SetPlayerCanRotate(true);
 	}
 	void CanNotMove () {
 		player.GetComponent<PlayerController>().SetCanMove(false);
+		GameObject.Find("Main Camera").GetComponent<PlayerLook>().SetPlayerCanRotate(false);
 	}
 	void ClearHits () {
 		player.GetComponent<AttackController>().targetsHit.Clear();
