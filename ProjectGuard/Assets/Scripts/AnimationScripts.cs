@@ -3,7 +3,7 @@ using System.Collections;
 
 public class AnimationScripts : MonoBehaviour {
 
-	public GameObject player;
+	private GameObject player;
 
 	// Use this for initialization
 	void Start () {
