@@ -83,7 +83,7 @@ Transition:
   m_SrcState: {fileID: 110200000}
   m_DstState: {fileID: 110262220}
   m_TransitionDuration: .101729758
-  m_TransitionOffset: .21525906
+  m_TransitionOffset: .0089971507
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: Rebound
