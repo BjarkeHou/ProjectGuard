@@ -17,7 +17,7 @@ public class WeaponStats : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//transform.parent = GameObject.Find("Player").transform;
-		//playerAtkCont = transform.parent.gameObject.GetComponent<AttackController>();
+		//transform.parent.gameObject.GetComponent<AttackController>();
 
 		holdPoint = transform.FindChild("HoldPoint");
 		skinPoint = transform.FindChild("SkinPoint");

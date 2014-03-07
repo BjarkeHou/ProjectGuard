@@ -121,7 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb947bf73dcb9404d83c8c13f29bdf4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  playerAtkCont: {fileID: 1868753564}
+  damage: 25
 --- !u!23 &355027418
 Renderer:
   m_ObjectHideFlags: 0
@@ -307,8 +308,8 @@ GameObject:
   - 4: {fileID: 737549986}
   - 33: {fileID: 737549985}
   - 23: {fileID: 737549983}
+  - 114: {fileID: 737549987}
   - 65: {fileID: 737549984}
-  - 114: {fileID: 737549988}
   m_Layer: 0
   m_Name: Dummy
   m_TagString: Enemy
@@ -369,19 +370,19 @@ Transform:
   m_LocalScale: {x: 1, y: 2.60977054, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
---- !u!114 &737549988
+--- !u!114 &737549987
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 11400000, guid: fbf97076c73ab7a4ca015c683f9d0a9d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1049016652}
   m_GameObject: {fileID: 737549982}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 344bd4ae0f44342528bec260b20f9e6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  minHealth: 0
+  curHealth: 100
 --- !u!1001 &738026285
 Prefab:
   m_ObjectHideFlags: 0
@@ -416,6 +417,14 @@ Prefab:
     - target: {fileID: 400006, guid: c6ab686afe810714aa604d0bc70a11c0, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: c6ab686afe810714aa604d0bc70a11c0, type: 2}
+      propertyPath: playerAtkCont
+      value: 
+      objectReference: {fileID: 1868753564}
+    - target: {fileID: 11400000, guid: c6ab686afe810714aa604d0bc70a11c0, type: 2}
+      propertyPath: damage
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6ab686afe810714aa604d0bc70a11c0, type: 2}
@@ -489,7 +498,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6500000, guid: fbf97076c73ab7a4ca015c683f9d0a9d, type: 2}
-    - {fileID: 11400000, guid: fbf97076c73ab7a4ca015c683f9d0a9d, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: fbf97076c73ab7a4ca015c683f9d0a9d, type: 2}
   m_RootGameObject: {fileID: 737549982}
   m_IsPrefabParent: 0
@@ -981,6 +990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 6
+  atkCtrl: {fileID: 1868753564}
 --- !u!114 &1868753566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -992,8 +1002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 344bd4ae0f44342528bec260b20f9e6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  minHealth: 0
+  curHealth: 0
 --- !u!1 &2008273342
 GameObject:
   m_ObjectHideFlags: 0
