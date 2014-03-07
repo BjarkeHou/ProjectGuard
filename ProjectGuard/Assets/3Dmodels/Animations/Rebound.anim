@@ -2024,14 +2024,21 @@ AnimationClip:
     script: {fileID: 0}
   m_Events:
   - time: 0
-    functionName: NoDamage
+    functionName: IniRebound
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: .916666687
+  - time: .833333313
     functionName: CanMove
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: .833333313
+    functionName: CanAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

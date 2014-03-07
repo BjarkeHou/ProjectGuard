@@ -21,9 +21,6 @@ public class AttackController : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-	    if (anim.GetNextAnimatorStateInfo(0).IsName("Idle")) {
-			anim.SetBool("Attack", false);
-			anim.SetBool("Rebound", false);
 		}
 	}
 
@@ -47,8 +44,8 @@ public class AttackController : MonoBehaviour {
 	}
 	//called from the equiped weapon
 	public void Rebound() {
+		print ("Rebound!");
 		//change animation
-		anim.SetBool("Attack", false);
 		anim.SetBool("Rebound", true);
 	}
 }
