@@ -2359,14 +2359,7 @@ AnimationClip:
     script: {fileID: 0}
   m_Events:
   - time: 0
-    functionName: CanNotMove
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0
-    functionName: ClearHits
+    functionName: IniAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
@@ -2381,6 +2374,13 @@ AnimationClip:
     messageOptions: 0
   - time: .616666675
     functionName: NoDamage
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: .666666687
+    functionName: CanAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
