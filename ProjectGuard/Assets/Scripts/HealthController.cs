@@ -4,9 +4,9 @@ using System.Collections;
 public class HealthController : MonoBehaviour
 {
 
-		public int maxHealth = 100;
-		public int minHealth = 0;
-		private int curHealth;
+		public const int maxHealth = 100;
+		public const int minHealth = 0;
+		public int curHealth;
 	
 		// Use this for initialization
 		void Start ()

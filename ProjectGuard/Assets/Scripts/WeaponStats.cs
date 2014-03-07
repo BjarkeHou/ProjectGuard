@@ -3,23 +3,27 @@ using System.Collections.Generic;
 
 public class WeaponStats : MonoBehaviour {
 	
-	private AttackController playerAtkCont;
+	public AttackController playerAtkCont;
 
 	private Transform holdPoint;
 	private Transform skinPoint;
 	private Transform tipPoint;
 	public float damage;
 
+    private GameObject hand;
+
 
 
 	// Use this for initialization
 	void Start () {
-		transform.parent = GameObject.Find("Player").transform;
-		playerAtkCont = transform.parent.gameObject.GetComponent<AttackController>();
+		//transform.parent = GameObject.Find("Player").transform;
+		//playerAtkCont = transform.parent.gameObject.GetComponent<AttackController>();
 
 		holdPoint = transform.FindChild("HoldPoint");
 		skinPoint = transform.FindChild("SkinPoint");
 		tipPoint = transform.FindChild("TipPoint");
+	    hand = playerAtkCont.gameObject.transform.FindChild("PlayerModel").FindChild("Hand").gameObject;
+        if (hand == null) { Debug.LogError("Sword found no Hand");}
 	}
 
 	void LateUpdate () {
@@ -27,8 +31,8 @@ public class WeaponStats : MonoBehaviour {
 		CheckCollision();
 
 		//Update position in hand
-		transform.position = transform.parent.Find ("PlayerModel/Hand").position +(transform.position -holdPoint.position);
-		transform.rotation = transform.parent.Find ("PlayerModel/Hand").rotation;
+		transform.position = hand.transform.position +(transform.position -holdPoint.position);
+		transform.rotation = hand.transform.rotation;
 	}
 
 	void CheckCollision() {

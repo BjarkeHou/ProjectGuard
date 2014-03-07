@@ -19,17 +19,20 @@ public class AttackController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		if (Input.GetMouseButton(0)) {
-			anim.SetBool("Attack", true);
-		}
-		if (anim.GetNextAnimatorStateInfo(0).IsName("Idle")) {
+	void Update ()
+	{
+	    if (anim.GetNextAnimatorStateInfo(0).IsName("Idle")) {
 			anim.SetBool("Attack", false);
 			anim.SetBool("Rebound", false);
 		}
 	}
 
-	//called from the equiped weapon
+    public void DeclareAttack()
+    {
+        anim.SetBool("Attack", true);
+    }
+
+    //called from the equiped weapon
 	public void Hit(GameObject obj, float damage) {
 		if (!targetsHit.Contains(obj)) {
 			print ("Hit on " +obj.name);
