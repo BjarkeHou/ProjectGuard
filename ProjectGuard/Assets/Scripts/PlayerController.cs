@@ -6,7 +6,6 @@ public class PlayerController : MonoBehaviour
 
 		public float normalMovementSpeed = 6;
 		public float attackingMovementSpeed = 0.5f;
-		public float dodgeTime;
 		public float dodgeSpeed;
 		public float dodgeDelay;
 		public float dodgeDistance;
@@ -76,7 +75,6 @@ public class PlayerController : MonoBehaviour
 						Vector3 sPoint = this.transform.position;
 						Vector3 ePoint = moveDirection.normalized * dodgeDistance;
 						StartCoroutine (PerformDodge (sPoint, ePoint));
-//						StartCoroutine (MoveFromTo (this.transform.position, moveDirection * dodgeSpeed, dodgeTime));
 				} else if (!inDodgeMove) {
 						this.transform.position += (moveDirection * Time.deltaTime * movementSpeed);
 				}
@@ -104,23 +102,6 @@ public class PlayerController : MonoBehaviour
 				Debug.Log ("Dodge performed!!");
 			
 		}
-		
-		
-		private IEnumerator MoveFromTo (Vector3 from, Vector3 to, float time)
-		{
-				if (!inDodgeMove) {
-						inDodgeMove = true;
-						float t = 0.0f;
-						while (t < 1.0f) {
-								t += Time.smoothDeltaTime / time;
-								this.transform.position = Vector3.Lerp (from, from + to, t);
-								yield return null;
-						}
-				
-						inDodgeMove = false;
-				}
-		}
-		
 		public void SetCanMove (bool value)
 		{
 				playerCanMove = value;

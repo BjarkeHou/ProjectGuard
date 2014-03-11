@@ -291,6 +291,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMovementSpeed: 6
   attackingMovementSpeed: 0
+  dodgeSpeed: 75
+  dodgeDelay: 0
+  dodgeDistance: 5
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1.00950122
+      value: .0470588207
+      inSlope: -3.55739975
+      outSlope: -3.55739975
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  lerpSpeed: 10
   atkCtrl: {fileID: 11400004}
 --- !u!114 &11400008
 MonoBehaviour:
