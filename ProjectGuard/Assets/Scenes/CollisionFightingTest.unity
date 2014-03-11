@@ -927,6 +927,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMovementSpeed: 6
   attackingMovementSpeed: .300000012
+  dodgeTime: 1000
+  dodgeSpeed: 8
+  dodgeDelay: 1500
   atkCtrl: {fileID: 1868753564}
 --- !u!114 &1868753566
 MonoBehaviour:
@@ -952,7 +955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camObj: {fileID: 2124293286}
-  rotationSpeed: 10
+  rotationSpeed: 15
 --- !u!1 &2008273342
 GameObject:
   m_ObjectHideFlags: 0
