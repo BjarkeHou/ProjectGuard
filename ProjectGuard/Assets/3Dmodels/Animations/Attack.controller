@@ -140,7 +140,7 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110212344}
   m_DstState: {fileID: 110262220}
-  m_TransitionDuration: .176470593
+  m_TransitionDuration: .101279266
   m_TransitionOffset: 1.1003943e-07
   m_Conditions:
   - m_ConditionMode: 1
@@ -195,7 +195,7 @@ Transition:
   m_SrcState: {fileID: 110262220}
   m_DstState: {fileID: 110200000}
   m_TransitionDuration: .230769217
-  m_TransitionOffset: 0
+  m_TransitionOffset: .00450506108
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: CanAttack

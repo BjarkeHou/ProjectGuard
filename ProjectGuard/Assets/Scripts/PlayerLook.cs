@@ -23,7 +23,9 @@ public class PlayerLook : MonoBehaviour
 			mousePos = Input.mousePosition;
 			worldPos = camObj.GetComponent<Camera>().ScreenToWorldPoint (new Vector3 (mousePos.x, mousePos.y, cameraDistance));
 		}
+		//Lerp towards decired rotation
 		transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(worldPos -transform.position), Time.deltaTime *rotationSpeed);
+		//Freeze x and z rotation
 		transform.rotation = Quaternion.Euler (new Vector3 (0, transform.rotation.eulerAngles.y, 0));
 	}	
 	

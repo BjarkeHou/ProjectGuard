@@ -4,6 +4,7 @@ using System.Collections;
 public class AnimationScripts : MonoBehaviour {
 
 	private GameObject player;
+	public bool isAttacking;
 
 	// Use this for initialization
 	void Start () {
@@ -17,6 +18,7 @@ public class AnimationScripts : MonoBehaviour {
 
 	//called form animations
 	void IniAttack () {
+		isAttacking = true;
 		//clear hits
 		player.GetComponent<AttackController>().targetsHit.Clear();
 		//don't attack again
@@ -30,6 +32,7 @@ public class AnimationScripts : MonoBehaviour {
 		player.GetComponent<AttackController>().doesDamage = false;
 	}
 	void IniRebound () {
+		isAttacking = false;
 		//don't rebound again
 		GetComponent<Animator>().SetBool("Rebound", false);
 		//don't attack again
@@ -44,6 +47,7 @@ public class AnimationScripts : MonoBehaviour {
 	}
 	void CanAttack () {
 		GetComponent<Animator>().SetBool("CanAttack", true);
+		isAttacking = false;
 	}
 	void CanNotAttack () {
 		GetComponent<Animator>().SetBool("CanAttack", false);
@@ -55,7 +59,9 @@ public class AnimationScripts : MonoBehaviour {
 		player.GetComponent<AttackController>().doesDamage = false;
 	}
 	void CanMove () {
-		player.GetComponent<PlayerController>().SetCanMove(true);
+		if (!isAttacking) {
+			player.GetComponent<PlayerController>().SetCanMove(true);
+		}
 	}
 	void CanNotMove () {
 		player.GetComponent<PlayerController>().SetCanMove(false);
