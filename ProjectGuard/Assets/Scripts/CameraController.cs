@@ -8,6 +8,7 @@ public class CameraController : MonoBehaviour
 	public float maxDistanceAbovePlayer = 12;
 	public float distanceBehindPlayer = 4;
 
+<<<<<<< HEAD
 	private Vector3 myPos;
 	// Use this for initialization
 	void Start ()
@@ -29,6 +30,31 @@ public class CameraController : MonoBehaviour
 					distanceAbovePlayer = maxDistanceAbovePlayer;
 					
 			GetComponent<PlayerLook> ().UpdateCameraDistance ();
+=======
+		private Vector3 myPos;
+		// Use this for initialization
+		void Start ()
+		{
+				myPos = this.transform.position;
+				this.transform.rotation = Quaternion.Euler (70, 0, 0);
+		}
+	
+		// Update is called once per frame
+		void Update ()
+		{
+				if (Input.GetAxis ("Mouse ScrollWheel") != 0) {
+						distanceAbovePlayer += Input.GetAxis ("Mouse ScrollWheel");
+						
+						if (distanceAbovePlayer < minDistanceAbovePlayer)
+								distanceAbovePlayer = minDistanceAbovePlayer;
+						if (distanceAbovePlayer > maxDistanceAbovePlayer)
+								distanceAbovePlayer = maxDistanceAbovePlayer;
+								
+						GetComponent<PlayerLook> ().UpdateCameraDistance ();
+				}
+				
+				UpdatePosition ();
+>>>>>>> f9af9c6c6014dd09517396979a5684dab8343ba8
 		}
 		
 		UpdatePosition ();
