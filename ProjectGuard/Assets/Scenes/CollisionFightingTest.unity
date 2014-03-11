@@ -624,6 +624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0a3fbbb1890cb489261694063e83b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAttacking: 0
 --- !u!1 &1518791352
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,10 +927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   normalMovementSpeed: 6
-  attackingMovementSpeed: .300000012
-  dodgeTime: 1000
-  dodgeSpeed: 8
-  dodgeDelay: 1500
+  attackingMovementSpeed: 0
   atkCtrl: {fileID: 1868753564}
 --- !u!114 &1868753566
 MonoBehaviour:

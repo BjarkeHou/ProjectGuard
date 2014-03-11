@@ -2030,15 +2030,22 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: .833333313
-    functionName: CanMove
+  - time: .583333313
+    functionName: CanRotate
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: .833333313
+  - time: .666666687
     functionName: CanAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: .916666687
+    functionName: CanMove
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
