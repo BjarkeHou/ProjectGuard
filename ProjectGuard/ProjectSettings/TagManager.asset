@@ -5,6 +5,12 @@ TagManager:
   tags:
   - Enemy
   - 
+  - Hand
+  - Weapon
+  - ActiveWeapon
+  - Helm
+  - ActiveHelm
+  - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
   Builtin Layer 2: Ignore Raycast

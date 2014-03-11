@@ -20,7 +20,6 @@ public class CameraController : MonoBehaviour
 		void Update ()
 		{
 				if (Input.GetAxis ("Mouse ScrollWheel") != 0) {
-						Debug.Log (Input.GetAxis ("Mouse ScrollWheel"));
 						distanceAbovePlayer += Input.GetAxis ("Mouse ScrollWheel");
 						
 						if (distanceAbovePlayer < minDistanceAbovePlayer)
