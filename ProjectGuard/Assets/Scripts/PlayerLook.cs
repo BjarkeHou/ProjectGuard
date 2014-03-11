@@ -3,37 +3,37 @@ using System.Collections;
 
 public class PlayerLook : MonoBehaviour
 {
-		public GameObject player;
-		private Vector3 mousePos;
-		private int cameraDistance;
-		private Vector3 worldPos;
-		
-		private bool playerCanRotate;
+	public GameObject camObj;
+	private Vector3 mousePos;
+	private float cameraDistance;
+	private Vector3 worldPos;
+	public float rotationSpeed;
 	
-		void Start ()
-		{
-				playerCanRotate = true;
-				UpdateCameraDistance ();
+	private bool playerCanRotate;
+
+	void Start ()
+	{
+		playerCanRotate = true;
+		UpdateCameraDistance ();
+	}
+
+	void FixedUpdate ()
+	{ 
+		if (playerCanRotate) {
+			mousePos = Input.mousePosition;
+			worldPos = camObj.GetComponent<Camera>().ScreenToWorldPoint (new Vector3 (mousePos.x, mousePos.y, cameraDistance));
 		}
+		transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(worldPos -transform.position), Time.deltaTime *rotationSpeed);
+		transform.rotation = Quaternion.Euler (new Vector3 (0, transform.rotation.eulerAngles.y, 0));
+	}	
 	
-		void FixedUpdate ()
-		{ 
-				if (playerCanRotate) {
-						mousePos = Input.mousePosition;
-						worldPos = camera.ScreenToWorldPoint (new Vector3 (mousePos.x, mousePos.y, cameraDistance));
-			
-						player.transform.LookAt (worldPos);
-						player.transform.rotation = Quaternion.Euler (new Vector3 (0, player.transform.rotation.eulerAngles.y, 0));
-				}
-		}	
-		
-		public void UpdateCameraDistance ()
-		{
-				cameraDistance = (int)(camera.transform.position.y - player.transform.position.y);
-		}
-		
-		public void SetPlayerCanRotate (bool value)
-		{
-				playerCanRotate = value;
-		}
+	public void UpdateCameraDistance ()
+	{
+		cameraDistance = camObj.transform.position.y - transform.position.y;
+	}
+	
+	public void SetPlayerCanRotate (bool value)
+	{
+		playerCanRotate = value;
+	}
 }

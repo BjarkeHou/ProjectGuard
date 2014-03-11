@@ -25,7 +25,7 @@ public class AnimationScripts : MonoBehaviour {
 		GetComponent<Animator>().SetBool("CanAttack", false);
 		//can't move or rotate
 		player.GetComponent<PlayerController>().SetCanMove(false);
-		GameObject.Find("Main Camera").GetComponent<PlayerLook>().SetPlayerCanRotate(false);
+		player.GetComponent<PlayerLook>().SetPlayerCanRotate(false);
 		//no damage
 		player.GetComponent<AttackController>().doesDamage = false;
 	}
@@ -38,7 +38,7 @@ public class AnimationScripts : MonoBehaviour {
 		GetComponent<Animator>().SetBool("CanAttack", false);
 		//can't move or rotate
 		player.GetComponent<PlayerController>().SetCanMove(false);
-		GameObject.Find("Main Camera").GetComponent<PlayerLook>().SetPlayerCanRotate(false);
+		player.GetComponent<PlayerLook>().SetPlayerCanRotate(false);
 		//no damage
 		player.GetComponent<AttackController>().doesDamage = false;
 	}
@@ -56,10 +56,11 @@ public class AnimationScripts : MonoBehaviour {
 	}
 	void CanMove () {
 		player.GetComponent<PlayerController>().SetCanMove(true);
-		GameObject.Find("Main Camera").GetComponent<PlayerLook>().SetPlayerCanRotate(true);
 	}
 	void CanNotMove () {
 		player.GetComponent<PlayerController>().SetCanMove(false);
-		GameObject.Find("Main Camera").GetComponent<PlayerLook>().SetPlayerCanRotate(false);
+	}
+	void CanRotate () {
+		player.GetComponent<PlayerLook>().SetPlayerCanRotate(true);
 	}
 }
