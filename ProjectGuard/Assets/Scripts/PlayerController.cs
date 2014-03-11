@@ -11,12 +11,15 @@ public class PlayerController : MonoBehaviour
 		public float dodgeDelay;
 		public float dodgeDistance;
 		public AnimationCurve curve;
+		public float lerpSpeed;
 		
 		private float movementSpeed;
 		private float v;
 		private float h;
 		private Vector3 moveDirection;
 		private bool playerCanMove = true;
+		private bool playerCanDodge = true;
+		private float progress;
 		
 		private float dodgeDelayCounter = 0;
 		private bool inDodgeMove = false;
@@ -38,7 +41,10 @@ public class PlayerController : MonoBehaviour
 						atkCtrl.DeclareAttack ();
 				}
 				
-				MoveCharacter ();
+				if (!inDodgeMove) {
+						MoveCharacter ();
+				}
+				
 		}
 		
 		void MoveCharacter ()
@@ -66,32 +72,37 @@ public class PlayerController : MonoBehaviour
 				}
 				
 				// Test if player is trying to dodge
-				if (dodgeDelayCounter == -1 && Input.GetKey (KeyCode.LeftShift) && playerCanMove) {
-						StartCoroutine (PerformDodge ());
+				if (playerCanDodge && Input.GetKey (KeyCode.LeftShift) && playerCanMove && !inDodgeMove && dodgeDelayCounter == -1) {
+						Vector3 sPoint = this.transform.position;
+						Vector3 ePoint = moveDirection.normalized * dodgeDistance;
+						StartCoroutine (PerformDodge (sPoint, ePoint));
 //						StartCoroutine (MoveFromTo (this.transform.position, moveDirection * dodgeSpeed, dodgeTime));
 				} else if (!inDodgeMove) {
 						this.transform.position += (moveDirection * Time.deltaTime * movementSpeed);
 				}
 		}
 		
-		private IEnumerator PerformDodge ()
+		
+		
+		private IEnumerator PerformDodge (Vector3 startPoint, Vector3 endPoint)
 		{
+				
 				inDodgeMove = true;
-				Vector3 startPoint = this.transform.position;
-				Vector3 endPoint = moveDirection.normalized * dodgeDistance;
-				float progress = Mathf.InverseLerp (0, dodgeDistance, (startPoint - this.transform.position).magnitude);
+
 				dodgeDelayCounter = dodgeDelay;
 		
 				while (progress < 1.0f) {
-						this.transform.position += moveDirection.normalized * curve.Evaluate (progress) * Time.deltaTime;
-			
+						progress = Mathf.InverseLerp (0, dodgeDistance, (startPoint - this.transform.position).magnitude);
+						Vector3 desiredPos = this.transform.position + moveDirection.normalized * curve.Evaluate (progress) * Time.deltaTime * dodgeSpeed;
+						this.transform.position = Vector3.Lerp (this.transform.position, desiredPos, Time.deltaTime * lerpSpeed); 
 						yield return null;
 				}
-		
-		
-		
-				Debug.Log ("Dodge performed!!");
 				
+				progress = 0.0f;
+				inDodgeMove = false;
+				
+				Debug.Log ("Dodge performed!!");
+			
 		}
 		
 		
@@ -119,5 +130,10 @@ public class PlayerController : MonoBehaviour
 				} else if (!value) {
 						movementSpeed = attackingMovementSpeed;
 				}
+		}
+		
+		public void SetCanDodge (bool value)
+		{
+				playerCanDodge = value;
 		}
 }
