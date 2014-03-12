@@ -54,7 +54,7 @@ public class MovementController : MonoBehaviour
 				}
 				
 				// Test if player is trying to dodge
-				if (playerCanDodge && shift && playerCanMove && !inDodgeMove && dodgeDelayCounter == -1) {
+				if (playerCanDodge && shift && playerCanMove && !inDodgeMove && dodgeDelayCounter == -1 && moveDirection != Vector3.zero) {
 						Vector3 sPoint = this.transform.position;
 						Vector3 ePoint = moveDirection.normalized * dodgeDistance;
 						StartCoroutine (PerformDodge (sPoint, ePoint));
