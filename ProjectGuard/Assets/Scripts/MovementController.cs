@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerController : MonoBehaviour
+public class MovementController : MonoBehaviour
 {
-
 		public float normalMovementSpeed = 6;
 		public float attackingMovementSpeed = 0.5f;
 		public float dodgeSpeed;
@@ -13,8 +12,7 @@ public class PlayerController : MonoBehaviour
 		public float lerpSpeed;
 		
 		private float movementSpeed;
-		private float v;
-		private float h;
+
 		private Vector3 moveDirection;
 		private bool playerCanMove = true;
 		private bool playerCanDodge = true;
@@ -22,35 +20,20 @@ public class PlayerController : MonoBehaviour
 		
 		private float dodgeDelayCounter = 0;
 		private bool inDodgeMove = false;
-		
-		public AttackController atkCtrl;
-
 
 		// Use this for initialization
 		void Start ()
 		{
 				movementSpeed = normalMovementSpeed;
 		}
-	
-		// Update is called once per frame
-		void Update ()
-		{
 
-				if (Input.GetMouseButtonDown (0)) {
-						atkCtrl.DeclareAttack ();
-				}
-				
-				if (!inDodgeMove) {
-						MoveCharacter ();
-				}
-				
-		}
-		
-		void MoveCharacter ()
+		public void MoveCharacter (float v, float h, bool shift)
 		{
+				if (inDodgeMove)
+						return;
+				
 				moveDirection = Vector3.zero;
-				v = Input.GetAxisRaw ("Vertical");
-				h = Input.GetAxisRaw ("Horizontal");
+				;
 		
 				if (v < 0) 
 						moveDirection += Vector3.back;
@@ -71,7 +54,7 @@ public class PlayerController : MonoBehaviour
 				}
 				
 				// Test if player is trying to dodge
-				if (playerCanDodge && Input.GetKey (KeyCode.LeftShift) && playerCanMove && !inDodgeMove && dodgeDelayCounter == -1) {
+				if (playerCanDodge && shift && playerCanMove && !inDodgeMove && dodgeDelayCounter == -1) {
 						Vector3 sPoint = this.transform.position;
 						Vector3 ePoint = moveDirection.normalized * dodgeDistance;
 						StartCoroutine (PerformDodge (sPoint, ePoint));
@@ -80,11 +63,8 @@ public class PlayerController : MonoBehaviour
 				}
 		}
 		
-		
-		
 		private IEnumerator PerformDodge (Vector3 startPoint, Vector3 endPoint)
 		{
-				
 				inDodgeMove = true;
 
 				dodgeDelayCounter = dodgeDelay;
@@ -100,8 +80,8 @@ public class PlayerController : MonoBehaviour
 				inDodgeMove = false;
 				
 				Debug.Log ("Dodge performed!!");
-			
 		}
+		
 		public void SetCanMove (bool value)
 		{
 				playerCanMove = value;
