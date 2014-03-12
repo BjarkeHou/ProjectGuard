@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Item : MonoBehaviour
 {
+		public float maxPickupRange;
 		protected Transform holdPoint;
 		protected bool equipped = false;
 

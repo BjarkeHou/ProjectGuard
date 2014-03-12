@@ -14,9 +14,9 @@ public class Weapon : Item
 		void Start ()
 		{
 				if (transform.parent != null) {
-					if (transform.parent.tag == "Player" || transform.parent.tag == "Enemy") {
-						Equip (transform.parent.gameObject);
-					}
+						if (transform.parent.tag == "Player" || transform.parent.tag == "Enemy") {
+								Equip (transform.parent.gameObject);
+						}
 				}
 				holdPoint = transform.FindChild ("HoldPoint");
 				skinPoint = transform.FindChild ("SkinPoint");
@@ -25,15 +25,19 @@ public class Weapon : Item
 		
 		void OnMouseDown ()
 		{
-			Equip (GameObject.FindGameObjectWithTag("Player"));
+				Debug.Log (Vector3.Distance (this.transform.position, GameObject.FindGameObjectWithTag ("Player").transform.position));
+				if (Vector3.Distance (this.transform.position, GameObject.FindGameObjectWithTag ("Player").transform.position) <= maxPickupRange) {
+						Equip (GameObject.FindGameObjectWithTag ("Player"));
+				}
 		}
 
-		void Equip (GameObject wielder) {
-			if (!equipped) {
-				wielder.GetComponent<EquipmentController>().currentWeapon = gameObject;
-				SetEquipped (true);
-				this.transform.parent = wielder.transform;
-			}
+		void Equip (GameObject wielder)
+		{
+				if (!equipped) {
+						wielder.GetComponent<EquipmentController> ().currentWeapon = gameObject;
+						SetEquipped (true);
+						this.transform.parent = wielder.transform;
+				}
 		}
 		
 		void LateUpdate ()
@@ -55,10 +59,10 @@ public class Weapon : Item
 						if (obj.tag == "Enemy") {
 								playerAtkCont.Hit (obj, damage);
 
-						//if an object is hit
+								//if an object is hit
 						} else {
 								//Instantiate sparks
-								GameObject spark = (GameObject)Instantiate(Resources.Load ("Prefabs/Sparks"), hit.point, Quaternion.LookRotation(hit.normal));
+								GameObject spark = (GameObject)Instantiate (Resources.Load ("Prefabs/Sparks"), hit.point, Quaternion.LookRotation (hit.normal));
 
 								//If collision is within skin depth
 								if ((hit.point - holdPoint.position).magnitude < (skinPoint.position - holdPoint.position).magnitude) {

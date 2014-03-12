@@ -192,6 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb947bf73dcb9404d83c8c13f29bdf4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxPickupRange: 1.5
   playerAtkCont: {fileID: 0}
   damage: 25
 --- !u!1001 &100100000
