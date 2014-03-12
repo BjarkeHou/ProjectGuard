@@ -9,6 +9,7 @@ public class PlayerInput : MonoBehaviour
 		private float h;
 		private MovementController mCtrl;
 		private AttackController aCtrl;
+		private EquipmentController eCtrl;
 
 		// Use this for initialization
 		void Start ()
@@ -16,6 +17,7 @@ public class PlayerInput : MonoBehaviour
 				GameObject p = GameObject.FindGameObjectWithTag ("Player");
 				mCtrl = p.GetComponent<MovementController> ();
 				aCtrl = p.GetComponent<AttackController> ();
+				eCtrl = p.GetComponent<EquipmentController> ();
 		}
 	
 		// Update is called once per frame
@@ -29,6 +31,11 @@ public class PlayerInput : MonoBehaviour
 				// Perform attack
 				if (Input.GetMouseButtonDown (0)) {
 						aCtrl.DeclareAttack ();
+				}
+				
+				// Drop weapon
+				if (Input.GetKey (KeyCode.G)) {
+						eCtrl.Drop (ItemType.Weapon);
 				}
 		}
 }

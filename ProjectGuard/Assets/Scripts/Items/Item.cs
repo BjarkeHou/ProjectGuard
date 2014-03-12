@@ -5,23 +5,13 @@ public class Item : MonoBehaviour
 {
 		public float maxPickupRange;
 		protected Transform holdPoint;
-		protected bool equipped = false;
-
-		// Use this for initialization
-		void Start ()
-		{
-				
-		}
-	
-		// Update is called once per frame
-		void Update ()
-		{
-	
-		}
+		protected bool m_equipped = false;
 		
-		public void SetEquipped (bool _equipped)
-		{
-				equipped = _equipped;
-				this.collider.enabled = !_equipped;
+		public bool equipped {
+				get { return m_equipped;}
+				set { 
+						m_equipped = value;
+						this.collider.enabled = !value;
+				}
 		}
 }

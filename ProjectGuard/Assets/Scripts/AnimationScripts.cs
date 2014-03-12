@@ -54,6 +54,7 @@ public class AnimationScripts : MonoBehaviour
 		{
 				GetComponent<Animator> ().SetBool ("CanAttack", true);
 				isAttacking = false;
+				player.GetComponent<AttackController> ().inAnAttack = false;
 		}
 		void CanNotAttack ()
 		{

@@ -15,7 +15,7 @@ public class Weapon : Item
 		{
 				if (transform.parent != null) {
 						if (transform.parent.tag == "Player" || transform.parent.tag == "Enemy") {
-								Equip (transform.parent.gameObject);
+								TryToEquip (transform.parent.gameObject);
 						}
 				}
 				holdPoint = transform.FindChild ("HoldPoint");
@@ -25,18 +25,25 @@ public class Weapon : Item
 		
 		void OnMouseDown ()
 		{
-				Debug.Log (Vector3.Distance (this.transform.position, GameObject.FindGameObjectWithTag ("Player").transform.position));
 				if (Vector3.Distance (this.transform.position, GameObject.FindGameObjectWithTag ("Player").transform.position) <= maxPickupRange) {
-						Equip (GameObject.FindGameObjectWithTag ("Player"));
+						TryToEquip (GameObject.FindGameObjectWithTag ("Player"));
 				}
 		}
 
-		void Equip (GameObject wielder)
+		void TryToEquip (GameObject wielder)
 		{
 				if (!equipped) {
-						wielder.GetComponent<EquipmentController> ().currentWeapon = gameObject;
-						SetEquipped (true);
+						equipped = true;
+						wielder.GetComponent<EquipmentController> ().Equip (this.gameObject);
 						this.transform.parent = wielder.transform;
+				}
+		}
+		
+		public void Dropped ()
+		{
+				if (equipped) {
+						equipped = false;
+						this.transform.parent = null;
 				}
 		}
 		
