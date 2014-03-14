@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerLook : MonoBehaviour
-{
+public class PlayerLook : MonoBehaviour {
 	public GameObject camObj;
 	private Vector2 mousePos;
 	private float cameraDistance;
@@ -11,13 +10,12 @@ public class PlayerLook : MonoBehaviour
 	
 	private bool playerCanRotate;
 
-	void Start ()
-	{
+	void Start () {
+		camObj = GameObject.FindGameObjectWithTag ("MainCamera");
 		playerCanRotate = true;
 	}
 
-	void FixedUpdate ()
-	{
+	void FixedUpdate () {
 		//convert mouseposition to relatives from 0 to 1
 		mousePos = new Vector2 (Mathf.InverseLerp (0, Screen.width, Input.mousePosition.x), Mathf.InverseLerp (0, Screen.height, Input.mousePosition.y));
 
@@ -34,8 +32,7 @@ public class PlayerLook : MonoBehaviour
 		transform.rotation = Quaternion.Euler (new Vector3 (0, transform.rotation.eulerAngles.y, 0));
 	}
 	
-	public void SetPlayerCanRotate (bool value)
-	{
+	public void SetPlayerCanRotate (bool value) {
 		playerCanRotate = value;
 	}
 }
