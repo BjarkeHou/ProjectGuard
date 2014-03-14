@@ -210,7 +210,7 @@ Transform:
   m_GameObject: {fileID: 305440655}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -.5, z: 1}
-  m_LocalScale: {x: 15, y: 1, z: 15}
+  m_LocalScale: {x: 100, y: 1, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1 &499374585
@@ -582,7 +582,7 @@ Prefab:
       objectReference: {fileID: 2124293286}
     - target: {fileID: 11400006, guid: e3bdc99c927a96845bd509172e5151e4, type: 2}
       propertyPath: dodgeDistance
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400006, guid: e3bdc99c927a96845bd509172e5151e4, type: 2}
       propertyPath: lerpSpeed
@@ -1002,7 +1002,7 @@ MonoBehaviour:
   attackingMovementSpeed: 0
   dodgeSpeed: 10
   dodgeDelay: 0
-  dodgeDistance: 3
+  dodgeDistance: 5
   curve:
     serializedVersion: 2
     m_Curve:
