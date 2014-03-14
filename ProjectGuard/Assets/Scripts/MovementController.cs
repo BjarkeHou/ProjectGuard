@@ -54,24 +54,31 @@ public class MovementController : MonoBehaviour
 				}
 				
 				// Test if player is trying to dodge
-				if (playerCanDodge && shift && playerCanMove && !inDodgeMove && dodgeDelayCounter == -1 && moveDirection != Vector3.zero) {
+				if (playerCanDodge && shift && playerCanMove && !inDodgeMove && dodgeDelayCounter == -1) {
 						Vector3 sPoint = this.transform.position;
-						Vector3 ePoint = moveDirection.normalized * dodgeDistance;
-						StartCoroutine (PerformDodge (sPoint, ePoint));
+						Vector3 dodgeDirection = moveDirection.normalized;
+						float dodgeDist = dodgeDistance;
+
+						//if no movement is detected, do a backstep
+						if (moveDirection == Vector3.zero) {
+								dodgeDirection = transform.TransformDirection(Vector3.back);
+								dodgeDist = dodgeDistance *0.75f;
+						}
+						StartCoroutine (PerformDodge (sPoint, dodgeDirection, dodgeDist));
 				} else if (!inDodgeMove) {
 						this.transform.position += (moveDirection * Time.deltaTime * movementSpeed);
 				}
 		}
 		
-		private IEnumerator PerformDodge (Vector3 startPoint, Vector3 endPoint)
+		private IEnumerator PerformDodge (Vector3 startPoint, Vector3 dodgeDir, float dodgeDist)
 		{
 				inDodgeMove = true;
 
 				dodgeDelayCounter = dodgeDelay;
 		
 				while (progress < 1.0f) {
-						progress = Mathf.InverseLerp (0, dodgeDistance, (startPoint - this.transform.position).magnitude);
-						Vector3 desiredPos = this.transform.position + moveDirection.normalized * curve.Evaluate (progress) * Time.deltaTime * dodgeSpeed;
+						progress = Mathf.InverseLerp (0, dodgeDist, (startPoint - this.transform.position).magnitude);
+						Vector3 desiredPos = this.transform.position + dodgeDir.normalized * curve.Evaluate (progress) * Time.deltaTime * dodgeSpeed;
 						this.transform.position = Vector3.Lerp (this.transform.position, desiredPos, Time.deltaTime * lerpSpeed); 
 						yield return null;
 				}
