@@ -580,6 +580,18 @@ Prefab:
       propertyPath: camObj
       value: 
       objectReference: {fileID: 2124293286}
+    - target: {fileID: 11400006, guid: e3bdc99c927a96845bd509172e5151e4, type: 2}
+      propertyPath: dodgeDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: e3bdc99c927a96845bd509172e5151e4, type: 2}
+      propertyPath: lerpSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: e3bdc99c927a96845bd509172e5151e4, type: 2}
+      propertyPath: dodgeSpeed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e3bdc99c927a96845bd509172e5151e4, type: 2}
   m_RootGameObject: {fileID: 1868753561}
@@ -988,9 +1000,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMovementSpeed: 6
   attackingMovementSpeed: 0
-  dodgeSpeed: 75
+  dodgeSpeed: 10
   dodgeDelay: 0
-  dodgeDistance: 5
+  dodgeDistance: 3
   curve:
     serializedVersion: 2
     m_Curve:
@@ -1006,7 +1018,7 @@ MonoBehaviour:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-  lerpSpeed: 10
+  lerpSpeed: 20
 --- !u!114 &1868753566
 MonoBehaviour:
   m_ObjectHideFlags: 0

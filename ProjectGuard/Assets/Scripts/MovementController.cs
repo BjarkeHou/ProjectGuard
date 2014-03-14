@@ -3,6 +3,8 @@ using System.Collections;
 
 public class MovementController : MonoBehaviour
 {
+		private PlayerLook pLook;
+
 		public float normalMovementSpeed = 6;
 		public float attackingMovementSpeed = 0.5f;
 		public float dodgeSpeed;
@@ -19,11 +21,13 @@ public class MovementController : MonoBehaviour
 		private float progress;
 		
 		private float dodgeDelayCounter = 0;
+		private float dodgedDistance = 0;
 		private bool inDodgeMove = false;
 
 		// Use this for initialization
 		void Start ()
 		{
+				pLook = this.GetComponent<PlayerLook>();
 				movementSpeed = normalMovementSpeed;
 		}
 
@@ -72,6 +76,30 @@ public class MovementController : MonoBehaviour
 		
 		private IEnumerator PerformDodge (Vector3 startPoint, Vector3 dodgeDir, float dodgeDist)
 		{
+			inDodgeMove = true;
+			pLook.SetPlayerCanRotate(false);
+			dodgeDelayCounter = dodgeDelay;
+			
+			while (progress < 1.0f) {
+				progress = Mathf.InverseLerp (0, dodgeDist, dodgedDistance);
+				dodgedDistance += curve.Evaluate (progress) * dodgeSpeed * Time.deltaTime ;	
+				Vector3 desiredPos = startPoint + dodgeDir.normalized *dodgedDistance;
+				this.transform.position = desiredPos; //Vector3.Lerp (this.transform.position, desiredPos, Time.deltaTime * lerpSpeed); 
+				print (dodgedDistance);
+				print (progress);
+				yield return null;
+			}
+			
+			progress = 0.0f;
+			dodgedDistance = 0;	
+			inDodgeMove = false;
+			pLook.SetPlayerCanRotate(true);
+			
+			Debug.Log ("Dodge performed!!");
+		}
+	/*
+		private IEnumerator PerformDodge (Vector3 startPoint, Vector3 dodgeDir, float dodgeDist)
+		{
 				inDodgeMove = true;
 
 				dodgeDelayCounter = dodgeDelay;
@@ -88,7 +116,7 @@ public class MovementController : MonoBehaviour
 				
 				Debug.Log ("Dodge performed!!");
 		}
-		
+	*/	
 		public void SetCanMove (bool value)
 		{
 				playerCanMove = value;
