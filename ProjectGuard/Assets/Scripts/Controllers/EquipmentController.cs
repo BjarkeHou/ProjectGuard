@@ -10,10 +10,10 @@ public enum ItemType
 
 public class EquipmentController : MonoBehaviour
 {
-		private GameObject currentWeapon;
+		public GameObject currentWeapon;
 		private GameObject currentHelm;
 		private Transform hand;
-		private bool m_hasWeaponEquipped = false;
+		public bool m_hasWeaponEquipped = false;
 		private bool m_hasHelmEquipped = false;
 		
 		// Use this for initialization

@@ -14,18 +14,28 @@ MonoBehaviour:
   _dataSerializer:
     _serializedData: <scriptableobject version="1.0" type="RAIN.BehaviorTrees.BTAsset"><fields><field
       value="&lt;behaviortree version=&quot;1.1&quot; repeatuntil=&quot;&quot; name=&quot;MirrorImage1&quot;&gt;&lt;parallel
-      tiebreaker=&quot;fail&quot; succeed=&quot;all&quot; repeatuntil=&quot;&quot;
+      tiebreaker=&quot;succeed&quot; succeed=&quot;all&quot; repeatuntil=&quot;&quot;
       name=&quot;root&quot; fail=&quot;any&quot;&gt;&lt;detect sensor=&quot;TargetSensor&quot;
-      repeatuntil=&quot;&quot; name=&quot;DetectDummy&quot; entityobjectvariable=&quot;detectDummy&quot;
+      repeatuntil=&quot;running&quot; name=&quot;DetectDummy&quot; entityobjectvariable=&quot;detectDummy&quot;
       aspectvariable=&quot;&quot; aspectobjectvariable=&quot;&quot; aspect=&quot;Dummy&quot;
-      /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
+      /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;running&quot;
       name=&quot;Engagement&quot;&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
       priority=&quot;&quot; name=&quot;engage&quot; movetarget=&quot;detectTarget&quot;
-      movespeed=&quot;1&quot; facetarget=&quot;&quot; closeenoughdistance=&quot;4&quot;
-      closeenoughangle=&quot;&quot; /&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;disengage&quot; movetarget=&quot;returnPos&quot;
-      movespeed=&quot;1&quot; facetarget=&quot;returnPos&quot; closeenoughdistance=&quot;&quot;
-      closeenoughangle=&quot;&quot; /&gt;&lt;/sequencer&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
+      movespeed=&quot;3&quot; facetarget=&quot;detectTarget&quot; closeenoughdistance=&quot;2&quot;
+      closeenoughangle=&quot;&quot; /&gt;&lt;mecparam valueexpression=&quot;true&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; parametertype=&quot;boolean&quot;
+      parametername=&quot;Attack&quot; name=&quot;attack&quot; damptime=&quot;0&quot;
+      /&gt;&lt;timer waitforsec=&quot;1.5&quot; returnvalue=&quot;success&quot; priority=&quot;&quot;
+      name=&quot;timer&quot; /&gt;&lt;action repeatuntil=&quot;&quot; priority=&quot;&quot;
+      parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;(global)&quot;
+      name=&quot;select disengage point&quot; classname=&quot;DisengagePoint&quot;
+      /&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;disengage&quot; fail=&quot;any&quot;&gt;&lt;action
+      repeatuntil=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;&quot;
+      namespace=&quot;(global)&quot; name=&quot;calculate new moveTarget&quot; classname=&quot;CalculateDisengagePoint&quot;
+      /&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;disengage&quot;
+      movetarget=&quot;returnTarget&quot; movespeed=&quot;5&quot; facetarget=&quot;detectTarget&quot;
+      closeenoughdistance=&quot;2&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
       type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
       elementtype="System.String" /></fields><references /></scriptableobject>
     _serializedGameObjects: []
