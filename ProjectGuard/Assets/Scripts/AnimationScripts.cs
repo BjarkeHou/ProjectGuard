@@ -33,7 +33,7 @@ public class AnimationScripts : MonoBehaviour
 		GetComponent<Animator> ().SetBool ("CanAttack", false);
 		//can't move or rotate
 		animated.GetComponent<MovementController> ().SetCanMove (false);
-		if(pLook != null)pLook.SetPlayerCanRotate (false);
+	    if (pLook != null) pLook.playerCanRotate = false;
 		//no damage
 		animated.GetComponent<AttackController> ().doesDamage = false;
 	}
@@ -48,7 +48,7 @@ public class AnimationScripts : MonoBehaviour
 		GetComponent<Animator> ().SetBool ("CanAttack", false);
 		//can't move or rotate
 		animated.GetComponent<MovementController> ().SetCanMove (false);
-        if (pLook != null) pLook.SetPlayerCanRotate(false);
+        if (pLook != null) pLook.playerCanRotate = false;
 		//no damage
 		animated.GetComponent<AttackController> ().doesDamage = false;
 	}
@@ -82,6 +82,6 @@ public class AnimationScripts : MonoBehaviour
 	}
 	void CanRotate ()
 	{
-        if (pLook != null) pLook.SetPlayerCanRotate(true);
+        if (pLook != null) pLook.playerCanRotate = true;
 	}
 }
