@@ -23,6 +23,7 @@ public class CalculateDisengagePoint : RAINAction
     {
         Vector3 rotaPoint = ai.WorkingMemory.GetItem<Vector3>("RotationPoint");
         Vector3 targetPos = ai.WorkingMemory.GetItem<GameObject>("detectTarget").transform.position;
+        targetPos.y *= 0;
         //targetPos = targetPos
         ai.WorkingMemory.SetItem("returnTarget", targetPos+rotaPoint);
         return ActionResult.SUCCESS;

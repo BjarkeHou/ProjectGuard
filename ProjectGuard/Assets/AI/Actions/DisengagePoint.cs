@@ -9,7 +9,7 @@ using Random = UnityEngine.Random;
 [RAINAction]
 public class DisengagePoint : RAINAction
 {
-    public const int SCALE = 10;
+    public const int SCALE = 3;
 
     public DisengagePoint()
     {
