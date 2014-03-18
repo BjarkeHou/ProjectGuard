@@ -19,8 +19,8 @@ public class Inventory : MonoBehaviour
 
     public void PickedUpItem(GameObject item)
     {
-        InventoryItem i = item.GetComponent<Item>().ItemRemove();
-        content.Add(i);
+        //InventoryItem i = item.GetComponent<Item>().ItemRemove();
+        //content.Add(i);
     }
 }
 
