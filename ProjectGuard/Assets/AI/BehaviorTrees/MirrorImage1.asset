@@ -16,8 +16,8 @@ MonoBehaviour:
       value="&lt;behaviortree version=&quot;1.1&quot; repeatuntil=&quot;&quot; name=&quot;MirrorImage1&quot;&gt;&lt;parallel
       tiebreaker=&quot;succeed&quot; succeed=&quot;all&quot; repeatuntil=&quot;&quot;
       name=&quot;root&quot; fail=&quot;any&quot;&gt;&lt;detect sensor=&quot;&amp;quot;TargetSensor&amp;quot;&quot;
-      repeatuntil=&quot;running&quot; name=&quot;DetectDummy&quot; entityobjectvariable=&quot;detectTarget&quot;
-      aspectvariable=&quot;&quot; aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;Dummy&amp;quot;&quot;
+      repeatuntil=&quot;running&quot; name=&quot;DetectPlayer&quot; entityobjectvariable=&quot;detectTarget&quot;
+      aspectvariable=&quot;&quot; aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;Player&amp;quot;&quot;
       /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;running&quot;
       name=&quot;Engagement&quot;&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
       priority=&quot;&quot; name=&quot;engage&quot; movetarget=&quot;detectTarget&quot;
