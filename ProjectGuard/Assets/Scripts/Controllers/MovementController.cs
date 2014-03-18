@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MovementController : MonoBehaviour
-{
+public class MovementController : MonoBehaviour {
 	private CharacterController charCont;
 	private PlayerLook pLook;
 
@@ -26,15 +25,13 @@ public class MovementController : MonoBehaviour
 	private bool inDodgeMove = false;
 
 	// Use this for initialization
-    protected void Start ()
-	{
-		charCont = GetComponent<CharacterController> ();
-		pLook = this.GetComponent<PlayerLook> ();
+	protected void Start() {
+		charCont = GetComponent<CharacterController>();
+		pLook = this.GetComponent<PlayerLook>();
 		movementSpeed = normalMovementSpeed;
 	}
 
-	public void MoveCharacter (float v, float h, bool shift)
-	{
+	public void MoveCharacter(float v, float h, bool shift) {
 		if (inDodgeMove)
 			return;				
 		moveDirection = Vector3.zero;
@@ -65,26 +62,25 @@ public class MovementController : MonoBehaviour
 
 			//if no movement is detected, do a backstep
 			if (moveDirection == Vector3.zero) {
-				dodgeDirection = transform.TransformDirection (Vector3.back);
+				dodgeDirection = transform.TransformDirection(Vector3.back);
 				dodgeDist = dodgeDistance * 0.75f;
 			}
-			StartCoroutine (PerformDodge (sPoint, dodgeDirection, dodgeDist));
+			StartCoroutine(PerformDodge(sPoint, dodgeDirection, dodgeDist));
 		} else if (!inDodgeMove) {
-			charCont.Move (moveDirection * Time.deltaTime * movementSpeed);
+			charCont.Move(moveDirection * Time.deltaTime * movementSpeed);
 		}
 	}
 	
-	private IEnumerator PerformDodge (Vector3 startPoint, Vector3 dodgeDir, float dodgeDist)
-	{
+	private IEnumerator PerformDodge(Vector3 startPoint, Vector3 dodgeDir, float dodgeDist) {
 		inDodgeMove = true;
-		pLook.LockPlayerOnDirection (dodgeDir);
+		pLook.LockPlayerOnDirection(dodgeDir);
 		dodgeDelayCounter = dodgeDelay;
 
 		while (progress < 1.0f) {
-			progress = Mathf.InverseLerp (0, dodgeDist, dodgedDistance);
-			dodgedDistance += curve.Evaluate (progress) * dodgeSpeed * Time.deltaTime;	
+			progress = Mathf.InverseLerp(0, dodgeDist, dodgedDistance);
+			dodgedDistance += curve.Evaluate(progress) * dodgeSpeed * Time.deltaTime;	
 			Vector3 desiredPos = startPoint + dodgeDir.normalized * dodgedDistance;
-			charCont.Move (desiredPos - transform.position);
+			charCont.Move(desiredPos - transform.position);
 			if (!pLook.playerCanRotate && progress > 0.8f)
 				pLook.playerCanRotate = true;
 			yield return null;
@@ -95,7 +91,7 @@ public class MovementController : MonoBehaviour
 		inDodgeMove = false;
 		pLook.playerCanRotate = true;
 		
-		Debug.Log ("Dodge performed!!");
+		Debug.Log("Dodge performed!!");
 	}
 /*
 	private IEnumerator PerformDodge (Vector3 startPoint, Vector3 dodgeDir, float dodgeDist)
@@ -117,8 +113,7 @@ public class MovementController : MonoBehaviour
 		Debug.Log ("Dodge performed!!");
 	}
 */	
-	public void SetCanMove (bool value)
-	{
+	public void SetCanMove(bool value) {
 		playerCanMove = value;
 			
 		if (value) {
@@ -128,8 +123,7 @@ public class MovementController : MonoBehaviour
 		}
 	}
 	
-	public void SetCanDodge (bool value)
-	{
+	public void SetCanDodge(bool value) {
 		playerCanDodge = value;
 	}
 }
