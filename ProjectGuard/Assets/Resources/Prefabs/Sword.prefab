@@ -55,13 +55,12 @@ GameObject:
   - 4: {fileID: 400006}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
-  - 65: {fileID: 6500000}
-  - 54: {fileID: 5400000}
-  - 95: {fileID: 9500000}
   - 114: {fileID: 11400000}
+  - 54: {fileID: 5400000}
+  - 65: {fileID: 6500000}
   m_Layer: 0
   m_Name: Sword
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,8 +72,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.448956668, z: 0}
-  m_LocalScale: {x: 20, y: .648382187, z: 20}
+  m_LocalPosition: {x: 0, y: -.400637269, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400006}
 --- !u!4 &400002
@@ -84,8 +83,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .499369591, z: 0}
-  m_LocalScale: {x: 20, y: .648382187, z: 20}
+  m_LocalPosition: {x: 0, y: .570449114, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400006}
 --- !u!4 &400004
@@ -95,8 +94,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .328167528, z: 0}
-  m_LocalScale: {x: 20, y: .648382187, z: 20}
+  m_LocalPosition: {x: 0, y: .440497398, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400006}
 --- !u!4 &400006
@@ -105,13 +104,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .524946213, y: .621923685, z: .0682754517}
-  m_LocalScale: {x: .0500000007, y: 1.54230022, z: .0500000007}
+  m_LocalRotation: {x: .500000119, y: .5, z: .5, w: .49999994}
+  m_LocalPosition: {x: 1, y: .13198781, z: 0}
+  m_LocalScale: {x: .800000012, y: 1.25, z: 1}
   m_Children:
   - {fileID: 400000}
-  - {fileID: 400002}
   - {fileID: 400004}
+  - {fileID: 400002}
   m_Father: {fileID: 0}
 --- !u!23 &2300000
 Renderer:
@@ -125,7 +124,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2ee53ad29dd444148bfe6ca3e1f2b2f9, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -140,7 +139,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 528e061e517728949bc47f25dbe3a7ea, type: 3}
 --- !u!54 &5400000
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -151,7 +150,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -166,8 +165,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: .0639150441, y: 1.16583014, z: .274580061}
+  m_Center: {x: -1.11022387e-15, y: -7.10542482e-16, z: 7.4505806e-09}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 2
@@ -193,9 +192,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb947bf73dcb9404d83c8c13f29bdf4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doesDamage: 0
-  damage: 5
-  targetsHit: []
+  maxPickupRange: 1.5
+  playerAtkCont: {fileID: 0}
+  damage: 25
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
