@@ -29,13 +29,16 @@ MonoBehaviour:
       name=&quot;timer&quot; /&gt;&lt;action repeatuntil=&quot;&quot; priority=&quot;&quot;
       parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;(global)&quot;
       name=&quot;select disengage point&quot; classname=&quot;DisengagePoint&quot;
-      /&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot; repeatuntil=&quot;&quot;
+      /&gt;&lt;parallel tiebreaker=&quot;succeed&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
       priority=&quot;&quot; name=&quot;disengage&quot; fail=&quot;any&quot;&gt;&lt;action
-      repeatuntil=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;&quot;
+      repeatuntil=&quot;running&quot; parametervalues=&quot;&quot; parameters=&quot;&quot;
       namespace=&quot;(global)&quot; name=&quot;calculate new moveTarget&quot; classname=&quot;CalculateDisengagePoint&quot;
-      /&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;disengage&quot;
-      movetarget=&quot;returnTarget&quot; movespeed=&quot;5&quot; facetarget=&quot;detectTarget&quot;
-      closeenoughdistance=&quot;2&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
+      /&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
+      name=&quot;parallel&quot; fail=&quot;any&quot;&gt;&lt;move turnspeed=&quot;&quot;
+      repeatuntil=&quot;&quot; name=&quot;disengage&quot; movetarget=&quot;returnTarget&quot;
+      movespeed=&quot;5&quot; facetarget=&quot;detectTarget&quot; closeenoughdistance=&quot;3&quot;
+      closeenoughangle=&quot;&quot; /&gt;&lt;timer waitforsec=&quot;1&quot; returnvalue=&quot;success&quot;
+      name=&quot;Dodged long enough&quot; /&gt;&lt;/parallel&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
       type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
       elementtype="System.String" /></fields><references /></scriptableobject>
     _serializedGameObjects: []
