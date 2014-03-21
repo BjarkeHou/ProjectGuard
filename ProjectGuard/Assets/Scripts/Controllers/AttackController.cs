@@ -29,10 +29,7 @@ public class AttackController : MonoBehaviour {
 
 	//called from the equiped weapon
 	public void Hit(GameObject obj, float damage) {
-		if (!targetsHit.Contains(obj) && obj.tag != gameObject.tag) {
-			//Instantiate blood
-			GameObject blood = (GameObject)Instantiate(Resources.Load("Prefabs/Blood"), obj.transform.position, Quaternion.LookRotation(transform.position - obj.transform.position));
-
+		if (!targetsHit.Contains(obj) && obj.tag != gameObject.tag) { 
 			//withdraw health
 			obj.GetComponent<HealthController>().adjustCurrentHealth(-(int)damage);
 			//add enemy to list of hit stuff

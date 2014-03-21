@@ -4,7 +4,6 @@ using System.Collections;
 public class Interface : MonoBehaviour {
 
 	private PlayerWillController pWill;
-	private float healthBarLength;
 
 	private Texture2D barTex;
 	private Texture2D spentTex;
@@ -18,7 +17,6 @@ public class Interface : MonoBehaviour {
 	// Use this for initialization
 	void Start() {
 		pWill = GetComponent<PlayerWillController>();
-		healthBarLength = Screen.width / 2;
 
 		barTex = new Texture2D (1, 1);
 		barTex.SetPixel(0, 0, barCol);
@@ -41,7 +39,6 @@ public class Interface : MonoBehaviour {
 		//Will Bar
 		Vector2 dimension = new Vector2 (Screen.width / 3, 50);
 		Vector2 anchor = new Vector2 ((Screen.width / 2) - (dimension.x / 2), Screen.height - dimension.y - 50);
-		Vector2 offset;
 
 		//BG
 		GUI.DrawTexture(new Rect (anchor.x, anchor.y, dimension.x, dimension.y), bgTex);

@@ -141,7 +141,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100016}
   m_LocalRotation: {x: 0, y: -.994496226, z: 0, w: -.10477268}
-  m_LocalPosition: {x: -1.71133637, y: 1.10944819, z: 7.08015919}
+  m_LocalPosition: {x: -2.5983026, y: 1.12085342, z: 6.9472127}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400012}
@@ -299,9 +299,9 @@ MonoBehaviour:
       type="RAIN.Core.AI" refcount="1" id="0"><field value="True" type="System.Boolean"
       id="_isActive" /><field type="UnityEngine.GameObject" id="_body" gameobject="0"
       /><field type="RAIN.Memory.BasicMemory" reference="1" id="_workingMemory" childrenvisible="False"
-      /><field type="RAIN.Minds.BasicMind" reference="2" id="_mind" childrenvisible="True"
+      /><field type="RAIN.Minds.BasicMind" reference="2" id="_mind" childrenvisible="False"
       /><field type="RAIN.Motion.CharacterControllerMotor" reference="3" id="_motor"
-      childrenvisible="False" /><field type="RAIN.Animation.BasicAnimator" reference="6"
+      childrenvisible="True" /><field type="RAIN.Animation.BasicAnimator" reference="6"
       id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
       reference="7" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
       reference="8" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
@@ -428,7 +428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5393257ef024ef4bad230411006f516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalMovementSpeed: 6
+  normalMovementSpeed: 5
   attackingMovementSpeed: 0
   dodgeSpeed: 75
   dodgeDelay: 0
@@ -458,7 +458,7 @@ CharacterController:
   m_GameObject: {fileID: 100016}
   serializedVersion: 2
   m_Height: 2
-  m_Radius: .400000006
+  m_Radius: .5
   m_SlopeLimit: 45
   m_StepOffset: .300000012
   m_SkinWidth: .0799999982

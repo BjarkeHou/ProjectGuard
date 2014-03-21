@@ -107,6 +107,19 @@ public class MovementController : MonoBehaviour {
 		Debug.Log("Dodge performed!!");
 	}
 
+	public void AttackStep() {
+		StartCoroutine(PerformAttackStep(transform.TransformDirection(Vector3.forward)));
+	}
+
+	private IEnumerator PerformAttackStep(Vector3 attackDir) {
+		float timer = Time.time;
+		float aStepSpeed = 0.5f;
+		while (Time.time < timer + 0.35f) {
+			charCont.Move(attackDir * Time.deltaTime * aStepSpeed);
+			yield return null;
+		}
+	}
+
 	public void SetCanMove(bool value) {
 		playerCanMove = value;
 			

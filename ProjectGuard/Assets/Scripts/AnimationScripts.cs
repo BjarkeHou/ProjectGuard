@@ -35,6 +35,9 @@ public class AnimationScripts : MonoBehaviour {
 		//no damage
 		animated.GetComponent<AttackController>().doesDamage = false;
 
+		//take a step forward
+		animated.GetComponent<MovementController>().AttackStep();
+
 		//deplete will if that script exists
 		if (animated.GetComponent<PlayerWillController>() != null) {
 			animated.GetComponent<PlayerWillController>().Attack();

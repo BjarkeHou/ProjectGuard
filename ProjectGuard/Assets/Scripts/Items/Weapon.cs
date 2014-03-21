@@ -58,6 +58,11 @@ public class Weapon : Item {
 			GameObject obj = hit.collider.gameObject;
 			//if an enemy is hit
 			if (obj.tag == "Enemy" || obj.tag == "Player") {
+				//Instantiate blood
+				GameObject blood = (GameObject)Instantiate(Resources.Load("Prefabs/Blood"));
+				blood.transform.parent = transform;
+				blood.GetComponent<BloodDestroy>().offset = (hit.point - transform.position).magnitude;
+
 				print("HIT on " + obj.name);
 				playerAtkCont.Hit(obj, damage);
 
