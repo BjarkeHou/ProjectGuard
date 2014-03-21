@@ -45,18 +45,20 @@ public class Weapon : Item {
 	void LateUpdate() {
 		//Update position and check for collisions
 		if (equipped) {
-			CheckCollision();
+			CheckHit();
 		}
 	}
 
-	void CheckCollision() {
+	void CheckHit() {
 		RaycastHit hit;
 		Ray charles = new Ray (holdPoint.position, tipPoint.position - holdPoint.position);
 		float dist = (tipPoint.position - holdPoint.position).magnitude;
+
 		if (Physics.Raycast(charles, out hit, dist) && playerAtkCont.doesDamage) {
 			GameObject obj = hit.collider.gameObject;
 			//if an enemy is hit
 			if (obj.tag == "Enemy" || obj.tag == "Player") {
+				print("HIT on " + obj.name);
 				playerAtkCont.Hit(obj, damage);
 
 				//if an object is hit
@@ -66,6 +68,10 @@ public class Weapon : Item {
 
 				//If collision is within skin depth
 				if ((hit.point - holdPoint.position).magnitude < (skinPoint.position - holdPoint.position).magnitude) {
+					print("REBOUND on " + obj.name);
+					if (obj.name == "Floor") {
+						UnityEditor.EditorApplication.isPaused = true;
+					}
 					playerAtkCont.Rebound();
 				}
 			}

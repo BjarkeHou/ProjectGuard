@@ -21,7 +21,7 @@ MonoBehaviour:
       /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;running&quot;
       name=&quot;Engagement&quot;&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
       priority=&quot;&quot; name=&quot;engage&quot; movetarget=&quot;detectTarget&quot;
-      movespeed=&quot;3&quot; facetarget=&quot;detectTarget&quot; closeenoughdistance=&quot;2&quot;
+      movespeed=&quot;3&quot; facetarget=&quot;detectTarget&quot; closeenoughdistance=&quot;1.5&quot;
       closeenoughangle=&quot;&quot; /&gt;&lt;mecparam valueexpression=&quot;true&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; parametertype=&quot;boolean&quot;
       parametername=&quot;Attack&quot; name=&quot;attack&quot; damptime=&quot;0&quot;

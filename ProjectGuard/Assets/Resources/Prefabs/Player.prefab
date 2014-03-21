@@ -123,7 +123,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .282845259, y: .983656406, z: -3.88065386}
+  m_LocalPosition: {x: .826216698, y: .983656406, z: .464316368}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   normalMovementSpeed: 5
-  attackingMovementSpeed: 1
+  attackingMovementSpeed: 0
   dodgeSpeed: 10
   dodgeDelay: 0
   dodgeDistance: 3
@@ -428,7 +428,7 @@ MonoBehaviour:
   dodgeAdj: 10
   minAtkSp: 0
   maxAtkSp: 0
-  regenCD: 0
+  regenCD: .300000012
   regenSpeed: 15
 --- !u!114 &11400020
 MonoBehaviour:
@@ -442,8 +442,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barCol: {r: .227941155, g: .456896514, b: 1, a: 1}
-  spentCol: {r: .691176474, g: .718864024, b: 1, a: 1}
-  bgCol: {r: .360294104, g: .360294104, b: .360294104, a: 1}
+  spentCol: {r: .16911763, g: .16911763, b: .16911763, a: 1}
+  bgCol: {r: 0, g: 0, b: 0, a: 1}
   borderCol: {r: 0, g: 0, b: 0, a: 1}
 --- !u!143 &14300000
 CharacterController:
