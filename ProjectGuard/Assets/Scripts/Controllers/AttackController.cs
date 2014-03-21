@@ -39,7 +39,7 @@ public class AttackController : MonoBehaviour
 		//called from the equiped weapon
 		public void Hit (GameObject obj, float damage)
 		{
-				if (!targetsHit.Contains (obj)) {
+				if (!targetsHit.Contains (obj) && obj.tag != gameObject.tag) {
 						print ("Hit on " + obj.name);
 						//Instantiate blood
 						GameObject blood = (GameObject)Instantiate (Resources.Load ("Prefabs/Blood"), obj.transform.position, Quaternion.LookRotation (transform.position - obj.transform.position));

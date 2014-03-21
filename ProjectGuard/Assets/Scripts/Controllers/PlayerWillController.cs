@@ -36,11 +36,6 @@ public class PlayerWillController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update() {
-		if (Input.GetKeyDown(KeyCode.LeftShift)) {
-			curWill += dodgeAdj;
-			regenTimer = Time.time;
-		}
-
 		if (Time.time > regenTimer + regenCD && curWill < curMaxWill) {
 			curWill += regenSpeed * Time.deltaTime;
 		}

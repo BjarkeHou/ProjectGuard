@@ -22,7 +22,10 @@ public class InputController : MonoBehaviour {
 		// Move Player
 		v = Input.GetAxisRaw("Vertical");
 		h = Input.GetAxisRaw("Horizontal");
-		mCtrl.MoveCharacter(v, h, Input.GetKey(KeyCode.LeftShift));
+		mCtrl.MoveCharacter(v, h);
+		if (Input.GetKeyDown(KeyCode.LeftShift)) {
+			mCtrl.Dodge(v, h);
+		}
 				
 		// Perform attack
 		if (Input.GetMouseButtonDown(0)) {

@@ -29,6 +29,7 @@ public class AnimationScripts : MonoBehaviour {
 		GetComponent<Animator>().SetBool("CanAttack", false);
 		//can't move or rotate
 		animated.GetComponent<MovementController>().SetCanMove(false);
+		animated.GetComponent<MovementController>().SetCanDodge(false);
 		if (pLook != null)
 			pLook.playerCanRotate = false;
 		//no damage
@@ -55,9 +56,10 @@ public class AnimationScripts : MonoBehaviour {
 		animated.GetComponent<AttackController>().doesDamage = false;
 	}
 	void CanAttack() {
+		animated.GetComponent<MovementController>().SetCanDodge(true);
 		GetComponent<Animator>().SetBool("CanAttack", true);
-		isAttacking = false;
 		animated.GetComponent<AttackController>().inAnAttack = false;
+		isAttacking = false;
 	}
 	void CanNotAttack() {
 		GetComponent<Animator>().SetBool("CanAttack", false);
