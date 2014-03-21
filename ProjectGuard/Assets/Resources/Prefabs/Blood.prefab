@@ -219,7 +219,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: .25
+      scalar: .150000006
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -286,7 +286,7 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: .100000001
     inheritVelocity: 5
-    maxNumParticles: 200
+    maxNumParticles: 400
   ShapeModule:
     serializedVersion: 2
     enabled: 1
@@ -304,7 +304,7 @@ ParticleSystem:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 200
+      scalar: 400
       maxCurve:
         serializedVersion: 2
         m_Curve:
