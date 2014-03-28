@@ -4,7 +4,7 @@ using System.Collections;
 public class LineOfSight : MonoBehaviour {
 
 	private RenderTexture lightMap;
-	private Camera lightCam; 
+	private GameObject lightCam; 
 	public Material matLos;
 	public GameObject player;
 	public float sightRange;
@@ -15,10 +15,15 @@ public class LineOfSight : MonoBehaviour {
 		lightMap = new RenderTexture (Screen.width, Screen.height, 24);
 		lightMap.name = "lightMap";
 
+		player = GameObject.FindGameObjectWithTag("Player");
+
 		//setup the second camera
-		lightCam = transform.Find("Camera").camera;
-		lightCam.targetTexture = lightMap;
-		lightCam.cullingMask = (1 << LayerMask.NameToLayer("LightMap"));
+		lightCam = new GameObject ();
+		lightCam.name = name + "_LightMapClone";
+		lightCam.AddComponent<Camera>();
+		lightCam.camera.enabled = false;
+		lightCam.camera.targetTexture = lightMap;
+		lightCam.camera.cullingMask = (1 << LayerMask.NameToLayer("LightMap"));
 
 		//instantiate LoS light on the player
 		sightLight = player.AddComponent<Light>();
@@ -31,7 +36,7 @@ public class LineOfSight : MonoBehaviour {
 		matLos.SetTexture("_LightTex", lightMap);
 	}
 
-	void Update() { 
+	void OnPreRender() { 
 		//Get a list of all the lights
 		lights = FindObjectsOfType(typeof(Light)) as Light[];
 
@@ -41,8 +46,10 @@ public class LineOfSight : MonoBehaviour {
 		}
 		sightLight.enabled = true;
 
-		//render the light info
-		lightCam.Render();
+		//move the second camera and render the line of sight info
+		lightCam.transform.position = transform.position;
+		lightCam.transform.rotation = transform.rotation;
+		lightCam.camera.Render();
 
 		//re-enable all lights except the LoS light
 		foreach (Light light in lights) {
