@@ -36,6 +36,7 @@ public class Interface : MonoBehaviour {
 	}
 
 	void OnGUI() {
+
 		//Will Bar
 		Vector2 dimension = new Vector2 (Screen.width / 3, 50);
 		Vector2 anchor = new Vector2 ((Screen.width / 2) - (dimension.x / 2), Screen.height - dimension.y - 50);

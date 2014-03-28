@@ -11,7 +11,6 @@ public class BloodDestroy : MonoBehaviour {
 	// Use this for initialization
 	void Start() {
 		transform.localPosition = Vector3.up * offset;
-		print(offset);
 		startTimer = Time.time;
 		particles = transform.GetComponent<ParticleSystem>().maxParticles;
 	}
