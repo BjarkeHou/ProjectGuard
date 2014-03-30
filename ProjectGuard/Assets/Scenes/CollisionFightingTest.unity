@@ -4644,7 +4644,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPickupRange: 1.5
   damage: 25
-  name: 
+  weaponName: 
   age: 
   quality: 
   attackWillCost: 0
@@ -7423,7 +7423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPickupRange: 1.5
   damage: 25
-  name: 
+  weaponName: 
   age: 
   quality: 
   attackWillCost: 0
@@ -12313,7 +12313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPickupRange: 1.5
   damage: 25
-  name: DINMOR
+  weaponName: 
   age: 19
   quality: "\xD8V!"
   attackWillCost: -20
@@ -12501,7 +12501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPickupRange: 1.5
   damage: 25
-  name: 
+  weaponName: 
   age: 
   quality: 
   attackWillCost: 0
@@ -12669,8 +12669,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ghostWorld: {fileID: 2100000, guid: b502a759750477f41b3799ade81e65d8, type: 2}
-  blueshift: .25
   transition: 0
+  blueshift: .25
   waveCount: 15
   waveSize: 5
 --- !u!1 &2131042272
@@ -12776,7 +12776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPickupRange: 1.5
   damage: 25
-  name: 
+  weaponName: 
   age: 
   quality: 
   attackWillCost: 0
