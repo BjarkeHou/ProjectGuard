@@ -15,8 +15,6 @@ public class LineOfSight : MonoBehaviour {
 		lightMap = new RenderTexture (Screen.width, Screen.height, 24);
 		lightMap.name = "lightMap";
 
-		player = GameObject.FindGameObjectWithTag("Player");
-
 		//setup the second camera
 		lightCam = new GameObject ();
 		lightCam.name = name + "_LightMapClone";
@@ -36,22 +34,22 @@ public class LineOfSight : MonoBehaviour {
 		matLos.SetTexture("_LightTex", lightMap);
 	}
 
-	void OnPreRender() { 
-		//Get a list of all the lights
+	void OnPreRender() {
+		//Get a list of lights
 		lights = FindObjectsOfType(typeof(Light)) as Light[];
-
+		
 		//disable all lights except the LoS light
 		foreach (Light light in lights) {
 			light.enabled = false;
 		}
 		sightLight.enabled = true;
-
+		
 		//move the second camera and render the line of sight info
 		lightCam.transform.position = transform.position;
 		lightCam.transform.rotation = transform.rotation;
 		lightCam.camera.Render();
 
-		//re-enable all lights except the LoS light
+		//enable all lights and disable the LoS light
 		foreach (Light light in lights) {
 			light.enabled = true;
 		}
