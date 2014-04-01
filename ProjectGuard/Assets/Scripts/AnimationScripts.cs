@@ -25,6 +25,8 @@ public class AnimationScripts : MonoBehaviour {
 		animated.GetComponent<AttackController>().targetsHit.Clear();
 		//don't attack again
 		GetComponent<Animator>().SetBool("Attack", false);
+		//don't stab again
+		GetComponent<Animator>().SetBool("Stab", false);
 		//can't attack
 		GetComponent<Animator>().SetBool("CanAttack", false);
 		//can't move or rotate
@@ -49,6 +51,8 @@ public class AnimationScripts : MonoBehaviour {
 		GetComponent<Animator>().SetBool("Rebound", false);
 		//don't attack again
 		GetComponent<Animator>().SetBool("Attack", false);
+		//don't stab again
+		GetComponent<Animator>().SetBool("Stab", false);
 		//can't attack
 		GetComponent<Animator>().SetBool("CanAttack", false);
 		//can't move or rotate
