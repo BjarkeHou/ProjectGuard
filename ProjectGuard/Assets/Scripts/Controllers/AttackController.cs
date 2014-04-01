@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class AttackController : MonoBehaviour {
+public class AttackController : MonoBehaviour
+{
 	
-	private enum HitTypes {
+	private enum HitTypes
+	{
 		HIT,
 		REBOUND
 	}
@@ -14,22 +16,34 @@ public class AttackController : MonoBehaviour {
 	public List<GameObject> targetsHit;
 	private Animator anim;
 	private bool m_inAnAttack = false;
+	
+	public float rangeForAttack;
 
 	// Use this for initialization
-	void Start() {
+	void Start()
+	{
 		doesDamage = false;
-		targetsHit = new List<GameObject> ();
+		targetsHit = new List<GameObject>();
 		anim = playerModel.GetComponent<Animator>();
 	}
 
-	public void DeclareAttack() {
-		anim.SetBool("Attack", true);
+	public void DeclareAttack()
+	{
 		inAnAttack = true;
+		if (ThereIsSpaceForNormalAttack())
+		{
+			anim.SetBool("Attack", true);
+		} else
+		{
+			anim.SetBool("Stab", true);
+		}
 	}
 
 	//called from the equiped weapon
-	public void Hit(GameObject obj, float damage) {
-		if (!targetsHit.Contains(obj) && obj.tag != gameObject.tag) { 
+	public void Hit(GameObject obj, float damage)
+	{
+		if (!targetsHit.Contains(obj) && obj.tag != gameObject.tag)
+		{ 
 			//withdraw health
 			obj.GetComponent<HealthController>().adjustCurrentHealth(-(int)damage);
 			//add enemy to list of hit stuff
@@ -37,13 +51,30 @@ public class AttackController : MonoBehaviour {
 		}
 	}
 	//called from the equiped weapon
-	public void Rebound() {
+	public void Rebound()
+	{
 		//change animation
 		anim.SetBool("Rebound", true);
 	}
 	
-	public bool inAnAttack {
+	public bool inAnAttack
+	{
 		get { return m_inAnAttack;}
 		set { m_inAnAttack = value;}
+	}
+	
+	private bool ThereIsSpaceForNormalAttack()
+	{
+		bool returnValue = true;
+		
+		RaycastHit hit;
+		
+		if (Physics.Raycast(this.transform.position, this.transform.right, out hit, rangeForAttack))
+		{
+			if (hit.collider.tag == "Wall")
+				returnValue = false;
+		}
+		
+		return returnValue;
 	}
 }
