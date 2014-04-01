@@ -70,7 +70,8 @@ public class AttackController : MonoBehaviour {
 				//TEMP SOLUTION
 				anim.SetBool("Stab", true);
 			}
+		} else {
+			anim.SetBool("Stab", false);
 		}
-		//return returnValue;
 	}
 }
