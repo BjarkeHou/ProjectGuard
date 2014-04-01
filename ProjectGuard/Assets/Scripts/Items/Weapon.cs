@@ -41,7 +41,7 @@ public class Weapon : Item
 	{
 		BoxCollider b = collider as BoxCollider;
 		Vector3 pre = b.size;
-		b.size = new Vector3 (pre.x, pre.y * 1.5f, pre.z * 1.5f);
+		b.size = new Vector3 (pre.x, pre.y * 1.5f, pre.z * 3.5f);
 	}
 	
 	void OnMouseDown ()
