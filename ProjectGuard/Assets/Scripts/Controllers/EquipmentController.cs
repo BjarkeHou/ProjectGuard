@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum ItemType {
+public enum ItemType
+{
 	Weapon,
 	Helm
 }
 ;
 
-public class EquipmentController : MonoBehaviour {
+public class EquipmentController : MonoBehaviour
+{
 	public GameObject currentWeapon;
 	private GameObject currentHelm;
 	private Transform hand;
@@ -16,32 +18,42 @@ public class EquipmentController : MonoBehaviour {
 	private bool m_hasHelmEquipped = false;
 		
 	// Use this for initialization
-	void Start() {
-		hand = gameObject.transform.Find("Model").Find("Hand");
+	void Start ()
+	{
+		hand = gameObject.transform.Find ("Model").Find ("Hand");
 	}
 	
 	// Update is called once per frame
-	void LateUpdate() {
+	void LateUpdate ()
+	{
 		if (hasWeaponEquipped) {
 			currentWeapon.transform.position = hand.position + (currentWeapon.transform.position - holdPoint.position);
 			currentWeapon.transform.rotation = hand.rotation;
 		}
 	}
 		
-	public void Equip(GameObject weapon) {
+	public void Equip (GameObject weapon)
+	{
 		currentWeapon = weapon;
 		currentWeapon.rigidbody.isKinematic = true;
 		currentWeapon.rigidbody.useGravity = false;
-		holdPoint = weapon.transform.Find("HoldPoint");
+		holdPoint = weapon.transform.Find ("HoldPoint");
+		
+		Invoke ("InvokedWeaponEquipFlag", 0.1f);
+	}
+	
+	private void InvokedWeaponEquipFlag ()
+	{
 		hasWeaponEquipped = true;
 	}
 		
-	public void Drop(ItemType type) {
+	public void Drop (ItemType type)
+	{
 		// If there is a weapon equipped, and player is not in the middle of an attack
 		if (type == ItemType.Weapon && hasWeaponEquipped &&
-			!this.GetComponent<AttackController>().inAnAttack) {
+			!this.GetComponent<AttackController> ().inAnAttack) {
 		    		
-			currentWeapon.GetComponent<Weapon>().Dropped();
+			currentWeapon.GetComponent<Weapon> ().Dropped ();
 			currentWeapon.rigidbody.isKinematic = false;
 			currentWeapon.rigidbody.useGravity = true;
 			hasWeaponEquipped = false;
