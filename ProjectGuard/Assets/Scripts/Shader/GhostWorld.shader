@@ -1,6 +1,8 @@
 ﻿Shader "Hidden/GhostWorld" {
 Properties {
 	_Transition ("Transition", Range (0, 1)) = 0
+	_DeathTimer ("Death Timer", Range (0, 1)) = 0
+	_RevivalRange ("Revival Range", Range (0, 1)) = 0
 	
 	_MainTex ("View", 2D) = "View" {}
 	_BlueShift ("Blue Shift", Range (0, 1)) = 0.25
@@ -23,6 +25,8 @@ SubShader {
 		#include "UnityCG.cginc"
 		
 		half _Transition;
+		half _DeathTimer;
+		half _RevivalRange;
 
 		sampler2D _MainTex;
 		half _BlueShift;
@@ -58,7 +62,8 @@ SubShader {
 				
 				//sample pixels from overlay
 				if (_OverlayAlpha > 0) {
-					fixed4 overlay = tex2D(_Overlay, IN.uv);
+					float pulse = lerp(-1, 3, _DeathTimer);
+					fixed4 overlay = tex2D(_Overlay, IN.uv *(1 + pulse) - 0.5 * pulse);
 					_OverlayAlpha = lerp(0, _OverlayAlpha, _Transition);
 					original.rgb = lerp(original.rgb, overlay.rgb, overlay.a * _OverlayAlpha);
 				}

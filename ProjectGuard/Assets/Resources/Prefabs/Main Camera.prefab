@@ -42,7 +42,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -119,8 +119,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ghostWorld: {fileID: 2100000, guid: b502a759750477f41b3799ade81e65d8, type: 2}
-  blueshift: .25
   transition: 0
+  blueshift: .25
   waveCount: 15
   waveSize: 5
 --- !u!124 &12400000

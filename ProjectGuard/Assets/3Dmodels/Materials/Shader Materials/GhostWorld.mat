@@ -35,7 +35,7 @@ Material:
       data:
         first:
           name: _Transition
-        second: 0
+        second: 1
       data:
         first:
           name: _WaveCount
@@ -48,6 +48,14 @@ Material:
         first:
           name: _OverlayAlpha
         second: 1
+      data:
+        first:
+          name: _DeathTimer
+        second: 0
+      data:
+        first:
+          name: _RevivalRange
+        second: 0
     m_Colors:
       data:
         first:

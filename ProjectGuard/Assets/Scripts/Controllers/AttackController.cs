@@ -27,6 +27,7 @@ public class AttackController : MonoBehaviour
 		anim = playerModel.GetComponent<Animator>();
 	}
 
+<<<<<<< HEAD
 	public void DeclareAttack()
 	{
 		inAnAttack = true;
@@ -37,6 +38,20 @@ public class AttackController : MonoBehaviour
 		{
 			anim.SetBool("Stab", true);
 		}
+=======
+	void Update() {
+		//TEMP SOLUTION
+		ThereIsSpaceForNormalAttack();
+	}
+
+	public void DeclareAttack() {
+		inAnAttack = true;
+		//if (ThereIsSpaceForNormalAttack()) {
+		anim.SetBool("Attack", true);
+		//} else {
+		//	anim.SetBool("Stab", true);
+		//}
+>>>>>>> Pitch_Demo
 	}
 
 	//called from the equiped weapon
@@ -63,12 +78,17 @@ public class AttackController : MonoBehaviour
 		set { m_inAnAttack = value;}
 	}
 	
+<<<<<<< HEAD
 	private bool ThereIsSpaceForNormalAttack()
 	{
+=======
+	private void ThereIsSpaceForNormalAttack() {
+>>>>>>> Pitch_Demo
 		bool returnValue = true;
 		
 		RaycastHit hit;
 		
+<<<<<<< HEAD
 		if (Physics.Raycast(this.transform.position, this.transform.right, out hit, rangeForAttack))
 		{
 			if (hit.collider.tag == "Wall")
@@ -76,5 +96,16 @@ public class AttackController : MonoBehaviour
 		}
 		
 		return returnValue;
+=======
+		if (Physics.Raycast(this.transform.position, this.transform.right, out hit, rangeForAttack)) {
+			if (hit.transform.gameObject.layer == LayerMask.NameToLayer("LightMap")) {
+				returnValue = false;
+
+				//TEMP SOLUTION
+				anim.SetBool("Stab", true);
+			}
+		}
+		//return returnValue;
+>>>>>>> Pitch_Demo
 	}
 }
