@@ -59,13 +59,13 @@ public class AttackController : MonoBehaviour {
 	}
 	
 	private void ThereIsSpaceForNormalAttack() {
-		bool returnValue = true;
+		//bool returnValue = true;
 		
 		RaycastHit hit;
 		
 		if (Physics.Raycast(this.transform.position, this.transform.right, out hit, rangeForAttack)) {
 			if (hit.transform.gameObject.layer == LayerMask.NameToLayer("LightMap")) {
-				returnValue = false;
+				//returnValue = false;
 
 				//TEMP SOLUTION
 				anim.SetBool("Stab", true);

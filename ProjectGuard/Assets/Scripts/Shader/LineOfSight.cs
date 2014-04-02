@@ -28,7 +28,7 @@ public class LineOfSight : MonoBehaviour {
 		sightLight.color = new Color (0, 1, 0);
 		sightLight.range = sightRange;
 		sightLight.intensity = 8;
-		sightLight.cullingMask = (1 << LayerMask.NameToLayer("LightMap"));
+		sightLight.cullingMask &= ~(1 << LayerMask.NameToLayer("Default"));
 		sightLight.shadows = LightShadows.Hard;
 
 		matLos.SetTexture("_LightTex", lightMap);

@@ -27,7 +27,7 @@ public class CheckPoint : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		if (other.tag == "Player") {
+		if (other.tag == "Player" && gameManager.GetComponent<GhostWorldController>().deathTransition < 1) {
 			hCont = other.GetComponent<HealthController>();
 			hCont.adjustCurrentHealth(hCont.getMaxHealth() - hCont.getCurrentHealth());
 		}

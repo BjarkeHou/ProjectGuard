@@ -68,12 +68,9 @@ public class PlayerWillController : MonoBehaviour
 						depleteTimer = Time.time + 0.1f;
 						if (GetComponentInChildren<Weapon> ()) {
 								curWill += GetComponentInChildren<Weapon> ().attackWillCost; 
-								Debug.Log ("LOL");
 						} else {
 								curWill += handAttackAdj;
-								Debug.Log ("OMG");
 						}
-						print (curWill);
 						regenTimer = Time.time;
 				}
 		}
