@@ -25,28 +25,6 @@ public class PlayerWillController : MonoBehaviour
 		public float CurMaxWill { get { return curMaxWill; } }
 		public float CurWill { get { return curWill; } }
 
-<<<<<<< HEAD
-	// Use this for initialization
-	void Start ()
-	{
-				
-		healthCont = GetComponent<HealthController> ();
-		anim = transform.Find ("Model").GetComponent<Animator> ();
-
-		regenTimer = Time.time;
-		maxWill = healthCont.getMaxHealth ();
-		curMaxWill = healthCont.getCurrentHealth ();
-		curWill = maxWill;
-	}
-	
-
-	
-	// Update is called once per frame
-	void Update ()
-	{
-		if (Time.time > regenTimer + regenCD && curWill < curMaxWill) {
-			curWill += regenSpeed * Time.deltaTime;
-=======
 		// Use this for initialization
 		void Start ()
 		{
@@ -57,7 +35,6 @@ public class PlayerWillController : MonoBehaviour
 				maxWill = healthCont.getMaxHealth ();
 				curMaxWill = healthCont.getCurrentHealth ();
 				curWill = maxWill;
->>>>>>> Pitch_Demo
 		}
 	
 
@@ -85,20 +62,6 @@ public class PlayerWillController : MonoBehaviour
 				anim.SetFloat ("curWill", 1 - Mathf.InverseLerp (0, maxWill, curWill));
 		}
 
-<<<<<<< HEAD
-	public void Attack ()
-	{
-		if (Time.time > depleteTimer) {
-			depleteTimer = Time.time + 0.1f;
-			if (GetComponentInChildren<Weapon> ()) {
-				curWill += GetComponentInChildren<Weapon> ().attackWillCost; 
-				Debug.Log ("LOL");
-			} else {
-				curWill += handAttackAdj;
-				Debug.Log ("OMG");
-			}
-			regenTimer = Time.time;
-=======
 		public void Attack ()
 		{
 				if (Time.time > depleteTimer) {
@@ -110,7 +73,6 @@ public class PlayerWillController : MonoBehaviour
 						}
 						regenTimer = Time.time;
 				}
->>>>>>> Pitch_Demo
 		}
 
 		public void Parry () {
