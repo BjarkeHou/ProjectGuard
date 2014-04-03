@@ -12,16 +12,11 @@ public class EquipmentController : MonoBehaviour
 {
 	public GameObject currentWeapon;
 	private GameObject currentHelm;
-	private Transform hand;
+	public Transform hand;
 	private Transform holdPoint;
 	public bool m_hasWeaponEquipped = false;
 	private bool m_hasHelmEquipped = false;
-		
-	// Use this for initialization
-	void Start ()
-	{
-		hand = gameObject.transform.Find ("Model").Find ("Hand");
-	}
+
 	
 	// Update is called once per frame
 	void LateUpdate ()

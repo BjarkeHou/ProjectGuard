@@ -1,45 +1,45 @@
 fileFormatVersion: 2
-guid: bf701c8f90c31154aaeda11fb40681fc
+guid: 6c535cb19a09fae4dbdfa0f39ba53ebc
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
-    100000: BackJoint01
-    100002: Belt_back
-    100004: Belt_front
-    100006: Body
-    100008: Char
-    100010: ChestJoint01
-    100012: GlobalControl01
-    100014: HeadEndJoint01
-    100016: HeadJoint01
-    100018: Helmet
-    100020: Helmet1
-    100022: HipEndJoint01
-    100024: HipJoint01
-    100026: Left_AnkleJoint01
-    100028: Left_ArmJoint01
-    100030: Left_BallJoint01
-    100032: Left_ElbowJoint01
-    100034: Left_hip
-    100036: Left_hip1
-    100038: Left_indexControl01
-    100040: Left_IndexJoint_A01
-    100042: Left_IndexJoint_B01
-    100044: Left_IndexJoint_C01
-    100046: Left_IndexJoint_D01
-    100048: Left_KneeJoint01
-    100050: Left_shoulder
-    100052: Left_shoulder 1
-    100054: Left_ThighJoint01
-    100056: Left_thumbControl01
-    100058: Left_ThumbJoint_A01
-    100060: Left_ThumbJoint_B01
-    100062: Left_ThumbJoint_C01
-    100064: Left_ThumbJoint_D01
-    100066: Left_ToeJoint01
-    100068: Left_WristJoint01
-    100070: LeftHipArmor
-    100072: //RootNode
+    100000: //RootNode
+    100002: BackJoint01
+    100004: Belt_back
+    100006: Belt_front
+    100008: Body
+    100010: Char
+    100012: ChestJoint01
+    100014: GlobalControl01
+    100016: HeadEndJoint01
+    100018: HeadJoint01
+    100020: Helmet
+    100022: Helmet1
+    100024: HipEndJoint01
+    100026: HipJoint01
+    100028: Left_AnkleJoint01
+    100030: Left_ArmJoint01
+    100032: Left_BallJoint01
+    100034: Left_ElbowJoint01
+    100036: Left_hip
+    100038: Left_hip1
+    100040: Left_indexControl01
+    100042: Left_IndexJoint_A01
+    100044: Left_IndexJoint_B01
+    100046: Left_IndexJoint_C01
+    100048: Left_IndexJoint_D01
+    100050: Left_KneeJoint01
+    100052: Left_shoulder
+    100054: Left_shoulder 1
+    100056: Left_ThighJoint01
+    100058: Left_thumbControl01
+    100060: Left_ThumbJoint_A01
+    100062: Left_ThumbJoint_B01
+    100064: Left_ThumbJoint_C01
+    100066: Left_ThumbJoint_D01
+    100068: Left_ToeJoint01
+    100070: Left_WristJoint01
+    100072: LeftHipArmor
     100074: Liam_body
     100076: Model01
     100078: NeckJoint01
@@ -92,43 +92,43 @@ ModelImporter:
     100172: transform7
     100174: transform8
     100176: transform9
-    400000: BackJoint01
-    400002: Belt_back
-    400004: Belt_front
-    400006: Body
-    400008: Char
-    400010: ChestJoint01
-    400012: GlobalControl01
-    400014: HeadEndJoint01
-    400016: HeadJoint01
-    400018: Helmet
-    400020: Helmet1
-    400022: HipEndJoint01
-    400024: HipJoint01
-    400026: Left_AnkleJoint01
-    400028: Left_ArmJoint01
-    400030: Left_BallJoint01
-    400032: Left_ElbowJoint01
-    400034: Left_hip
-    400036: Left_hip1
-    400038: Left_indexControl01
-    400040: Left_IndexJoint_A01
-    400042: Left_IndexJoint_B01
-    400044: Left_IndexJoint_C01
-    400046: Left_IndexJoint_D01
-    400048: Left_KneeJoint01
-    400050: Left_shoulder
-    400052: Left_shoulder 1
-    400054: Left_ThighJoint01
-    400056: Left_thumbControl01
-    400058: Left_ThumbJoint_A01
-    400060: Left_ThumbJoint_B01
-    400062: Left_ThumbJoint_C01
-    400064: Left_ThumbJoint_D01
-    400066: Left_ToeJoint01
-    400068: Left_WristJoint01
-    400070: LeftHipArmor
-    400072: //RootNode
+    400000: //RootNode
+    400002: BackJoint01
+    400004: Belt_back
+    400006: Belt_front
+    400008: Body
+    400010: Char
+    400012: ChestJoint01
+    400014: GlobalControl01
+    400016: HeadEndJoint01
+    400018: HeadJoint01
+    400020: Helmet
+    400022: Helmet1
+    400024: HipEndJoint01
+    400026: HipJoint01
+    400028: Left_AnkleJoint01
+    400030: Left_ArmJoint01
+    400032: Left_BallJoint01
+    400034: Left_ElbowJoint01
+    400036: Left_hip
+    400038: Left_hip1
+    400040: Left_indexControl01
+    400042: Left_IndexJoint_A01
+    400044: Left_IndexJoint_B01
+    400046: Left_IndexJoint_C01
+    400048: Left_IndexJoint_D01
+    400050: Left_KneeJoint01
+    400052: Left_shoulder
+    400054: Left_shoulder 1
+    400056: Left_ThighJoint01
+    400058: Left_thumbControl01
+    400060: Left_ThumbJoint_A01
+    400062: Left_ThumbJoint_B01
+    400064: Left_ThumbJoint_C01
+    400066: Left_ThumbJoint_D01
+    400068: Left_ToeJoint01
+    400070: Left_WristJoint01
+    400072: LeftHipArmor
     400074: Liam_body
     400076: Model01
     400078: NeckJoint01
@@ -203,7 +203,15 @@ ModelImporter:
     4300010: Left_hip
     4300012: Belt_back
     4300014: Liam_body
-    7400000: Take 001
+    7400000: Run_Forward
+    7400002: Run_Back
+    7400004: Running_Left
+    7400006: Running_Right
+    7400008: Swing1
+    7400010: Swing2
+    7400012: Dodge_Forward
+    7400014: Dodging_Backwards
+    7400016: Idle
     9500000: //RootNode
     13700000: Liam_body
   materials:
@@ -214,13 +222,1849 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     optimizeGameObjects: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Run_Forward
+      takeName: Take 001
+      firstFrame: 2
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Char
+        weight: 0
+      - path: Char/Model01
+        weight: 0
+      - path: Char/Model01/Body
+        weight: 0
+      - path: Char/Model01/Body/transform1
+        weight: 0
+      - path: Char/Model01/Helmet1
+        weight: 0
+      - path: Char/Model01/Helmet1/transform2
+        weight: 0
+      - path: Char/Model01/Left_shoulder
+        weight: 0
+      - path: Char/Model01/Left_shoulder/transform4
+        weight: 0
+      - path: Char/Model01/LeftHipArmor
+        weight: 0
+      - path: Char/Model01/LeftHipArmor/transform5
+        weight: 0
+      - path: Char/Model01/Right_Shoulder
+        weight: 0
+      - path: Char/Model01/Right_Shoulder/transform3
+        weight: 0
+      - path: Char/Model01/RightHipArmor
+        weight: 0
+      - path: Char/Model01/RightHipArmor/transform6
+        weight: 0
+      - path: GlobalControl01
+        weight: 1
+      - path: GlobalControl01/RootJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_indexControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01/Left_IndexJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01/Left_IndexJoint_C01/Left_IndexJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_thumbControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01/Left_ThumbJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01/Left_ThumbJoint_C01/Left_ThumbJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_shoulder 1
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01/HeadEndJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01/Helmet
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_indexControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01/Right_IndexJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01/Right_IndexJoint_C01/Right_IndexJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_thumbControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01/Right_ThumbJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01/Right_ThumbJoint_C01/Right_ThumbJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_shoulder
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Belt_back
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Belt_front
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/HipEndJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_hip
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_hip1
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01/Left_BallJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01/Left_BallJoint01/Left_ToeJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01/Right_BallJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01/Right_BallJoint01/Right_ToeJoint01
+        weight: 0
+      - path: polySurface24
+        weight: 0
+      - path: polySurface24/Liam_body
+        weight: 0
+      - path: polySurface24/transform7
+        weight: 0
+      - path: polySurface45
+        weight: 0
+      - path: polySurface45/polySurface48
+        weight: 0
+      - path: polySurface45/polySurface48/transform13
+        weight: 0
+      - path: polySurface45/polySurface49
+        weight: 0
+      - path: polySurface45/polySurface49/transform14
+        weight: 0
+      - path: polySurface45/polySurface50
+        weight: 0
+      - path: polySurface45/polySurface50/transform11
+        weight: 0
+      - path: polySurface45/polySurface51
+        weight: 0
+      - path: polySurface45/polySurface51/transform12
+        weight: 0
+      - path: polySurface45/polySurface53
+        weight: 0
+      - path: polySurface45/polySurface53/transform16
+        weight: 0
+      - path: polySurface45/polySurface54
+        weight: 0
+      - path: polySurface45/polySurface54/transform15
+        weight: 0
+      - path: polySurface45/polySurface55
+        weight: 0
+      - path: polySurface45/polySurface55/transform10
+        weight: 0
+      - path: polySurface45/polySurface56
+        weight: 0
+      - path: polySurface45/polySurface56/transform9
+        weight: 0
+      - path: polySurface45/polySurface57
+        weight: 0
+      - path: polySurface45/polySurface57/transform8
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Run_Back
+      takeName: Take 001
+      firstFrame: 16
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Char
+        weight: 0
+      - path: Char/Model01
+        weight: 0
+      - path: Char/Model01/Body
+        weight: 0
+      - path: Char/Model01/Body/transform1
+        weight: 0
+      - path: Char/Model01/Helmet1
+        weight: 0
+      - path: Char/Model01/Helmet1/transform2
+        weight: 0
+      - path: Char/Model01/Left_shoulder
+        weight: 0
+      - path: Char/Model01/Left_shoulder/transform4
+        weight: 0
+      - path: Char/Model01/LeftHipArmor
+        weight: 0
+      - path: Char/Model01/LeftHipArmor/transform5
+        weight: 0
+      - path: Char/Model01/Right_Shoulder
+        weight: 0
+      - path: Char/Model01/Right_Shoulder/transform3
+        weight: 0
+      - path: Char/Model01/RightHipArmor
+        weight: 0
+      - path: Char/Model01/RightHipArmor/transform6
+        weight: 0
+      - path: GlobalControl01
+        weight: 1
+      - path: GlobalControl01/RootJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_indexControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01/Left_IndexJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01/Left_IndexJoint_C01/Left_IndexJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_thumbControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01/Left_ThumbJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01/Left_ThumbJoint_C01/Left_ThumbJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_shoulder 1
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01/HeadEndJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01/Helmet
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_indexControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01/Right_IndexJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01/Right_IndexJoint_C01/Right_IndexJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_thumbControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01/Right_ThumbJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01/Right_ThumbJoint_C01/Right_ThumbJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_shoulder
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Belt_back
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Belt_front
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/HipEndJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_hip
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_hip1
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01/Left_BallJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01/Left_BallJoint01/Left_ToeJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01/Right_BallJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01/Right_BallJoint01/Right_ToeJoint01
+        weight: 0
+      - path: polySurface24
+        weight: 0
+      - path: polySurface24/Liam_body
+        weight: 0
+      - path: polySurface24/transform7
+        weight: 0
+      - path: polySurface45
+        weight: 0
+      - path: polySurface45/polySurface48
+        weight: 0
+      - path: polySurface45/polySurface48/transform13
+        weight: 0
+      - path: polySurface45/polySurface49
+        weight: 0
+      - path: polySurface45/polySurface49/transform14
+        weight: 0
+      - path: polySurface45/polySurface50
+        weight: 0
+      - path: polySurface45/polySurface50/transform11
+        weight: 0
+      - path: polySurface45/polySurface51
+        weight: 0
+      - path: polySurface45/polySurface51/transform12
+        weight: 0
+      - path: polySurface45/polySurface53
+        weight: 0
+      - path: polySurface45/polySurface53/transform16
+        weight: 0
+      - path: polySurface45/polySurface54
+        weight: 0
+      - path: polySurface45/polySurface54/transform15
+        weight: 0
+      - path: polySurface45/polySurface55
+        weight: 0
+      - path: polySurface45/polySurface55/transform10
+        weight: 0
+      - path: polySurface45/polySurface56
+        weight: 0
+      - path: polySurface45/polySurface56/transform9
+        weight: 0
+      - path: polySurface45/polySurface57
+        weight: 0
+      - path: polySurface45/polySurface57/transform8
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Running_Left
+      takeName: Take 001
+      firstFrame: 30
+      lastFrame: 42
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Char
+        weight: 0
+      - path: Char/Model01
+        weight: 0
+      - path: Char/Model01/Body
+        weight: 0
+      - path: Char/Model01/Body/transform1
+        weight: 0
+      - path: Char/Model01/Helmet1
+        weight: 0
+      - path: Char/Model01/Helmet1/transform2
+        weight: 0
+      - path: Char/Model01/Left_shoulder
+        weight: 0
+      - path: Char/Model01/Left_shoulder/transform4
+        weight: 0
+      - path: Char/Model01/LeftHipArmor
+        weight: 0
+      - path: Char/Model01/LeftHipArmor/transform5
+        weight: 0
+      - path: Char/Model01/Right_Shoulder
+        weight: 0
+      - path: Char/Model01/Right_Shoulder/transform3
+        weight: 0
+      - path: Char/Model01/RightHipArmor
+        weight: 0
+      - path: Char/Model01/RightHipArmor/transform6
+        weight: 0
+      - path: GlobalControl01
+        weight: 1
+      - path: GlobalControl01/RootJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_indexControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01/Left_IndexJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01/Left_IndexJoint_C01/Left_IndexJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_thumbControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01/Left_ThumbJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01/Left_ThumbJoint_C01/Left_ThumbJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_shoulder 1
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01/HeadEndJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01/Helmet
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_indexControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01/Right_IndexJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01/Right_IndexJoint_C01/Right_IndexJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_thumbControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01/Right_ThumbJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01/Right_ThumbJoint_C01/Right_ThumbJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_shoulder
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Belt_back
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Belt_front
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/HipEndJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_hip
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_hip1
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01/Left_BallJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01/Left_BallJoint01/Left_ToeJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01/Right_BallJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01/Right_BallJoint01/Right_ToeJoint01
+        weight: 0
+      - path: polySurface24
+        weight: 0
+      - path: polySurface24/Liam_body
+        weight: 0
+      - path: polySurface24/transform7
+        weight: 0
+      - path: polySurface45
+        weight: 0
+      - path: polySurface45/polySurface48
+        weight: 0
+      - path: polySurface45/polySurface48/transform13
+        weight: 0
+      - path: polySurface45/polySurface49
+        weight: 0
+      - path: polySurface45/polySurface49/transform14
+        weight: 0
+      - path: polySurface45/polySurface50
+        weight: 0
+      - path: polySurface45/polySurface50/transform11
+        weight: 0
+      - path: polySurface45/polySurface51
+        weight: 0
+      - path: polySurface45/polySurface51/transform12
+        weight: 0
+      - path: polySurface45/polySurface53
+        weight: 0
+      - path: polySurface45/polySurface53/transform16
+        weight: 0
+      - path: polySurface45/polySurface54
+        weight: 0
+      - path: polySurface45/polySurface54/transform15
+        weight: 0
+      - path: polySurface45/polySurface55
+        weight: 0
+      - path: polySurface45/polySurface55/transform10
+        weight: 0
+      - path: polySurface45/polySurface56
+        weight: 0
+      - path: polySurface45/polySurface56/transform9
+        weight: 0
+      - path: polySurface45/polySurface57
+        weight: 0
+      - path: polySurface45/polySurface57/transform8
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Running_Right
+      takeName: Take 001
+      firstFrame: 46
+      lastFrame: 57
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Char
+        weight: 0
+      - path: Char/Model01
+        weight: 0
+      - path: Char/Model01/Body
+        weight: 0
+      - path: Char/Model01/Body/transform1
+        weight: 0
+      - path: Char/Model01/Helmet1
+        weight: 0
+      - path: Char/Model01/Helmet1/transform2
+        weight: 0
+      - path: Char/Model01/Left_shoulder
+        weight: 0
+      - path: Char/Model01/Left_shoulder/transform4
+        weight: 0
+      - path: Char/Model01/LeftHipArmor
+        weight: 0
+      - path: Char/Model01/LeftHipArmor/transform5
+        weight: 0
+      - path: Char/Model01/Right_Shoulder
+        weight: 0
+      - path: Char/Model01/Right_Shoulder/transform3
+        weight: 0
+      - path: Char/Model01/RightHipArmor
+        weight: 0
+      - path: Char/Model01/RightHipArmor/transform6
+        weight: 0
+      - path: GlobalControl01
+        weight: 1
+      - path: GlobalControl01/RootJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_indexControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01/Left_IndexJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01/Left_IndexJoint_C01/Left_IndexJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_thumbControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01/Left_ThumbJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01/Left_ThumbJoint_C01/Left_ThumbJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_shoulder 1
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01/HeadEndJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01/Helmet
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_indexControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01/Right_IndexJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01/Right_IndexJoint_C01/Right_IndexJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_thumbControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01/Right_ThumbJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01/Right_ThumbJoint_C01/Right_ThumbJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_shoulder
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Belt_back
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Belt_front
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/HipEndJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_hip
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_hip1
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01/Left_BallJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01/Left_BallJoint01/Left_ToeJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01/Right_BallJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01/Right_BallJoint01/Right_ToeJoint01
+        weight: 0
+      - path: polySurface24
+        weight: 0
+      - path: polySurface24/Liam_body
+        weight: 0
+      - path: polySurface24/transform7
+        weight: 0
+      - path: polySurface45
+        weight: 0
+      - path: polySurface45/polySurface48
+        weight: 0
+      - path: polySurface45/polySurface48/transform13
+        weight: 0
+      - path: polySurface45/polySurface49
+        weight: 0
+      - path: polySurface45/polySurface49/transform14
+        weight: 0
+      - path: polySurface45/polySurface50
+        weight: 0
+      - path: polySurface45/polySurface50/transform11
+        weight: 0
+      - path: polySurface45/polySurface51
+        weight: 0
+      - path: polySurface45/polySurface51/transform12
+        weight: 0
+      - path: polySurface45/polySurface53
+        weight: 0
+      - path: polySurface45/polySurface53/transform16
+        weight: 0
+      - path: polySurface45/polySurface54
+        weight: 0
+      - path: polySurface45/polySurface54/transform15
+        weight: 0
+      - path: polySurface45/polySurface55
+        weight: 0
+      - path: polySurface45/polySurface55/transform10
+        weight: 0
+      - path: polySurface45/polySurface56
+        weight: 0
+      - path: polySurface45/polySurface56/transform9
+        weight: 0
+      - path: polySurface45/polySurface57
+        weight: 0
+      - path: polySurface45/polySurface57/transform8
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Swing1
+      takeName: Take 001
+      firstFrame: 60
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Char
+        weight: 0
+      - path: Char/Model01
+        weight: 0
+      - path: Char/Model01/Body
+        weight: 0
+      - path: Char/Model01/Body/transform1
+        weight: 0
+      - path: Char/Model01/Helmet1
+        weight: 0
+      - path: Char/Model01/Helmet1/transform2
+        weight: 0
+      - path: Char/Model01/Left_shoulder
+        weight: 0
+      - path: Char/Model01/Left_shoulder/transform4
+        weight: 0
+      - path: Char/Model01/LeftHipArmor
+        weight: 0
+      - path: Char/Model01/LeftHipArmor/transform5
+        weight: 0
+      - path: Char/Model01/Right_Shoulder
+        weight: 0
+      - path: Char/Model01/Right_Shoulder/transform3
+        weight: 0
+      - path: Char/Model01/RightHipArmor
+        weight: 0
+      - path: Char/Model01/RightHipArmor/transform6
+        weight: 0
+      - path: GlobalControl01
+        weight: 1
+      - path: GlobalControl01/RootJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_indexControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01/Left_IndexJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01/Left_IndexJoint_C01/Left_IndexJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_thumbControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01/Left_ThumbJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01/Left_ThumbJoint_C01/Left_ThumbJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_shoulder 1
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01/HeadEndJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01/Helmet
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_indexControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01/Right_IndexJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01/Right_IndexJoint_C01/Right_IndexJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_thumbControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01/Right_ThumbJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01/Right_ThumbJoint_C01/Right_ThumbJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_shoulder
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Belt_back
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Belt_front
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/HipEndJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_hip
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_hip1
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01/Left_BallJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01/Left_BallJoint01/Left_ToeJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01/Right_BallJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01/Right_BallJoint01/Right_ToeJoint01
+        weight: 0
+      - path: polySurface24
+        weight: 0
+      - path: polySurface24/Liam_body
+        weight: 0
+      - path: polySurface24/transform7
+        weight: 0
+      - path: polySurface45
+        weight: 0
+      - path: polySurface45/polySurface48
+        weight: 0
+      - path: polySurface45/polySurface48/transform13
+        weight: 0
+      - path: polySurface45/polySurface49
+        weight: 0
+      - path: polySurface45/polySurface49/transform14
+        weight: 0
+      - path: polySurface45/polySurface50
+        weight: 0
+      - path: polySurface45/polySurface50/transform11
+        weight: 0
+      - path: polySurface45/polySurface51
+        weight: 0
+      - path: polySurface45/polySurface51/transform12
+        weight: 0
+      - path: polySurface45/polySurface53
+        weight: 0
+      - path: polySurface45/polySurface53/transform16
+        weight: 0
+      - path: polySurface45/polySurface54
+        weight: 0
+      - path: polySurface45/polySurface54/transform15
+        weight: 0
+      - path: polySurface45/polySurface55
+        weight: 0
+      - path: polySurface45/polySurface55/transform10
+        weight: 0
+      - path: polySurface45/polySurface56
+        weight: 0
+      - path: polySurface45/polySurface56/transform9
+        weight: 0
+      - path: polySurface45/polySurface57
+        weight: 0
+      - path: polySurface45/polySurface57/transform8
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Swing2
+      takeName: Take 001
+      firstFrame: 79
+      lastFrame: 87
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Char
+        weight: 0
+      - path: Char/Model01
+        weight: 0
+      - path: Char/Model01/Body
+        weight: 0
+      - path: Char/Model01/Body/transform1
+        weight: 0
+      - path: Char/Model01/Helmet1
+        weight: 0
+      - path: Char/Model01/Helmet1/transform2
+        weight: 0
+      - path: Char/Model01/Left_shoulder
+        weight: 0
+      - path: Char/Model01/Left_shoulder/transform4
+        weight: 0
+      - path: Char/Model01/LeftHipArmor
+        weight: 0
+      - path: Char/Model01/LeftHipArmor/transform5
+        weight: 0
+      - path: Char/Model01/Right_Shoulder
+        weight: 0
+      - path: Char/Model01/Right_Shoulder/transform3
+        weight: 0
+      - path: Char/Model01/RightHipArmor
+        weight: 0
+      - path: Char/Model01/RightHipArmor/transform6
+        weight: 0
+      - path: GlobalControl01
+        weight: 1
+      - path: GlobalControl01/RootJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_indexControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01/Left_IndexJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01/Left_IndexJoint_C01/Left_IndexJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_thumbControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01/Left_ThumbJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01/Left_ThumbJoint_C01/Left_ThumbJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_shoulder 1
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01/HeadEndJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01/Helmet
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_indexControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01/Right_IndexJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01/Right_IndexJoint_C01/Right_IndexJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_thumbControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01/Right_ThumbJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01/Right_ThumbJoint_C01/Right_ThumbJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_shoulder
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Belt_back
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Belt_front
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/HipEndJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_hip
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_hip1
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01/Left_BallJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01/Left_BallJoint01/Left_ToeJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01/Right_BallJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01/Right_BallJoint01/Right_ToeJoint01
+        weight: 0
+      - path: polySurface24
+        weight: 0
+      - path: polySurface24/Liam_body
+        weight: 0
+      - path: polySurface24/transform7
+        weight: 0
+      - path: polySurface45
+        weight: 0
+      - path: polySurface45/polySurface48
+        weight: 0
+      - path: polySurface45/polySurface48/transform13
+        weight: 0
+      - path: polySurface45/polySurface49
+        weight: 0
+      - path: polySurface45/polySurface49/transform14
+        weight: 0
+      - path: polySurface45/polySurface50
+        weight: 0
+      - path: polySurface45/polySurface50/transform11
+        weight: 0
+      - path: polySurface45/polySurface51
+        weight: 0
+      - path: polySurface45/polySurface51/transform12
+        weight: 0
+      - path: polySurface45/polySurface53
+        weight: 0
+      - path: polySurface45/polySurface53/transform16
+        weight: 0
+      - path: polySurface45/polySurface54
+        weight: 0
+      - path: polySurface45/polySurface54/transform15
+        weight: 0
+      - path: polySurface45/polySurface55
+        weight: 0
+      - path: polySurface45/polySurface55/transform10
+        weight: 0
+      - path: polySurface45/polySurface56
+        weight: 0
+      - path: polySurface45/polySurface56/transform9
+        weight: 0
+      - path: polySurface45/polySurface57
+        weight: 0
+      - path: polySurface45/polySurface57/transform8
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Dodge_Forward
+      takeName: Take 001
+      firstFrame: 89
+      lastFrame: 101
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Char
+        weight: 0
+      - path: Char/Model01
+        weight: 0
+      - path: Char/Model01/Body
+        weight: 0
+      - path: Char/Model01/Body/transform1
+        weight: 0
+      - path: Char/Model01/Helmet1
+        weight: 0
+      - path: Char/Model01/Helmet1/transform2
+        weight: 0
+      - path: Char/Model01/Left_shoulder
+        weight: 0
+      - path: Char/Model01/Left_shoulder/transform4
+        weight: 0
+      - path: Char/Model01/LeftHipArmor
+        weight: 0
+      - path: Char/Model01/LeftHipArmor/transform5
+        weight: 0
+      - path: Char/Model01/Right_Shoulder
+        weight: 0
+      - path: Char/Model01/Right_Shoulder/transform3
+        weight: 0
+      - path: Char/Model01/RightHipArmor
+        weight: 0
+      - path: Char/Model01/RightHipArmor/transform6
+        weight: 0
+      - path: GlobalControl01
+        weight: 1
+      - path: GlobalControl01/RootJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_indexControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01/Left_IndexJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01/Left_IndexJoint_C01/Left_IndexJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_thumbControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01/Left_ThumbJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01/Left_ThumbJoint_C01/Left_ThumbJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_shoulder 1
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01/HeadEndJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01/Helmet
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_indexControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01/Right_IndexJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01/Right_IndexJoint_C01/Right_IndexJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_thumbControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01/Right_ThumbJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01/Right_ThumbJoint_C01/Right_ThumbJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_shoulder
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Belt_back
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Belt_front
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/HipEndJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_hip
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_hip1
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01/Left_BallJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01/Left_BallJoint01/Left_ToeJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01/Right_BallJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01/Right_BallJoint01/Right_ToeJoint01
+        weight: 0
+      - path: polySurface24
+        weight: 0
+      - path: polySurface24/Liam_body
+        weight: 0
+      - path: polySurface24/transform7
+        weight: 0
+      - path: polySurface45
+        weight: 0
+      - path: polySurface45/polySurface48
+        weight: 0
+      - path: polySurface45/polySurface48/transform13
+        weight: 0
+      - path: polySurface45/polySurface49
+        weight: 0
+      - path: polySurface45/polySurface49/transform14
+        weight: 0
+      - path: polySurface45/polySurface50
+        weight: 0
+      - path: polySurface45/polySurface50/transform11
+        weight: 0
+      - path: polySurface45/polySurface51
+        weight: 0
+      - path: polySurface45/polySurface51/transform12
+        weight: 0
+      - path: polySurface45/polySurface53
+        weight: 0
+      - path: polySurface45/polySurface53/transform16
+        weight: 0
+      - path: polySurface45/polySurface54
+        weight: 0
+      - path: polySurface45/polySurface54/transform15
+        weight: 0
+      - path: polySurface45/polySurface55
+        weight: 0
+      - path: polySurface45/polySurface55/transform10
+        weight: 0
+      - path: polySurface45/polySurface56
+        weight: 0
+      - path: polySurface45/polySurface56/transform9
+        weight: 0
+      - path: polySurface45/polySurface57
+        weight: 0
+      - path: polySurface45/polySurface57/transform8
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Dodging_Backwards
+      takeName: Take 001
+      firstFrame: 103
+      lastFrame: 115
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Char
+        weight: 0
+      - path: Char/Model01
+        weight: 0
+      - path: Char/Model01/Body
+        weight: 0
+      - path: Char/Model01/Body/transform1
+        weight: 0
+      - path: Char/Model01/Helmet1
+        weight: 0
+      - path: Char/Model01/Helmet1/transform2
+        weight: 0
+      - path: Char/Model01/Left_shoulder
+        weight: 0
+      - path: Char/Model01/Left_shoulder/transform4
+        weight: 0
+      - path: Char/Model01/LeftHipArmor
+        weight: 0
+      - path: Char/Model01/LeftHipArmor/transform5
+        weight: 0
+      - path: Char/Model01/Right_Shoulder
+        weight: 0
+      - path: Char/Model01/Right_Shoulder/transform3
+        weight: 0
+      - path: Char/Model01/RightHipArmor
+        weight: 0
+      - path: Char/Model01/RightHipArmor/transform6
+        weight: 0
+      - path: GlobalControl01
+        weight: 1
+      - path: GlobalControl01/RootJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_indexControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01/Left_IndexJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01/Left_IndexJoint_C01/Left_IndexJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_thumbControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01/Left_ThumbJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01/Left_ThumbJoint_C01/Left_ThumbJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_shoulder 1
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01/HeadEndJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01/Helmet
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_indexControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01/Right_IndexJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01/Right_IndexJoint_C01/Right_IndexJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_thumbControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01/Right_ThumbJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01/Right_ThumbJoint_C01/Right_ThumbJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_shoulder
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Belt_back
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Belt_front
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/HipEndJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_hip
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_hip1
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01/Left_BallJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01/Left_BallJoint01/Left_ToeJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01/Right_BallJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01/Right_BallJoint01/Right_ToeJoint01
+        weight: 0
+      - path: polySurface24
+        weight: 0
+      - path: polySurface24/Liam_body
+        weight: 0
+      - path: polySurface24/transform7
+        weight: 0
+      - path: polySurface45
+        weight: 0
+      - path: polySurface45/polySurface48
+        weight: 0
+      - path: polySurface45/polySurface48/transform13
+        weight: 0
+      - path: polySurface45/polySurface49
+        weight: 0
+      - path: polySurface45/polySurface49/transform14
+        weight: 0
+      - path: polySurface45/polySurface50
+        weight: 0
+      - path: polySurface45/polySurface50/transform11
+        weight: 0
+      - path: polySurface45/polySurface51
+        weight: 0
+      - path: polySurface45/polySurface51/transform12
+        weight: 0
+      - path: polySurface45/polySurface53
+        weight: 0
+      - path: polySurface45/polySurface53/transform16
+        weight: 0
+      - path: polySurface45/polySurface54
+        weight: 0
+      - path: polySurface45/polySurface54/transform15
+        weight: 0
+      - path: polySurface45/polySurface55
+        weight: 0
+      - path: polySurface45/polySurface55/transform10
+        weight: 0
+      - path: polySurface45/polySurface56
+        weight: 0
+      - path: polySurface45/polySurface56/transform9
+        weight: 0
+      - path: polySurface45/polySurface57
+        weight: 0
+      - path: polySurface45/polySurface57/transform8
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 101
+      lastFrame: 102
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Char
+        weight: 0
+      - path: Char/Model01
+        weight: 0
+      - path: Char/Model01/Body
+        weight: 0
+      - path: Char/Model01/Body/transform1
+        weight: 0
+      - path: Char/Model01/Helmet1
+        weight: 0
+      - path: Char/Model01/Helmet1/transform2
+        weight: 0
+      - path: Char/Model01/Left_shoulder
+        weight: 0
+      - path: Char/Model01/Left_shoulder/transform4
+        weight: 0
+      - path: Char/Model01/LeftHipArmor
+        weight: 0
+      - path: Char/Model01/LeftHipArmor/transform5
+        weight: 0
+      - path: Char/Model01/Right_Shoulder
+        weight: 0
+      - path: Char/Model01/Right_Shoulder/transform3
+        weight: 0
+      - path: Char/Model01/RightHipArmor
+        weight: 0
+      - path: Char/Model01/RightHipArmor/transform6
+        weight: 0
+      - path: GlobalControl01
+        weight: 1
+      - path: GlobalControl01/RootJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_indexControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01/Left_IndexJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01/Left_IndexJoint_C01/Left_IndexJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_thumbControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01/Left_ThumbJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01/Left_ThumbJoint_C01/Left_ThumbJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_shoulder 1
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01/HeadEndJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01/Helmet
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_indexControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01/Right_IndexJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01/Right_IndexJoint_C01/Right_IndexJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_thumbControl01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01/Right_ThumbJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01/Right_ThumbJoint_C01/Right_ThumbJoint_D01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_shoulder
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Belt_back
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Belt_front
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/HipEndJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_hip
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_hip1
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01/Left_BallJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01/Left_AnkleJoint01/Left_BallJoint01/Left_ToeJoint01
+        weight: 0
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01/Right_BallJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01/Right_BallJoint01/Right_ToeJoint01
+        weight: 0
+      - path: polySurface24
+        weight: 0
+      - path: polySurface24/Liam_body
+        weight: 0
+      - path: polySurface24/transform7
+        weight: 0
+      - path: polySurface45
+        weight: 0
+      - path: polySurface45/polySurface48
+        weight: 0
+      - path: polySurface45/polySurface48/transform13
+        weight: 0
+      - path: polySurface45/polySurface49
+        weight: 0
+      - path: polySurface45/polySurface49/transform14
+        weight: 0
+      - path: polySurface45/polySurface50
+        weight: 0
+      - path: polySurface45/polySurface50/transform11
+        weight: 0
+      - path: polySurface45/polySurface51
+        weight: 0
+      - path: polySurface45/polySurface51/transform12
+        weight: 0
+      - path: polySurface45/polySurface53
+        weight: 0
+      - path: polySurface45/polySurface53/transform16
+        weight: 0
+      - path: polySurface45/polySurface54
+        weight: 0
+      - path: polySurface45/polySurface54/transform15
+        weight: 0
+      - path: polySurface45/polySurface55
+        weight: 0
+      - path: polySurface45/polySurface55/transform10
+        weight: 0
+      - path: polySurface45/polySurface56
+        weight: 0
+      - path: polySurface45/polySurface56/transform9
+        weight: 0
+      - path: polySurface45/polySurface57
+        weight: 0
+      - path: polySurface45/polySurface57/transform8
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -245,8 +2089,701 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    human: []
-    skeleton: []
+    human:
+    - boneName: RootJoint01
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left_ThighJoint01
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right_ThighJoint01
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left_KneeJoint01
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right_KneeJoint01
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left_AnkleJoint01
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right_AnkleJoint01
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BackJoint01
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ChestJoint01
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: NeckJoint01
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: HeadJoint01
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left_ArmJoint01
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right_ArmJoint01
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left_ElbowJoint01
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right_ElbowJoint01
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left_WristJoint01
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right_WristJoint01
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left_BallJoint01
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right_BallJoint01
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left_ThumbJoint_A01
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left_ThumbJoint_B01
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left_ThumbJoint_C01
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left_IndexJoint_A01
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left_IndexJoint_B01
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left_IndexJoint_C01
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right_ThumbJoint_A01
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right_ThumbJoint_B01
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right_ThumbJoint_C01
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right_IndexJoint_A01
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right_IndexJoint_B01
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right_IndexJoint_C01
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Liam(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Char
+      position: {x: 0, y: .939043045, z: 0}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Model01
+      position: {x: -0, y: -.939043045, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Body
+      position: {x: -0, y: -.00745090283, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Helmet1
+      position: {x: -0, y: -.00745090283, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform2
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_shoulder
+      position: {x: -0, y: -.00745090283, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform4
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LeftHipArmor
+      position: {x: -0, y: -.00745090283, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform5
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_Shoulder
+      position: {x: -0, y: -.00745090283, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform3
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RightHipArmor
+      position: {x: -0, y: -.00745090283, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform6
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: GlobalControl01
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RootJoint01
+      position: {x: -2.28704204e-34, y: .549427092, z: .0328972898}
+      rotation: {x: -.499245942, y: .500752926, z: -.499245942, w: .500752926}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: BackJoint01
+      position: {x: -.264156789, y: -.0216735806, z: 3.17226313e-17}
+      rotation: {x: .999917209, y: -.0128682908, z: -1.9361405e-16, w: 5.87457252e-17}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: ChestJoint01
+      position: {x: -.255959988, y: -.0206246506, z: -2.78543906e-17}
+      rotation: {x: .999399364, y: -.0346539244, z: 1.66681115e-16, w: -5.54895122e-17}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_ArmJoint01
+      position: {x: -.0668096095, y: .0320787393, z: -.241840303}
+      rotation: {x: .68592453, y: -.30346185, z: .219098762, w: .624030709}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_ElbowJoint01
+      position: {x: -.193453997, y: -.224859819, z: .0393384025}
+      rotation: {x: -.0240208488, y: -.0140455384, z: -.211515531, w: .976978421}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_WristJoint01
+      position: {x: -.0769814178, y: -.289387167, z: .027958991}
+      rotation: {x: -.00600650255, y: -.0114216767, z: .00149470801, w: .9999156}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_indexControl01
+      position: {x: -.00811315235, y: -.084689647, z: .00632922119}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_IndexJoint_A01
+      position: {x: -.00811315235, y: -.084689647, z: .00632922119}
+      rotation: {x: .0498607419, y: -.0395063125, z: -.228453785, w: .971474171}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_IndexJoint_B01
+      position: {x: .013698942, y: -.0453599393, z: .0108339153}
+      rotation: {x: -.00461981073, y: -.00807321351, z: -.0279598534, w: .99956584}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_IndexJoint_C01
+      position: {x: .0135969371, y: -.0295434892, z: .00628386391}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_IndexJoint_D01
+      position: {x: .0142005198, y: -.0308550373, z: .00656298827}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_thumbControl01
+      position: {x: -.00552183855, y: -.038341485, z: .00414074445}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_ThumbJoint_A01
+      position: {x: -.00552183855, y: -.038341485, z: .00414074445}
+      rotation: {x: .0713449717, y: -.402616709, z: -.317974448, w: .855395854}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_ThumbJoint_B01
+      position: {x: .0302791595, y: -.00704195397, z: .0157101694}
+      rotation: {x: -.0349336788, y: -.0699778497, z: .0820259452, w: .993556499}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_ThumbJoint_C01
+      position: {x: .0237864107, y: -.0123956203, z: .00841438584}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_ThumbJoint_D01
+      position: {x: .0295062307, y: -.0153749799, z: .0104363598}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_shoulder 1
+      position: {x: 1.06913006, y: -.0208925363, z: 0}
+      rotation: {x: .488215774, y: -.511512876, z: .488215774, w: .511512876}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: NeckJoint01
+      position: {x: -.224888995, y: -.0121764699, z: 2.24370706e-17}
+      rotation: {x: 1.41313934e-16, y: -2.96620086e-17, z: .0312724486, w: .999510884}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: HeadJoint01
+      position: {x: -.0852621868, y: -9.7144508e-17, z: 8.3897993e-18}
+      rotation: {x: 9.02912141e-18, y: -3.11296718e-17, z: .162654206, w: .98668313}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: HeadEndJoint01
+      position: {x: -.393205196, y: 8.32667268e-17, z: 1.83449105e-17}
+      rotation: {x: .380053014, y: -.596288264, z: .380053014, w: .596288264}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Helmet
+      position: {x: 1.274629, y: -.52658242, z: -2.72150945e-16}
+      rotation: {x: .380053043, y: -.596288264, z: .380053043, w: .596288264}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_ArmJoint01
+      position: {x: -.0668055713, y: .0320785493, z: .241840005}
+      rotation: {x: .303143114, y: .686046898, z: .623949468, w: -.219387725}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_ElbowJoint01
+      position: {x: .193453997, y: .224855989, z: -.0393383726}
+      rotation: {x: -.023998389, y: -.0140514579, z: -.211514935, w: .976979017}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_WristJoint01
+      position: {x: .0769820064, y: .289387017, z: -.0279590264}
+      rotation: {x: -.00624714512, y: -.0118791535, z: .00155458821, w: .999908745}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_indexControl01
+      position: {x: .00811300427, y: .0846900046, z: -.00632926449}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_IndexJoint_A01
+      position: {x: .00811300427, y: .0846900046, z: -.00632926449}
+      rotation: {x: .0499290377, y: -.0394912995, z: -.228478506, w: .971465468}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_IndexJoint_B01
+      position: {x: -.0136990044, y: .0453600064, z: -.0108338632}
+      rotation: {x: -.00770565402, y: -.0103993025, z: -.0337970406, w: .999344945}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_IndexJoint_C01
+      position: {x: -.0141709996, y: .0299999993, z: -.00600000005}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_IndexJoint_D01
+      position: {x: -.0136270048, y: .0296070203, z: -.00629746914}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_thumbControl01
+      position: {x: .00552200107, y: .0383410007, z: -.00414078543}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_ThumbJoint_A01
+      position: {x: .00552200107, y: .0383410007, z: -.00414078543}
+      rotation: {x: .0738262758, y: -.40061307, z: -.316034496, w: .85684365}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_ThumbJoint_B01
+      position: {x: -.0302800201, y: .00704201497, z: -.0160000008}
+      rotation: {x: -.0361554921, y: -.0723132491, z: .0819424167, w: .993352413}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_ThumbJoint_C01
+      position: {x: -.0237860102, y: .0123960096, z: -.00841427036}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_ThumbJoint_D01
+      position: {x: -.0295060091, y: .0153750097, z: -.0104359603}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_shoulder
+      position: {x: 1.06913006, y: -.0208925363, z: 0}
+      rotation: {x: .488215774, y: -.511512876, z: .488215774, w: .511512876}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: HipJoint01
+      position: {x: -.196627393, y: -.0395314917, z: 2.62189007e-17}
+      rotation: {x: 1.79172668e-16, y: -2.52917526e-16, z: .999196172, w: .0400883406}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Belt_back
+      position: {x: -.738083065, y: -.130321145, z: -2.14449777e-16}
+      rotation: {x: -.480336428, y: -.518919051, z: -.480336428, w: .518919051}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Belt_front
+      position: {x: -.738083065, y: -.130321145, z: -2.14449777e-16}
+      rotation: {x: -.480336428, y: -.518919051, z: -.480336428, w: .518919051}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: HipEndJoint01
+      position: {x: -.251414388, y: -1.00614001e-16, z: 5.58252218e-17}
+      rotation: {x: -.480336428, y: -.518919051, z: -.480336428, w: .518919051}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_hip
+      position: {x: -.738083065, y: -.130321145, z: -2.14449777e-16}
+      rotation: {x: -.480336428, y: -.518919051, z: -.480336428, w: .518919051}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_hip1
+      position: {x: -.738083065, y: -.130321145, z: -2.14449777e-16}
+      rotation: {x: -.480336428, y: -.518919051, z: -.480336428, w: .518919051}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_ThighJoint01
+      position: {x: -.193844199, y: -.0553920493, z: -.177747399}
+      rotation: {x: .485274941, y: .566641152, z: .432865113, w: -.506017685}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_KneeJoint01
+      position: {x: -.00304600294, y: -.181513518, z: .0616230629}
+      rotation: {x: -.00286382041, y: .000168250277, z: .000312771357, w: .999995828}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_AnkleJoint01
+      position: {x: -.021943083, y: -.245288536, z: -.0630415007}
+      rotation: {x: -.0359221026, y: .0564714856, z: .00176681241, w: .997756183}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_BallJoint01
+      position: {x: .00463535497, y: -.116950341, z: .105719}
+      rotation: {x: 1.0691904e-09, y: 1.10939081e-16, z: -6.91383799e-14, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_ToeJoint01
+      position: {x: -.00243757316, y: 6.78283468e-05, z: .146456227}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_ThighJoint01
+      position: {x: -.193844393, y: -.0553920418, z: .177746996}
+      rotation: {x: .566672921, y: -.485224903, z: .506054401, w: .432836801}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_KneeJoint01
+      position: {x: .00304599828, y: .181512997, z: -.0616229996}
+      rotation: {x: -3.49117589e-15, y: 2.06210674e-16, z: 3.8072699e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_AnkleJoint01
+      position: {x: .0219440013, y: .245288998, z: .0630415007}
+      rotation: {x: -.0388703495, y: .0566199347, z: .00193207304, w: .997636974}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_BallJoint01
+      position: {x: -.00463600317, y: .116950281, z: -.105719499}
+      rotation: {x: 3.13659689e-16, y: -1.27673903e-14, z: 3.4657173e-14, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_ToeJoint01
+      position: {x: .00243799598, y: -6.78284705e-05, z: -.146456003}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface24
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Liam_body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform7
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface45
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface48
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform13
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface49
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform14
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface50
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform11
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface51
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform12
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface53
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform16
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface54
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform15
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface55
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform10
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface56
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform9
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: polySurface57
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform8
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
     armTwist: .5
     foreArmTwist: .5
     upperLegTwist: .5
@@ -256,5 +2793,5 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 3
   userData: 
