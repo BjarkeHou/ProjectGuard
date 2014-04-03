@@ -6,6 +6,9 @@ public class HealthController : MonoBehaviour {
 	public const int maxHealth = 100;
 	public const int minHealth = 0;
 	public int curHealth;
+	private bool isParrying;
+	public bool IsParrying { get { return isParrying; }
+							 set { isParrying = value; } }
 	
 	// Use this for initialization
 	void Start() {

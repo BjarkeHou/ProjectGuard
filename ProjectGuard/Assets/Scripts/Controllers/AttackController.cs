@@ -38,13 +38,23 @@ public class AttackController : MonoBehaviour {
 		//}
 	}
 
+	public void DeclareParry() {
+		anim.SetBool("Parry", true);
+	}
+
 	//called from the equiped weapon
 	public void Hit(GameObject obj, float damage) {
 		if (!targetsHit.Contains(obj) && obj.tag != gameObject.tag) { 
-			//withdraw health
-			obj.GetComponent<HealthController>().adjustCurrentHealth(-(int)damage);
 			//add enemy to list of hit stuff
 			targetsHit.Add(obj);
+
+			//check if the character is parrying
+			if (obj.GetComponent<HealthController>().IsParrying) {
+				anim.SetBool("Rebound", true);
+			} else {
+				//withdraw health
+				obj.GetComponent<HealthController>().adjustCurrentHealth(-(int)damage);
+			}
 		}
 	}
 	//called from the equiped weapon

@@ -34,7 +34,11 @@ public class InputController : MonoBehaviour
 		if (Input.GetMouseButtonDown (0) && eCtrl.hasWeaponEquipped) {
 			aCtrl.DeclareAttack ();
 		}
-				
+
+		if (Input.GetMouseButtonDown (1) && eCtrl.hasWeaponEquipped) {
+			aCtrl.DeclareParry ();
+		}
+
 		// Drop weapon
 		if (Input.GetKey (KeyCode.G)) {
 			eCtrl.Drop (ItemType.Weapon);

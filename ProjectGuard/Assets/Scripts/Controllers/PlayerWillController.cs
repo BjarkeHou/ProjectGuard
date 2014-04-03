@@ -9,6 +9,7 @@ public class PlayerWillController : MonoBehaviour
 
 		public float handAttackAdj;
 		public float dodgeAdj;
+		public float parryAdj;
 		public float minAtkSp;
 		public float maxAtkSp;
 		public float regenCD;
@@ -27,7 +28,6 @@ public class PlayerWillController : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{
-				
 				healthCont = GetComponent<HealthController> ();
 				anim = transform.Find ("Model").GetComponent<Animator> ();
 
@@ -72,6 +72,14 @@ public class PlayerWillController : MonoBehaviour
 								curWill += handAttackAdj;
 						}
 						regenTimer = Time.time;
+				}
+		}
+
+		public void Parry () {
+				if (Time.time > depleteTimer) {
+					depleteTimer = Time.time + 0.1f;
+					curWill += parryAdj;
+					regenTimer = Time.time;
 				}
 		}
 

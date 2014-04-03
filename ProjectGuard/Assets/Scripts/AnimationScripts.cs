@@ -23,12 +23,8 @@ public class AnimationScripts : MonoBehaviour {
 		isAttacking = true;
 		//clear hits
 		animated.GetComponent<AttackController>().targetsHit.Clear();
-		//don't attack again
-		GetComponent<Animator>().SetBool("Attack", false);
-		//don't stab again
-		GetComponent<Animator>().SetBool("Stab", false);
-		//can't attack
-		GetComponent<Animator>().SetBool("CanAttack", false);
+		//reset bools
+		ResetBools();
 		//can't move or rotate
 		animated.GetComponent<MovementController>().SetCanMove(false);
 		animated.GetComponent<MovementController>().SetCanDodge(false);
@@ -47,14 +43,7 @@ public class AnimationScripts : MonoBehaviour {
 	}
 	void IniRebound() {
 		isAttacking = false;
-		//don't rebound again
-		GetComponent<Animator>().SetBool("Rebound", false);
-		//don't attack again
-		GetComponent<Animator>().SetBool("Attack", false);
-		//don't stab again
-		GetComponent<Animator>().SetBool("Stab", false);
-		//can't attack
-		GetComponent<Animator>().SetBool("CanAttack", false);
+		ResetBools();
 		//can't move or rotate
 		animated.GetComponent<MovementController>().SetCanMove(false);
 		if (pLook != null)
@@ -62,14 +51,21 @@ public class AnimationScripts : MonoBehaviour {
 		//no damage
 		animated.GetComponent<AttackController>().doesDamage = false;
 	}
-	void CanAttack() {
-		animated.GetComponent<MovementController>().SetCanDodge(true);
-		GetComponent<Animator>().SetBool("CanAttack", true);
-		animated.GetComponent<AttackController>().inAnAttack = false;
+	void IniParry() {
 		isAttacking = false;
-	}
-	void CanNotAttack() {
-		GetComponent<Animator>().SetBool("CanAttack", false);
+		//reset bools
+		ResetBools();
+		//can't move or rotate
+		animated.GetComponent<MovementController>().SetCanMove(false);
+		animated.GetComponent<MovementController>().SetCanDodge(false);
+		if (pLook != null)
+			pLook.playerCanRotate = false;
+		//no damage
+		animated.GetComponent<AttackController>().doesDamage = false;
+		//deplete will if that script exists
+		if (animated.GetComponent<PlayerWillController>() != null) {
+			animated.GetComponent<PlayerWillController>().Parry();
+		}
 	}
 	void Damage() {
 		animated.GetComponent<AttackController>().doesDamage = true;
@@ -77,16 +73,38 @@ public class AnimationScripts : MonoBehaviour {
 	void NoDamage() {
 		animated.GetComponent<AttackController>().doesDamage = false;
 	}
+	void Parry() {
+		animated.GetComponent<HealthController>().IsParrying = true;
+	}
+	void NoParry() {
+		animated.GetComponent<HealthController>().IsParrying = false;
+	}
+	void CanRotate() {
+		if (pLook != null)
+			pLook.playerCanRotate = true;
+	}
+	void CanAttack() {
+		animated.GetComponent<MovementController>().SetCanDodge(true);
+		GetComponent<Animator>().SetBool("CanAttack", true);
+		animated.GetComponent<AttackController>().inAnAttack = false;
+		isAttacking = false;
+	}
 	void CanMove() {
 		if (!isAttacking) {
 			animated.GetComponent<MovementController>().SetCanMove(true);
 		}
 	}
-	void CanNotMove() {
-		animated.GetComponent<MovementController>().SetCanMove(false);
-	}
-	void CanRotate() {
-		if (pLook != null)
-			pLook.playerCanRotate = true;
+
+	void ResetBools() {
+		//don't attack again
+		GetComponent<Animator>().SetBool("Attack", false);
+		//don't stab again
+		GetComponent<Animator>().SetBool("Stab", false);
+		//don't parry again
+		GetComponent<Animator>().SetBool("Parry", false);
+		//don't rebound again
+		GetComponent<Animator>().SetBool("Rebound", false);
+		//can't attack
+		GetComponent<Animator>().SetBool("CanAttack", false);
 	}
 }

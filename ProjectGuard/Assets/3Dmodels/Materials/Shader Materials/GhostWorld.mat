@@ -51,7 +51,7 @@ Material:
       data:
         first:
           name: _DeathTimer
-        second: .232142851
+        second: 0
       data:
         first:
           name: _RevivalRange
