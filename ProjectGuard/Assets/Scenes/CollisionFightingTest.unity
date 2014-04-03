@@ -74,6 +74,32 @@ NavMeshSettings:
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
   m_NavMesh: {fileID: 0}
+--- !u!1 &392196
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100020, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 1131346798}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 392197}
+  m_Layer: 0
+  m_Name: SkinPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &392197
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400020, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 1131346798}
+  m_GameObject: {fileID: 392196}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.46832728e-08, y: .0272849184, z: 1.09054412e-07}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1989408271}
 --- !u!1 &5583842
 GameObject:
   m_ObjectHideFlags: 0
@@ -2351,6 +2377,32 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
+--- !u!1 &99658649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100018, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 615592240}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 99658650}
+  m_Layer: 0
+  m_Name: HoldPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &99658650
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400018, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 615592240}
+  m_GameObject: {fileID: 99658649}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -.400637269, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1432756923}
 --- !u!1 &100561936
 GameObject:
   m_ObjectHideFlags: 0
@@ -7036,6 +7088,46 @@ Prefab:
   m_RootGameObject: {fileID: 813799415}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1001 &142573044
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 15.8085661
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.12085342
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -5.54916906
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -.320849925
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .947130084
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_RootGameObject: {fileID: 2041752771}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &144645597
 GameObject:
   m_ObjectHideFlags: 0
@@ -7164,7 +7256,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100006, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 157505521}
@@ -7179,7 +7271,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400006, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 157505520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.46832728e-08, y: .0272849184, z: 1.09054412e-07}
@@ -9418,6 +9510,46 @@ Prefab:
   m_RootGameObject: {fileID: 1577134088}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1001 &214725950
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.29657316
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.12085342
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: .911480546
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: .405604154
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .914048851
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_RootGameObject: {fileID: 259101716}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &214771486
 GameObject:
   m_ObjectHideFlags: 0
@@ -9899,6 +10031,32 @@ Mesh:
     m_Extent: {x: 1.00000048, y: 1.50000024, z: 1.00000048}
   m_MeshUsageFlags: 0
   m_MeshOptimized: 0
+--- !u!1 &225734492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100022, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 214725950}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 225734493}
+  m_Layer: 0
+  m_Name: TipPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &225734493
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400022, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 214725950}
+  m_GameObject: {fileID: 225734492}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: .570449114, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2126578754}
 --- !u!1 &238527150
 GameObject:
   m_ObjectHideFlags: 0
@@ -10498,7 +10656,7 @@ MeshFilter:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 259101717}
@@ -10518,7 +10676,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 259101716}
   m_LocalRotation: {x: 0, y: .405604154, z: 0, w: .914048851}
   m_LocalPosition: {x: 2.29657316, y: 1.12085342, z: .911480546}
@@ -10528,13 +10686,14 @@ Transform:
   - {fileID: 295332666}
   - {fileID: 1299244385}
   - {fileID: 1315181236}
+  - {fileID: 2126578754}
   m_Father: {fileID: 0}
 --- !u!143 &259101718
 CharacterController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 14300000, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 259101716}
   serializedVersion: 2
   m_Height: 2
@@ -10549,7 +10708,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400012, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 259101716}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -10583,7 +10742,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400010, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 259101716}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -10597,7 +10756,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400006, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 259101716}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -10610,7 +10769,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400008, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 259101716}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -12524,7 +12683,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100010, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 295332666}
@@ -12544,7 +12703,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400010, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 295332665}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -12557,7 +12716,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 295332665}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -12571,7 +12730,7 @@ Animator:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 9500000, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 295332665}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
@@ -12585,7 +12744,7 @@ Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 5400000, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 295332665}
   serializedVersion: 2
   m_Mass: 1
@@ -12601,7 +12760,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300002, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 295332665}
   m_Enabled: 1
   m_CastShadows: 0
@@ -12623,7 +12782,7 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3300002, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 295332665}
   m_Mesh: {fileID: 10205, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &297587564
@@ -26713,7 +26872,7 @@ Light:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100002, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 514557709}
@@ -26728,7 +26887,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400002, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 514557708}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -.400637269, z: 0}
@@ -28914,7 +29073,7 @@ Light:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100012, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 544498771}
@@ -28930,7 +29089,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400012, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 544498770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -28942,7 +29101,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400002, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 544498770}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -28959,10 +29118,10 @@ MonoBehaviour:
       /><field type="RAIN.Memory.BasicMemory" reference="1" id="_workingMemory" childrenvisible="False"
       /><field type="RAIN.Minds.BasicMind" reference="2" id="_mind" childrenvisible="False"
       /><field type="RAIN.Motion.CharacterControllerMotor" reference="3" id="_motor"
-      childrenvisible="True" /><field type="RAIN.Animation.BasicAnimator" reference="6"
+      childrenvisible="False" /><field type="RAIN.Animation.BasicAnimator" reference="6"
       id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
       reference="7" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-      reference="8" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
+      reference="8" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
       id="_customElements" elementtype="RAIN.Core.CustomAIElement" childrenvisible="False"
       /></reference><reference type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field
       type="System.Collections.Generic.List" id="_memoryItems" elementtype="System.String"><field
@@ -29025,7 +29184,7 @@ MonoBehaviour:
       id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
       childrenvisible="True" /><field value="360" type="System.Single" id="_horizontalAngle"
       /><field value="360" type="System.Single" id="_verticalAngle" /><field value="15"
-      type="System.Single" id="_range" /><field value="False" type="System.Boolean"
+      type="System.Single" id="_range" /><field value="True" type="System.Boolean"
       id="_requireLineOfSight" /><field value="-5" type="UnityEngine.LayerMask" id="_lineOfSightMask"
       /><field value="True" type="System.Boolean" id="_lineOfSightIgnoresSelf" /></reference></references></component>
     _serializedGameObjects:
@@ -29088,6 +29247,7 @@ Transform:
   - {fileID: 5583843}
   - {fileID: 243991331}
   - {fileID: 1189193867}
+  - {fileID: 1989408271}
   - {fileID: 2119978425}
   m_Father: {fileID: 0}
 --- !u!114 &545029430
@@ -29938,6 +30098,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 690278204}
   m_GameObject: {fileID: 575996947}
   m_Mesh: {fileID: 4300000, guid: 8c60732cec3331046ac07a83f6222b92, type: 3}
+--- !u!1 &582895402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100022, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 1131346798}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 582895403}
+  m_Layer: 0
+  m_Name: TipPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &582895403
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400022, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 1131346798}
+  m_GameObject: {fileID: 582895402}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: .570449114, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1989408271}
 --- !u!1 &584685506
 GameObject:
   m_ObjectHideFlags: 0
@@ -30060,7 +30246,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100006, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 592610923}
@@ -30075,7 +30261,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400006, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 592610922}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.46832728e-08, y: .0272849184, z: 1.09054412e-07}
@@ -32329,8 +32515,8 @@ Light:
 --- !u!1 &671979007
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100000, guid: c6ab686afe810714aa604d0bc70a11c0, type: 2}
-  m_PrefabInternal: {fileID: 1490073503}
+  m_PrefabParentObject: {fileID: 100018, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 142573044}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 671979008}
@@ -32344,8 +32530,8 @@ GameObject:
 --- !u!4 &671979008
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400000, guid: c6ab686afe810714aa604d0bc70a11c0, type: 2}
-  m_PrefabInternal: {fileID: 1490073503}
+  m_PrefabParentObject: {fileID: 400018, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 671979007}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -.400637269, z: 0}
@@ -37543,7 +37729,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100014, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 737802315}
@@ -37558,7 +37744,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400014, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 737802314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: .570449114, z: 0}
@@ -37791,10 +37977,10 @@ MonoBehaviour:
       /><field type="RAIN.Memory.BasicMemory" reference="1" id="_workingMemory" childrenvisible="False"
       /><field type="RAIN.Minds.BasicMind" reference="2" id="_mind" childrenvisible="False"
       /><field type="RAIN.Motion.CharacterControllerMotor" reference="3" id="_motor"
-      childrenvisible="True" /><field type="RAIN.Animation.BasicAnimator" reference="6"
+      childrenvisible="False" /><field type="RAIN.Animation.BasicAnimator" reference="6"
       id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
       reference="7" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-      reference="8" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
+      reference="8" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
       id="_customElements" elementtype="RAIN.Core.CustomAIElement" childrenvisible="False"
       /></reference><reference type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field
       type="System.Collections.Generic.List" id="_memoryItems" elementtype="System.String"><field
@@ -37857,7 +38043,7 @@ MonoBehaviour:
       id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
       childrenvisible="True" /><field value="360" type="System.Single" id="_horizontalAngle"
       /><field value="360" type="System.Single" id="_verticalAngle" /><field value="15"
-      type="System.Single" id="_range" /><field value="False" type="System.Boolean"
+      type="System.Single" id="_range" /><field value="True" type="System.Boolean"
       id="_requireLineOfSight" /><field value="-5" type="UnityEngine.LayerMask" id="_lineOfSightMask"
       /><field value="True" type="System.Boolean" id="_lineOfSightIgnoresSelf" /></reference></references></component>
     _serializedGameObjects:
@@ -40568,7 +40754,7 @@ Mesh:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100008, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 849381729}
@@ -40588,7 +40774,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400008, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 849381728}
   m_LocalRotation: {x: .501156867, y: .4988406, z: .501156747, w: .498840541}
   m_LocalPosition: {x: 1, y: -.851668596, z: 0}
@@ -40603,7 +40789,7 @@ BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6500000, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 849381728}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -40616,7 +40802,7 @@ Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 5400002, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 849381728}
   serializedVersion: 2
   m_Mass: 1
@@ -40632,7 +40818,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400004, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 849381728}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -40651,7 +40837,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300004, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 849381728}
   m_Enabled: 1
   m_CastShadows: 1
@@ -40673,7 +40859,7 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3300004, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 849381728}
   m_Mesh: {fileID: 4300000, guid: 528e061e517728949bc47f25dbe3a7ea, type: 3}
 --- !u!1 &855422349
@@ -43108,7 +43294,7 @@ MeshFilter:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100010, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 901483696}
@@ -43129,7 +43315,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 901483690}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -43143,7 +43329,7 @@ Animator:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 9500000, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 901483690}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
@@ -43157,7 +43343,7 @@ Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 5400000, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 901483690}
   serializedVersion: 2
   m_Mass: 1
@@ -43173,7 +43359,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300002, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 901483690}
   m_Enabled: 1
   m_CastShadows: 0
@@ -43195,14 +43381,14 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3300002, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 901483690}
   m_Mesh: {fileID: 10205, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &901483696
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400010, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 901483690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -50048,7 +50234,7 @@ Light:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100004, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 996394783}
@@ -50065,7 +50251,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400004, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 996394782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.5, y: 0, z: 0}
@@ -50077,7 +50263,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300000, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 996394782}
   m_Enabled: 1
   m_CastShadows: 0
@@ -50099,7 +50285,7 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3300000, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 996394782}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &996466190
@@ -53876,10 +54062,10 @@ MonoBehaviour:
       /><field type="RAIN.Memory.BasicMemory" reference="1" id="_workingMemory" childrenvisible="False"
       /><field type="RAIN.Minds.BasicMind" reference="2" id="_mind" childrenvisible="False"
       /><field type="RAIN.Motion.CharacterControllerMotor" reference="3" id="_motor"
-      childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator" reference="6"
-      id="_animator" childrenvisible="True" /><field type="RAIN.Navigation.BasicNavigator"
+      childrenvisible="False" /><field type="RAIN.Animation.BasicAnimator" reference="6"
+      id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
       reference="7" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-      reference="8" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
+      reference="8" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
       id="_customElements" elementtype="RAIN.Core.CustomAIElement" childrenvisible="False"
       /></reference><reference type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field
       type="System.Collections.Generic.List" id="_memoryItems" elementtype="System.String"><field
@@ -53915,79 +54101,36 @@ MonoBehaviour:
       type="UnityEngine.Vector3" id="_vectorTarget" /><field type="RAIN.Navigation.Targets.NavigationTarget"
       reference="-1" id="_navigationTarget" /><field type="RAIN.Entities.Aspects.RAINAspect"
       reference="-1" id="_aspectTarget" /><field value="" type="System.String" id="_variableTarget"
-      /></reference><reference type="RAIN.Animation.MecanimAnimator" refcount="1"
-      id="6"><field type="RAIN.Animation.MecanimAnimator+IKTarget" reference="11"
-      id="rightFoot" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator+IKTarget"
-      reference="13" id="leftFoot" /><field type="RAIN.Animation.MecanimAnimator+IKTarget"
-      reference="14" id="rightHand" /><field type="RAIN.Animation.MecanimAnimator+IKTarget"
-      reference="15" id="leftHand" /><field type="RAIN.Animation.MecanimAnimator+IKLookAt"
-      reference="16" id="lookAt" /><field type="System.Collections.Generic.List" id="animationStates"
-      elementtype="RAIN.Animation.MecanimAnimator+MecanimAnimatorState" childrenvisible="False"
-      /></reference><reference type="RAIN.Navigation.BasicNavigator" refcount="1"
-      id="7"><field type="System.Collections.Generic.List" id="graphTags" elementtype="System.String"
-      childrenvisible="False" /><field value="100" type="System.Int32" id="maxPathfindingStepsPerFrame"
-      /><field value="False" type="System.Boolean" id="useAvoidance" /><field value="5"
-      type="System.Single" id="avoidanceSize" /><field value="0.1" type="System.Single"
-      id="avoidanceCellSize" /><field value="2" type="System.Single" id="avoidanceMaxChange"
-      /><field value="False" type="System.Boolean" id="drawPaths" /><field value="False"
-      type="System.Boolean" id="drawAvoidance" /></reference><reference type="RAIN.Perception.BasicSenses"
-      refcount="1" id="8"><field type="System.Collections.Generic.List" id="sensors"
-      elementtype="RAIN.Perception.Sensors.RAINSensor"><field type="RAIN.Perception.Sensors.VisualSensor"
-      reference="10" id="element0" /></field></reference><reference type="RAIN.Memory.MemoryObject"
-      refcount="1" id="9"><field value="UnityEngine.GameObject" type="System.String"
-      id="_serializedType" /><field value="" type="System.String" id="_serializedValue"
-      /><field type="UnityEngine.GameObject" id="_serializedGameObject" gameobject="1"
-      /></reference><reference type="RAIN.Perception.Sensors.VisualSensor" refcount="1"
-      id="10"><field value="True" type="System.Boolean" id="_showVisual" /><field
-      value="0,0.6,0.6,1" type="UnityEngine.Color" id="_sensorColor" /><field value="True"
-      type="System.Boolean" id="_isActive" /><field value="TargetSensor" type="System.String"
-      id="_sensorName" /><field type="UnityEngine.Transform" id="_mountPoint" gameobject="3"
-      /><field value="0,1.14,0" type="UnityEngine.Vector3" id="_positionOffset" /><field
-      value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /><field value="False"
-      type="System.Boolean" id="_canDetectSelf" /><field type="System.Collections.Generic.List"
+      /></reference><reference type="RAIN.Animation.BasicAnimator" refcount="1" id="6"><field
+      type="System.Collections.Generic.List" id="animationStates" elementtype="RAIN.Animation.BasicAnimator+BasicAnimatorState"
+      childrenvisible="True" /></reference><reference type="RAIN.Navigation.BasicNavigator"
+      refcount="1" id="7"><field type="System.Collections.Generic.List" id="graphTags"
+      elementtype="System.String" childrenvisible="False" /><field value="100" type="System.Int32"
+      id="maxPathfindingStepsPerFrame" /><field value="False" type="System.Boolean"
+      id="useAvoidance" /><field value="5" type="System.Single" id="avoidanceSize"
+      /><field value="0.1" type="System.Single" id="avoidanceCellSize" /><field value="2"
+      type="System.Single" id="avoidanceMaxChange" /><field value="False" type="System.Boolean"
+      id="drawPaths" /><field value="False" type="System.Boolean" id="drawAvoidance"
+      /></reference><reference type="RAIN.Perception.BasicSenses" refcount="1" id="8"><field
+      type="System.Collections.Generic.List" id="sensors" elementtype="RAIN.Perception.Sensors.RAINSensor"><field
+      type="RAIN.Perception.Sensors.VisualSensor" reference="10" id="element0" /></field></reference><reference
+      type="RAIN.Memory.MemoryObject" refcount="1" id="9"><field value="UnityEngine.GameObject"
+      type="System.String" id="_serializedType" /><field value="" type="System.String"
+      id="_serializedValue" /><field type="UnityEngine.GameObject" id="_serializedGameObject"
+      gameobject="1" /></reference><reference type="RAIN.Perception.Sensors.VisualSensor"
+      refcount="1" id="10"><field value="True" type="System.Boolean" id="_showVisual"
+      /><field value="0,0.6,0.6,1" type="UnityEngine.Color" id="_sensorColor" /><field
+      value="True" type="System.Boolean" id="_isActive" /><field value="TargetSensor"
+      type="System.String" id="_sensorName" /><field type="UnityEngine.Transform"
+      id="_mountPoint" gameobject="3" /><field value="0,1.14,0" type="UnityEngine.Vector3"
+      id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
+      /><field value="False" type="System.Boolean" id="_canDetectSelf" /><field type="System.Collections.Generic.List"
       id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
       childrenvisible="True" /><field value="360" type="System.Single" id="_horizontalAngle"
       /><field value="360" type="System.Single" id="_verticalAngle" /><field value="15"
-      type="System.Single" id="_range" /><field value="False" type="System.Boolean"
+      type="System.Single" id="_range" /><field value="True" type="System.Boolean"
       id="_requireLineOfSight" /><field value="-5" type="UnityEngine.LayerMask" id="_lineOfSightMask"
-      /><field value="True" type="System.Boolean" id="_lineOfSightIgnoresSelf" /></reference><reference
-      type="RAIN.Animation.MecanimAnimator+IKTarget" refcount="1" id="11"><field value="False"
-      type="System.Boolean" id="isActive" /><field value="0" type="System.Single"
-      id="positionWeight" /><field value="0" type="System.Single" id="rotationWeight"
-      /><field value="0,0,0" type="UnityEngine.Vector3" id="positionVector" /><field
-      value="0,0,0" type="UnityEngine.Vector3" id="rotationVector" /></reference><reference
-      type="RAIN.Animation.BasicAnimator+BasicAnimatorState+MixingTransform" refcount="1"
-      id="12"><field type="UnityEngine.Transform" id="transform" gameobject="-1" /><field
-      value="False" type="System.Boolean" id="recursive" /></reference><reference
-      type="RAIN.Animation.MecanimAnimator+IKTarget" refcount="1" id="13"><field value="False"
-      type="System.Boolean" id="isActive" /><field value="0" type="System.Single"
-      id="positionWeight" /><field value="0" type="System.Single" id="rotationWeight"
-      /><field value="0,0,0" type="UnityEngine.Vector3" id="positionVector" /><field
-      value="0,0,0" type="UnityEngine.Vector3" id="rotationVector" /></reference><reference
-      type="RAIN.Animation.MecanimAnimator+IKTarget" refcount="1" id="14"><field value="False"
-      type="System.Boolean" id="isActive" /><field value="0" type="System.Single"
-      id="positionWeight" /><field value="0" type="System.Single" id="rotationWeight"
-      /><field value="0,0,0" type="UnityEngine.Vector3" id="positionVector" /><field
-      value="0,0,0" type="UnityEngine.Vector3" id="rotationVector" /></reference><reference
-      type="RAIN.Animation.MecanimAnimator+IKTarget" refcount="1" id="15"><field value="False"
-      type="System.Boolean" id="isActive" /><field value="0" type="System.Single"
-      id="positionWeight" /><field value="0" type="System.Single" id="rotationWeight"
-      /><field value="0,0,0" type="UnityEngine.Vector3" id="positionVector" /><field
-      value="0,0,0" type="UnityEngine.Vector3" id="rotationVector" /></reference><reference
-      type="RAIN.Animation.MecanimAnimator+IKLookAt" refcount="1" id="16"><field value="False"
-      type="System.Boolean" id="isActive" /><field value="0" type="System.Single"
-      id="lookAtWeight" /><field value="0" type="System.Single" id="lookAtBodyWeight"
-      /><field value="0" type="System.Single" id="lookAtHeadWeight" /><field value="0"
-      type="System.Single" id="lookAtEyesWeight" /><field value="0" type="System.Single"
-      id="lookAtClampWeight" /><field value="0,0,0" type="UnityEngine.Vector3" id="positionVector"
-      /></reference><reference type="RAIN.Animation.MecanimAnimator+MecanimAnimatorState"
-      refcount="0" id="17" /><reference type="RAIN.Animation.MecanimParameterValue"
-      refcount="0" id="18" /><reference type="RAIN.Representation.Expression" refcount="0"
-      id="19" customdata="0" /><reference type="RAIN.Animation.MecanimParameterValue"
-      refcount="0" id="20" /><reference type="RAIN.Representation.Expression" refcount="0"
-      id="21" customdata="1" /><reference type="RAIN.Animation.MecanimParameterValue"
-      refcount="0" id="22" /><reference type="RAIN.Representation.Expression" refcount="0"
-      id="23" customdata="2" /></references></component>
+      /><field value="True" type="System.Boolean" id="_lineOfSightIgnoresSelf" /></reference></references></component>
     _serializedGameObjects:
     - {fileID: 1318525388}
     - {fileID: 100004, guid: e3bdc99c927a96845bd509172e5151e4, type: 2}
@@ -54525,7 +54668,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100002, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1116543919}
@@ -54540,7 +54683,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400002, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 1116543918}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -.400637269, z: 0}
@@ -54788,10 +54931,10 @@ Prefab:
         /><field type="RAIN.Memory.BasicMemory" reference="1" id="_workingMemory"
         childrenvisible="False" /><field type="RAIN.Minds.BasicMind" reference="2"
         id="_mind" childrenvisible="False" /><field type="RAIN.Motion.CharacterControllerMotor"
-        reference="3" id="_motor" childrenvisible="True" /><field type="RAIN.Animation.BasicAnimator"
+        reference="3" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.BasicAnimator"
         reference="6" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
         reference="7" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-        reference="8" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
+        reference="8" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
         id="_customElements" elementtype="RAIN.Core.CustomAIElement" childrenvisible="False"
         /></reference><reference type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field
         type="System.Collections.Generic.List" id="_memoryItems" elementtype="System.String"><field
@@ -54856,7 +54999,7 @@ Prefab:
         id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
         childrenvisible="True" /><field value="360" type="System.Single" id="_horizontalAngle"
         /><field value="360" type="System.Single" id="_verticalAngle" /><field value="15"
-        type="System.Single" id="_range" /><field value="False" type="System.Boolean"
+        type="System.Single" id="_range" /><field value="True" type="System.Boolean"
         id="_requireLineOfSight" /><field value="-5" type="UnityEngine.LayerMask"
         id="_lineOfSightMask" /><field value="True" type="System.Boolean" id="_lineOfSightIgnoresSelf"
         /></reference></references></component>
@@ -55010,6 +55153,32 @@ Prefab:
   m_RootGameObject: {fileID: 320684760}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1148186056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100018, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 214725950}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1148186057}
+  m_Layer: 0
+  m_Name: HoldPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1148186057
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400018, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 214725950}
+  m_GameObject: {fileID: 1148186056}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -.400637269, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2126578754}
 --- !u!1 &1149755810
 GameObject:
   m_ObjectHideFlags: 0
@@ -61059,7 +61228,7 @@ MeshFilter:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100004, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1248173393}
@@ -61076,7 +61245,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400004, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 1248173392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.5, y: 0, z: 0}
@@ -61088,7 +61257,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300000, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 1248173392}
   m_Enabled: 1
   m_CastShadows: 0
@@ -61110,7 +61279,7 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3300000, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 1248173392}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1250268160
@@ -64594,7 +64763,7 @@ ParticleSystem:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1299244385}
@@ -64610,7 +64779,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 1299244384}
   m_LocalRotation: {x: .173648193, y: 0, z: 0, w: .984807789}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -64622,7 +64791,7 @@ Light:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 10800000, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 1299244384}
   m_Enabled: 1
   serializedVersion: 3
@@ -64974,7 +65143,7 @@ Mesh:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100008, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1315181236}
@@ -64994,7 +65163,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400008, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 1315181235}
   m_LocalRotation: {x: .501156867, y: .4988406, z: .501156747, w: .498840541}
   m_LocalPosition: {x: 1, y: -.851668596, z: 0}
@@ -65009,7 +65178,7 @@ BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6500000, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 1315181235}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -65022,7 +65191,7 @@ Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 5400002, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 1315181235}
   serializedVersion: 2
   m_Mass: 1
@@ -65038,7 +65207,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400004, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 1315181235}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -65057,7 +65226,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300004, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 1315181235}
   m_Enabled: 1
   m_CastShadows: 1
@@ -65079,7 +65248,7 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3300004, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 1315181235}
   m_Mesh: {fileID: 4300000, guid: 528e061e517728949bc47f25dbe3a7ea, type: 3}
 --- !u!1 &1315242819
@@ -65179,6 +65348,7 @@ Transform:
   - {fileID: 2060823716}
   - {fileID: 1499416067}
   - {fileID: 449277855}
+  - {fileID: 1432756923}
   - {fileID: 875454688}
   m_Father: {fileID: 0}
 --- !u!114 &1318525390
@@ -70216,6 +70386,118 @@ Prefab:
   m_RootGameObject: {fileID: 534906444}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1432756917
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100024, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 615592240}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1432756923}
+  - 33: {fileID: 1432756922}
+  - 23: {fileID: 1432756921}
+  - 114: {fileID: 1432756920}
+  - 54: {fileID: 1432756919}
+  - 65: {fileID: 1432756918}
+  m_Layer: 0
+  m_Name: Sword
+  m_TagString: Weapon
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1432756918
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500002, guid: 22dcba112f5eb564287d27fe1f7afb80,
+    type: 2}
+  m_PrefabInternal: {fileID: 615592240}
+  m_GameObject: {fileID: 1432756917}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .0639150441, y: 1.5, z: .699999988}
+  m_Center: {x: -1.11022387e-15, y: -7.10542482e-16, z: 7.4505806e-09}
+--- !u!54 &1432756919
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400004, guid: 22dcba112f5eb564287d27fe1f7afb80,
+    type: 2}
+  m_PrefabInternal: {fileID: 615592240}
+  m_GameObject: {fileID: 1432756917}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1432756920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400014, guid: 22dcba112f5eb564287d27fe1f7afb80,
+    type: 2}
+  m_PrefabInternal: {fileID: 615592240}
+  m_GameObject: {fileID: 1432756917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb947bf73dcb9404d83c8c13f29bdf4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPickupRange: 1.5
+  damage: 25
+  weaponName: 
+  age: 19
+  quality: "\xD8V!"
+  attackWillCost: -20
+  gui_Skin: {fileID: 11400000, guid: 49c7d18afcfee4ef4ae02f66852d6706, type: 2}
+--- !u!23 &1432756921
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300006, guid: 22dcba112f5eb564287d27fe1f7afb80,
+    type: 2}
+  m_PrefabInternal: {fileID: 615592240}
+  m_GameObject: {fileID: 1432756917}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 2ee53ad29dd444148bfe6ca3e1f2b2f9, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!33 &1432756922
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300006, guid: 22dcba112f5eb564287d27fe1f7afb80,
+    type: 2}
+  m_PrefabInternal: {fileID: 615592240}
+  m_GameObject: {fileID: 1432756917}
+  m_Mesh: {fileID: 4300000, guid: 528e061e517728949bc47f25dbe3a7ea, type: 3}
+--- !u!4 &1432756923
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400024, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 615592240}
+  m_GameObject: {fileID: 1432756917}
+  m_LocalRotation: {x: .501156867, y: .4988406, z: .501156747, w: .498840541}
+  m_LocalPosition: {x: 1, y: -.851668596, z: 0}
+  m_LocalScale: {x: .800000131, y: 1.25000012, z: 1}
+  m_Children:
+  - {fileID: 99658650}
+  - {fileID: 1783592087}
+  - {fileID: 1690224196}
+  m_Father: {fileID: 1318525389}
 --- !u!1001 &1433746633
 Prefab:
   m_ObjectHideFlags: 0
@@ -71924,6 +72206,32 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
+--- !u!1 &1450292635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100018, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 1131346798}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1450292636}
+  m_Layer: 0
+  m_Name: HoldPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1450292636
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400018, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 1131346798}
+  m_GameObject: {fileID: 1450292635}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -.400637269, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1989408271}
 --- !u!1 &1458669988
 GameObject:
   m_ObjectHideFlags: 0
@@ -72468,46 +72776,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 692460839}
   m_GameObject: {fileID: 1472621970}
   m_Mesh: {fileID: 4300000, guid: c638df2a3b5e0a744aa007f2cd34e94d, type: 3}
---- !u!1001 &1490073503
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 2041752772}
-    m_Modifications:
-    - target: {fileID: 400006, guid: c6ab686afe810714aa604d0bc70a11c0, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: c6ab686afe810714aa604d0bc70a11c0, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -.851668596
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: c6ab686afe810714aa604d0bc70a11c0, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: c6ab686afe810714aa604d0bc70a11c0, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: .501156867
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: c6ab686afe810714aa604d0bc70a11c0, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: .4988406
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: c6ab686afe810714aa604d0bc70a11c0, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: .501156747
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: c6ab686afe810714aa604d0bc70a11c0, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: .498840541
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c6ab686afe810714aa604d0bc70a11c0, type: 2}
-  m_RootGameObject: {fileID: 2144942375}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &1490446616
 GameObject:
   m_ObjectHideFlags: 0
@@ -72585,8 +72853,8 @@ MeshFilter:
 --- !u!1 &1490840304
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100004, guid: c6ab686afe810714aa604d0bc70a11c0, type: 2}
-  m_PrefabInternal: {fileID: 1490073503}
+  m_PrefabParentObject: {fileID: 100020, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 142573044}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1490840305}
@@ -72600,8 +72868,8 @@ GameObject:
 --- !u!4 &1490840305
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400004, guid: c6ab686afe810714aa604d0bc70a11c0, type: 2}
-  m_PrefabInternal: {fileID: 1490073503}
+  m_PrefabParentObject: {fileID: 400020, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 1490840304}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.46832728e-08, y: .0272849184, z: 1.09054412e-07}
@@ -74768,175 +75036,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1779619300}
   m_GameObject: {fileID: 1561633683}
   m_Mesh: {fileID: 4300000, guid: 6f198eaa47f72f84eab4e7971035c6ad, type: 3}
---- !u!1001 &1562565617
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 2.29657316
-      objectReference: {fileID: 0}
-    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.12085342
-      objectReference: {fileID: 0}
-    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: .911480546
-      objectReference: {fileID: 0}
-    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: .405604154
-      objectReference: {fileID: 0}
-    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: .914048851
-      objectReference: {fileID: 0}
-    - target: {fileID: 100016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400002, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-      propertyPath: _dataSerializer._serializedData
-      value: <component version="1.0" type="RAIN.Core.AIRig"><fields><field value="True"
-        type="System.Boolean" id="_showVisual" /><field value="True" type="System.Boolean"
-        id="_useUnityMessages" /><field value="False" type="System.Boolean" id="_useFixedUpdate"
-        /><field type="RAIN.Core.AI" reference="0" id="_ai" /></fields><references><reference
-        type="RAIN.Core.AI" refcount="1" id="0"><field value="True" type="System.Boolean"
-        id="_isActive" /><field type="UnityEngine.GameObject" id="_body" gameobject="0"
-        /><field type="RAIN.Memory.BasicMemory" reference="1" id="_workingMemory"
-        childrenvisible="False" /><field type="RAIN.Minds.BasicMind" reference="2"
-        id="_mind" childrenvisible="False" /><field type="RAIN.Motion.CharacterControllerMotor"
-        reference="3" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
-        reference="6" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
-        reference="7" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-        reference="8" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
-        id="_customElements" elementtype="RAIN.Core.CustomAIElement" childrenvisible="False"
-        /></reference><reference type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field
-        type="System.Collections.Generic.List" id="_memoryItems" elementtype="System.String"><field
-        value="detectTarget" type="System.String" id="element0" /></field><field type="System.Collections.Generic.List"
-        id="_memoryValues" elementtype="RAIN.Memory.MemoryObject"><field type="RAIN.Memory.MemoryObject"
-        reference="9" id="element0" /></field></reference><reference type="RAIN.Minds.BasicMind"
-        refcount="1" id="2"><field type="RAIN.BehaviorTrees.BTAsset" id="behaviorTreeAsset"
-        gameobject="2" /><field type="System.Collections.Generic.List" id="behaviorTreeBindings"
-        elementtype="RAIN.BehaviorTrees.BTAssetBinding" /></reference><reference type="RAIN.Motion.CharacterControllerMotor"
-        refcount="1" id="3"><field type="RAIN.Motion.MoveLookTarget" reference="4"
-        id="moveTarget" /><field type="RAIN.Motion.MoveLookTarget" reference="5" id="faceTarget"
-        /><field value="1" type="System.Single" id="defaultSpeed" /><field value="180"
-        type="System.Single" id="defaultRotationSpeed" /><field value="0.1" type="System.Single"
-        id="defaultCloseEnoughDistance" /><field value="0.001" type="System.Single"
-        id="defaultCloseEnoughAngle" /><field value="90" type="System.Single" id="defaultFaceBeforeMoveAngle"
-        /><field value="0.5" type="System.Single" id="defaultStepUpHeight" /><field
-        value="False" type="System.Boolean" id="allow3DMovement" /><field value="False"
-        type="System.Boolean" id="allow3DRotation" /><field value="True" type="System.Boolean"
-        id="validPathRequired" /><field type="UnityEngine.CharacterController" id="characterController"
-        gameobject="5" /></reference><reference type="RAIN.Motion.MoveLookTarget"
-        refcount="1" id="4"><field value="0" type="System.Single" id="closeEnoughDistance"
-        /><field value="None" type="RAIN.Motion.MoveLookTarget+MoveLookTargetType"
-        id="_targetType" /><field type="UnityEngine.Transform" id="_transformTarget"
-        gameobject="-1" /><field type="RAIN.Core.Kinematic" reference="-1" id="_kinematicTarget"
-        /><field value="0,0,0" type="UnityEngine.Vector3" id="_vectorTarget" /><field
-        type="RAIN.Navigation.Targets.NavigationTarget" reference="-1" id="_navigationTarget"
-        /><field type="RAIN.Entities.Aspects.RAINAspect" reference="-1" id="_aspectTarget"
-        /><field value="" type="System.String" id="_variableTarget" /></reference><reference
-        type="RAIN.Motion.MoveLookTarget" refcount="1" id="5"><field value="0" type="System.Single"
-        id="closeEnoughDistance" /><field value="None" type="RAIN.Motion.MoveLookTarget+MoveLookTargetType"
-        id="_targetType" /><field type="UnityEngine.Transform" id="_transformTarget"
-        gameobject="-1" /><field type="RAIN.Core.Kinematic" reference="-1" id="_kinematicTarget"
-        /><field value="0,0,0" type="UnityEngine.Vector3" id="_vectorTarget" /><field
-        type="RAIN.Navigation.Targets.NavigationTarget" reference="-1" id="_navigationTarget"
-        /><field type="RAIN.Entities.Aspects.RAINAspect" reference="-1" id="_aspectTarget"
-        /><field value="" type="System.String" id="_variableTarget" /></reference><reference
-        type="RAIN.Animation.MecanimAnimator" refcount="1" id="6"><field type="RAIN.Animation.MecanimAnimator+IKTarget"
-        reference="11" id="rightFoot" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator+IKTarget"
-        reference="13" id="leftFoot" /><field type="RAIN.Animation.MecanimAnimator+IKTarget"
-        reference="14" id="rightHand" /><field type="RAIN.Animation.MecanimAnimator+IKTarget"
-        reference="15" id="leftHand" /><field type="RAIN.Animation.MecanimAnimator+IKLookAt"
-        reference="16" id="lookAt" /><field type="System.Collections.Generic.List"
-        id="animationStates" elementtype="RAIN.Animation.MecanimAnimator+MecanimAnimatorState"
-        childrenvisible="False" /></reference><reference type="RAIN.Navigation.BasicNavigator"
-        refcount="1" id="7"><field type="System.Collections.Generic.List" id="graphTags"
-        elementtype="System.String" childrenvisible="False" /><field value="100" type="System.Int32"
-        id="maxPathfindingStepsPerFrame" /><field value="False" type="System.Boolean"
-        id="useAvoidance" /><field value="5" type="System.Single" id="avoidanceSize"
-        /><field value="0.1" type="System.Single" id="avoidanceCellSize" /><field
-        value="2" type="System.Single" id="avoidanceMaxChange" /><field value="False"
-        type="System.Boolean" id="drawPaths" /><field value="False" type="System.Boolean"
-        id="drawAvoidance" /></reference><reference type="RAIN.Perception.BasicSenses"
-        refcount="1" id="8"><field type="System.Collections.Generic.List" id="sensors"
-        elementtype="RAIN.Perception.Sensors.RAINSensor"><field type="RAIN.Perception.Sensors.VisualSensor"
-        reference="10" id="element0" /></field></reference><reference type="RAIN.Memory.MemoryObject"
-        refcount="1" id="9"><field value="UnityEngine.GameObject" type="System.String"
-        id="_serializedType" /><field value="" type="System.String" id="_serializedValue"
-        /><field type="UnityEngine.GameObject" id="_serializedGameObject" gameobject="1"
-        /></reference><reference type="RAIN.Perception.Sensors.VisualSensor" refcount="1"
-        id="10"><field value="True" type="System.Boolean" id="_showVisual" /><field
-        value="0,0.6,0.6,1" type="UnityEngine.Color" id="_sensorColor" /><field value="True"
-        type="System.Boolean" id="_isActive" /><field value="TargetSensor" type="System.String"
-        id="_sensorName" /><field type="UnityEngine.Transform" id="_mountPoint" gameobject="3"
-        /><field value="0,1.14,0" type="UnityEngine.Vector3" id="_positionOffset"
-        /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /><field
-        value="False" type="System.Boolean" id="_canDetectSelf" /><field type="System.Collections.Generic.List"
-        id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
-        childrenvisible="True" /><field value="360" type="System.Single" id="_horizontalAngle"
-        /><field value="360" type="System.Single" id="_verticalAngle" /><field value="15"
-        type="System.Single" id="_range" /><field value="True" type="System.Boolean"
-        id="_requireLineOfSight" /><field value="-5" type="UnityEngine.LayerMask"
-        id="_lineOfSightMask" /><field value="True" type="System.Boolean" id="_lineOfSightIgnoresSelf"
-        /></reference><reference type="RAIN.Animation.MecanimAnimator+IKTarget" refcount="1"
-        id="11"><field value="False" type="System.Boolean" id="isActive" /><field
-        value="0" type="System.Single" id="positionWeight" /><field value="0" type="System.Single"
-        id="rotationWeight" /><field value="0,0,0" type="UnityEngine.Vector3" id="positionVector"
-        /><field value="0,0,0" type="UnityEngine.Vector3" id="rotationVector" /></reference><reference
-        type="RAIN.Animation.BasicAnimator+BasicAnimatorState+MixingTransform" refcount="1"
-        id="12"><field type="UnityEngine.Transform" id="transform" gameobject="-1"
-        /><field value="False" type="System.Boolean" id="recursive" /></reference><reference
-        type="RAIN.Animation.MecanimAnimator+IKTarget" refcount="1" id="13"><field
-        value="False" type="System.Boolean" id="isActive" /><field value="0" type="System.Single"
-        id="positionWeight" /><field value="0" type="System.Single" id="rotationWeight"
-        /><field value="0,0,0" type="UnityEngine.Vector3" id="positionVector" /><field
-        value="0,0,0" type="UnityEngine.Vector3" id="rotationVector" /></reference><reference
-        type="RAIN.Animation.MecanimAnimator+IKTarget" refcount="1" id="14"><field
-        value="False" type="System.Boolean" id="isActive" /><field value="0" type="System.Single"
-        id="positionWeight" /><field value="0" type="System.Single" id="rotationWeight"
-        /><field value="0,0,0" type="UnityEngine.Vector3" id="positionVector" /><field
-        value="0,0,0" type="UnityEngine.Vector3" id="rotationVector" /></reference><reference
-        type="RAIN.Animation.MecanimAnimator+IKTarget" refcount="1" id="15"><field
-        value="False" type="System.Boolean" id="isActive" /><field value="0" type="System.Single"
-        id="positionWeight" /><field value="0" type="System.Single" id="rotationWeight"
-        /><field value="0,0,0" type="UnityEngine.Vector3" id="positionVector" /><field
-        value="0,0,0" type="UnityEngine.Vector3" id="rotationVector" /></reference><reference
-        type="RAIN.Animation.MecanimAnimator+IKLookAt" refcount="1" id="16"><field
-        value="False" type="System.Boolean" id="isActive" /><field value="0" type="System.Single"
-        id="lookAtWeight" /><field value="0" type="System.Single" id="lookAtBodyWeight"
-        /><field value="0" type="System.Single" id="lookAtHeadWeight" /><field value="0"
-        type="System.Single" id="lookAtEyesWeight" /><field value="0" type="System.Single"
-        id="lookAtClampWeight" /><field value="0,0,0" type="UnityEngine.Vector3" id="positionVector"
-        /></reference><reference type="RAIN.Animation.MecanimAnimator+MecanimAnimatorState"
-        refcount="0" id="17" /><reference type="RAIN.Animation.MecanimParameterValue"
-        refcount="0" id="18" /><reference type="RAIN.Representation.Expression" refcount="0"
-        id="19" customdata="0" /><reference type="RAIN.Animation.MecanimParameterValue"
-        refcount="0" id="20" /><reference type="RAIN.Representation.Expression" refcount="0"
-        id="21" customdata="1" /><reference type="RAIN.Animation.MecanimParameterValue"
-        refcount="0" id="22" /><reference type="RAIN.Representation.Expression" refcount="0"
-        id="23" customdata="2" /></references></component>
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_RootGameObject: {fileID: 259101716}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &1564812072
 GameObject:
   m_ObjectHideFlags: 0
@@ -81571,6 +81670,32 @@ Mesh:
     m_Extent: {x: 1, y: 1.50000024, z: 1.00000024}
   m_MeshUsageFlags: 0
   m_MeshOptimized: 0
+--- !u!1 &1678902587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100020, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 214725950}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1678902588}
+  m_Layer: 0
+  m_Name: SkinPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1678902588
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400020, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 214725950}
+  m_GameObject: {fileID: 1678902587}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.46832728e-08, y: .0272849184, z: 1.09054412e-07}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2126578754}
 --- !u!1001 &1685124274
 Prefab:
   m_ObjectHideFlags: 0
@@ -81868,6 +81993,32 @@ Prefab:
   m_RootGameObject: {fileID: 1937388420}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1690224195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100022, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 615592240}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1690224196}
+  m_Layer: 0
+  m_Name: TipPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1690224196
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400022, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 615592240}
+  m_GameObject: {fileID: 1690224195}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: .570449114, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1432756923}
 --- !u!1 &1693738323
 GameObject:
   m_ObjectHideFlags: 0
@@ -83500,7 +83651,7 @@ MeshFilter:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100012, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1753917902}
@@ -83516,7 +83667,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400012, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 1753917901}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -83528,7 +83679,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400002, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 1753917901}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -83545,7 +83696,7 @@ MonoBehaviour:
       /><field type="RAIN.Memory.BasicMemory" reference="1" id="_workingMemory" childrenvisible="False"
       /><field type="RAIN.Minds.BasicMind" reference="2" id="_mind" childrenvisible="False"
       /><field type="RAIN.Motion.CharacterControllerMotor" reference="3" id="_motor"
-      childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator" reference="6"
+      childrenvisible="False" /><field type="RAIN.Animation.BasicAnimator" reference="6"
       id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
       reference="7" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
       reference="8" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
@@ -83584,79 +83735,36 @@ MonoBehaviour:
       type="UnityEngine.Vector3" id="_vectorTarget" /><field type="RAIN.Navigation.Targets.NavigationTarget"
       reference="-1" id="_navigationTarget" /><field type="RAIN.Entities.Aspects.RAINAspect"
       reference="-1" id="_aspectTarget" /><field value="" type="System.String" id="_variableTarget"
-      /></reference><reference type="RAIN.Animation.MecanimAnimator" refcount="1"
-      id="6"><field type="RAIN.Animation.MecanimAnimator+IKTarget" reference="11"
-      id="rightFoot" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator+IKTarget"
-      reference="13" id="leftFoot" /><field type="RAIN.Animation.MecanimAnimator+IKTarget"
-      reference="14" id="rightHand" /><field type="RAIN.Animation.MecanimAnimator+IKTarget"
-      reference="15" id="leftHand" /><field type="RAIN.Animation.MecanimAnimator+IKLookAt"
-      reference="16" id="lookAt" /><field type="System.Collections.Generic.List" id="animationStates"
-      elementtype="RAIN.Animation.MecanimAnimator+MecanimAnimatorState" childrenvisible="False"
-      /></reference><reference type="RAIN.Navigation.BasicNavigator" refcount="1"
-      id="7"><field type="System.Collections.Generic.List" id="graphTags" elementtype="System.String"
-      childrenvisible="False" /><field value="100" type="System.Int32" id="maxPathfindingStepsPerFrame"
-      /><field value="False" type="System.Boolean" id="useAvoidance" /><field value="5"
-      type="System.Single" id="avoidanceSize" /><field value="0.1" type="System.Single"
-      id="avoidanceCellSize" /><field value="2" type="System.Single" id="avoidanceMaxChange"
-      /><field value="False" type="System.Boolean" id="drawPaths" /><field value="False"
-      type="System.Boolean" id="drawAvoidance" /></reference><reference type="RAIN.Perception.BasicSenses"
-      refcount="1" id="8"><field type="System.Collections.Generic.List" id="sensors"
-      elementtype="RAIN.Perception.Sensors.RAINSensor"><field type="RAIN.Perception.Sensors.VisualSensor"
-      reference="10" id="element0" /></field></reference><reference type="RAIN.Memory.MemoryObject"
-      refcount="1" id="9"><field value="UnityEngine.GameObject" type="System.String"
-      id="_serializedType" /><field value="" type="System.String" id="_serializedValue"
-      /><field type="UnityEngine.GameObject" id="_serializedGameObject" gameobject="1"
-      /></reference><reference type="RAIN.Perception.Sensors.VisualSensor" refcount="1"
-      id="10"><field value="True" type="System.Boolean" id="_showVisual" /><field
-      value="0,0.6,0.6,1" type="UnityEngine.Color" id="_sensorColor" /><field value="True"
-      type="System.Boolean" id="_isActive" /><field value="TargetSensor" type="System.String"
-      id="_sensorName" /><field type="UnityEngine.Transform" id="_mountPoint" gameobject="3"
-      /><field value="0,1.14,0" type="UnityEngine.Vector3" id="_positionOffset" /><field
-      value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /><field value="False"
-      type="System.Boolean" id="_canDetectSelf" /><field type="System.Collections.Generic.List"
+      /></reference><reference type="RAIN.Animation.BasicAnimator" refcount="1" id="6"><field
+      type="System.Collections.Generic.List" id="animationStates" elementtype="RAIN.Animation.BasicAnimator+BasicAnimatorState"
+      childrenvisible="True" /></reference><reference type="RAIN.Navigation.BasicNavigator"
+      refcount="1" id="7"><field type="System.Collections.Generic.List" id="graphTags"
+      elementtype="System.String" childrenvisible="False" /><field value="100" type="System.Int32"
+      id="maxPathfindingStepsPerFrame" /><field value="False" type="System.Boolean"
+      id="useAvoidance" /><field value="5" type="System.Single" id="avoidanceSize"
+      /><field value="0.1" type="System.Single" id="avoidanceCellSize" /><field value="2"
+      type="System.Single" id="avoidanceMaxChange" /><field value="False" type="System.Boolean"
+      id="drawPaths" /><field value="False" type="System.Boolean" id="drawAvoidance"
+      /></reference><reference type="RAIN.Perception.BasicSenses" refcount="1" id="8"><field
+      type="System.Collections.Generic.List" id="sensors" elementtype="RAIN.Perception.Sensors.RAINSensor"><field
+      type="RAIN.Perception.Sensors.VisualSensor" reference="10" id="element0" /></field></reference><reference
+      type="RAIN.Memory.MemoryObject" refcount="1" id="9"><field value="UnityEngine.GameObject"
+      type="System.String" id="_serializedType" /><field value="" type="System.String"
+      id="_serializedValue" /><field type="UnityEngine.GameObject" id="_serializedGameObject"
+      gameobject="1" /></reference><reference type="RAIN.Perception.Sensors.VisualSensor"
+      refcount="1" id="10"><field value="True" type="System.Boolean" id="_showVisual"
+      /><field value="0,0.6,0.6,1" type="UnityEngine.Color" id="_sensorColor" /><field
+      value="True" type="System.Boolean" id="_isActive" /><field value="TargetSensor"
+      type="System.String" id="_sensorName" /><field type="UnityEngine.Transform"
+      id="_mountPoint" gameobject="3" /><field value="0,1.14,0" type="UnityEngine.Vector3"
+      id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
+      /><field value="False" type="System.Boolean" id="_canDetectSelf" /><field type="System.Collections.Generic.List"
       id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
       childrenvisible="True" /><field value="360" type="System.Single" id="_horizontalAngle"
       /><field value="360" type="System.Single" id="_verticalAngle" /><field value="15"
       type="System.Single" id="_range" /><field value="True" type="System.Boolean"
       id="_requireLineOfSight" /><field value="-5" type="UnityEngine.LayerMask" id="_lineOfSightMask"
-      /><field value="True" type="System.Boolean" id="_lineOfSightIgnoresSelf" /></reference><reference
-      type="RAIN.Animation.MecanimAnimator+IKTarget" refcount="1" id="11"><field value="False"
-      type="System.Boolean" id="isActive" /><field value="0" type="System.Single"
-      id="positionWeight" /><field value="0" type="System.Single" id="rotationWeight"
-      /><field value="0,0,0" type="UnityEngine.Vector3" id="positionVector" /><field
-      value="0,0,0" type="UnityEngine.Vector3" id="rotationVector" /></reference><reference
-      type="RAIN.Animation.BasicAnimator+BasicAnimatorState+MixingTransform" refcount="1"
-      id="12"><field type="UnityEngine.Transform" id="transform" gameobject="-1" /><field
-      value="False" type="System.Boolean" id="recursive" /></reference><reference
-      type="RAIN.Animation.MecanimAnimator+IKTarget" refcount="1" id="13"><field value="False"
-      type="System.Boolean" id="isActive" /><field value="0" type="System.Single"
-      id="positionWeight" /><field value="0" type="System.Single" id="rotationWeight"
-      /><field value="0,0,0" type="UnityEngine.Vector3" id="positionVector" /><field
-      value="0,0,0" type="UnityEngine.Vector3" id="rotationVector" /></reference><reference
-      type="RAIN.Animation.MecanimAnimator+IKTarget" refcount="1" id="14"><field value="False"
-      type="System.Boolean" id="isActive" /><field value="0" type="System.Single"
-      id="positionWeight" /><field value="0" type="System.Single" id="rotationWeight"
-      /><field value="0,0,0" type="UnityEngine.Vector3" id="positionVector" /><field
-      value="0,0,0" type="UnityEngine.Vector3" id="rotationVector" /></reference><reference
-      type="RAIN.Animation.MecanimAnimator+IKTarget" refcount="1" id="15"><field value="False"
-      type="System.Boolean" id="isActive" /><field value="0" type="System.Single"
-      id="positionWeight" /><field value="0" type="System.Single" id="rotationWeight"
-      /><field value="0,0,0" type="UnityEngine.Vector3" id="positionVector" /><field
-      value="0,0,0" type="UnityEngine.Vector3" id="rotationVector" /></reference><reference
-      type="RAIN.Animation.MecanimAnimator+IKLookAt" refcount="1" id="16"><field value="False"
-      type="System.Boolean" id="isActive" /><field value="0" type="System.Single"
-      id="lookAtWeight" /><field value="0" type="System.Single" id="lookAtBodyWeight"
-      /><field value="0" type="System.Single" id="lookAtHeadWeight" /><field value="0"
-      type="System.Single" id="lookAtEyesWeight" /><field value="0" type="System.Single"
-      id="lookAtClampWeight" /><field value="0,0,0" type="UnityEngine.Vector3" id="positionVector"
-      /></reference><reference type="RAIN.Animation.MecanimAnimator+MecanimAnimatorState"
-      refcount="0" id="17" /><reference type="RAIN.Animation.MecanimParameterValue"
-      refcount="0" id="18" /><reference type="RAIN.Representation.Expression" refcount="0"
-      id="19" customdata="0" /><reference type="RAIN.Animation.MecanimParameterValue"
-      refcount="0" id="20" /><reference type="RAIN.Representation.Expression" refcount="0"
-      id="21" customdata="1" /><reference type="RAIN.Animation.MecanimParameterValue"
-      refcount="0" id="22" /><reference type="RAIN.Representation.Expression" refcount="0"
-      id="23" customdata="2" /></references></component>
+      /><field value="True" type="System.Boolean" id="_lineOfSightIgnoresSelf" /></reference></references></component>
     _serializedGameObjects:
     - {fileID: 259101716}
     - {fileID: 100004, guid: e3bdc99c927a96845bd509172e5151e4, type: 2}
@@ -85720,6 +85828,32 @@ Prefab:
   m_RootGameObject: {fileID: 1561633683}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1783592086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100020, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 615592240}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1783592087}
+  m_Layer: 0
+  m_Name: SkinPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1783592087
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400020, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 615592240}
+  m_GameObject: {fileID: 1783592086}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.46832728e-08, y: .0272849184, z: 1.09054412e-07}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1432756923}
 --- !u!1 &1784771903
 GameObject:
   m_ObjectHideFlags: 0
@@ -91936,7 +92070,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100014, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1939395119}
@@ -91951,7 +92085,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400014, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 1562565617}
+  m_PrefabInternal: {fileID: 214725950}
   m_GameObject: {fileID: 1939395118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: .570449114, z: 0}
@@ -93538,6 +93672,118 @@ Mesh:
     m_Extent: {x: 1, y: 1.50000024, z: 1}
   m_MeshUsageFlags: 0
   m_MeshOptimized: 0
+--- !u!1 &1989408270
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100024, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 1131346798}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1989408271}
+  - 33: {fileID: 1989408276}
+  - 23: {fileID: 1989408275}
+  - 114: {fileID: 1989408274}
+  - 54: {fileID: 1989408273}
+  - 65: {fileID: 1989408272}
+  m_Layer: 0
+  m_Name: Sword
+  m_TagString: Weapon
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1989408271
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400024, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 1131346798}
+  m_GameObject: {fileID: 1989408270}
+  m_LocalRotation: {x: .501156867, y: .4988406, z: .501156747, w: .498840541}
+  m_LocalPosition: {x: 1, y: -.851668596, z: 0}
+  m_LocalScale: {x: .800000131, y: 1.25000012, z: 1}
+  m_Children:
+  - {fileID: 1450292636}
+  - {fileID: 392197}
+  - {fileID: 582895403}
+  m_Father: {fileID: 545029429}
+--- !u!65 &1989408272
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500002, guid: 22dcba112f5eb564287d27fe1f7afb80,
+    type: 2}
+  m_PrefabInternal: {fileID: 1131346798}
+  m_GameObject: {fileID: 1989408270}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .0639150441, y: 1.5, z: .699999988}
+  m_Center: {x: -1.11022387e-15, y: -7.10542482e-16, z: 7.4505806e-09}
+--- !u!54 &1989408273
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400004, guid: 22dcba112f5eb564287d27fe1f7afb80,
+    type: 2}
+  m_PrefabInternal: {fileID: 1131346798}
+  m_GameObject: {fileID: 1989408270}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1989408274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400014, guid: 22dcba112f5eb564287d27fe1f7afb80,
+    type: 2}
+  m_PrefabInternal: {fileID: 1131346798}
+  m_GameObject: {fileID: 1989408270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb947bf73dcb9404d83c8c13f29bdf4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPickupRange: 1.5
+  damage: 25
+  weaponName: 
+  age: 19
+  quality: "\xD8V!"
+  attackWillCost: -20
+  gui_Skin: {fileID: 11400000, guid: 49c7d18afcfee4ef4ae02f66852d6706, type: 2}
+--- !u!23 &1989408275
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300006, guid: 22dcba112f5eb564287d27fe1f7afb80,
+    type: 2}
+  m_PrefabInternal: {fileID: 1131346798}
+  m_GameObject: {fileID: 1989408270}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 2ee53ad29dd444148bfe6ca3e1f2b2f9, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!33 &1989408276
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300006, guid: 22dcba112f5eb564287d27fe1f7afb80,
+    type: 2}
+  m_PrefabInternal: {fileID: 1131346798}
+  m_GameObject: {fileID: 1989408270}
+  m_Mesh: {fileID: 4300000, guid: 528e061e517728949bc47f25dbe3a7ea, type: 3}
 --- !u!1 &1997363016
 GameObject:
   m_ObjectHideFlags: 0
@@ -95191,138 +95437,6 @@ Prefab:
   m_RootGameObject: {fileID: 1740042136}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1001 &2030946594
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 15.8085661
-      objectReference: {fileID: 0}
-    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.12085342
-      objectReference: {fileID: 0}
-    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -5.54916906
-      objectReference: {fileID: 0}
-    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -.320849925
-      objectReference: {fileID: 0}
-    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: .947130084
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400002, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-      propertyPath: _dataSerializer._serializedData
-      value: <component version="1.0" type="RAIN.Core.AIRig"><fields><field value="True"
-        type="System.Boolean" id="_showVisual" /><field value="True" type="System.Boolean"
-        id="_useUnityMessages" /><field value="False" type="System.Boolean" id="_useFixedUpdate"
-        /><field type="RAIN.Core.AI" reference="0" id="_ai" /></fields><references><reference
-        type="RAIN.Core.AI" refcount="1" id="0"><field value="True" type="System.Boolean"
-        id="_isActive" /><field type="UnityEngine.GameObject" id="_body" gameobject="0"
-        /><field type="RAIN.Memory.BasicMemory" reference="1" id="_workingMemory"
-        childrenvisible="False" /><field type="RAIN.Minds.BasicMind" reference="2"
-        id="_mind" childrenvisible="False" /><field type="RAIN.Motion.CharacterControllerMotor"
-        reference="3" id="_motor" childrenvisible="True" /><field type="RAIN.Animation.BasicAnimator"
-        reference="6" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
-        reference="7" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-        reference="8" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
-        id="_customElements" elementtype="RAIN.Core.CustomAIElement" childrenvisible="False"
-        /></reference><reference type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field
-        type="System.Collections.Generic.List" id="_memoryItems" elementtype="System.String"><field
-        value="detectTarget" type="System.String" id="element0" /></field><field type="System.Collections.Generic.List"
-        id="_memoryValues" elementtype="RAIN.Memory.MemoryObject"><field type="RAIN.Memory.MemoryObject"
-        reference="9" id="element0" /></field></reference><reference type="RAIN.Minds.BasicMind"
-        refcount="1" id="2"><field type="RAIN.BehaviorTrees.BTAsset" id="behaviorTreeAsset"
-        gameobject="2" /><field type="System.Collections.Generic.List" id="behaviorTreeBindings"
-        elementtype="RAIN.BehaviorTrees.BTAssetBinding" /></reference><reference type="RAIN.Motion.CharacterControllerMotor"
-        refcount="1" id="3"><field type="RAIN.Motion.MoveLookTarget" reference="4"
-        id="moveTarget" /><field type="RAIN.Motion.MoveLookTarget" reference="5" id="faceTarget"
-        /><field value="1" type="System.Single" id="defaultSpeed" /><field value="180"
-        type="System.Single" id="defaultRotationSpeed" /><field value="0.1" type="System.Single"
-        id="defaultCloseEnoughDistance" /><field value="0.001" type="System.Single"
-        id="defaultCloseEnoughAngle" /><field value="90" type="System.Single" id="defaultFaceBeforeMoveAngle"
-        /><field value="0.5" type="System.Single" id="defaultStepUpHeight" /><field
-        value="False" type="System.Boolean" id="allow3DMovement" /><field value="False"
-        type="System.Boolean" id="allow3DRotation" /><field value="True" type="System.Boolean"
-        id="validPathRequired" /><field type="UnityEngine.CharacterController" id="characterController"
-        gameobject="5" /></reference><reference type="RAIN.Motion.MoveLookTarget"
-        refcount="1" id="4"><field value="0" type="System.Single" id="closeEnoughDistance"
-        /><field value="None" type="RAIN.Motion.MoveLookTarget+MoveLookTargetType"
-        id="_targetType" /><field type="UnityEngine.Transform" id="_transformTarget"
-        gameobject="-1" /><field type="RAIN.Core.Kinematic" reference="-1" id="_kinematicTarget"
-        /><field value="0,0,0" type="UnityEngine.Vector3" id="_vectorTarget" /><field
-        type="RAIN.Navigation.Targets.NavigationTarget" reference="-1" id="_navigationTarget"
-        /><field type="RAIN.Entities.Aspects.RAINAspect" reference="-1" id="_aspectTarget"
-        /><field value="" type="System.String" id="_variableTarget" /></reference><reference
-        type="RAIN.Motion.MoveLookTarget" refcount="1" id="5"><field value="0" type="System.Single"
-        id="closeEnoughDistance" /><field value="None" type="RAIN.Motion.MoveLookTarget+MoveLookTargetType"
-        id="_targetType" /><field type="UnityEngine.Transform" id="_transformTarget"
-        gameobject="-1" /><field type="RAIN.Core.Kinematic" reference="-1" id="_kinematicTarget"
-        /><field value="0,0,0" type="UnityEngine.Vector3" id="_vectorTarget" /><field
-        type="RAIN.Navigation.Targets.NavigationTarget" reference="-1" id="_navigationTarget"
-        /><field type="RAIN.Entities.Aspects.RAINAspect" reference="-1" id="_aspectTarget"
-        /><field value="" type="System.String" id="_variableTarget" /></reference><reference
-        type="RAIN.Animation.BasicAnimator" refcount="1" id="6"><field type="System.Collections.Generic.List"
-        id="animationStates" elementtype="RAIN.Animation.BasicAnimator+BasicAnimatorState"
-        childrenvisible="True" /></reference><reference type="RAIN.Navigation.BasicNavigator"
-        refcount="1" id="7"><field type="System.Collections.Generic.List" id="graphTags"
-        elementtype="System.String" childrenvisible="False" /><field value="100" type="System.Int32"
-        id="maxPathfindingStepsPerFrame" /><field value="False" type="System.Boolean"
-        id="useAvoidance" /><field value="5" type="System.Single" id="avoidanceSize"
-        /><field value="0.1" type="System.Single" id="avoidanceCellSize" /><field
-        value="2" type="System.Single" id="avoidanceMaxChange" /><field value="False"
-        type="System.Boolean" id="drawPaths" /><field value="False" type="System.Boolean"
-        id="drawAvoidance" /></reference><reference type="RAIN.Perception.BasicSenses"
-        refcount="1" id="8"><field type="System.Collections.Generic.List" id="sensors"
-        elementtype="RAIN.Perception.Sensors.RAINSensor"><field type="RAIN.Perception.Sensors.VisualSensor"
-        reference="10" id="element0" /></field></reference><reference type="RAIN.Memory.MemoryObject"
-        refcount="1" id="9"><field value="UnityEngine.GameObject" type="System.String"
-        id="_serializedType" /><field value="" type="System.String" id="_serializedValue"
-        /><field type="UnityEngine.GameObject" id="_serializedGameObject" gameobject="1"
-        /></reference><reference type="RAIN.Perception.Sensors.VisualSensor" refcount="1"
-        id="10"><field value="True" type="System.Boolean" id="_showVisual" /><field
-        value="0,0.6,0.6,1" type="UnityEngine.Color" id="_sensorColor" /><field value="True"
-        type="System.Boolean" id="_isActive" /><field value="TargetSensor" type="System.String"
-        id="_sensorName" /><field type="UnityEngine.Transform" id="_mountPoint" gameobject="3"
-        /><field value="0,1.14,0" type="UnityEngine.Vector3" id="_positionOffset"
-        /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /><field
-        value="False" type="System.Boolean" id="_canDetectSelf" /><field type="System.Collections.Generic.List"
-        id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
-        childrenvisible="True" /><field value="360" type="System.Single" id="_horizontalAngle"
-        /><field value="360" type="System.Single" id="_verticalAngle" /><field value="15"
-        type="System.Single" id="_range" /><field value="False" type="System.Boolean"
-        id="_requireLineOfSight" /><field value="-5" type="UnityEngine.LayerMask"
-        id="_lineOfSightMask" /><field value="True" type="System.Boolean" id="_lineOfSightIgnoresSelf"
-        /></reference></references></component>
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400012, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-      propertyPath: normalMovementSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 100016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_RootGameObject: {fileID: 2041752771}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &2031343672
 GameObject:
   m_ObjectHideFlags: 0
@@ -95563,7 +95677,7 @@ MeshFilter:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2041752772}
@@ -95583,7 +95697,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 2041752771}
   m_LocalRotation: {x: 0, y: -.320849925, z: 0, w: .947130084}
   m_LocalPosition: {x: 15.8085661, y: 1.12085342, z: -5.54916906}
@@ -95600,7 +95714,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400012, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 2041752771}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -95634,7 +95748,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400010, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 2041752771}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -95648,7 +95762,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400006, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 2041752771}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -95661,7 +95775,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400008, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 2041752771}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -95677,7 +95791,7 @@ CharacterController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 14300000, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 2041752771}
   serializedVersion: 2
   m_Height: 2
@@ -96909,7 +97023,7 @@ MeshFilter:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2099382654}
@@ -96925,7 +97039,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 2099382653}
   m_LocalRotation: {x: .173648193, y: 0, z: 0, w: .984807789}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -96937,7 +97051,7 @@ Light:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 10800000, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 2030946594}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 2099382653}
   m_Enabled: 1
   serializedVersion: 3
@@ -97533,6 +97647,118 @@ Prefab:
   m_RootGameObject: {fileID: 1028513307}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &2126578748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100024, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 214725950}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2126578754}
+  - 33: {fileID: 2126578753}
+  - 23: {fileID: 2126578752}
+  - 114: {fileID: 2126578751}
+  - 54: {fileID: 2126578750}
+  - 65: {fileID: 2126578749}
+  m_Layer: 0
+  m_Name: Sword
+  m_TagString: Weapon
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &2126578749
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500002, guid: 22dcba112f5eb564287d27fe1f7afb80,
+    type: 2}
+  m_PrefabInternal: {fileID: 214725950}
+  m_GameObject: {fileID: 2126578748}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .0639150441, y: 1.5, z: .699999988}
+  m_Center: {x: -1.11022387e-15, y: -7.10542482e-16, z: 7.4505806e-09}
+--- !u!54 &2126578750
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400004, guid: 22dcba112f5eb564287d27fe1f7afb80,
+    type: 2}
+  m_PrefabInternal: {fileID: 214725950}
+  m_GameObject: {fileID: 2126578748}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &2126578751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400014, guid: 22dcba112f5eb564287d27fe1f7afb80,
+    type: 2}
+  m_PrefabInternal: {fileID: 214725950}
+  m_GameObject: {fileID: 2126578748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb947bf73dcb9404d83c8c13f29bdf4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPickupRange: 1.5
+  damage: 25
+  weaponName: 
+  age: 19
+  quality: "\xD8V!"
+  attackWillCost: -20
+  gui_Skin: {fileID: 11400000, guid: 49c7d18afcfee4ef4ae02f66852d6706, type: 2}
+--- !u!23 &2126578752
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300006, guid: 22dcba112f5eb564287d27fe1f7afb80,
+    type: 2}
+  m_PrefabInternal: {fileID: 214725950}
+  m_GameObject: {fileID: 2126578748}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 2ee53ad29dd444148bfe6ca3e1f2b2f9, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!33 &2126578753
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300006, guid: 22dcba112f5eb564287d27fe1f7afb80,
+    type: 2}
+  m_PrefabInternal: {fileID: 214725950}
+  m_GameObject: {fileID: 2126578748}
+  m_Mesh: {fileID: 4300000, guid: 528e061e517728949bc47f25dbe3a7ea, type: 3}
+--- !u!4 &2126578754
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400024, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 214725950}
+  m_GameObject: {fileID: 2126578748}
+  m_LocalRotation: {x: .501156867, y: .4988406, z: .501156747, w: .498840541}
+  m_LocalPosition: {x: 1, y: -.851668596, z: 0}
+  m_LocalScale: {x: .800000131, y: 1.25000012, z: 1}
+  m_Children:
+  - {fileID: 1148186057}
+  - {fileID: 1678902588}
+  - {fileID: 225734493}
+  m_Father: {fileID: 259101717}
 --- !u!1 &2127252519
 GameObject:
   m_ObjectHideFlags: 0
@@ -97650,8 +97876,8 @@ Prefab:
 --- !u!1 &2131042272
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100002, guid: c6ab686afe810714aa604d0bc70a11c0, type: 2}
-  m_PrefabInternal: {fileID: 1490073503}
+  m_PrefabParentObject: {fileID: 100022, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 142573044}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2131042273}
@@ -97665,8 +97891,8 @@ GameObject:
 --- !u!4 &2131042273
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400002, guid: c6ab686afe810714aa604d0bc70a11c0, type: 2}
-  m_PrefabInternal: {fileID: 1490073503}
+  m_PrefabParentObject: {fileID: 400022, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 2131042272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: .570449114, z: 0}
@@ -97814,8 +98040,8 @@ Prefab:
 --- !u!1 &2144942375
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100006, guid: c6ab686afe810714aa604d0bc70a11c0, type: 2}
-  m_PrefabInternal: {fileID: 1490073503}
+  m_PrefabParentObject: {fileID: 100024, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 142573044}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2144942376}
@@ -97834,8 +98060,8 @@ GameObject:
 --- !u!4 &2144942376
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400006, guid: c6ab686afe810714aa604d0bc70a11c0, type: 2}
-  m_PrefabInternal: {fileID: 1490073503}
+  m_PrefabParentObject: {fileID: 400024, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 2144942375}
   m_LocalRotation: {x: .501156867, y: .4988406, z: .501156747, w: .498840541}
   m_LocalPosition: {x: 1, y: -.851668596, z: 0}
@@ -97848,9 +98074,9 @@ Transform:
 --- !u!65 &2144942377
 BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: c6ab686afe810714aa604d0bc70a11c0,
+  m_PrefabParentObject: {fileID: 6500002, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 1490073503}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 2144942375}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -97861,9 +98087,9 @@ BoxCollider:
 --- !u!54 &2144942378
 Rigidbody:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: c6ab686afe810714aa604d0bc70a11c0,
+  m_PrefabParentObject: {fileID: 5400004, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 1490073503}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 2144942375}
   serializedVersion: 2
   m_Mass: 1
@@ -97877,9 +98103,9 @@ Rigidbody:
 --- !u!114 &2144942379
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: c6ab686afe810714aa604d0bc70a11c0,
+  m_PrefabParentObject: {fileID: 11400014, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 1490073503}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 2144942375}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -97896,9 +98122,9 @@ MonoBehaviour:
 --- !u!23 &2144942380
 Renderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300000, guid: c6ab686afe810714aa604d0bc70a11c0,
+  m_PrefabParentObject: {fileID: 2300006, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 1490073503}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 2144942375}
   m_Enabled: 1
   m_CastShadows: 1
@@ -97918,8 +98144,8 @@ Renderer:
 --- !u!33 &2144942381
 MeshFilter:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3300000, guid: c6ab686afe810714aa604d0bc70a11c0,
+  m_PrefabParentObject: {fileID: 3300006, guid: 22dcba112f5eb564287d27fe1f7afb80,
     type: 2}
-  m_PrefabInternal: {fileID: 1490073503}
+  m_PrefabInternal: {fileID: 142573044}
   m_GameObject: {fileID: 2144942375}
   m_Mesh: {fileID: 4300000, guid: 528e061e517728949bc47f25dbe3a7ea, type: 3}
