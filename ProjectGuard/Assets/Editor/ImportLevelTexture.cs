@@ -91,11 +91,8 @@ public class ImportLevelTexture {
 
 		switch (wallType) {
 		case WallTypes.WALL:
-			if (tempBlock[1] == Color.black) {
-				if (tempBlock[3] == Color.black) {
-
-				}
-			}
+			Debug.Log("bleh");
+			return 1;
 		
 		case WallTypes.CORNER_INNER:
 			Debug.Log("bleh");
