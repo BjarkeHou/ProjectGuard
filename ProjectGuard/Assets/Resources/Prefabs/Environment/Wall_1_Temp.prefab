@@ -11,7 +11,7 @@ GameObject:
   - 95: {fileID: 9500000}
   - 64: {fileID: 6400000}
   m_Layer: 8
-  m_Name: Wall_1
+  m_Name: Wall_1_Temp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

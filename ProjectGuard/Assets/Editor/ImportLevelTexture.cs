@@ -5,8 +5,14 @@ using System.Collections;
 public class ImportLevelTexture {
 
 	static Texture2D inputTexture = Selection.activeObject as Texture2D;
-	enum WallTypes {WALL, CORNER_INNER, CORNER_OUTER, ERROR};
+	enum WallTypes {
+		WALL,
+		CORNER_INNER,
+		CORNER_OUTER,
+		ERROR}
+	;
 	static WallTypes wallType;
+	static int wallRot;
 
 
 	[MenuItem ("Assets/Import as Level Texture")]
@@ -15,39 +21,45 @@ public class ImportLevelTexture {
 			Debug.Log("Selected object is not a texture");
 			return;
 		}
-		
-		Color[] texturePixels = inputTexture.GetPixels();
-		int[] wallPlacement = ReadPixels(texturePixels);
+		BuildLevel(inputTexture.GetPixels());
 	}
 
-	static int[] ReadPixels(Color[] pix) {
-		int[] temp = new int[pix.Length];
-
-		for (int y = 0; y < inputTexture.width; y += 3) {
-			for (int x = 0; x < inputTexture.height; x += 3) {
+	static void BuildLevel(Color[] pix) {
+		for (int y = 0; y < inputTexture.width; y ++) {
+			for (int x = 0; x < inputTexture.height; x ++) {
 
 				int num = inputTexture.height * y + x;
-				if (pix[num] == new Color(0, 0, 1)) {
+				if (pix [num] == new Color (0, 0, 1)) {
 					wallType = DetermineType(x, y);
 					Debug.Log(wallType);
-					temp[num] = DetermineRotation(x, y);
-					Debug.Log(temp[num]);
-				} else {
-					temp[num] = 0;
+					wallRot = DetermineRotation(x, y);
+					Debug.Log(wallRot);
+					PlaceWall(x, y, wallType, wallRot);
 				}
 			}
 		}
+	}
 
-		return temp;
+	static void PlaceWall(int xPos, int zPos, WallTypes type, int rot) {
+		Quaternion rotation = Quaternion.Euler(new Vector3 (-90, 90 * rot, 0));
+		string prefab = "Empty";
+		if (type == WallTypes.WALL) {
+			prefab = "Wall_" + Random.Range(1, 3) + "_Temp";
+		} else if (type == WallTypes.CORNER_INNER) {
+			prefab = "Wall_CornerInner_Temp";
+		} else if (type == WallTypes.CORNER_OUTER) {
+			prefab = "Wall_CornerOuter_Temp";
+		}
+
+		Object wall = Object.Instantiate(Resources.Load("Prefabs/Environment/" + prefab), new Vector3 (xPos, 0, zPos), rotation);
 	}
 
 	static WallTypes DetermineType(int xPos, int yPos) {
 		Color[] tempBlock = inputTexture.GetPixels(xPos - 1, yPos - 1, 3, 3);
 
-		//is it a wall?
 		int value = 0;
 		for (int i = 0; i < tempBlock.Length; i ++) {
-			if (tempBlock[i] == Color.black || tempBlock[i] == Color.blue) {
+			if (tempBlock [i] == Color.black || tempBlock [i] == Color.blue) {
 				value += i;
 			}
 		}
@@ -57,25 +69,25 @@ public class ImportLevelTexture {
 
 		} else {
 			if (value == 8) {
-				if (tempBlock[0] == Color.white) {
+				if (tempBlock [0] == Color.white) {
 					return WallTypes.CORNER_OUTER;
 				} else {
 					return WallTypes.CORNER_INNER;
 				}
 			} else if (value == 10) {
-				if (tempBlock[2] == Color.white) {
+				if (tempBlock [2] == Color.white) {
 					return WallTypes.CORNER_OUTER;
 				} else {
 					return WallTypes.CORNER_INNER;
 				}
 			} else if (value == 14) {
-				if (tempBlock[6] == Color.white) {
+				if (tempBlock [6] == Color.white) {
 					return WallTypes.CORNER_OUTER;
 				} else {
 					return WallTypes.CORNER_INNER;
 				}
 			} else if (value == 16) {
-				if (tempBlock[8] == Color.white) {
+				if (tempBlock [8] == Color.white) {
 					return WallTypes.CORNER_OUTER;
 				} else {
 					return WallTypes.CORNER_INNER;
@@ -86,23 +98,50 @@ public class ImportLevelTexture {
 		}
 	}
 
-	static int DetermineRotation (int xPos, int yPos) {
+	static int DetermineRotation(int xPos, int yPos) {
 		Color[] tempBlock = inputTexture.GetPixels(xPos - 1, yPos - 1, 3, 3);
 
 		switch (wallType) {
 		case WallTypes.WALL:
-			Debug.Log("bleh");
-			return 1;
+			if (tempBlock [1] == Color.black) {
+				if (tempBlock [3] == Color.red) {
+					return 0;
+				} else {
+					return 2;
+				}
+			} else {
+				if (tempBlock [1] == Color.red) {
+					return 3;
+				} else {
+					return 1;
+				} 
+			}
+			break;
 		
 		case WallTypes.CORNER_INNER:
-			Debug.Log("bleh");
-			return 1;
+			if (tempBlock [0] == Color.red) {
+				return 0;
+			} else if (tempBlock [2] == Color.red) {
+				return 3;
+			} else if (tempBlock [6] == Color.red) {
+				return 1;
+			} else if (tempBlock [8] == Color.red) {
+				return 2;
+			}
+			break;
 		
 		case WallTypes.CORNER_OUTER:
-			Debug.Log("bleh");
-			return 1;
+			if (tempBlock [0] == Color.white) {
+				return 0;
+			} else if (tempBlock [2] == Color.white) {
+				return 3;
+			} else if (tempBlock [6] == Color.white) {
+				return 1;
+			} else if (tempBlock [8] == Color.white) {
+				return 2;
+			}
+			break;
 		}
-
 		return -1;
 	}
 }
