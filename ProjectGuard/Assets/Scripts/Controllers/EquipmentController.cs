@@ -17,14 +17,20 @@ public class EquipmentController : MonoBehaviour
 	public bool m_hasWeaponEquipped = false;
 	private bool m_hasHelmEquipped = false;
 
+	void Start() {
+		if (hand == null) {
+			hand = transform.Find ("Model").Find("Hand");
+		}
+	}
 	
 	// Update is called once per frame
 	void LateUpdate ()
 	{
-		if (hasWeaponEquipped) {
+		/*if (hasWeaponEquipped) {
 			currentWeapon.transform.position = hand.position + (currentWeapon.transform.position - holdPoint.position);
 			currentWeapon.transform.rotation = hand.rotation;
-		}
+			currentWeapon.transform.localRotation = Quaternion.Euler(-280.5f, 2.5f, -15f);
+		}*/
 	}
 		
 	public void Equip (GameObject weapon)
@@ -32,7 +38,14 @@ public class EquipmentController : MonoBehaviour
 		currentWeapon = weapon;
 		currentWeapon.rigidbody.isKinematic = true;
 		currentWeapon.rigidbody.useGravity = false;
+		currentWeapon.transform.parent = hand;
 		holdPoint = weapon.transform.Find ("HoldPoint");
+
+
+		//currentWeapon.transform.rotation = Quaternion.Euler(Vector3.zero);
+		currentWeapon.transform.localRotation = Quaternion.Euler(-100.5f, 2.5f, -15f);
+		//currentWeapon.transform.position = Vector3.zero;
+		currentWeapon.transform.position = hand.position + (currentWeapon.transform.position - holdPoint.position);
 		
 		Invoke ("InvokedWeaponEquipFlag", 0.1f);
 	}
