@@ -4,7 +4,7 @@ using System.Collections;
 
 public class ImportLevelTexture {
 
-	static Texture2D inputTexture = Selection.activeObject as Texture2D;
+	static Texture2D inputTexture;
 	enum WallTypes {
 		WALL,
 		CORNER_INNER,
@@ -17,11 +17,29 @@ public class ImportLevelTexture {
 
 	[MenuItem ("Assets/Import as Level Texture")]
 	static void GenerateLevelFromTexture() {
+		ClearLevel();
+		inputTexture = null;
+		inputTexture = Selection.activeObject as Texture2D;
 		if (inputTexture == null) { 
 			Debug.Log("Selected object is not a texture");
 			return;
 		}
 		BuildLevel(inputTexture.GetPixels());
+	}
+
+	static void ClearLevel() {
+		object[] obj = GameObject.FindSceneObjectsOfType(typeof(GameObject));
+		foreach (object o in obj) {
+			GameObject g = (GameObject)o;
+			string tempName = g.name;
+			if (tempName.IndexOf("_") != -1) {
+				if (tempName.Substring(0, tempName.IndexOf("_")) == "Wall") {
+					Undo.DestroyObjectImmediate(g);
+				}
+			} else {
+				Debug.Log(tempName);
+			}
+		}
 	}
 
 	static void BuildLevel(Color[] pix) {
@@ -31,9 +49,9 @@ public class ImportLevelTexture {
 				int num = inputTexture.height * y + x;
 				if (pix [num] == new Color (0, 0, 1)) {
 					wallType = DetermineType(x, y);
-					Debug.Log(wallType);
+					//Debug.Log(wallType);
 					wallRot = DetermineRotation(x, y);
-					Debug.Log(wallRot);
+					//Debug.Log(wallRot);
 					PlaceWall(x, y, wallType, wallRot);
 				}
 			}
@@ -52,6 +70,7 @@ public class ImportLevelTexture {
 		}
 
 		Object wall = Object.Instantiate(Resources.Load("Prefabs/Environment/" + prefab), new Vector3 (xPos, 0, zPos), rotation);
+		Undo.RegisterCreatedObjectUndo(wall, "Undo Level insert");
 	}
 
 	static WallTypes DetermineType(int xPos, int yPos) {
@@ -116,7 +135,6 @@ public class ImportLevelTexture {
 					return 1;
 				} 
 			}
-			break;
 		
 		case WallTypes.CORNER_INNER:
 			if (tempBlock [0] == Color.red) {
