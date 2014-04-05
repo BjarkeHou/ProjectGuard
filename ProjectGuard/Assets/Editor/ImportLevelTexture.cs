@@ -44,11 +44,11 @@ public class ImportLevelTexture {
 		Quaternion rotation = Quaternion.Euler(new Vector3 (-90, 90 * rot, 0));
 		string prefab = "Empty";
 		if (type == WallTypes.WALL) {
-			prefab = "Wall_" + Random.Range(1, 3) + "_Temp";
+			prefab = "Wall_" + Random.Range(1, 3);
 		} else if (type == WallTypes.CORNER_INNER) {
-			prefab = "Wall_CornerInner_Temp";
+			prefab = "Wall_CornerInner";
 		} else if (type == WallTypes.CORNER_OUTER) {
-			prefab = "Wall_CornerOuter_Temp";
+			prefab = "Wall_CornerOuter";
 		}
 
 		Object wall = Object.Instantiate(Resources.Load("Prefabs/Environment/" + prefab), new Vector3 (xPos, 0, zPos), rotation);
