@@ -46,12 +46,15 @@ public class ImportLevelTexture {
 
 					PlaceWall(x, y, wallType, wallRot);
 				}
+
 				//place lights
 				if (pix [num] == Color.green) {
 					PlaceLight(x, y);
 				}
 			}
 		}
+		//Place floor
+		PlaceFloor();
 	}
 
 	static void PlaceWall(int xPos, int zPos, WallTypes type, int rot) {
@@ -76,36 +79,63 @@ public class ImportLevelTexture {
 		wall.transform.rotation = rotation;
 	}
 
+	static void PlaceFloor() {
+		for (int y = 0; y <= Mathf.Ceil(inputTexture.height/50); y ++) {
+			for (int x = 0; x <= Mathf.Ceil(inputTexture.width/50); x++) {
+				GameObject floor = (GameObject)PrefabUtility.InstantiatePrefab(Resources.Load("Prefabs/Environment/Floor") as GameObject);
+				Undo.RegisterCreatedObjectUndo(floor, "Undo Level insert");
+				if (GameObject.Find ("GeneratedLevel") != null) {
+					floor.transform.parent = GameObject.Find ("GeneratedLevel").transform;
+				}
+				floor.transform.position = new Vector3(12.5f + x * 50, -0.5f,12.5f + y * 50);
+			}
+		}
+	}
+
 	static void PlaceLight(int xPos, int zPos) {
 		Color[] tempBlock = inputTexture.GetPixels(xPos - 1, zPos - 1, 3, 3);
 		Quaternion rotation = Quaternion.identity;
-		Debug.Log ("Calculating rotation");
+		Vector2 offset = new Vector2(0, 0);
 
 		if (tempBlock[1] == Color.blue) {
-			Debug.Log ("rotation 1");
 			rotation = Quaternion.Euler(new Vector3(-90, 0, 0));
+			if (tempBlock[0] == Color.black && tempBlock[2] != Color.black) {
+				offset = new Vector3(0.37f, 0);
+			} else if (tempBlock[0] != Color.black && tempBlock[2] == Color.black) {
+				offset = new Vector3(-0.37f, 0);
+			}
 		} else if (tempBlock[3] == Color.blue) {
-			Debug.Log ("rotation 2");
 			rotation = Quaternion.Euler(new Vector3(-90, 90, 0));
+			if (tempBlock[0] == Color.black && tempBlock[6] != Color.black) {
+				offset = new Vector3(0, 0.37f);
+			} else if (tempBlock[0] != Color.black && tempBlock[6] == Color.black) {
+				offset = new Vector3(0, -0.37f);
+			}
 		} else if (tempBlock[5] == Color.blue) {
-			Debug.Log ("rotation 3");
 			rotation = Quaternion.Euler(new Vector3(-90, -90, 0));
+			if (tempBlock[2] == Color.black && tempBlock[8] != Color.black) {
+				offset = new Vector3(0, 0.37f);
+			} else if (tempBlock[2] != Color.black && tempBlock[8] == Color.black) {
+				offset = new Vector3(0, -0.37f);
+			}
 		} else if (tempBlock[7] == Color.blue) {
-			Debug.Log ("rotation 4");
 			rotation = Quaternion.Euler(new Vector3(-90, 180, 0));
+			if (tempBlock[6] == Color.black && tempBlock[8] != Color.black) {
+				offset = new Vector3(0.37f, 0);
+			} else if (tempBlock[6] != Color.black && tempBlock[8] == Color.black) {
+				offset = new Vector3(-0.37f, 0);
+			}
 		}
 
 		GameObject torch = (GameObject)PrefabUtility.InstantiatePrefab(Resources.Load("Prefabs/Environment/Torch_WithMount") as GameObject);
 		Undo.RegisterCreatedObjectUndo(torch, "Undo Level insert");
 		torch.transform.parent = GameObject.Find ("GeneratedLevel").transform;
-		torch.transform.position = new Vector3(xPos, 0, zPos);
+		torch.transform.position = new Vector3(xPos + offset.x, 0, zPos + offset.y);
 		torch.transform.rotation = rotation;
 	}
 
 	static WallTypes DetermineType(int xPos, int yPos) {
 		Color[] tempBlock = inputTexture.GetPixels(xPos - 1, yPos - 1, 3, 3);
-
-		Debug.Log(xPos + " " + yPos);
 
 		int value = 0;
 		for (int i = 0; i < tempBlock.Length; i ++) {
@@ -143,7 +173,6 @@ public class ImportLevelTexture {
 					return WallTypes.CORNER_INNER;
 				}
 			}
-			Debug.Log(value);
 			Debug.Log("Error!");
 			return WallTypes.ERROR;
 		}

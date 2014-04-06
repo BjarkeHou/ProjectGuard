@@ -15,7 +15,7 @@ public class AnimationScripts : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update() {
-	
+
 	}
 
 	//called form animations
