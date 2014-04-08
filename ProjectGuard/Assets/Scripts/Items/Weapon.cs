@@ -77,7 +77,6 @@ public class Weapon : Item
 			equipped = true;
 			playerAtkCont = wielder.GetComponent<AttackController> ();
 			wielder.GetComponent<EquipmentController> ().Equip (this.gameObject);
-			this.transform.parent = wielder.transform;
 		}
 	}
 	
