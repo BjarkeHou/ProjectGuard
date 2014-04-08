@@ -32,6 +32,9 @@ public class ImportLevelTexture {
 			Undo.DestroyObjectImmediate(GameObject.Find ("GeneratedLevel"));
 		}
 		new GameObject("GeneratedLevel");
+		if (GameObject.Find ("Assets") == null) {
+			new GameObject("Assets");
+		}
 	}
 
 	static void BuildLevel(Color[] pix) {
