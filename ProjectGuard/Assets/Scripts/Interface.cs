@@ -122,7 +122,6 @@ public class Interface : MonoBehaviour
 		
 		//Spent
 		float width = dimension.x * Mathf.InverseLerp(0, game.timeToReviveInGhostMode, game.timeLeftToReviveFromGhostMode);
-		print(width);
 		GUI.DrawTexture(new Rect(anchor.x, anchor.y, width, dimension.y), borderTex);
 	}
 
