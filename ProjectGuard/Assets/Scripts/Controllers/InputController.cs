@@ -39,24 +39,24 @@ public class InputController : MonoBehaviour
 			v = Input.GetAxisRaw("Vertical");
 			h = Input.GetAxisRaw("Horizontal");
 			mCtrl.MoveCharacter(v, h);
-			if (Input.GetKeyDown(KeyCode.LeftShift))
+			if (Input.GetButtonDown("Dodge"))
 			{
 				mCtrl.Dodge(v, h);
 			}
 					
 			// Perform attack
-			if (Input.GetMouseButtonDown(0) && eCtrl.hasWeaponEquipped)
+			if (Input.GetButtonDown("Attack") && eCtrl.hasWeaponEquipped)
 			{
 				aCtrl.DeclareAttack();
 			}
 	
-			if (Input.GetMouseButtonDown(1) && eCtrl.hasWeaponEquipped)
+			if (Input.GetButtonDown("Parry") && eCtrl.hasWeaponEquipped)
 			{
 				aCtrl.DeclareParry();
 			}
 	
 			// Drop weapon
-			if (Input.GetKey(KeyCode.G))
+			if (Input.GetButtonDown("DropWeapon"))
 			{
 				eCtrl.Drop(ItemType.Weapon);
 			}
