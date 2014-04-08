@@ -24,7 +24,7 @@ public class Interface : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-		pWill = GetComponent<PlayerWillController>();
+		pWill = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerWillController>();
 		game = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 
 		SetupWillBar();

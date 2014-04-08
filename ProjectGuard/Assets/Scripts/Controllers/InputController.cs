@@ -9,7 +9,7 @@ public class InputController : MonoBehaviour
 	private MovementController mCtrl;
 	private AttackController aCtrl;
 	private EquipmentController eCtrl;
-	private GameController gCtrl;
+	private GameController game;
 
 	// Use this for initialization
 	void Start()
@@ -18,7 +18,7 @@ public class InputController : MonoBehaviour
 		mCtrl = p.GetComponent<MovementController>();
 		aCtrl = p.GetComponent<AttackController>();
 		eCtrl = p.GetComponent<EquipmentController>();
-		gCtrl = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+		game = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 	}
 	
 	// Update is called once per frame
@@ -27,18 +27,18 @@ public class InputController : MonoBehaviour
 		// Pause the game
 		if (Input.GetKey(KeyCode.Escape))
 		{
-			if (!gCtrl.isPaused)
+			if (!game.isPaused)
 			{
-				gCtrl.PauseGame();
+				game.PauseGame();
 			}
 		}
-	
-		if (!gCtrl.isPaused)
+		if (!game.isPaused)
 		{
 			// Move Player
 			v = Input.GetAxisRaw("Vertical");
 			h = Input.GetAxisRaw("Horizontal");
 			mCtrl.MoveCharacter(v, h);
+			
 			if (Input.GetButtonDown("Dodge"))
 			{
 				mCtrl.Dodge(v, h);
