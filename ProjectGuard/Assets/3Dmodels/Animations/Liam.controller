@@ -230,6 +230,19 @@ BlendTree:
   m_MaxThreshold: 1
   m_UseAutomaticThresholds: 1
   m_BlendType: 0
+--- !u!206 &20684590
+BlendTree:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Blend Tree
+  m_Childs: []
+  m_BlendParameter: curWill
+  m_BlendParameterY: curWill
+  m_MinThreshold: 0
+  m_MaxThreshold: 1
+  m_UseAutomaticThresholds: 1
+  m_BlendType: 0
 --- !u!206 &20689614
 BlendTree:
   m_ObjectHideFlags: 3
@@ -900,12 +913,21 @@ StateMachine:
       - {fileID: 110124058}
       - {fileID: 110112381}
     data:
+      first: {fileID: 110276243}
+      second:
+      - {fileID: 110121240}
+      - {fileID: 110125984}
+      - {fileID: 110106596}
+    data:
       first: {fileID: 110200000}
       second:
       - {fileID: 110120500}
       - {fileID: 110183534}
       - {fileID: 110171679}
       - {fileID: 110133955}
+    data:
+      first: {fileID: 110262220}
+      second: []
     data:
       first: {fileID: 110212344}
       second:
@@ -914,23 +936,14 @@ StateMachine:
       - {fileID: 110151227}
       - {fileID: 110182380}
     data:
-      first: {fileID: 110220715}
-      second:
-      - {fileID: 110153523}
-    data:
       first: {fileID: 110251932}
       second:
       - {fileID: 110119435}
       - {fileID: 110117308}
     data:
-      first: {fileID: 110262220}
-      second: []
-    data:
-      first: {fileID: 110276243}
+      first: {fileID: 110220715}
       second:
-      - {fileID: 110121240}
-      - {fileID: 110125984}
-      - {fileID: 110106596}
+      - {fileID: 110153523}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: -156, y: 0, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
