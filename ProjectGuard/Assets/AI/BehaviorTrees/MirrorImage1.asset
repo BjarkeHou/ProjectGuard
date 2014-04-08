@@ -20,10 +20,12 @@ MonoBehaviour:
       aspectvariable=&quot;&quot; aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;Player&amp;quot;&quot;
       /&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;&quot;
       namespace=&quot;(global)&quot; name=&quot;action&quot; classname=&quot;CalculateActionPriority&quot;
-      /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;running&quot;
+      /&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;selector&quot;&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;constraint&quot; constraint=&quot;detectTarget
+      != null&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;running&quot;
       name=&quot;Engagement&quot;&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
       priority=&quot;&quot; name=&quot;engage&quot; movetarget=&quot;detectTarget&quot;
-      movespeed=&quot;3&quot; facetarget=&quot;detectTarget&quot; closeenoughdistance=&quot;1.5&quot;
+      movespeed=&quot;3&quot; facetarget=&quot;detectTarget&quot; closeenoughdistance=&quot;2.5&quot;
       closeenoughangle=&quot;&quot; /&gt;&lt;mecparam valueexpression=&quot;true&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; parametertype=&quot;boolean&quot;
       parametername=&quot;Attack&quot; name=&quot;attack&quot; damptime=&quot;0&quot;
@@ -40,7 +42,7 @@ MonoBehaviour:
       repeatuntil=&quot;&quot; name=&quot;disengage&quot; movetarget=&quot;returnTarget&quot;
       movespeed=&quot;5&quot; facetarget=&quot;detectTarget&quot; closeenoughdistance=&quot;3&quot;
       closeenoughangle=&quot;&quot; /&gt;&lt;timer waitforsec=&quot;1&quot; returnvalue=&quot;success&quot;
-      name=&quot;Dodged long enough&quot; /&gt;&lt;/parallel&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
+      name=&quot;Dodged long enough&quot; /&gt;&lt;/parallel&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
       type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
       elementtype="System.String" /></fields><references /></scriptableobject>
     _serializedGameObjects: []

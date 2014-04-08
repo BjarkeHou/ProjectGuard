@@ -9,7 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 95: {fileID: 9500000}
-  - 64: {fileID: 6400000}
   m_Layer: 8
   m_Name: Wall_1
   m_TagString: Untagged
@@ -28,8 +27,9 @@ GameObject:
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
   - 95: {fileID: 9500002}
+  - 64: {fileID: 6400000}
   m_Layer: 8
-  m_Name: Wall1
+  m_Name: Wall_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,8 +41,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: -.500000179, y: .499999881, z: .499999881, w: .500000179}
-  m_LocalPosition: {x: -4.15176582, y: -.281426668, z: -10.2344246}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
+  m_LocalPosition: {x: 1, y: 0, z: 7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -53,8 +53,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
-  m_LocalRotation: {x: 5.4232089e-08, y: 5.4232089e-08, z: .70710814, w: -.707105517}
-  m_LocalPosition: {x: -.625004768, y: .125, z: -0}
+  m_LocalRotation: {x: -.5, y: -.5, z: -.5, w: .5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -85,20 +85,20 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
-  m_Mesh: {fileID: 4300000, guid: 4bf9418a8285da6429194731650699fa, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 3e82f3cfe6850ec4d9b7bb3d00a3da03, type: 3}
 --- !u!64 &6400000
 MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
+  m_GameObject: {fileID: 100002}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
-  m_Mesh: {fileID: 4300016, guid: 939ee2ab66c228441b65d03d5ec0b316, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 3e82f3cfe6850ec4d9b7bb3d00a3da03, type: 3}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 2
@@ -121,7 +121,7 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 4bf9418a8285da6429194731650699fa, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 3e82f3cfe6850ec4d9b7bb3d00a3da03, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_ApplyRootMotion: 1
