@@ -6,7 +6,7 @@ public class HealthController : MonoBehaviour
 
 	public const int maxHealth = 100;
 	public const int minHealth = 0;
-	public int curHealth;
+	private int curHealth;
 	
 	private GameController game;
 	
@@ -38,7 +38,7 @@ public class HealthController : MonoBehaviour
 	{
 		curHealth += value;
 		
-		if (curHealth < minHealth)
+		if (curHealth <= minHealth)
 		{	
 			if (tag == "Player")
 				game.isInGhostMode = true;

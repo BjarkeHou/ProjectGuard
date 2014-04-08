@@ -4,6 +4,7 @@ using System.Collections;
 public class MovementController : MonoBehaviour {
 	private CharacterController charCont;
 	private PlayerLook pLook;
+	private Animator anim;
 
 	public float normalMovementSpeed = 6;
 	public float attackingMovementSpeed = 0.5f;
@@ -27,6 +28,7 @@ public class MovementController : MonoBehaviour {
 	protected void Start() {
 		charCont = GetComponent<CharacterController>();
 		pLook = this.GetComponent<PlayerLook>();
+		anim = transform.Find("Model").GetComponent<Animator>();
 		movementSpeed = normalMovementSpeed;
 	}
 
@@ -43,7 +45,11 @@ public class MovementController : MonoBehaviour {
 				moveDirection += Vector3.left;
 			else if (h > 0)
 				moveDirection += Vector3.right;
-		
+
+			Vector3 localDir = pLook.transform.InverseTransformDirection(moveDirection);
+			anim.SetFloat("RunForward", localDir.z);
+			anim.SetFloat("RunSideways", localDir.x);
+
 			charCont.Move(moveDirection * Time.deltaTime * movementSpeed);
 		}
 	}
