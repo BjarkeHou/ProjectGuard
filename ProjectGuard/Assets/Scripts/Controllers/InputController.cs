@@ -27,41 +27,39 @@ public class InputController : MonoBehaviour
 		// Pause the game
 		if (Input.GetKey(KeyCode.Escape))
 		{
-			if (gCtrl.isPaused)
-			{
-				gCtrl.UnPauseGame();
-			} else if (!gCtrl.isPaused)
+			if (!gCtrl.isPaused)
 			{
 				gCtrl.PauseGame();
 			}
 		}
 	
-		// Move Player
-		v = Input.GetAxisRaw("Vertical");
-		h = Input.GetAxisRaw("Horizontal");
-		mCtrl.MoveCharacter(v, h);
-		if (Input.GetKeyDown(KeyCode.LeftShift))
+		if (!gCtrl.isPaused)
 		{
-			mCtrl.Dodge(v, h);
+			// Move Player
+			v = Input.GetAxisRaw("Vertical");
+			h = Input.GetAxisRaw("Horizontal");
+			mCtrl.MoveCharacter(v, h);
+			if (Input.GetKeyDown(KeyCode.LeftShift))
+			{
+				mCtrl.Dodge(v, h);
+			}
+					
+			// Perform attack
+			if (Input.GetMouseButtonDown(0) && eCtrl.hasWeaponEquipped)
+			{
+				aCtrl.DeclareAttack();
+			}
+	
+			if (Input.GetMouseButtonDown(1) && eCtrl.hasWeaponEquipped)
+			{
+				aCtrl.DeclareParry();
+			}
+	
+			// Drop weapon
+			if (Input.GetKey(KeyCode.G))
+			{
+				eCtrl.Drop(ItemType.Weapon);
+			}
 		}
-				
-		// Perform attack
-		if (Input.GetMouseButtonDown(0) && eCtrl.hasWeaponEquipped)
-		{
-			aCtrl.DeclareAttack();
-		}
-
-		if (Input.GetMouseButtonDown(1) && eCtrl.hasWeaponEquipped)
-		{
-			aCtrl.DeclareParry();
-		}
-
-		// Drop weapon
-		if (Input.GetKey(KeyCode.G))
-		{
-			eCtrl.Drop(ItemType.Weapon);
-		}
-		
-
 	}
 }
