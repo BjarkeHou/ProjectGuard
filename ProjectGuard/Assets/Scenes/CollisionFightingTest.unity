@@ -1159,8 +1159,8 @@ Prefab:
 --- !u!1 &60076430
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 100000, guid: 990bd4c948583464a89bdcb8760a2d28, type: 2}
+  m_PrefabInternal: {fileID: 1201960352}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 60076432}
@@ -1175,21 +1175,21 @@ GameObject:
 --- !u!114 &60076431
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 11400000, guid: 990bd4c948583464a89bdcb8760a2d28,
+    type: 2}
+  m_PrefabInternal: {fileID: 1201960352}
   m_GameObject: {fileID: 60076430}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a88209db597bc4ded986ecca19234b90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guiSkin: {fileID: 11400000, guid: 49c7d18afcfee4ef4ae02f66852d6706, type: 2}
-  PauseMenuButtonHeight: .0599999987
+  timeToReviveInGhostMode: 30
 --- !u!4 &60076432
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 400000, guid: 990bd4c948583464a89bdcb8760a2d28, type: 2}
+  m_PrefabInternal: {fileID: 1201960352}
   m_GameObject: {fileID: 60076430}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1000, y: 1000, z: 1000}
@@ -12278,7 +12278,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &259101717
 Transform:
   m_ObjectHideFlags: 0
@@ -59722,6 +59722,46 @@ Prefab:
   m_RootGameObject: {fileID: 835715506}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1001 &1201960352
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 990bd4c948583464a89bdcb8760a2d28, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 990bd4c948583464a89bdcb8760a2d28, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 990bd4c948583464a89bdcb8760a2d28, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 990bd4c948583464a89bdcb8760a2d28, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 990bd4c948583464a89bdcb8760a2d28, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 990bd4c948583464a89bdcb8760a2d28, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 990bd4c948583464a89bdcb8760a2d28, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 990bd4c948583464a89bdcb8760a2d28, type: 2}
+  m_RootGameObject: {fileID: 60076430}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!43 &1203790040
 Mesh:
   m_ObjectHideFlags: 0
@@ -76864,7 +76904,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100016, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 22dcba112f5eb564287d27fe1f7afb80, type: 2}
@@ -89975,10 +90015,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6659ca3d03c05430082a75e725b52009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guiSkin: {fileID: 0}
   barCol: {r: .227941155, g: .456896514, b: 1, a: 1}
   spentCol: {r: .16911763, g: .0565669276, b: .0565669276, a: 1}
   bgCol: {r: 0, g: 0, b: 0, a: 1}
   borderCol: {r: 1, g: 1, b: 1, a: 1}
+  PauseMenuButtonHeight: 0
 --- !u!114 &1868753571
 MonoBehaviour:
   m_ObjectHideFlags: 0
