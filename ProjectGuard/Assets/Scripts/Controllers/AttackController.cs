@@ -43,18 +43,22 @@ public class AttackController : MonoBehaviour {
 	}
 
 	//called from the equiped weapon
-	public void Hit(GameObject obj, float damage) {
+	public int Hit(GameObject obj, float damage) {
 		if (!targetsHit.Contains(obj) && obj.tag != gameObject.tag) { 
 			//add enemy to list of hit stuff
 			targetsHit.Add(obj);
 
 			//check if the character is parrying
 			if (obj.GetComponent<HealthController>().IsParrying) {
-				anim.SetBool("Rebound", true);
+				Rebound();
+				return 0;
 			} else {
 				//withdraw health
 				obj.GetComponent<HealthController>().adjustCurrentHealth(-(int)damage);
+				return 1;
 			}
+		} else {
+			return -1;
 		}
 	}
 	//called from the equiped weapon

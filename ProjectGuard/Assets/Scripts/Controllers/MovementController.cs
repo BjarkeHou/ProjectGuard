@@ -78,12 +78,15 @@ public class MovementController : MonoBehaviour {
 			Vector3 sPoint = this.transform.position;
 			Vector3 dodgeDirection = moveDirection.normalized;
 			float dodgeDist = dodgeDistance;
+			string animState = "Dodge_Forward";
 			
 			//if no movement is detected, do a backstep
 			if (moveDirection == Vector3.zero) {
+				animState = "Dodge_Backwards";
 				dodgeDirection = transform.TransformDirection(Vector3.back);
 				dodgeDist = dodgeDistance * 0.75f;
 			}
+			anim.SetBool(animState, true);
 			StartCoroutine(PerformDodge(sPoint, dodgeDirection, dodgeDist));
 		}
 	}
