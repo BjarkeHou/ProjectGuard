@@ -9,6 +9,8 @@ using RAIN.Action;
 [RAINAction]
 public class CalculateActionPriority : RAINAction
 {
+
+
     public CalculateActionPriority()
     {
         actionName = "CalculateActionPriority";
@@ -21,13 +23,13 @@ public class CalculateActionPriority : RAINAction
 
     public override ActionResult Execute(AI ai)
     {
-        Dictionary<ActionType, int> actionVector = Enum.GetValues(typeof (ActionType)).Cast<ActionType>().ToDictionary(at => at, at => 0);
+        Dictionary<ActionType, double> actionVector = Enum.GetValues(typeof (ActionType)).Cast<ActionType>().ToDictionary(at => at, at => 1.0);
 
         //actionVector = DecisionParameters(ai, actionVector);
 
         ActionType highestRatedAction = ActionType.StandStill;
-        int highestRating = 0;
-        foreach (KeyValuePair<ActionType, int> atVal in actionVector)
+        double highestRating = 1;
+        foreach (KeyValuePair<ActionType, double> atVal in actionVector)
         {
             if (atVal.Value > highestRating)
             {
@@ -42,7 +44,7 @@ public class CalculateActionPriority : RAINAction
         return ActionResult.SUCCESS;
     }
 
-    protected virtual Dictionary<ActionType, int> DecisionParameters(AI ai, Dictionary<ActionType, int> actionVector)
+    protected virtual Dictionary<ActionType, double> DecisionParameters(AI ai, Dictionary<ActionType, double> actionVector)
     {
         // Player:
         // - moving
@@ -51,6 +53,24 @@ public class CalculateActionPriority : RAINAction
         // - Cannot detect
 
         // AI:
+        // - can see player
+        var player = ai.WorkingMemory.GetItem<GameObject>("DetectTarget");
+        if (player == null)
+        {
+            actionVector[ActionType.Search] *= 3;
+            actionVector[ActionType.StandStill] *= 1.5;
+            actionVector[ActionType.Attack] *= 0;
+            actionVector[ActionType.Engage] *= 0;
+            actionVector[ActionType.Dodge] *= 0;
+        }
+        else
+        {
+            actionVector[ActionType.Engage] *= 2;
+            actionVector[ActionType.Attack] *= 1.1;
+            actionVector[ActionType.Search] *= 0;
+            actionVector[ActionType.StandStill] *= 0.8;
+            actionVector[ActionType.Dodge] *= 1;
+        }
         // - distance from player
         // - current health
         // - Sword rebounded last swing
