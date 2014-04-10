@@ -90,32 +90,34 @@ public class Weapon : Item {
 		RaycastHit hit;
 		Ray charles = new Ray (holdPoint.position, tipPoint.position - holdPoint.position);
 		float dist = (tipPoint.position - holdPoint.position).magnitude;
-
+		
 		if (Physics.Raycast(charles, out hit, dist) && playerAtkCont.doesDamage) {
 			GameObject obj = hit.collider.gameObject;
 			//if an enemy is hit
 			if (obj.tag == "Enemy" || obj.tag == "Player") {
-				if (playerAtkCont.Hit(obj, damage) == 1) {
+				int hitType = playerAtkCont.Hit(obj, damage);
+				if (hitType == 1) {
 					//Instantiate blood
 					GameObject blood = (GameObject)Instantiate(Resources.Load("Prefabs/Blood"));
 					blood.transform.parent = transform;
 					blood.GetComponent<BloodDestroy>().offset = (hit.point - transform.position).magnitude;
-
+					
 					print("HIT on " + obj.name);
-				} else if (playerAtkCont.Hit(obj, damage) == 0) {
+				} else if (hitType == 0) {
 					//Instantiate sparks
 					GameObject spark = (GameObject)Instantiate(Resources.Load("Prefabs/Sparks"), hit.point, Quaternion.LookRotation(hit.normal));
-
+					
 					print("PARRY by " + obj.name);
-				} else {
+				} else if (hitType == 2) {
 					//in case of friendly fire
+					print ("Friendly Fire");
 				}
-
+				
 				//if an object is hit
 			} else {
 				//Instantiate sparks
 				GameObject spark = (GameObject)Instantiate(Resources.Load("Prefabs/Sparks"), hit.point, Quaternion.LookRotation(hit.normal));
-
+				
 				//If collision is within skin depth
 				if ((hit.point - holdPoint.position).magnitude < (skinPoint.position - holdPoint.position).magnitude) {
 					print("REBOUND on " + obj.name);

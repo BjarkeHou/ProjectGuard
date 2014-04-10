@@ -2,12 +2,7 @@
 using System.Collections.Generic;
 
 public class AttackController : MonoBehaviour {
-	
-	private enum HitTypes {
-		HIT,
-		REBOUND
-	}
-	private HitTypes hitType;
+
 	public GameObject playerModel;
 
 	public bool doesDamage;
@@ -44,18 +39,22 @@ public class AttackController : MonoBehaviour {
 
 	//called from the equiped weapon
 	public int Hit(GameObject obj, float damage) {
-		if (!targetsHit.Contains(obj) && obj.tag != gameObject.tag) { 
-			//add enemy to list of hit stuff
-			targetsHit.Add(obj);
-
-			//check if the character is parrying
-			if (obj.GetComponent<HealthController>().IsParrying) {
-				Rebound();
-				return 0;
+		if (!targetsHit.Contains(obj)) {
+			if (obj.tag != gameObject.tag) { 
+				//add enemy to list of hit stuff
+				targetsHit.Add(obj);
+				print (obj.GetComponent<HealthController>().IsParrying);
+				//check if the character is parrying
+				if (obj.GetComponent<HealthController>().IsParrying) {
+					Rebound();
+					return 0;
+				} else {
+					//withdraw health
+					obj.GetComponent<HealthController>().adjustCurrentHealth(-(int)damage);
+					return 1;
+				}
 			} else {
-				//withdraw health
-				obj.GetComponent<HealthController>().adjustCurrentHealth(-(int)damage);
-				return 1;
+				return 2;
 			}
 		} else {
 			return -1;
