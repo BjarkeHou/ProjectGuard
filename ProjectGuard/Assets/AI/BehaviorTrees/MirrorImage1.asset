@@ -70,7 +70,7 @@ MonoBehaviour:
       name=&quot;Dodged long enough&quot; /&gt;&lt;/parallel&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;move
       turnspeed=&quot;&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
       name=&quot;return to init position&quot; movetarget=&quot;initPosition&quot;
-      movespeed=&quot;&quot; facetarget=&quot;&quot; closeenoughdistance=&quot;1&quot;
+      movespeed=&quot;5&quot; facetarget=&quot;&quot; closeenoughdistance=&quot;1&quot;
       closeenoughangle=&quot;&quot; /&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
       type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
       elementtype="System.String" /></fields><references /></scriptableobject>

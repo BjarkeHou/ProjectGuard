@@ -67,6 +67,18 @@ public class AnimationScripts : MonoBehaviour {
 			animated.GetComponent<PlayerWillController>().Parry();
 		}
 	}
+	void IniDodge() {
+		isAttacking = false;
+		//reset bools
+		ResetBools();
+		//can't move or rotate
+		animated.GetComponent<MovementController>().SetCanMove(false);
+		animated.GetComponent<MovementController>().SetCanDodge(false);
+		if (pLook != null)
+			pLook.playerCanRotate = false;
+		//no damage
+		animated.GetComponent<AttackController>().doesDamage = false;
+	}
 	void Damage() {
 		animated.GetComponent<AttackController>().doesDamage = true;
 	}
@@ -104,6 +116,9 @@ public class AnimationScripts : MonoBehaviour {
 		GetComponent<Animator>().SetBool("Parry", false);
 		//don't rebound again
 		GetComponent<Animator>().SetBool("Rebound", false);
+		//don't dodge again
+		GetComponent<Animator>().SetBool("Dodge_Forward", false);
+		GetComponent<Animator>().SetBool("Dodge_Backwards", false);
 		//can't attack
 		GetComponent<Animator>().SetBool("CanAttack", false);
 	}

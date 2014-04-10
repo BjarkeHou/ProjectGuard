@@ -16,7 +16,7 @@ public class CheckGhostState : RAINAction
 
     public override void Start(AI ai)
     {
-        gameManager = GameObject.FindGameObjectWithTag("GameManager");
+        gameManager = GameObject.FindGameObjectWithTag("GameController");
         ghostControl = gameManager.GetComponent<GhostWorldController>();
         base.Start(ai);
     }
