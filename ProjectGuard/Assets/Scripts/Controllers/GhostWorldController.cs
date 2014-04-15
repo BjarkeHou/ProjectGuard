@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GhostWorldController : MonoBehaviour
-{
+public class GhostWorldController : MonoBehaviour {
 
 	private GameObject player;
 	private GhostWorld gWorld;
@@ -17,37 +16,33 @@ public class GhostWorldController : MonoBehaviour
 	private bool fading = false;
 
 	// Use this for initialization
-	void Start()
-	{
+	void Start() {
 		player = GameObject.FindGameObjectWithTag("Player");
 		gWorld = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<GhostWorld>();
 		game = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 	}
 	
 	// Update is called once per frame
-	void Update()
-	{
-		if (game.isInGhostMode != screenIsInGhostMode)
-		{
+	void Update() {
+		if (game.isInGhostMode != screenIsInGhostMode) {
 			fading = true;
 			screenIsInGhostMode = game.isInGhostMode;
 		}
-		
 
-		if (fading)
-		{
-			if (!player.GetComponent<HealthController>().stillAlive() && deathTransition < 1)
-			{
+		if (fading) {
+			if (!player.GetComponent<HealthController>().stillAlive() && deathTransition < 1) {
 				deathTransition += deathTransitionSpeed * Time.deltaTime;
 
-			} else if (player.GetComponent<HealthController>().stillAlive() && deathTransition > 0)
-			{
+			} else if (player.GetComponent<HealthController>().stillAlive() && deathTransition > 0) {
 				deathTransition -= deathTransitionSpeed * Time.deltaTime;
-			} else
-			{
+			} else {
 				fading = false;
 			}
 		}
 		gWorld.transition = deathTransition;
+
+		if (game.isInGhostMode) {
+
+		}
 	}
 }

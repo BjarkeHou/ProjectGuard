@@ -62,7 +62,7 @@ SubShader {
 				
 				//sample pixels from overlay
 				if (_OverlayAlpha > 0) {
-					float pulse = lerp(-1, 3, _DeathTimer);
+					float pulse = lerp(-0.75, 0, _DeathTimer);
 					fixed4 overlay = tex2D(_Overlay, IN.uv *(1 + pulse) - 0.5 * pulse);
 					_OverlayAlpha = lerp(0, _OverlayAlpha, _Transition);
 					original.rgb = lerp(original.rgb, overlay.rgb, overlay.a * _OverlayAlpha);
