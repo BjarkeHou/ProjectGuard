@@ -142,4 +142,9 @@ public class MovementController : MonoBehaviour {
 	public void SetCanDodge(bool value) {
 		playerCanDodge = value;
 	}
+
+    public virtual bool IsLunaBlasted()
+    {
+        return false;
+    }
 }

@@ -12,6 +12,7 @@ public class CalculateActionPriority : RAINAction
     private int lastHealth;
     private HealthController aiHealthControl;
     private GameObject self;
+    private GhostWorldController ghostController;
 
     public CalculateActionPriority()
     {
@@ -23,6 +24,7 @@ public class CalculateActionPriority : RAINAction
         base.Start(ai);
         self = ai.WorkingMemory.GetItem<GameObject>("self");
         aiHealthControl = self.GetComponent<HealthController>();
+        ghostController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GhostWorldController>();
         lastHealth = aiHealthControl.getCurrentHealth();
     }
 
@@ -51,55 +53,52 @@ public class CalculateActionPriority : RAINAction
     protected virtual Dictionary<ActionType, double> DecisionParameters(AI ai, Dictionary<ActionType, double> actionVector)
     {
         GameObject player = ai.WorkingMemory.GetItem<GameObject>("DetectTarget");
+        
         if (player != null)
         {
-            // Player Actions:
+            // Player Dependant Parameters:
+            //Player Situation
             // - moving
-            //TODO
+            //TODO PA Moving
             // - standing still
-            //TODO
+            //TODO PA Standing Still
             // - attacking
-            //TODO
+            //TODO PA Attacking
             // - Player Health
-            //TODO
+            //TODO PA Player Health
             // - Cannot detect
-            //TODO
-            
+            //TODO PA Cannot Detect
+
+            // - distance from player
+            float distToPlayer = Vector3.Distance(self.transform.position, player.transform.position);
+            float playerAtkRng = player.GetComponent<EquipmentController>().GetWeaponRange();
+            float selfAtkRng = self.GetComponent<EquipmentController>().GetWeaponRange();
+
+            if (distToPlayer <= selfAtkRng && distToPlayer > playerAtkRng)
+            {
+                InSelfAttackRange(actionVector);
+            }
+            else if (distToPlayer > selfAtkRng && distToPlayer <= playerAtkRng)
+            {
+                InPlayerAttackRange(actionVector);
+            }
+            else if (distToPlayer <= selfAtkRng && distToPlayer <= playerAtkRng)
+            {
+                InBothAttackRange(actionVector);
+            }
+            else
+            {
+                OutsideBothAttackRange(actionVector);
+            }
         }
-
-        // AI situation:
-
-        // - can see player
-        if (player == null)
+        // - cant see player
+        else
         {
             CannotSeePlayer(actionVector);
         }
-        else
-        {
-            CanSeePlayer(actionVector);
-        }
+        // AI situation:
 
-        // - distance from player
-        float distToPlayer = Vector3.Distance(self.transform.position, player.transform.position);
-        float playerAtkRng = player.GetComponent<AttackController>().GetWeaponRange();
-        float selfAtkRng = self.GetComponent<AttackController>().GetWeaponRange();
-
-        if(distToPlayer <= selfAtkRng && distToPlayer > playerAtkRng)
-        {
-            InSelfAttackRange(actionVector);
-        }
-        else if(distToPlayer > selfAtkRng && distToPlayer <= playerAtkRng)
-        {
-            InPlayerAttackRange(actionVector);
-        }
-        else if(distToPlayer <= selfAtkRng && distToPlayer <= playerAtkRng)
-        {
-            InBothAttackRange(actionVector);
-        }
-        else
-        {
-            OutsideBothAttackRange(actionVector);
-        }
+        
 
         // - current self health
         float AIHealthPerc = ((float)aiHealthControl.getCurrentHealth())/((float)aiHealthControl.getMaxHealth());
@@ -116,13 +115,22 @@ public class CalculateActionPriority : RAINAction
             LowHealth(actionVector);
         }
 
+        // - is at origin postion
+        //TODO at origin
+
         // - Sword rebounded last swing
-        //TODO
+        //TODO sword rebound
 
         // - took damage
         if (lastHealth != aiHealthControl.getCurrentHealth())
         {
             TookDamage(actionVector);
+        }
+
+        // - In Ghost World
+        if (ghostController.deathTransition > 0.5)
+        {
+            InGhostWorld(actionVector);
         }
 
         // - Luna-blasted
@@ -135,6 +143,17 @@ public class CalculateActionPriority : RAINAction
         lastHealth = aiHealthControl.getCurrentHealth();
         throw new NotImplementedException();
         return actionVector;
+    }
+
+    protected virtual void InGhostWorld(Dictionary<ActionType, double> actionVector)
+    {
+        actionVector[ActionType.Engage] *= 0;
+        actionVector[ActionType.Dodge] *= 0;
+        actionVector[ActionType.Attack] *= 0;
+        actionVector[ActionType.Search] *= 0;
+        actionVector[ActionType.StandStill] *= 1;
+        actionVector[ActionType.Wander] *= 16;
+        actionVector[ActionType.Return] *= 32;
     }
 
     protected virtual void LunaBlasted(Dictionary<ActionType, double> actionVector)
@@ -234,17 +253,6 @@ public class CalculateActionPriority : RAINAction
         actionVector[ActionType.StandStill] /= 2;
         actionVector[ActionType.Wander] *= 1;
         actionVector[ActionType.Return] /= 2;
-    }
-
-    protected virtual void CanSeePlayer(Dictionary<ActionType, double> actionVector)
-    {
-        actionVector[ActionType.Engage] *= 2;
-        actionVector[ActionType.Dodge] *= 1;
-        actionVector[ActionType.Attack] *= 1;
-        actionVector[ActionType.Search] *= 0;
-        actionVector[ActionType.StandStill] /= 1.5;
-        actionVector[ActionType.Wander] /= 16;
-        actionVector[ActionType.Return] /= 16;
     }
 
     protected virtual void CannotSeePlayer(Dictionary<ActionType, double> actionVector)

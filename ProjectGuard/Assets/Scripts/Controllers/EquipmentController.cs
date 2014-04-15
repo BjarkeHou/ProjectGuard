@@ -82,4 +82,14 @@ public class EquipmentController : MonoBehaviour
 		get { return m_hasHelmEquipped;}
 		set { m_hasHelmEquipped = value;}
 	}
+
+    public float GetWeaponRange()
+    {
+        if (hasWeaponEquipped)
+        {
+            //HACK
+            return 1.3f;
+        }
+        return 0f;
+    }
 }
