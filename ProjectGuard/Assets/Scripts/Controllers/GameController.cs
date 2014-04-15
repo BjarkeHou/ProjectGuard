@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour
 	public float timeToReviveInGhostMode;
 	
 	private bool m_isPaused = false;
-	private bool m_isInGhostMode = false;
+	public bool m_isInGhostMode = false;
 	private float m_timeLeftToReviveFromGhostMode;
 	
 	public bool isPaused

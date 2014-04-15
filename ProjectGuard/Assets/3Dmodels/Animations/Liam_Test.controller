@@ -1682,7 +1682,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Swing2
-  m_Speed: 1.25
+  m_Speed: 1.60000002
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 20622744}
