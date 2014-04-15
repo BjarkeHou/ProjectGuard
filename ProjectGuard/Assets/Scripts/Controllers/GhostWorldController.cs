@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GhostWorldController : MonoBehaviour
-{
+public class GhostWorldController : MonoBehaviour {
 	private GhostWorld gWorld;
 	private GameController game;
 	private bool screenIsInGhostMode = false;
@@ -15,34 +14,27 @@ public class GhostWorldController : MonoBehaviour
 	private bool fading = false;
 
 	// Use this for initialization
-	void Start()
-	{
+	void Start() {
 		gWorld = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<GhostWorld>();
 		game = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 	}
 	
 	// Update is called once per frame
-	void Update()
-	{
-		if (game.isInGhostMode != screenIsInGhostMode)
-		{
+	void Update() {
+		if (game.isInGhostMode != screenIsInGhostMode) {
 			fading = true;
 			screenIsInGhostMode = game.isInGhostMode;
 		}
 		
 
-		if (fading)
-		{
-			if (game.isInGhostMode && deathTransition < 1)
-			{
+		if (fading) {
+			if (game.isInGhostMode && deathTransition < 1) {
 				deathTransition += deathTransitionSpeed * Time.deltaTime;
 //				TransitionToGhostMode();
-			} else if (!game.isInGhostMode && deathTransition > 0)
-			{
+			} else if (!game.isInGhostMode && deathTransition > 0) {
 				deathTransition -= deathTransitionSpeed * Time.deltaTime;
 //				TransitionToNormalMode();
-			} else
-			{
+			} else {
 				fading = false;
 			}
 			TransitionLOL();
@@ -50,18 +42,15 @@ public class GhostWorldController : MonoBehaviour
 		gWorld.transition = deathTransition;
 	}
 	
-	void TransitionLOL()
-	{
+	void TransitionLOL() {
 		float normalModelAlphaValue = Mathf.InverseLerp(0f, 0.5f, deathTransition);
 		float liamModelAlphaValue = Mathf.InverseLerp(0.5f, 1f, deathTransition);
 		
 		GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-		foreach (GameObject enemy in enemies)
-		{
+		foreach (GameObject enemy in enemies) {
 			enemy.transform.FindChild("LiamModel").gameObject.SetActive(true);
 			Renderer[] renderes = enemy.transform.FindChild("Model").GetComponentsInChildren<Renderer>();
-			foreach (Renderer r in renderes)
-			{
+			foreach (Renderer r in renderes) {
 				r.material.shader = Shader.Find("Transparent/Diffuse");
 				Color c = r.material.color;
 				c.a = 1 - normalModelAlphaValue;
@@ -69,8 +58,7 @@ public class GhostWorldController : MonoBehaviour
 			}
 			
 			renderes = enemy.transform.FindChild("LiamModel").GetComponentsInChildren<Renderer>();
-			foreach (Renderer r in renderes)
-			{	
+			foreach (Renderer r in renderes) {	
 				r.material.shader = Shader.Find("Transparent/Diffuse");
 				Color c = r.material.color;
 				c.a = liamModelAlphaValue;
