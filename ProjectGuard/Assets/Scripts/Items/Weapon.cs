@@ -105,7 +105,9 @@ public class Weapon : Item {
 					print("HIT on " + obj.name);
 				} else if (hitType == 0) {
 					//Instantiate sparks
-					GameObject spark = (GameObject)Instantiate(Resources.Load("Prefabs/Sparks"), hit.point, Quaternion.LookRotation(hit.normal));
+					GameObject spark = (GameObject)Instantiate(Resources.Load("Prefabs/Sparks"));
+					spark.transform.position = hit.point;
+					spark.transform.rotation = Quaternion.LookRotation(hit.normal);
 					
 					print("PARRY by " + obj.name);
 				} else if (hitType == 2) {
@@ -116,7 +118,9 @@ public class Weapon : Item {
 				//if an object is hit
 			} else {
 				//Instantiate sparks
-				GameObject spark = (GameObject)Instantiate(Resources.Load("Prefabs/Sparks"), hit.point, Quaternion.LookRotation(hit.normal));
+				GameObject spark = (GameObject)Instantiate(Resources.Load("Prefabs/Sparks"));
+				spark.transform.position = hit.point;
+				spark.transform.rotation = Quaternion.LookRotation(hit.normal);
 				
 				//If collision is within skin depth
 				if ((hit.point - holdPoint.position).magnitude < (skinPoint.position - holdPoint.position).magnitude) {

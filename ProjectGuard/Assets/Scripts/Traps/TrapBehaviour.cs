@@ -17,19 +17,12 @@ public class TrapBehaviour : MonoBehaviour {
 			}
 		}
 	}
-	
-	// Update is called once per frame
-	void Update() {
-		if (trapCtrl.isTriggered) {
-			Behave();
-		}
-	}
 
-	void Behave() {
+	public void Behave() {
 		GetComponent<Animator>().SetBool("Trigger", true);
 	}
 
-	void Rewind() {
-
+	public void Rewind() {
+		GetComponent<Animator>().SetBool("Trigger", false);
 	}
 }

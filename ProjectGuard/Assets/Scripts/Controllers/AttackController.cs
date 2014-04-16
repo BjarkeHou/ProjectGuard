@@ -57,7 +57,6 @@ public class AttackController : MonoBehaviour
 			{ 
 				//add enemy to list of hit stuff
 				targetsHit.Add(obj);
-				print(obj.GetComponent<HealthController>().IsParrying);
 				//check if the character is parrying
 				if (obj.GetComponent<HealthController>().IsParrying)
 				{

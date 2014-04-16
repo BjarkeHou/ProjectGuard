@@ -52,7 +52,6 @@ public class GhostWorldController : MonoBehaviour {
 
 			//set live model
 			enemy.transform.Find("Model").GetComponent<Animator>().speed = 1 - normalModelAlphaValue;
-			print ("enemy model speed " + enemy.transform.Find("Model").GetComponent<Animator>().speed);
 			Renderer[] renderes = enemy.transform.FindChild("Model").GetComponentsInChildren<Renderer>();
 			foreach (Renderer r in renderes) {
 				r.material.shader = Shader.Find("Transparent/Diffuse");
@@ -63,7 +62,6 @@ public class GhostWorldController : MonoBehaviour {
 
 			//set ghost model
 			enemy.transform.Find("LiamModel").GetComponent<Animator>().speed = liamModelAlphaValue;
-			print ("enemy LiamModel speed " + enemy.transform.Find("LiamModel").GetComponent<Animator>().speed);
 			renderes = enemy.transform.FindChild("LiamModel").GetComponentsInChildren<Renderer>();
 			foreach (Renderer r in renderes) {	
 				r.material.shader = Shader.Find("Transparent/Diffuse");
