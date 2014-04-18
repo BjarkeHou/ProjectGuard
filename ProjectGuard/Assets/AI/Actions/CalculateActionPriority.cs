@@ -13,6 +13,7 @@ public class CalculateActionPriority : RAINAction
     private HealthController aiHealthControl;
     private GameObject self;
     private GhostWorldController ghostController;
+    private DebugAP gui;
 
     public CalculateActionPriority()
     {
@@ -26,13 +27,17 @@ public class CalculateActionPriority : RAINAction
         aiHealthControl = self.GetComponent<HealthController>();
         ghostController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GhostWorldController>();
         lastHealth = aiHealthControl.getCurrentHealth();
+        gui = self.GetComponent<DebugAP>();
     }
 
     public override ActionResult Execute(AI ai)
     {
         Dictionary<ActionType, double> actionVector = Enum.GetValues(typeof (ActionType)).Cast<ActionType>().ToDictionary(at => at, at => 1.0);
 
-        //actionVector = DecisionParameters(ai, actionVector);
+
+        actionVector = DecisionParameters(ai, actionVector);
+
+        gui.SetAPVals(actionVector);
 
         ActionType highestRatedAction = ActionType.StandStill;
         double highestRating = 1;
@@ -45,14 +50,16 @@ public class CalculateActionPriority : RAINAction
             }
         }
 
-        ai.WorkingMemory.SetItem("ActionPriority", highestRatedAction);
+        ai.WorkingMemory.SetItem("ActionPriority", (int)highestRatedAction);
 
         return ActionResult.SUCCESS;
     }
 
     protected virtual Dictionary<ActionType, double> DecisionParameters(AI ai, Dictionary<ActionType, double> actionVector)
     {
-        GameObject player = ai.WorkingMemory.GetItem<GameObject>("DetectTarget");
+        GameObject player = ai.WorkingMemory.GetItem<GameObject>("detectTarget");
+
+        Debug.LogWarning("ActionPriority Calculated");
         
         if (player != null)
         {
@@ -138,10 +145,18 @@ public class CalculateActionPriority : RAINAction
         {
             LunaBlasted(actionVector);
         }
+        //Debug.LogWarning(actionVector[ActionType.Engage]);
 
 
         lastHealth = aiHealthControl.getCurrentHealth();
-        throw new NotImplementedException();
+
+        //foreach (ActionType at in actionVector.Keys.ToList())
+        //{
+        //    actionVector[at] = Math.Log(actionVector[at], 2);
+        //}
+        //Debug.LogWarning(actionVector[ActionType.Engage]);
+
+        //throw new NotImplementedException();
         return actionVector;
     }
 
