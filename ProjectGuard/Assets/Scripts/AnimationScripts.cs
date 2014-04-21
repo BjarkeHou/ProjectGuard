@@ -3,9 +3,9 @@ using System.Collections;
 
 public class AnimationScripts : MonoBehaviour {
 
-	private GameObject animated;
+	protected GameObject animated;
 	public bool isAttacking;
-	private PlayerLook pLook;
+	protected PlayerLook pLook;
 
 	// Use this for initialization
 	void Start() {
