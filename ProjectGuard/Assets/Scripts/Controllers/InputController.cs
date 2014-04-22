@@ -9,6 +9,7 @@ public class InputController : MonoBehaviour
 	private MovementController mCtrl;
 	private AttackController aCtrl;
 	private EquipmentController eCtrl;
+	private PlayerSoundController playerSound;
 	private GameController game;
 
 	// Use this for initialization
@@ -18,6 +19,7 @@ public class InputController : MonoBehaviour
 		mCtrl = p.GetComponent<MovementController>();
 		aCtrl = p.GetComponent<AttackController>();
 		eCtrl = p.GetComponent<EquipmentController>();
+		playerSound = p.GetComponent<PlayerSoundController>();
 		game = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 	}
 	
@@ -38,21 +40,25 @@ public class InputController : MonoBehaviour
 			v = Input.GetAxisRaw("Vertical");
 			h = Input.GetAxisRaw("Horizontal");
 			mCtrl.MoveCharacter(v, h);
+			playerSound.running(v != 0 || h != 0);
 			
 			if (Input.GetButtonDown("Dodge"))
 			{
 				mCtrl.Dodge(v, h);
+				playerSound.dodge();
 			}
 					
 			// Perform attack
 			if (Input.GetButtonDown("Attack") && eCtrl.hasWeaponEquipped)
 			{
 				aCtrl.DeclareAttack();
+				playerSound.attack();
 			}
 	
 			if (Input.GetButtonDown("Parry") && eCtrl.hasWeaponEquipped)
 			{
 				aCtrl.DeclareParry();
+				playerSound.parry();
 			}
 	
 			// Drop weapon

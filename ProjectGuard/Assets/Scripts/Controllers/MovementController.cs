@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MovementController : MonoBehaviour {
+public class MovementController : MonoBehaviour
+{
 	private CharacterController charCont;
 	private PlayerLook pLook;
 	private Animator anim;
@@ -25,15 +26,18 @@ public class MovementController : MonoBehaviour {
 	private float dodgedDistance = 0;
 
 	// Use this for initialization
-	protected void Start() {
+	protected void Start()
+	{
 		charCont = GetComponent<CharacterController>();
 		pLook = this.GetComponent<PlayerLook>();
 		anim = transform.Find("Model").GetComponent<Animator>();
 		movementSpeed = normalMovementSpeed;
 	}
 
-	public void MoveCharacter(float v, float h) {
-		if (playerCanMove) {				
+	public void MoveCharacter(float v, float h)
+	{
+		if (playerCanMove)
+		{				
 			moveDirection = Vector3.zero;
 		
 			if (v < 0) 
@@ -46,15 +50,18 @@ public class MovementController : MonoBehaviour {
 			else if (h > 0)
 				moveDirection += Vector3.right;
 
+			
 			Vector3 localDir = pLook.transform.InverseTransformDirection(moveDirection);
 			anim.SetFloat("RunForward", localDir.z);
 			anim.SetFloat("RunSideways", localDir.x);
 
 			charCont.Move(moveDirection * Time.deltaTime * movementSpeed);
+			
 		}
 	}
 
-	public void Dodge(float v, float h) {
+	public void Dodge(float v, float h)
+	{
 		moveDirection = Vector3.zero;
 
 		if (v < 0) 
@@ -70,8 +77,10 @@ public class MovementController : MonoBehaviour {
 		transform.Find("Model").GetComponent<Animator>().SetBool("Attack", false);
 
 		// Test if player is trying to dodge
-		if (playerCanDodge && Time.time > dodgeDelayTimer) {
-			if (GetComponent<PlayerWillController>() != null) {
+		if (playerCanDodge && Time.time > dodgeDelayTimer)
+		{
+			if (GetComponent<PlayerWillController>() != null)
+			{
 				GetComponent<PlayerWillController>().Dodge();
 			}
 
@@ -81,7 +90,8 @@ public class MovementController : MonoBehaviour {
 			string animState = "Dodge_Forward";
 			
 			//if no movement is detected, do a backstep
-			if (moveDirection == Vector3.zero) {
+			if (moveDirection == Vector3.zero)
+			{
 				animState = "Dodge_Backwards";
 				dodgeDirection = transform.TransformDirection(Vector3.back);
 				dodgeDist = dodgeDistance * 0.75f;
@@ -91,14 +101,17 @@ public class MovementController : MonoBehaviour {
 		}
 	}
 
-	private IEnumerator PerformDodge(Vector3 startPoint, Vector3 dodgeDir, float dodgeDist) {
-		if (moveDirection != Vector3.zero) {
+	private IEnumerator PerformDodge(Vector3 startPoint, Vector3 dodgeDir, float dodgeDist)
+	{
+		if (moveDirection != Vector3.zero)
+		{
 			pLook.LockPlayerOnDirection(dodgeDir);
 		}
 		dodgeDelayTimer = Time.time + dodgeDelay;
 		SetCanDodge(false);
 
-		while (progress < 1.0f) {
+		while (progress < 1.0f)
+		{
 			progress = Mathf.InverseLerp(0, dodgeDist, dodgedDistance);
 			dodgedDistance += curve.Evaluate(progress) * dodgeSpeed * Time.deltaTime;	
 			Vector3 desiredPos = startPoint + dodgeDir.normalized * dodgedDistance;
@@ -116,30 +129,37 @@ public class MovementController : MonoBehaviour {
 		Debug.Log("Dodge performed!!");
 	}
 
-	public void AttackStep() {
+	public void AttackStep()
+	{
 		StartCoroutine(PerformAttackStep(transform.TransformDirection(Vector3.forward)));
 	}
 
-	private IEnumerator PerformAttackStep(Vector3 attackDir) {
+	private IEnumerator PerformAttackStep(Vector3 attackDir)
+	{
 		float timer = Time.time;
 		float aStepSpeed = 0.5f;
-		while (Time.time < timer + 0.35f) {
+		while (Time.time < timer + 0.35f)
+		{
 			charCont.Move(attackDir * Time.deltaTime * aStepSpeed);
 			yield return null;
 		}
 	}
 
-	public void SetCanMove(bool value) {
+	public void SetCanMove(bool value)
+	{
 		playerCanMove = value;
 			
-		if (value) {
+		if (value)
+		{
 			movementSpeed = normalMovementSpeed;
-		} else if (!value) {
+		} else if (!value)
+		{
 			movementSpeed = attackingMovementSpeed;
 		}
 	}
 	
-	public void SetCanDodge(bool value) {
+	public void SetCanDodge(bool value)
+	{
 		playerCanDodge = value;
 	}
 }
