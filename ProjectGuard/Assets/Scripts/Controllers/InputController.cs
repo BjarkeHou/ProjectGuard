@@ -18,6 +18,7 @@ public class InputController : MonoBehaviour
 		mCtrl = p.GetComponent<MovementController>();
 		aCtrl = p.GetComponent<AttackController>();
 		eCtrl = p.GetComponent<EquipmentController>();
+
 		game = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 	}
 	
@@ -48,11 +49,13 @@ public class InputController : MonoBehaviour
 			if (Input.GetButtonDown("Attack") && eCtrl.hasWeaponEquipped)
 			{
 				aCtrl.DeclareAttack();
+
 			}
 	
 			if (Input.GetButtonDown("Parry") && eCtrl.hasWeaponEquipped)
 			{
 				aCtrl.DeclareParry();
+
 			}
 	
 			// Drop weapon

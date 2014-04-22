@@ -8,6 +8,29 @@ public class AnimationScripts_SEle : AnimationScripts {
 	public GameObject rockSpot;
 
 	//called form animations
+	void IniAttack() {
+		isAttacking = true;
+		//clear hits
+		animated.GetComponent<AttackController>().targetsHit.Clear();
+		//reset bools
+		ResetBools();
+		//can't move or rotate
+		animated.GetComponent<MovementController>().SetCanMove(false);
+		animated.GetComponent<MovementController>().SetCanDodge(false);
+		if (pLook != null)
+			pLook.playerCanRotate = false;
+		//no damage
+		animated.GetComponent<AttackController>().doesDamage = false;
+		
+		//take a step forward
+		animated.GetComponent<MovementController>().AttackStep();
+		
+		//deplete will if that script exists
+		if (animated.GetComponent<PlayerWillController>() != null) {
+			animated.GetComponent<PlayerWillController>().Attack();
+		}
+	}
+
 	void IniThrow() {
 		isAttacking = true;
 		//clear hits
@@ -38,5 +61,7 @@ public class AnimationScripts_SEle : AnimationScripts {
 		GetComponent<Animator>().SetBool("Attack", false);
 		//can't attack
 		GetComponent<Animator>().SetBool("CanAttack", false);
+		//don't throw again
+		GetComponent<Animator>().SetBool("Throw", false);
 	}
 }
