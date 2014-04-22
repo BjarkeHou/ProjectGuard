@@ -1,10 +1,12 @@
 using System;
 using System.Linq;
+using System.Text;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using RAIN.Core;
 using RAIN.Action;
+using Random = UnityEngine.Random;
 
 [RAINAction]
 public class CalculateActionPriority : RAINAction
@@ -14,6 +16,7 @@ public class CalculateActionPriority : RAINAction
     private GameObject self;
     private GhostWorldController ghostController;
     private DebugAP gui;
+    private Random rand;
 
     public CalculateActionPriority()
     {
@@ -28,6 +31,7 @@ public class CalculateActionPriority : RAINAction
         ghostController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GhostWorldController>();
         lastHealth = aiHealthControl.getCurrentHealth();
         gui = self.GetComponent<DebugAP>();
+        rand = new Random();
     }
 
     public override ActionResult Execute(AI ai)
@@ -39,25 +43,31 @@ public class CalculateActionPriority : RAINAction
 
         gui.SetAPVals(actionVector);
 
-        ActionType highestRatedAction = ActionType.StandStill;
-        double highestRating = 1;
-        foreach (KeyValuePair<ActionType, double> atVal in actionVector)
+        double max = actionVector.Values.Max();
+        List<KeyValuePair<ActionType, double>> highest = actionVector.Where(e => Math.Abs(e.Value - max) < 0.001).ToList();
+        if (!highest.Any())
         {
-            if (atVal.Value > highestRating)
-            {
-                highestRating = atVal.Value;
-                highestRatedAction = atVal.Key;
-            }
+            throw new ArgumentOutOfRangeException();
         }
+        if (highest.Count() == 1)
+        {
+            ai.WorkingMemory.SetItem("ActionPriority", (int)highest[0].Key);
+        }
+        else
+        {
+            int rVal = Random.Range(0, highest.Count);
+            ai.WorkingMemory.SetItem("ActionPriority", (int)highest[rVal].Key);
 
-        ai.WorkingMemory.SetItem("ActionPriority", (int)highestRatedAction);
-
+        }
+        
         return ActionResult.SUCCESS;
     }
 
     protected virtual Dictionary<ActionType, double> DecisionParameters(AI ai, Dictionary<ActionType, double> actionVector)
     {
         GameObject player = ai.WorkingMemory.GetItem<GameObject>("detectTarget");
+
+        StringBuilder sitB = new StringBuilder();
 
         Debug.LogWarning("ActionPriority Calculated");
         
@@ -84,46 +94,62 @@ public class CalculateActionPriority : RAINAction
             if (distToPlayer <= selfAtkRng && distToPlayer > playerAtkRng)
             {
                 InSelfAttackRange(actionVector);
+                sitB.Append("In Range of Self Attack\n");
             }
             else if (distToPlayer > selfAtkRng && distToPlayer <= playerAtkRng)
             {
                 InPlayerAttackRange(actionVector);
+                sitB.Append("In Range of Player Attack \n");
             }
             else if (distToPlayer <= selfAtkRng && distToPlayer <= playerAtkRng)
             {
                 InBothAttackRange(actionVector);
+                sitB.Append("In Range of Both Attack \n");
             }
             else
             {
                 OutsideBothAttackRange(actionVector);
+                sitB.Append("Outside Attack Ranges \n");
             }
         }
         // - cant see player
         else
         {
             CannotSeePlayer(actionVector);
+            sitB.Append("Cannot See Player \n");
         }
-        // AI situation:
 
-        
+
+        #region AI situation
 
         // - current self health
         float AIHealthPerc = ((float)aiHealthControl.getCurrentHealth())/((float)aiHealthControl.getMaxHealth());
-        if (AIHealthPerc >= 0.75)
+        Debug.Log(string.Format("AI Health: {0}",AIHealthPerc));
+        if (AIHealthPerc >= 0.70f)
         {
             HighHealth(actionVector);
+            sitB.Append("High Health\n");
         }
-        else if (AIHealthPerc < 0.25)
+        else if (AIHealthPerc > 0.30f)
         {
             MediumHealth(actionVector);
+            sitB.Append("Medium Health\n");
         }
         else
         {
             LowHealth(actionVector);
+            sitB.Append("Low Health\n");
         }
 
         // - is at origin postion
-        //TODO at origin
+        Vector3 initPos = ai.WorkingMemory.GetItem<Vector3>("initPosition");
+        float dist = Vector3.Distance(self.transform.position, initPos);
+
+        if (dist < 2.5)
+        {
+            AtOrigin(actionVector);
+            sitB.Append("At Origin Position\n");
+        }
 
         // - Sword rebounded last swing
         //TODO sword rebound
@@ -132,32 +158,50 @@ public class CalculateActionPriority : RAINAction
         if (lastHealth != aiHealthControl.getCurrentHealth())
         {
             TookDamage(actionVector);
+            sitB.Append("Taking Damage\n");
         }
 
         // - In Ghost World
         if (ghostController.deathTransition > 0.5)
         {
             InGhostWorld(actionVector);
+            sitB.Append("Ghost World\n");
         }
 
         // - Luna-blasted
         if (self.GetComponent<MovementController>().IsLunaBlasted())
         {
             LunaBlasted(actionVector);
+            sitB.Append("Luna Blasted\n");
         }
+        #endregion
+
         //Debug.LogWarning(actionVector[ActionType.Engage]);
 
 
         lastHealth = aiHealthControl.getCurrentHealth();
 
-        //foreach (ActionType at in actionVector.Keys.ToList())
-        //{
-        //    actionVector[at] = Math.Log(actionVector[at], 2);
-        //}
+        gui.SetCurrentParameters(sitB.ToString());
+
+        /*foreach (ActionType at in actionVector.Keys.ToList())
+        {
+            Debug.Log(actionVector[at]);
+        }*/
         //Debug.LogWarning(actionVector[ActionType.Engage]);
 
         //throw new NotImplementedException();
         return actionVector;
+    }
+
+    protected virtual void AtOrigin(Dictionary<ActionType, double> actionVector)
+    {
+        actionVector[ActionType.Engage] *= 1.5;
+        actionVector[ActionType.Dodge] *= 1;
+        actionVector[ActionType.Attack] *= 1;
+        actionVector[ActionType.Search] *= 1.5;
+        actionVector[ActionType.StandStill] /= 1.5;
+        actionVector[ActionType.Wander] *= 4;
+        actionVector[ActionType.Return] *= 0;
     }
 
     protected virtual void InGhostWorld(Dictionary<ActionType, double> actionVector)

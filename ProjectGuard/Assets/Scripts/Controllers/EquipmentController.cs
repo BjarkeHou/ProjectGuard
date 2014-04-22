@@ -88,7 +88,7 @@ public class EquipmentController : MonoBehaviour
         if (hasWeaponEquipped)
         {
             //HACK
-            return 1.3f;
+            return 2.4f;
         }
         return 0f;
     }

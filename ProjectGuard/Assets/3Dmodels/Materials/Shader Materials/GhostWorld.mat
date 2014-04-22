@@ -34,14 +34,6 @@ Material:
         second: 0
       data:
         first:
-          name: _DeathTimer
-        second: .607142866
-      data:
-        first:
-          name: _RevivalRange
-        second: 0
-      data:
-        first:
           name: _BlueShift
         second: .25
       data:
@@ -55,6 +47,14 @@ Material:
       data:
         first:
           name: _OverlayAlpha
+        second: 0
+      data:
+        first:
+          name: _DeathTimer
+        second: .607142866
+      data:
+        first:
+          name: _RevivalRange
         second: 0
     m_Colors:
       data:

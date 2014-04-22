@@ -23,75 +23,69 @@ MonoBehaviour:
       /&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot; repeatuntil=&quot;running&quot;
       name=&quot;sequencer&quot; fail=&quot;any&quot;&gt;&lt;action repeatuntil=&quot;&quot;
       parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;(global)&quot;
-      name=&quot;ActionPriority (not working yet)&quot; classname=&quot;CalculateActionPriority&quot;
+      name=&quot;ActionPriority&quot; classname=&quot;CalculateActionPriority&quot;
       /&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;SelectAction&quot;&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;Engage&quot; constraint=&quot;ActionPriority
       == 0&quot;&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;Engage Behaviour&quot;
-      binding=&quot;Engage&quot; /&gt;&lt;sequencer usepriorities=&quot;False&quot;
-      repeatuntil=&quot;&quot; name=&quot;Engagement&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;expression&quot; expression=&quot;moveTarget
-      = detectTarget&quot; /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;root&quot;&gt;&lt;mecparam valueexpression=&quot;3.0&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; parametertype=&quot;float&quot;
-      parametername=&quot;RunForward&quot; name=&quot;StartRunning&quot; damptime=&quot;0&quot;
-      /&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;&gt;&lt;move
-      turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;move&quot; movetarget=&quot;moveTarget&quot;
-      movespeed=&quot;3&quot; facetarget=&quot;moveTarget&quot; closeenoughdistance=&quot;2&quot;
-      closeenoughangle=&quot;&quot; /&gt;&lt;timer waitforsec=&quot;1&quot; returnvalue=&quot;success&quot;
-      name=&quot;timer&quot; /&gt;&lt;/parallel&gt;&lt;mecparam valueexpression=&quot;0.0&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; parametertype=&quot;float&quot;
-      parametername=&quot;RunForward&quot; name=&quot;Stop Running&quot; damptime=&quot;0&quot;
-      /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
+      binding=&quot;Engage&quot; /&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
       priority=&quot;&quot; name=&quot;Dodge&quot; constraint=&quot;ActionPriority
       == 1&quot;&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;Dodge Behaviour&quot;
-      binding=&quot;Dodge&quot; /&gt;&lt;timer waitforsec=&quot;0.1&quot; returnvalue=&quot;success&quot;
-      name=&quot;timer&quot; /&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;Attack&quot; constraint=&quot;ActionPriority
-      == 2&quot;&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;Attack Behaviour&quot;
-      binding=&quot;Attack&quot; /&gt;&lt;sequencer usepriorities=&quot;False&quot;
-      repeatuntil=&quot;&quot; name=&quot;Engagement&quot;&gt;&lt;mecparam valueexpression=&quot;true&quot;
+      binding=&quot;Dodge&quot; /&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;&quot;
+      parameters=&quot;&quot; namespace=&quot;(global)&quot; name=&quot;find Dodge
+      endpoint&quot; classname=&quot;DisengagePoint&quot; /&gt;&lt;mecparam valueexpression=&quot;true&quot;
+      repeatuntil=&quot;&quot; parametertype=&quot;boolean&quot; parametername=&quot;Dodge_Backwards&quot;
+      name=&quot;mecparam&quot; damptime=&quot;0&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;any&quot; repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;&gt;&lt;timer
+      waitforsec=&quot;0.9&quot; returnvalue=&quot;success&quot; name=&quot;timer&quot;
+      /&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;move&quot;
+      movetarget=&quot;moveTarget&quot; movespeed=&quot;3&quot; facetarget=&quot;&quot;
+      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;Attack&quot; constraint=&quot;ActionPriority
+      == 2&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
+      name=&quot;Engagement&quot;&gt;&lt;mecparam valueexpression=&quot;true&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; parametertype=&quot;boolean&quot;
       parametername=&quot;Attack&quot; name=&quot;attack&quot; damptime=&quot;0&quot;
       /&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot; repeatuntil=&quot;success&quot;
       priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;&gt;&lt;expression
       returnvalue=&quot;evaluate&quot; repeatuntil=&quot;&quot; name=&quot;expression&quot;
-      expression=&quot;canMove&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;constraint
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;Search&quot; constraint=&quot;ActionPriority
-      == 3&quot;&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;Search Behaviour&quot;
-      binding=&quot;Search&quot; /&gt;&lt;timer waitforsec=&quot;0.1&quot; returnvalue=&quot;failure&quot;
-      name=&quot;timer&quot; /&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;Stand Still&quot; constraint=&quot;ActionPriority
-      == 4&quot;&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;Stand Still
-      Behaviour&quot; binding=&quot;StandStill&quot; /&gt;&lt;timer waitforsec=&quot;0.1&quot;
-      returnvalue=&quot;failure&quot; name=&quot;timer&quot; /&gt;&lt;/constraint&gt;&lt;constraint
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;Wander&quot; constraint=&quot;ActionPriority
-      == 5&quot;&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;Wander Behaviour&quot;
-      binding=&quot;Wander&quot; /&gt;&lt;timer waitforsec=&quot;0.1&quot; returnvalue=&quot;failure&quot;
-      name=&quot;timer&quot; /&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;Return&quot; constraint=&quot;ActionPriority
-      == 6&quot;&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;Return Behaviour&quot;
-      binding=&quot;Return&quot; /&gt;&lt;sequencer usepriorities=&quot;False&quot;
-      repeatuntil=&quot;&quot; name=&quot;sequencer&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;expression&quot; expression=&quot;moveTarget
-      = initPosition&quot; /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;root&quot;&gt;&lt;mecparam valueexpression=&quot;3.0&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; parametertype=&quot;float&quot;
-      parametername=&quot;RunForward&quot; name=&quot;StartRunning&quot; damptime=&quot;0.51&quot;
-      /&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;&gt;&lt;move
-      turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;move&quot; movetarget=&quot;moveTarget&quot;
+      expression=&quot;canMove&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;treebinding
+      repeatuntil=&quot;&quot; name=&quot;Attack Behaviour&quot; binding=&quot;Attack&quot;
+      /&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;Search&quot; constraint=&quot;ActionPriority == 3&quot;&gt;&lt;treebinding
+      repeatuntil=&quot;&quot; name=&quot;Search Behaviour&quot; binding=&quot;Search&quot;
+      /&gt;&lt;timer waitforsec=&quot;0.3&quot; returnvalue=&quot;failure&quot; name=&quot;timer&quot;
+      /&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;Stand Still&quot; constraint=&quot;ActionPriority == 4&quot;&gt;&lt;treebinding
+      repeatuntil=&quot;&quot; name=&quot;Stand Still Behaviour&quot; binding=&quot;StandStill&quot;
+      /&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;Wander&quot; constraint=&quot;ActionPriority == 5&quot;&gt;&lt;treebinding
+      repeatuntil=&quot;&quot; name=&quot;Wander Behaviour&quot; binding=&quot;Wander&quot;
+      /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
+      name=&quot;parallel&quot;&gt;&lt;action repeatuntil=&quot;&quot; priority=&quot;&quot;
+      parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;(global)&quot;
+      name=&quot;DecideGhostworldAction&quot; classname=&quot;DecideAction&quot; /&gt;&lt;selector
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;selector&quot;&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;Ghostworld Wander&quot; constraint=&quot;ghostAction == 1&quot;&gt;&lt;action
+      repeatuntil=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;&quot;
+      namespace=&quot;(global)&quot; name=&quot;Choose new position&quot; classname=&quot;CalculateGhostworldWander&quot;
+      /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
+      name=&quot;root&quot;&gt;&lt;mecparam valueexpression=&quot;3.0&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; parametertype=&quot;float&quot; parametername=&quot;RunForward&quot;
+      name=&quot;StartRunning&quot; damptime=&quot;0.51&quot; /&gt;&lt;move turnspeed=&quot;&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;move&quot; movetarget=&quot;moveTarget&quot;
       movespeed=&quot;3&quot; facetarget=&quot;moveTarget&quot; closeenoughdistance=&quot;2&quot;
-      closeenoughangle=&quot;&quot; /&gt;&lt;timer waitforsec=&quot;1&quot; returnvalue=&quot;success&quot;
-      name=&quot;timer&quot; /&gt;&lt;/parallel&gt;&lt;mecparam valueexpression=&quot;0.0&quot;
+      closeenoughangle=&quot;&quot; /&gt;&lt;mecparam valueexpression=&quot;0.0&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; parametertype=&quot;float&quot;
       parametername=&quot;RunForward&quot; name=&quot;Stop Running&quot; damptime=&quot;0&quot;
-      /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;timer waitforsec=&quot;0.1&quot;
+      /&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;timer waitforsec=&quot;1&quot;
+      returnvalue=&quot;success&quot; priority=&quot;&quot; name=&quot;GhostWorld
+      Wait&quot; /&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;Return&quot; constraint=&quot;ActionPriority
+      == 6&quot;&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;Return Behaviour&quot;
+      binding=&quot;Return&quot; /&gt;&lt;/constraint&gt;&lt;timer waitforsec=&quot;0.3&quot;
       returnvalue=&quot;success&quot; priority=&quot;&quot; name=&quot;timer&quot;
-      /&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot;
-      succeed=&quot;any&quot; repeatuntil=&quot;running&quot; name=&quot;parallel&quot;
-      fail=&quot;any&quot;&gt;&lt;timer waitforsec=&quot;1&quot; returnvalue=&quot;success&quot;
-      name=&quot;timer&quot; /&gt;&lt;/parallel&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
+      /&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
       type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
       elementtype="System.String"><field value="Engage" type="System.String" id="element0"
       /><field value="Dodge" type="System.String" id="element1" /><field value="Attack"

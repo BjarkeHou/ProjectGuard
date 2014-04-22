@@ -41,7 +41,7 @@ MonoBehaviour:
       closeenoughangle=&quot;&quot; /&gt;&lt;mecparam valueexpression=&quot;0.0&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; parametertype=&quot;float&quot;
       parametername=&quot;RunForward&quot; name=&quot;Stop Running&quot; damptime=&quot;0&quot;
-      /&gt;&lt;/sequencer&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
+      /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
       priority=&quot;&quot; name=&quot;parallel&quot;&gt;&lt;action repeatuntil=&quot;&quot;
       priority=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;(global)&quot;
       name=&quot;DecideGhostworldAction&quot; classname=&quot;DecideAction&quot; /&gt;&lt;selector
@@ -61,7 +61,7 @@ MonoBehaviour:
       parametername=&quot;RunForward&quot; name=&quot;Stop Running&quot; damptime=&quot;0&quot;
       /&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;timer waitforsec=&quot;1&quot;
       returnvalue=&quot;success&quot; priority=&quot;&quot; name=&quot;GhostWorld
-      Wait&quot; /&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;constraint
+      Wait&quot; /&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;Found Target&quot;
       constraint=&quot;detectTarget != null&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot;
       repeatuntil=&quot;&quot; name=&quot;Engagement&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
