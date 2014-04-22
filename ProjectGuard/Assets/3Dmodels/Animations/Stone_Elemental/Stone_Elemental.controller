@@ -26,7 +26,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: Run_Forward
+  - m_Name: RunForward
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -66,6 +66,10 @@ Transition:
     m_EventTreshold: 0
     m_ExitTime: .812500119
   - m_ConditionMode: 1
+    m_ConditionEvent: Throw
+    m_EventTreshold: 0
+    m_ExitTime: .812500119
+  - m_ConditionMode: 1
     m_ConditionEvent: CanAttack
     m_EventTreshold: 0
     m_ExitTime: .812500119
@@ -102,7 +106,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: Run_Forward
+    m_ConditionEvent: RunForward
     m_EventTreshold: .100000001
     m_ExitTime: .90625
   m_Atomic: 0
@@ -120,7 +124,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: Run_Forward
+    m_ConditionEvent: RunForward
     m_EventTreshold: -.100000001
     m_ExitTime: .909638584
   m_Atomic: 0
@@ -156,7 +160,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: Run_Forward
+    m_ConditionEvent: RunForward
     m_EventTreshold: .100000001
     m_ExitTime: .909638584
   m_Atomic: 0
@@ -174,6 +178,10 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
+    m_ConditionEvent: Attack
+    m_EventTreshold: 0
+    m_ExitTime: .90625
+  - m_ConditionMode: 2
     m_ConditionEvent: Throw
     m_EventTreshold: 0
     m_ExitTime: .90625
@@ -196,7 +204,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: Run_Forward
+    m_ConditionEvent: RunForward
     m_EventTreshold: -.100000001
     m_ExitTime: .90625
   m_Atomic: 0
@@ -214,7 +222,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: Run_Forward
+    m_ConditionEvent: RunForward
     m_EventTreshold: .100000001
     m_ExitTime: .909638584
   m_Atomic: 0
@@ -232,7 +240,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: Run_Forward
+    m_ConditionEvent: RunForward
     m_EventTreshold: -.100000001
     m_ExitTime: .909638584
   m_Atomic: 0
@@ -274,7 +282,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: SEle_Walk_Backwards
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: 0e0c962e49e1f1e4da27105946787fbc, type: 2}
@@ -289,7 +297,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: SEle_Walk_Forward
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: bfbc42a6a659d9f4b90ad876d780fa1e, type: 2}
@@ -331,30 +339,30 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110284819}
-      second:
-      - {fileID: 110162303}
-      - {fileID: 110114289}
-    data:
-      first: {fileID: 110290341}
-      second:
-      - {fileID: 110166186}
-      - {fileID: 110133044}
-    data:
-      first: {fileID: 110224853}
-      second:
-      - {fileID: 110117993}
-    data:
-      first: {fileID: 110200000}
-      second:
-      - {fileID: 110112533}
-    data:
       first: {fileID: 110292919}
       second:
       - {fileID: 110100000}
       - {fileID: 110138319}
       - {fileID: 110113270}
       - {fileID: 110143705}
+    data:
+      first: {fileID: 110200000}
+      second:
+      - {fileID: 110112533}
+    data:
+      first: {fileID: 110224853}
+      second:
+      - {fileID: 110117993}
+    data:
+      first: {fileID: 110290341}
+      second:
+      - {fileID: 110166186}
+      - {fileID: 110133044}
+    data:
+      first: {fileID: 110284819}
+      second:
+      - {fileID: 110162303}
+      - {fileID: 110114289}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: -288, y: -96, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

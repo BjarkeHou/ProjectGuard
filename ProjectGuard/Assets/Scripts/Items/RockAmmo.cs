@@ -15,7 +15,6 @@ public class RockAmmo : MonoBehaviour {
 	// Update is called once per frame
 	void Update() {
 		if (rigidbody.velocity.magnitude > limit) {
-			print("emitting");
 			part.Play();
 		} else {
 			part.Stop();

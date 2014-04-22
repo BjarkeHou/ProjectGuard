@@ -2150,7 +2150,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100020}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -2.95473583e-08}
-  m_LocalPosition: {x: 37.4843216, y: 1.47753906, z: 22.1386318}
+  m_LocalPosition: {x: 39.3858414, y: 1.54205132, z: 27.1494656}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400244}
@@ -3919,6 +3919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 344bd4ae0f44342528bec260b20f9e6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curHealth: 100
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3952,6 +3953,8 @@ MonoBehaviour:
     m_PostInfinity: 2
   lerpSpeed: 10
   playerCanMove: 1
+  LunaBlasted: 0
+  LunaBlastTimer: 0
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
