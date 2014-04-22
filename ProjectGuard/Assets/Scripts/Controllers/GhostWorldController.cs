@@ -12,6 +12,7 @@ public class GhostWorldController : MonoBehaviour {
 	
 
 	private bool fading = false;
+	private bool shaderSet = false;
 
 	// Use this for initialization
 	void Start() {
@@ -37,7 +38,10 @@ public class GhostWorldController : MonoBehaviour {
 			} else {
 				fading = false;
 			}
+			shaderSet = false;
 			TransitionLOL();
+		} else if (!shaderSet) {
+			ResetShaders();
 		}
 		gWorld.transition = deathTransition;
 	}
@@ -48,7 +52,8 @@ public class GhostWorldController : MonoBehaviour {
 		
 		GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 		foreach (GameObject enemy in enemies) {
-			enemy.transform.FindChild("LiamModel").gameObject.SetActive(true);
+			enemy.transform.FindChild("GhostModel").gameObject.SetActive(true);
+			enemy.transform.FindChild("Model").gameObject.SetActive(true);
 
 			//set live model
 			enemy.transform.Find("Model").GetComponent<Animator>().speed = 1 - normalModelAlphaValue;
@@ -61,9 +66,9 @@ public class GhostWorldController : MonoBehaviour {
 			}
 
 			//set ghost model
-			enemy.transform.Find("LiamModel").GetComponent<Animator>().speed = liamModelAlphaValue;
-			renderes = enemy.transform.FindChild("LiamModel").GetComponentsInChildren<Renderer>();
-			foreach (Renderer r in renderes) {	
+			enemy.transform.Find("GhostModel").GetComponent<Animator>().speed = liamModelAlphaValue;
+			renderes = enemy.transform.FindChild("GhostModel").GetComponentsInChildren<Renderer>();
+			foreach (Renderer r in renderes) {
 				r.material.shader = Shader.Find("Transparent/Diffuse");
 				Color c = r.material.color;
 				c.a = liamModelAlphaValue;
@@ -71,8 +76,34 @@ public class GhostWorldController : MonoBehaviour {
 			}
 		}
 	}
+
+	void ResetShaders() {
+		shaderSet = true;
+		GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+		Renderer[] renderes;
+		foreach (GameObject enemy in enemies) {
+			if (!screenIsInGhostMode) {
+				enemy.transform.FindChild("GhostModel").gameObject.SetActive(false);
+				//set live model
+				renderes = enemy.transform.FindChild("Model").GetComponentsInChildren<Renderer>();
+				foreach (Renderer r in renderes) {
+					if (r.tag != "IgnoreGhostTrans") {
+						r.material.shader = Shader.Find("Diffuse");
+					}
+				}
+			} else {
+				enemy.transform.FindChild("Model").gameObject.SetActive(false);
+				//set ghost model
+				renderes = enemy.transform.FindChild("GhostModel").GetComponentsInChildren<Renderer>();
+				foreach (Renderer r in renderes) {
+					if (r.tag != "IgnoreGhostTrans") {
+						r.material.shader = Shader.Find("Diffuse");
+					}
+				}
+			}
+		}
 	
-	/*void TransitionToGhostMode()
+		/*void TransitionToGhostMode()
 	{
 		deathTransition += deathTransitionSpeed * Time.deltaTime;
 		
@@ -160,4 +191,5 @@ public class GhostWorldController : MonoBehaviour {
 			
 		}
 	}*/
+	}
 }

@@ -112,7 +112,7 @@ public class Weapon : Item {
 					print("PARRY by " + obj.name);
 				} else if (hitType == 2) {
 					//in case of friendly fire
-					print ("Friendly Fire");
+					print("Friendly Fire");
 				}
 				
 				//if an object is hit

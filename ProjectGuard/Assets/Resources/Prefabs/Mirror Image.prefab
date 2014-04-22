@@ -2572,7 +2572,7 @@ GameObject:
   - 95: {fileID: 9500002}
   - 114: {fileID: 11400014}
   m_Layer: 0
-  m_Name: LiamModel
+  m_Name: GhostModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3036,7 +3036,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.6429787, y: 1.2508049, z: 46.4251976}
+  m_LocalPosition: {x: 41.4429398, y: 1.47753906, z: 28.0798302}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400012}
@@ -6107,8 +6107,8 @@ CharacterController:
   serializedVersion: 2
   m_Height: 2
   m_Radius: .800000012
-  m_SlopeLimit: 45
-  m_StepOffset: .300000012
+  m_SlopeLimit: 0
+  m_StepOffset: .100000001
   m_SkinWidth: .0799999982
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}

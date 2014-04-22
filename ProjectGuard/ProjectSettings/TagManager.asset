@@ -11,7 +11,7 @@ TagManager:
   - Helm
   - ActiveHelm
   - GameManager
-  - 
+  - IgnoreGhostTrans
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
