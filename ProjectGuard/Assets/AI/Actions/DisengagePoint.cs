@@ -28,7 +28,7 @@ public class DisengagePoint : RAINAction
         GameObject target = ai.WorkingMemory.GetItem<GameObject>("detectTarget");
         Vector3 vecToPlayer = target.transform.position - self.transform.position;
         vecToPlayer.Normalize();
-        vecToPlayer.z *= 0;
+        vecToPlayer.y *= 0;
         vecToPlayer *= -1;
 
 
