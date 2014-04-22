@@ -1,0 +1,35 @@
+<root>
+	<speechelements>
+		<speechnode>
+			<id>0</id>
+			<speaker name = "Luna"></speaker>
+			<text>Welcome to the mines</text>
+			<voicefile>*Link to voicefile*</voicefile>
+		</speechnode>
+		<speechnode>
+			<id>1</id>
+			<speaker name = "Luna"></speaker>
+			<text>Please familiarize yourself with your surroundings</text>
+			<voicefile>*Link to voicefile*</voicefile>
+		</speechnode>
+		<speechnode>
+			<id>2</id>
+			<speaker name = "Liam"></speaker>
+			<text>This looks dangerous</text>
+			<voicefile>*Link to voicefile*</voicefile>
+		</speechnode>
+	</speechelements>
+	
+	<speakers>
+		<speaker>
+			<name>Luna</name>
+			<picture>*Link to image*</picture>
+			<nametoappear>Luna</nametoappear>
+		</speaker>
+		<speaker>
+			<name>Liam</name>
+			<picture>*Link to image*</picture>
+			<nametoappear>Liam</nametoappear>
+		</speaker>
+	</speakers>
+</root>

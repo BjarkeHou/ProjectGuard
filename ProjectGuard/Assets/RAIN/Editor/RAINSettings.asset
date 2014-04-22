@@ -21,8 +21,8 @@ MonoBehaviour:
   _navMeshGenerationThreads: 4
   _useSkin: 1
   _skin: {fileID: 11400000, guid: a284bcd7ccc08e442a03e55846119e2c, type: 2}
-  _showAdvanced: 1
+  _showAdvanced: 0
   _allowAutoUpdateCheck: 1
-  _lastUpdateCheck: 4/22/2014 12:35:02 PM
+  _lastUpdateCheck: 04/22/2014 13:27:16
   _updateFrequencyHours: 24
   _updateMetaformRequired: 0

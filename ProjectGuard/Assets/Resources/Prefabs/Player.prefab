@@ -47,7 +47,8 @@ GameObject:
   - 114: {fileID: 11400018}
   - 114: {fileID: 11400020}
   - 82: {fileID: 8200000}
-  - 114: {fileID: 11400016}
+  - 114: {fileID: 11400000}
+  - 81: {fileID: 8100000}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1495,7 +1496,7 @@ GameObject:
   - 4: {fileID: 400190}
   - 33: {fileID: 3300014}
   - 23: {fileID: 2300014}
-  - 114: {fileID: 11400000}
+  - 114: {fileID: 11400016}
   - 54: {fileID: 5400000}
   - 65: {fileID: 6500000}
   m_Layer: 0
@@ -2271,7 +2272,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100138}
-  m_LocalRotation: {x: -.00600650255, y: -.0114216767, z: .00149470801, w: .9999156}
+  m_LocalRotation: {x: -.00600650301, y: -.0114216777, z: .00149470812, w: .999915659}
   m_LocalPosition: {x: -.0769814178, y: -.289387167, z: .027958991}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2956,6 +2957,13 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .0639150441, y: 1.5, z: .699999988}
   m_Center: {x: -1.11022387e-15, y: -7.10542482e-16, z: 7.4505806e-09}
+--- !u!81 &8100000
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
 --- !u!82 &8200000
 AudioSource:
   m_ObjectHideFlags: 1
@@ -3103,19 +3111,20 @@ MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100194}
+  m_GameObject: {fileID: 100004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb947bf73dcb9404d83c8c13f29bdf4e, type: 3}
+  m_Script: {fileID: 11500000, guid: 07163de953b574bafa61a0bf199f8b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPickupRange: 1.5
-  damage: 25
-  weaponName: 
-  age: 19
-  quality: "\xD8V!"
-  attackWillCost: -20
-  gui_Skin: {fileID: 11400000, guid: 49c7d18afcfee4ef4ae02f66852d6706, type: 2}
+  runSound: {fileID: 8300000, guid: b127a1a17c8de4c49870407850768f3b, type: 3}
+  runSoundSpeed: 0
+  dodgeSound: {fileID: 8300000, guid: cc76e511e2a6540499b39ca119439229, type: 3}
+  dodgeSoundSpeed: 0
+  attackSound: {fileID: 0}
+  attackSoundSpeed: 0
+  parrySound: {fileID: 0}
+  parrySoundSpeed: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3251,20 +3260,19 @@ MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100004}
+  m_GameObject: {fileID: 100194}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07163de953b574bafa61a0bf199f8b66, type: 3}
+  m_Script: {fileID: 11500000, guid: bb947bf73dcb9404d83c8c13f29bdf4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSound: {fileID: 8300000, guid: b127a1a17c8de4c49870407850768f3b, type: 3}
-  runSoundSpeed: 0
-  dodgeSound: {fileID: 8300000, guid: cc76e511e2a6540499b39ca119439229, type: 3}
-  dodgeSoundSpeed: 0
-  attackSound: {fileID: 0}
-  attackSoundSpeed: 0
-  parrySound: {fileID: 0}
-  parrySoundSpeed: 0
+  maxPickupRange: 1.5
+  damage: 25
+  weaponName: 
+  age: 19
+  quality: "\xD8V!"
+  attackWillCost: -20
+  gui_Skin: {fileID: 11400000, guid: 49c7d18afcfee4ef4ae02f66852d6706, type: 2}
 --- !u!114 &11400018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3372,8 +3380,8 @@ CharacterController:
   serializedVersion: 2
   m_Height: 2
   m_Radius: .800000012
-  m_SlopeLimit: 0
-  m_StepOffset: .100000001
+  m_SlopeLimit: 45
+  m_StepOffset: 0
   m_SkinWidth: .0799999982
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}
