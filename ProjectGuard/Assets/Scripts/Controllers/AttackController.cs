@@ -11,12 +11,14 @@ public class AttackController : MonoBehaviour
 	private Animator anim;
 	private bool m_inAnAttack = false;
 	private GameController game;
+	private PlayerSoundController playerSound;
 	
 	public float rangeForAttack;
 
 	// Use this for initialization
 	void Start()
 	{
+		playerSound = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSoundController>();
 		game = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 		doesDamage = false;
 		targetsHit = new List<GameObject>();
@@ -33,6 +35,7 @@ public class AttackController : MonoBehaviour
 	{
 		if (!game.isInGhostMode)
 		{
+			playerSound.attack();
 			inAnAttack = true;
 			//if (ThereIsSpaceForNormalAttack()) {
 			anim.SetBool("Attack", true);
@@ -44,8 +47,11 @@ public class AttackController : MonoBehaviour
 
 	public void DeclareParry()
 	{
-		
-		anim.SetBool("Parry", true);
+		if (!game.isInGhostMode)
+		{
+			playerSound.parry();
+			anim.SetBool("Parry", true);
+		}
 	}
 
 	//called from the equiped weapon

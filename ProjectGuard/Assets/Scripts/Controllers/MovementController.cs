@@ -6,6 +6,7 @@ public class MovementController : MonoBehaviour
 	private CharacterController charCont;
 	private PlayerLook pLook;
 	protected Animator anim;
+	private PlayerSoundController playerSound;
 
 	public float normalMovementSpeed = 6;
 	public float attackingMovementSpeed = 0.5f;
@@ -28,6 +29,7 @@ public class MovementController : MonoBehaviour
 	// Use this for initialization
 	protected void Start()
 	{
+		playerSound = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSoundController>();
 		charCont = GetComponent<CharacterController>();
 		pLook = this.GetComponent<PlayerLook>();
 		anim = transform.Find("Model").GetComponent<Animator>();
@@ -37,7 +39,7 @@ public class MovementController : MonoBehaviour
 	public void MoveCharacter(float v, float h)
 	{
 		if (playerCanMove)
-		{				
+		{		
 			moveDirection = Vector3.zero;
 		
 			if (v < 0) 
@@ -50,13 +52,12 @@ public class MovementController : MonoBehaviour
 			else if (h > 0)
 				moveDirection += Vector3.right;
 
-			
+			playerSound.running(v != 0 || h != 0);
 			Vector3 localDir = pLook.transform.InverseTransformDirection(moveDirection);
 			anim.SetFloat("RunForward", localDir.z);
 			anim.SetFloat("RunSideways", localDir.x);
 
 			charCont.Move(moveDirection * Time.deltaTime * movementSpeed);
-			
 		}
 	}
 
@@ -80,6 +81,7 @@ public class MovementController : MonoBehaviour
 	    // Test if player is trying to dodge
 	    if (playerCanDodge && Time.time > dodgeDelayTimer)
 	    {
+			playerSound.dodge();
 	        if (GetComponent<PlayerWillController>() != null)
 	        {
 	            GetComponent<PlayerWillController>().Dodge();

@@ -3,14 +3,10 @@ using System.Collections;
 
 public class PlayerSoundController : MonoBehaviour
 {
-	public AudioClip runSound;
-	public float runSoundSpeed;
+	public AudioClip[] runSound;
 	public AudioClip dodgeSound;
-	public float dodgeSoundSpeed;
 	public AudioClip attackSound;
-	public float attackSoundSpeed;
 	public AudioClip parrySound;
-	public float parrySoundSpeed;
 	
 	private AudioSource feetSource;
 	
@@ -18,7 +14,6 @@ public class PlayerSoundController : MonoBehaviour
 	void Start()
 	{
 		feetSource = GetComponent<AudioSource>();
-		feetSource.clip = runSound;
 	}
 	
 	// Update is called once per frame
@@ -32,8 +27,7 @@ public class PlayerSoundController : MonoBehaviour
 		if (feetSource.isPlaying)
 			return;
 		
-		if (feetSource.clip != runSound)
-			feetSource.clip = runSound;
+		feetSource.clip = runSound [Mathf.FloorToInt(Random.Range(0, runSound.Length))];
 		
 		if (moving)
 		{
@@ -58,11 +52,15 @@ public class PlayerSoundController : MonoBehaviour
 	
 	public void attack()
 	{
-		
+		feetSource.Stop();
+		feetSource.clip = attackSound;
+		feetSource.Play();
 	}
 	
 	public void parry()
 	{
-		
+		feetSource.Stop();
+		feetSource.clip = parrySound;
+		feetSource.Play();
 	}
 }
