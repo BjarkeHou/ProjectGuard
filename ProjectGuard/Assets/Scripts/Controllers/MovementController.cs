@@ -5,7 +5,7 @@ public class MovementController : MonoBehaviour
 {
 	private CharacterController charCont;
 	private PlayerLook pLook;
-	private Animator anim;
+	protected Animator anim;
 
 	public float normalMovementSpeed = 6;
 	public float attackingMovementSpeed = 0.5f;
@@ -17,12 +17,12 @@ public class MovementController : MonoBehaviour
 	
 	private float movementSpeed;
 
-	private Vector3 moveDirection;
+	protected Vector3 moveDirection;
 	public bool playerCanMove = true;
-	private bool playerCanDodge = true;
+	protected bool playerCanDodge = true;
 	private float progress;
 	
-	private float dodgeDelayTimer = 0;
+	protected float dodgeDelayTimer = 0;
 	private float dodgedDistance = 0;
 
 	// Use this for initialization
@@ -60,7 +60,7 @@ public class MovementController : MonoBehaviour
 		}
 	}
 
-	public void Dodge(float v, float h)
+	public virtual void Dodge(float v, float h) {
 	{
 		moveDirection = Vector3.zero;
 
@@ -101,7 +101,7 @@ public class MovementController : MonoBehaviour
 		}
 	}
 
-	private IEnumerator PerformDodge(Vector3 startPoint, Vector3 dodgeDir, float dodgeDist)
+	protected IEnumerator PerformDodge(Vector3 startPoint, Vector3 dodgeDir, float dodgeDist) {
 	{
 		if (moveDirection != Vector3.zero)
 		{
@@ -162,4 +162,9 @@ public class MovementController : MonoBehaviour
 	{
 		playerCanDodge = value;
 	}
+
+    public virtual bool IsLunaBlasted()
+    {
+        return false;
+    }
 }
