@@ -6,7 +6,10 @@ public class HealthController : MonoBehaviour
 
 	public const int maxHealth = 100;
 	public const int minHealth = 0;
-	private int curHealth;
+	public int curHealth;
+
+	private int lastDamageTaken;
+	public int LastDamageTaken { get { return lastDamageTaken; } }
 	
 	private GameController game;
 	
@@ -21,7 +24,7 @@ public class HealthController : MonoBehaviour
 	void Start()
 	{
 		game = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
-		curHealth = maxHealth;
+		//curHealth = maxHealth;
 	}
  
 	void Update()
@@ -31,11 +34,15 @@ public class HealthController : MonoBehaviour
 			Destroy(gameObject);
 		}
 	}
-	
+
 	//Damage comes in minus, health comes in plus.
 	//If player/creep is still alive, method returns true.
 	public bool adjustCurrentHealth(int value)
 	{
+		if (value < 0) {
+			lastDamageTaken = value;
+		}
+
 		curHealth += value;
 		
 		if (curHealth <= minHealth)

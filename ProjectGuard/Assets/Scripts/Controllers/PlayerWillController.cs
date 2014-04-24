@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerWillController : MonoBehaviour
 {
 
-	private HealthController healthCont;
+	private HealthController hCtrl;
 	private Animator anim;
 
 	public float handAttackAdj;
@@ -25,28 +25,42 @@ public class PlayerWillController : MonoBehaviour
 	public float CurMaxWill { get { return curMaxWill; } }
 	public float CurWill { get { return curWill; } }
 
+	private int prevHealth;
+
 	// Use this for initialization
 	void Start()
 	{
-		healthCont = GetComponent<HealthController>();
+		hCtrl = GetComponent<HealthController>();
 		anim = transform.Find("Model").GetComponent<Animator>();
 
 		regenTimer = Time.time;
-		maxWill = healthCont.getMaxHealth();
-		curMaxWill = healthCont.getCurrentHealth();
+		maxWill = hCtrl.getMaxHealth();
+		curMaxWill = hCtrl.getCurrentHealth();
 		curWill = maxWill;
+
+		prevHealth = hCtrl.getCurrentHealth();
 	}
 	
 	// Update is called once per frame
 	void Update()
 	{
+		//if there is a change in health, check if the player has gone below the current will
+		if (hCtrl.getCurrentHealth() != prevHealth) {
+			if (hCtrl.getCurrentHealth() < prevHealth && curWill + hCtrl.LastDamageTaken < 0) {
+				hCtrl.adjustCurrentHealth(-hCtrl.getMaxHealth());
+			} else {
+				//curWill += hCtrl.LastDamageTaken;
+			}
+			prevHealth = hCtrl.getCurrentHealth();
+		}
+
 		if (Time.time > regenTimer + regenCD && curWill < curMaxWill)
 		{
 			curWill += regenSpeed * Time.deltaTime;
 		}
 
 		//adjuct current max will
-		curMaxWill = healthCont.getCurrentHealth();
+		curMaxWill = hCtrl.getCurrentHealth();
 
 		//regen current will
 		if (curWill > curMaxWill)

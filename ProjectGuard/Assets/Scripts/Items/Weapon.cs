@@ -100,7 +100,7 @@ public class Weapon : Item {
 					//Instantiate blood
 					GameObject blood = (GameObject)Instantiate(Resources.Load("Prefabs/Blood"));
 					blood.transform.parent = transform;
-					blood.GetComponent<BloodDestroy>().offset = (hit.point - transform.position).magnitude;
+					blood.GetComponent<BloodDestroy>().origin = hit.point;
 					
 					print("HIT on " + obj.name);
 				} else if (hitType == 0) {
@@ -112,7 +112,7 @@ public class Weapon : Item {
 					print("PARRY by " + obj.name);
 				} else if (hitType == 2) {
 					//in case of friendly fire
-					print ("Friendly Fire");
+					print("Friendly Fire");
 				}
 				
 				//if an object is hit

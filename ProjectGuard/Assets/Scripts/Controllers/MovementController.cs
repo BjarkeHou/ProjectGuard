@@ -5,7 +5,7 @@ public class MovementController : MonoBehaviour
 {
 	private CharacterController charCont;
 	private PlayerLook pLook;
-	private Animator anim;
+	protected Animator anim;
 	private PlayerSoundController playerSound;
 
 	public float normalMovementSpeed = 6;
@@ -18,12 +18,12 @@ public class MovementController : MonoBehaviour
 	
 	private float movementSpeed;
 
-	private Vector3 moveDirection;
+	protected Vector3 moveDirection;
 	public bool playerCanMove = true;
-	private bool playerCanDodge = true;
+	protected bool playerCanDodge = true;
 	private float progress;
 	
-	private float dodgeDelayTimer = 0;
+	protected float dodgeDelayTimer = 0;
 	private float dodgedDistance = 0;
 
 	// Use this for initialization
@@ -61,77 +61,81 @@ public class MovementController : MonoBehaviour
 		}
 	}
 
-	public void Dodge(float v, float h)
+	public virtual void Dodge(float v, float h)
 	{
-		moveDirection = Vector3.zero;
+	    
+	    moveDirection = Vector3.zero;
 
-		if (v < 0) 
-			moveDirection += Vector3.back;
-		else if (v > 0)
-			moveDirection += Vector3.forward;
-		
-		if (h < 0)
-			moveDirection += Vector3.left;
-		else if (h > 0)
-			moveDirection += Vector3.right;
+	    if (v < 0)
+	        moveDirection += Vector3.back;
+	    else if (v > 0)
+	        moveDirection += Vector3.forward;
 
-		transform.Find("Model").GetComponent<Animator>().SetBool("Attack", false);
+	    if (h < 0)
+	        moveDirection += Vector3.left;
+	    else if (h > 0)
+	        moveDirection += Vector3.right;
 
-		// Test if player is trying to dodge
-		if (playerCanDodge && Time.time > dodgeDelayTimer)
-		{
+	    transform.Find("Model").GetComponent<Animator>().SetBool("Attack", false);
+
+	    // Test if player is trying to dodge
+	    if (playerCanDodge && Time.time > dodgeDelayTimer)
+	    {
 			playerSound.dodge();
-			if (GetComponent<PlayerWillController>() != null)
-			{
-				GetComponent<PlayerWillController>().Dodge();
-			}
+	        if (GetComponent<PlayerWillController>() != null)
+	        {
+	            GetComponent<PlayerWillController>().Dodge();
+	        }
 
-			Vector3 sPoint = this.transform.position;
-			Vector3 dodgeDirection = moveDirection.normalized;
-			float dodgeDist = dodgeDistance;
-			string animState = "Dodge_Forward";
-			
-			//if no movement is detected, do a backstep
-			if (moveDirection == Vector3.zero)
-			{
-				animState = "Dodge_Backwards";
-				dodgeDirection = transform.TransformDirection(Vector3.back);
-				dodgeDist = dodgeDistance * 0.75f;
-			}
-			anim.SetBool(animState, true);
-			StartCoroutine(PerformDodge(sPoint, dodgeDirection, dodgeDist));
-		}
+	        Vector3 sPoint = this.transform.position;
+	        Vector3 dodgeDirection = moveDirection.normalized;
+	        float dodgeDist = dodgeDistance;
+	        string animState = "Dodge_Forward";
+
+	        //if no movement is detected, do a backstep
+	        if (moveDirection == Vector3.zero)
+	        {
+	            animState = "Dodge_Backwards";
+	            dodgeDirection = transform.TransformDirection(Vector3.back);
+	            dodgeDist = dodgeDistance*0.75f;
+	        }
+	        anim.SetBool(animState, true);
+	        StartCoroutine(PerformDodge(sPoint, dodgeDirection, dodgeDist));
+	    }
+	    
 	}
 
-	private IEnumerator PerformDodge(Vector3 startPoint, Vector3 dodgeDir, float dodgeDist)
-	{
-		if (moveDirection != Vector3.zero)
-		{
-			pLook.LockPlayerOnDirection(dodgeDir);
-		}
-		dodgeDelayTimer = Time.time + dodgeDelay;
-		SetCanDodge(false);
+    protected IEnumerator PerformDodge(Vector3 startPoint, Vector3 dodgeDir, float dodgeDist)
+    {
 
-		while (progress < 1.0f)
-		{
-			progress = Mathf.InverseLerp(0, dodgeDist, dodgedDistance);
-			dodgedDistance += curve.Evaluate(progress) * dodgeSpeed * Time.deltaTime;	
-			Vector3 desiredPos = startPoint + dodgeDir.normalized * dodgedDistance;
-			charCont.Move(desiredPos - transform.position);
-			if (!pLook.playerCanRotate && progress > 0.8f)
-				pLook.playerCanRotate = true;
-			yield return null;
-		}
-		
-		progress = 0.0f;
-		dodgedDistance = 0;
-		pLook.playerCanRotate = true;
-		SetCanDodge(true);
-		
-		Debug.Log("Dodge performed!!");
-	}
+        if (moveDirection != Vector3.zero)
+        {
+            pLook.LockPlayerOnDirection(dodgeDir);
+        }
+        dodgeDelayTimer = Time.time + dodgeDelay;
+        SetCanDodge(false);
 
-	public void AttackStep()
+        while (progress < 1.0f)
+        {
+            progress = Mathf.InverseLerp(0, dodgeDist, dodgedDistance);
+            dodgedDistance += curve.Evaluate(progress)*dodgeSpeed*Time.deltaTime;
+            Vector3 desiredPos = startPoint + dodgeDir.normalized*dodgedDistance;
+            charCont.Move(desiredPos - transform.position);
+            if (!pLook.playerCanRotate && progress > 0.8f)
+                pLook.playerCanRotate = true;
+            yield return null;
+        }
+
+        progress = 0.0f;
+        dodgedDistance = 0;
+        pLook.playerCanRotate = true;
+        SetCanDodge(true);
+
+        Debug.Log("Dodge performed!!");
+
+    }
+
+    public void AttackStep()
 	{
 		StartCoroutine(PerformAttackStep(transform.TransformDirection(Vector3.forward)));
 	}
@@ -164,4 +168,10 @@ public class MovementController : MonoBehaviour
 	{
 		playerCanDodge = value;
 	}
+
+    public virtual bool IsLunaBlasted()
+    {
+        return false;
+    }
 }
+

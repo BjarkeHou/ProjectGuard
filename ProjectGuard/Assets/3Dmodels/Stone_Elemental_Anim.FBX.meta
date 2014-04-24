@@ -1,76 +1,86 @@
 fileFormatVersion: 2
-guid: b69d8f95d0af65e4aa8b272e4aef1a02
+guid: e4ec8cedcf59a1242a7160c254a4e5a5
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
-    100000: Base HumanHead
-    100002: Base HumanLCalf
-    100004: Base HumanLCollarbone
-    100006: Base HumanLDigit11
-    100008: Base HumanLDigit11 1
-    100010: Base HumanLDigit21
-    100012: Base HumanLDigit31
-    100014: Base HumanLFoot
-    100016: Base HumanLForearm
-    100018: Base HumanLPalm
-    100020: Base HumanLThigh
-    100022: Base HumanLUpperarm
-    100024: Base HumanNeck1
-    100026: Base HumanNeck2
-    100028: Base HumanPelvis
-    100030: Base HumanRCalf
-    100032: Base HumanRCollarbone
-    100034: Base HumanRDigit11
-    100036: Base HumanRDigit11 1
-    100038: Base HumanRDigit21
-    100040: Base HumanRDigit31
-    100042: Base HumanRFoot
-    100044: Base HumanRForearm
-    100046: Base HumanRibcage
-    100048: Base HumanRPalm
-    100050: Base HumanRThigh
-    100052: Base HumanRUpperarm
-    100054: Base HumanSpine1
-    100056: Base HumanSpine2
-    100058: Base HumanSpine3
-    100060: Base HumanSpine4
-    100062: Box004
-    100064: Rock
-    100066: //RootNode
-    400000: Base HumanHead
-    400002: Base HumanLCalf
-    400004: Base HumanLCollarbone
-    400006: Base HumanLDigit11
-    400008: Base HumanLDigit11 1
-    400010: Base HumanLDigit21
-    400012: Base HumanLDigit31
-    400014: Base HumanLFoot
-    400016: Base HumanLForearm
-    400018: Base HumanLPalm
-    400020: Base HumanLThigh
-    400022: Base HumanLUpperarm
-    400024: Base HumanNeck1
-    400026: Base HumanNeck2
-    400028: Base HumanPelvis
-    400030: Base HumanRCalf
-    400032: Base HumanRCollarbone
-    400034: Base HumanRDigit11
-    400036: Base HumanRDigit11 1
-    400038: Base HumanRDigit21
-    400040: Base HumanRDigit31
-    400042: Base HumanRFoot
-    400044: Base HumanRForearm
-    400046: Base HumanRibcage
-    400048: Base HumanRPalm
-    400050: Base HumanRThigh
-    400052: Base HumanRUpperarm
-    400054: Base HumanSpine1
-    400056: Base HumanSpine2
-    400058: Base HumanSpine3
-    400060: Base HumanSpine4
-    400062: Box004
-    400064: Rock
-    400066: //RootNode
+    100000: Base Human
+    100002: Base HumanHead
+    100004: Base HumanLCalf
+    100006: Base HumanLCollarbone
+    100008: Base HumanLDigit11
+    100010: Base HumanLDigit11 1
+    100012: Base HumanLDigit21
+    100014: Base HumanLDigit31
+    100016: Base HumanLFoot
+    100018: Base HumanLForearm
+    100020: Base HumanLIKTarget
+    100022: Base HumanLPalm
+    100024: Base HumanLPlatform
+    100026: Base HumanLThigh
+    100028: Base HumanLUpperarm
+    100030: Base HumanNeck1
+    100032: Base HumanNeck2
+    100034: Base HumanPelvis
+    100036: Base HumanRCalf
+    100038: Base HumanRCollarbone
+    100040: Base HumanRDigit11
+    100042: Base HumanRDigit11 1
+    100044: Base HumanRDigit21
+    100046: Base HumanRDigit31
+    100048: Base HumanRFoot
+    100050: Base HumanRForearm
+    100052: Base HumanRibcage
+    100054: Base HumanRIKTarget
+    100056: Base HumanRPalm
+    100058: Base HumanRPlatform
+    100060: Base HumanRThigh
+    100062: Base HumanRUpperarm
+    100064: Base HumanSpine1
+    100066: Base HumanSpine2
+    100068: Base HumanSpine3
+    100070: Base HumanSpine4
+    100072: Box004
+    100074: Rock
+    100076: //RootNode
+    400000: Base Human
+    400002: Base HumanHead
+    400004: Base HumanLCalf
+    400006: Base HumanLCollarbone
+    400008: Base HumanLDigit11
+    400010: Base HumanLDigit11 1
+    400012: Base HumanLDigit21
+    400014: Base HumanLDigit31
+    400016: Base HumanLFoot
+    400018: Base HumanLForearm
+    400020: Base HumanLIKTarget
+    400022: Base HumanLPalm
+    400024: Base HumanLPlatform
+    400026: Base HumanLThigh
+    400028: Base HumanLUpperarm
+    400030: Base HumanNeck1
+    400032: Base HumanNeck2
+    400034: Base HumanPelvis
+    400036: Base HumanRCalf
+    400038: Base HumanRCollarbone
+    400040: Base HumanRDigit11
+    400042: Base HumanRDigit11 1
+    400044: Base HumanRDigit21
+    400046: Base HumanRDigit31
+    400048: Base HumanRFoot
+    400050: Base HumanRForearm
+    400052: Base HumanRibcage
+    400054: Base HumanRIKTarget
+    400056: Base HumanRPalm
+    400058: Base HumanRPlatform
+    400060: Base HumanRThigh
+    400062: Base HumanRUpperarm
+    400064: Base HumanSpine1
+    400066: Base HumanSpine2
+    400068: Base HumanSpine3
+    400070: Base HumanSpine4
+    400072: Box004
+    400074: Rock
+    400076: //RootNode
     2300000: Rock
     3300000: Rock
     4300000: Box004
@@ -123,6 +133,12 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
+      - path: Base Human
+        weight: 1
+      - path: Base HumanLIKTarget
+        weight: 1
+      - path: Base HumanLPlatform
+        weight: 1
       - path: Base HumanPelvis
         weight: 1
       - path: Base HumanPelvis/Base HumanLThigh
@@ -215,6 +231,10 @@ ModelImporter:
       - path: Base HumanPelvis/Base HumanSpine1/Base HumanSpine2/Base HumanSpine3/Base
           HumanSpine4/Base HumanRibcage/Base HumanRCollarbone/Base HumanRUpperarm/Base
           HumanRForearm/Base HumanRPalm/Base HumanRDigit31
+        weight: 1
+      - path: Base HumanRIKTarget
+        weight: 1
+      - path: Base HumanRPlatform
         weight: 1
       - path: Box004
         weight: 1
@@ -248,6 +268,12 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
+      - path: Base Human
+        weight: 1
+      - path: Base HumanLIKTarget
+        weight: 1
+      - path: Base HumanLPlatform
+        weight: 1
       - path: Base HumanPelvis
         weight: 1
       - path: Base HumanPelvis/Base HumanLThigh
@@ -340,6 +366,10 @@ ModelImporter:
       - path: Base HumanPelvis/Base HumanSpine1/Base HumanSpine2/Base HumanSpine3/Base
           HumanSpine4/Base HumanRibcage/Base HumanRCollarbone/Base HumanRUpperarm/Base
           HumanRForearm/Base HumanRPalm/Base HumanRDigit31
+        weight: 1
+      - path: Base HumanRIKTarget
+        weight: 1
+      - path: Base HumanRPlatform
         weight: 1
       - path: Box004
         weight: 1
@@ -357,7 +387,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -372,6 +402,12 @@ ModelImporter:
       events: []
       transformMask:
       - path: 
+        weight: 1
+      - path: Base Human
+        weight: 1
+      - path: Base HumanLIKTarget
+        weight: 1
+      - path: Base HumanLPlatform
         weight: 1
       - path: Base HumanPelvis
         weight: 1
@@ -465,6 +501,10 @@ ModelImporter:
       - path: Base HumanPelvis/Base HumanSpine1/Base HumanSpine2/Base HumanSpine3/Base
           HumanSpine4/Base HumanRibcage/Base HumanRCollarbone/Base HumanRUpperarm/Base
           HumanRForearm/Base HumanRPalm/Base HumanRDigit31
+        weight: 1
+      - path: Base HumanRIKTarget
+        weight: 1
+      - path: Base HumanRPlatform
         weight: 1
       - path: Box004
         weight: 1
@@ -498,6 +538,12 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
+      - path: Base Human
+        weight: 1
+      - path: Base HumanLIKTarget
+        weight: 1
+      - path: Base HumanLPlatform
+        weight: 1
       - path: Base HumanPelvis
         weight: 1
       - path: Base HumanPelvis/Base HumanLThigh
@@ -591,6 +637,10 @@ ModelImporter:
           HumanSpine4/Base HumanRibcage/Base HumanRCollarbone/Base HumanRUpperarm/Base
           HumanRForearm/Base HumanRPalm/Base HumanRDigit31
         weight: 1
+      - path: Base HumanRIKTarget
+        weight: 1
+      - path: Base HumanRPlatform
+        weight: 1
       - path: Box004
         weight: 1
       - path: Rock
@@ -600,8 +650,8 @@ ModelImporter:
     - serializedVersion: 16
       name: SEle_Attack_Throw
       takeName: Take 001
-      firstFrame: 301
-      lastFrame: 400
+      firstFrame: 300
+      lastFrame: 401
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -623,6 +673,12 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
+      - path: Base Human
+        weight: 1
+      - path: Base HumanLIKTarget
+        weight: 1
+      - path: Base HumanLPlatform
+        weight: 1
       - path: Base HumanPelvis
         weight: 1
       - path: Base HumanPelvis/Base HumanLThigh
@@ -715,6 +771,10 @@ ModelImporter:
       - path: Base HumanPelvis/Base HumanSpine1/Base HumanSpine2/Base HumanSpine3/Base
           HumanSpine4/Base HumanRibcage/Base HumanRCollarbone/Base HumanRUpperarm/Base
           HumanRForearm/Base HumanRPalm/Base HumanRDigit31
+        weight: 1
+      - path: Base HumanRIKTarget
+        weight: 1
+      - path: Base HumanRPlatform
         weight: 1
       - path: Box004
         weight: 1
