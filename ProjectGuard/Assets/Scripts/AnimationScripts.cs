@@ -71,6 +71,7 @@ public class AnimationScripts : MonoBehaviour {
 		isAttacking = false;
 		//reset bools
 		ResetBools();
+
 		//can't move or rotate
 		animated.GetComponent<MovementController>().SetCanMove(false);
 		animated.GetComponent<MovementController>().SetCanDodge(false);
@@ -81,6 +82,10 @@ public class AnimationScripts : MonoBehaviour {
 	}
 	void Damage() {
 		animated.GetComponent<AttackController>().doesDamage = true;
+
+		if (transform.GetComponentInChildren<Weapon>() != null) { 
+			transform.GetComponentInChildren<Weapon>().gameObject.audio.Play();
+		}
 	}
 	void NoDamage() {
 		animated.GetComponent<AttackController>().doesDamage = false;

@@ -3,11 +3,12 @@
 public class TrapController : MonoBehaviour {
 	
 	private SpearBehaviour[] spearBehav;
+	private BearBehaviour[] bearBehav;
 
 	// Use this for initialization
 	void Start() {
 		spearBehav = transform.GetComponentsInChildren<SpearBehaviour>();
-
+		bearBehav = transform.GetComponentsInChildren<BearBehaviour>();
 	}
 
 	public int Hit(GameObject obj, float damage) {
@@ -28,6 +29,9 @@ public class TrapController : MonoBehaviour {
 	public void Trigger() {
 		foreach (SpearBehaviour spear in spearBehav) {
 			spear.Trigger();
+		}
+		foreach (BearBehaviour bear in bearBehav) {
+			bear.Trigger();
 		}
 	}
 
