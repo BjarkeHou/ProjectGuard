@@ -6,7 +6,8 @@ public class GameController : MonoBehaviour {
 	public float timeToReviveInGhostMode;
 	
 	private bool m_isPaused = false;
-	public bool m_isInGhostMode = false;
+	private bool m_isInGhostMode = false;
+	private bool m_isInDialogMode = false;
 	private float m_timeLeftToReviveFromGhostMode;
 	private bool lunaChange = false;
 	public bool LunaChange { set { lunaChange = value; } }
@@ -25,7 +26,15 @@ public class GameController : MonoBehaviour {
 		set { m_isPaused = value; }
 	}
 	
-	public bool isInGhostMode {
+
+	public bool isInDialogMode
+	{
+		get { return m_isInDialogMode; }
+		set { m_isInDialogMode = value; }
+	}
+	
+	public bool isInGhostMode
+	{
 		get { return m_isInGhostMode;}
 		set { 
 			m_isInGhostMode = value;

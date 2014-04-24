@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class PlayerSoundController : MonoBehaviour {
@@ -61,7 +61,7 @@ public class PlayerSoundController : MonoBehaviour {
 	public void attack() {
 		feetSource.Stop();
 		feetSource.clip = attackSound;
-		feetSource.Play();
+		feetSource.PlayDelayed(1);
 	}
 	
 	public void parry() {
