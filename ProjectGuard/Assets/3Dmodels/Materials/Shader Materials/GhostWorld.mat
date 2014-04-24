@@ -24,18 +24,18 @@ Material:
         first:
           name: _Overlay
         second:
-          m_Texture: {fileID: 2800000, guid: 760f67fd072efae47a66d4616755e8d0, type: 3}
+          m_Texture: {fileID: 2800000, guid: af9841af8447c2e4ea32909ab91edfe6, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
           name: _Transition
-        second: 0
+        second: .100893565
       data:
         first:
           name: _BlueShift
-        second: .25
+        second: .349999994
       data:
         first:
           name: _WaveCount
@@ -47,11 +47,11 @@ Material:
       data:
         first:
           name: _OverlayAlpha
-        second: 0
+        second: .500537872
       data:
         first:
           name: _DeathTimer
-        second: 0
+        second: .00107568502
       data:
         first:
           name: _RevivalRange
