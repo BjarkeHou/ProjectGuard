@@ -4,6 +4,7 @@ using System.Collections;
 public class GhostWorldController : MonoBehaviour {
 	private GhostWorld gWorld;
 	private GameController game;
+	private PlayerSoundController playerAudio;
 	private bool screenIsInGhostMode = false;
 
 	public float deathTransition;
@@ -18,15 +19,30 @@ public class GhostWorldController : MonoBehaviour {
 	void Start() {
 		gWorld = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<GhostWorld>();
 		game = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+		playerAudio = GameObject.FindWithTag("Player").GetComponent<PlayerSoundController>();
 	}
 	
 	// Update is called once per frame
 	void Update() {
+		playerAudio.LivingAmbSource.volume = 1 - deathTransition;
+		playerAudio.GhostAmbSource.volume = Mathf.Clamp(deathTransition, 0, Mathf.InverseLerp(-game.timeToReviveInGhostMode / 2, game.timeToReviveInGhostMode, game.timeToReviveInGhostMode - game.timeLeftToReviveFromGhostMode));
+
+		if (playerAudio.LivingAmbSource.volume < 0 && playerAudio.LivingAmbSource.isPlaying) {
+			playerAudio.LivingAmbSource.Stop();
+		} else if (playerAudio.LivingAmbSource.volume > 0 && !playerAudio.LivingAmbSource.isPlaying) {
+			playerAudio.LivingAmbSource.Play();
+		}
+		if (playerAudio.GhostAmbSource.volume < 0 && playerAudio.GhostAmbSource.isPlaying) {
+			playerAudio.GhostAmbSource.Stop();
+		} else if (playerAudio.GhostAmbSource.volume > 0 && !playerAudio.GhostAmbSource.isPlaying) {
+			playerAudio.GhostAmbSource.Play();
+		}
+
+
 		if (game.isInGhostMode != screenIsInGhostMode) {
 			fading = true;
 			screenIsInGhostMode = game.isInGhostMode;
 		}
-		
 
 		if (fading) {
 			if (game.isInGhostMode && deathTransition < 1) {

@@ -23,7 +23,6 @@ public class Interface : MonoBehaviour {
 	public float PauseMenuButtonHeight;
 
 	private int prevHealth;
-	private int damageTaken;
 	private float barAlpha;
 
 	// Use this for initialization
@@ -106,7 +105,6 @@ public class Interface : MonoBehaviour {
 		//Damage taken
 		if (hCtrl.getCurrentHealth() != prevHealth) {
 			if (hCtrl.getCurrentHealth() < prevHealth) {
-				damageTaken = hCtrl.LastDamageTaken;
 				barAlpha = 1;
 			}
 			prevHealth = hCtrl.getCurrentHealth();

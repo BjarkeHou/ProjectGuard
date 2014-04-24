@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11400000}
   m_Layer: 2
   m_Name: CheckPoint
-  m_TagString: Untagged
+  m_TagString: ActiveCheckpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 388663183a9307e4d929f8a59629f6b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateSound: {fileID: 8300000, guid: 56ffaf6ed8fc94df0a6d0dabf3378451, type: 3}
+  activateSound: {fileID: 8300000, guid: d6b739360fac4f84b8395093a74dc286, type: 3}
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

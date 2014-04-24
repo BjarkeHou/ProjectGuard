@@ -5,17 +5,18 @@ public class TrapTrigger : MonoBehaviour {
 
 	private TrapController trapCtrl;
 	private GhostWorldController ghostCtrl;
-	private GameController game;
 
 	private Transform disarm;
 	private Color disarmColor;
 	public float disarmTime;
 
+	public AudioClip trapTrigger;
+	public AudioClip trapDisarm;
+
 	// Use this for initialization
 	void Start() {
 		trapCtrl = transform.parent.GetComponent<TrapController>();
 		ghostCtrl = GameObject.Find("GameController").GetComponent<GhostWorldController>();
-		game = GameObject.Find("GameController").GetComponent<GameController>();
 
 		disarm = transform.Find("Disarm");
 		disarmColor = new Color (0.5f, 0, 0, 1);
@@ -31,6 +32,15 @@ public class TrapTrigger : MonoBehaviour {
 			Disarm();
 		} else {
 			transform.Find("Disarm").guiTexture.enabled = false;
+		}
+	}
+
+	void OnTriggerEnter(Collider other) {
+		if (other.tag == "Player" && ghostCtrl.deathTransition <= 0) {
+			audio.clip = trapTrigger;
+			if (!audio.isPlaying) {
+				audio.Play();
+			}
 		}
 	}
 
@@ -50,6 +60,7 @@ public class TrapTrigger : MonoBehaviour {
 			disarm.guiTexture.color = disarmColor;
 		} else {
 			collider.enabled = false;
+			audio.clip = trapDisarm;
 			audio.Play();
 		}
 	}

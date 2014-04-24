@@ -225,7 +225,7 @@ BlendTree:
   - m_Motion: {fileID: 7400000, guid: 3ea8a46a12a3cb44f9645f82e89acb1d, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
-    m_TimeScale: .75
+    m_TimeScale: 1
     m_CycleOffset: 0
     m_IsAnim: 1
     m_Mirror: 0
@@ -252,7 +252,7 @@ BlendTree:
   - m_Motion: {fileID: 7400000, guid: a8224bc4ce2efc746bf99854725b930e, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
-    m_TimeScale: .75
+    m_TimeScale: 1
     m_CycleOffset: 0
     m_IsAnim: 1
     m_Mirror: 0
@@ -372,7 +372,7 @@ BlendTree:
   - m_Motion: {fileID: 7400000, guid: 83f1c68df7dc6f34c82c551b7e7fd15e, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
-    m_TimeScale: .75
+    m_TimeScale: 1
     m_CycleOffset: 0
     m_IsAnim: 1
     m_Mirror: 0
@@ -484,7 +484,7 @@ Transition:
     m_ConditionEvent: Dodge_Backwards
     m_EventTreshold: 0
     m_ExitTime: .8125
-  m_Atomic: 1
+  m_Atomic: 0
   m_Solo: 0
   m_Mute: 0
 --- !u!1101 &110102229
@@ -502,7 +502,7 @@ Transition:
     m_ConditionEvent: Dodge_Backwards
     m_EventTreshold: 0
     m_ExitTime: .899999976
-  m_Atomic: 1
+  m_Atomic: 0
   m_Solo: 0
   m_Mute: 0
 --- !u!1101 &110102640
@@ -582,7 +582,7 @@ Transition:
     m_ConditionEvent: Dodge_Forward
     m_EventTreshold: 0
     m_ExitTime: .812500119
-  m_Atomic: 1
+  m_Atomic: 0
   m_Solo: 0
   m_Mute: 0
 --- !u!1101 &110105052
@@ -672,7 +672,7 @@ Transition:
     m_ConditionEvent: Dodge_Backwards
     m_EventTreshold: 0
     m_ExitTime: .812500119
-  m_Atomic: 1
+  m_Atomic: 0
   m_Solo: 0
   m_Mute: 0
 --- !u!1101 &110118203
@@ -690,7 +690,7 @@ Transition:
     m_ConditionEvent: Dodge_Backwards
     m_EventTreshold: 0
     m_ExitTime: .899999976
-  m_Atomic: 1
+  m_Atomic: 0
   m_Solo: 0
   m_Mute: 0
 --- !u!1101 &110121568
@@ -770,7 +770,7 @@ Transition:
     m_ConditionEvent: Dodge_Backwards
     m_EventTreshold: 0
     m_ExitTime: .823529422
-  m_Atomic: 1
+  m_Atomic: 0
   m_Solo: 0
   m_Mute: 0
 --- !u!1101 &110128102
@@ -788,7 +788,7 @@ Transition:
     m_ConditionEvent: Dodge_Backwards
     m_EventTreshold: 0
     m_ExitTime: .823529482
-  m_Atomic: 1
+  m_Atomic: 0
   m_Solo: 0
   m_Mute: 0
 --- !u!1101 &110128969
@@ -850,7 +850,7 @@ Transition:
     m_ConditionEvent: Dodge_Backwards
     m_EventTreshold: 0
     m_ExitTime: .823529482
-  m_Atomic: 1
+  m_Atomic: 0
   m_Solo: 0
   m_Mute: 0
 --- !u!1101 &110131036
@@ -982,7 +982,7 @@ Transition:
     m_ConditionEvent: Dodge_Forward
     m_EventTreshold: 0
     m_ExitTime: .899999976
-  m_Atomic: 1
+  m_Atomic: 0
   m_Solo: 0
   m_Mute: 0
 --- !u!1101 &110139432
@@ -1018,7 +1018,7 @@ Transition:
     m_ConditionEvent: Dodge_Forward
     m_EventTreshold: 0
     m_ExitTime: .899999976
-  m_Atomic: 1
+  m_Atomic: 0
   m_Solo: 0
   m_Mute: 0
 --- !u!1101 &110148579
@@ -1178,7 +1178,7 @@ Transition:
     m_ConditionEvent: Dodge_Forward
     m_EventTreshold: 0
     m_ExitTime: .8125
-  m_Atomic: 1
+  m_Atomic: 0
   m_Solo: 0
   m_Mute: 0
 --- !u!1101 &110157805
@@ -1348,7 +1348,7 @@ Transition:
     m_ConditionEvent: Dodge_Forward
     m_EventTreshold: 0
     m_ExitTime: .823529482
-  m_Atomic: 1
+  m_Atomic: 0
   m_Solo: 0
   m_Mute: 0
 --- !u!1101 &110178818
@@ -1366,7 +1366,7 @@ Transition:
     m_ConditionEvent: Dodge_Forward
     m_EventTreshold: 0
     m_ExitTime: .823529482
-  m_Atomic: 1
+  m_Atomic: 0
   m_Solo: 0
   m_Mute: 0
 --- !u!1101 &110179462
@@ -1402,7 +1402,7 @@ Transition:
     m_ConditionEvent: Dodge_Backwards
     m_EventTreshold: 0
     m_ExitTime: .899999976
-  m_Atomic: 1
+  m_Atomic: 0
   m_Solo: 0
   m_Mute: 0
 --- !u!1101 &110179656
@@ -1446,7 +1446,7 @@ Transition:
     m_ConditionEvent: Dodge_Forward
     m_EventTreshold: 0
     m_ExitTime: .899999976
-  m_Atomic: 1
+  m_Atomic: 0
   m_Solo: 0
   m_Mute: 0
 --- !u!1101 &110181073
@@ -1544,7 +1544,7 @@ Transition:
     m_ConditionEvent: Dodge_Forward
     m_EventTreshold: 0
     m_ExitTime: .823529422
-  m_Atomic: 1
+  m_Atomic: 0
   m_Solo: 0
   m_Mute: 0
 --- !u!1101 &110185858

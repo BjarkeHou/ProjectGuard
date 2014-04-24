@@ -24391,25 +24391,4 @@ AnimationClip:
     path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01/Right_AnkleJoint01/Right_BallJoint01/Right_ToeJoint01
     classID: 4
     script: {fileID: 0}
-  m_Events:
-  - time: .125
-    functionName: CanRotate
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: .125
-    functionName: CanAttack
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: .125
-    functionName: CanMove
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []

@@ -29,7 +29,7 @@ public class SpearBehaviour : MonoBehaviour {
 		}
 	}
 
-	public void Trigger () {
+	public void Trigger() {
 		if (canTrigger && Time.time > repeatTimer + repeatDelay) {
 			isTriggered = true;
 		}
@@ -55,5 +55,9 @@ public class SpearBehaviour : MonoBehaviour {
 			deadlyPart.targetsHit.Clear();
 			canTrigger = true;
 		}
+	}
+
+	void AudioPlay() {
+		audio.Play();
 	}
 }

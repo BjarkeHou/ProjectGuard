@@ -81,6 +81,10 @@ public class AnimationScripts : MonoBehaviour {
 	}
 	void Damage() {
 		animated.GetComponent<AttackController>().doesDamage = true;
+
+		if (transform.GetComponentInChildren<Weapon>() != null) { 
+			transform.GetComponentInChildren<Weapon>().gameObject.audio.Play();
+		}
 	}
 	void NoDamage() {
 		animated.GetComponent<AttackController>().doesDamage = false;

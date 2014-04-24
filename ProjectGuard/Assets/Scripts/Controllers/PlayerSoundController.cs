@@ -1,45 +1,53 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerSoundController : MonoBehaviour
-{
+public class PlayerSoundController : MonoBehaviour {
 	public AudioClip[] runSound;
 	public AudioClip dodgeSound;
 	public AudioClip attackSound;
 	public AudioClip parrySound;
+	public AudioClip livingAmbiance;
+	public AudioClip ghostAmbiance;
 	
 	private AudioSource feetSource;
+	private AudioSource livingAmbSource;
+	public AudioSource LivingAmbSource { 
+		set { livingAmbSource = value; }
+		get { return livingAmbSource; }
+	}
+	private AudioSource ghostAmbSource;
+	public AudioSource GhostAmbSource { 
+		set { ghostAmbSource = value; }
+		get { return ghostAmbSource; }
+	}
 	
 	// Use this for initialization
-	void Start()
-	{
-		feetSource = GetComponent<AudioSource>();
+	void Start() {
+		feetSource = gameObject.AddComponent<AudioSource>();
+
+		livingAmbSource = gameObject.AddComponent<AudioSource>();
+		livingAmbSource.playOnAwake = false;
+		livingAmbSource.clip = livingAmbiance;
+
+		ghostAmbSource = gameObject.AddComponent<AudioSource>();
+		ghostAmbSource.playOnAwake = false;
+		ghostAmbSource.clip = ghostAmbiance;
 	}
 	
-	// Update is called once per frame
-	void Update()
-	{
-	
-	}
-	
-	public void running(bool moving)
-	{
+	public void running(bool moving) {
 		if (feetSource.isPlaying)
 			return;
 		
 		feetSource.clip = runSound [Mathf.FloorToInt(Random.Range(0, runSound.Length))];
 		
-		if (moving)
-		{
+		if (moving) {
 			feetSource.Play();
-		} else
-		{
+		} else {
 			feetSource.Stop();
 		}
 	}
 	
-	public void dodge()
-	{
+	public void dodge() {
 		feetSource.Stop();
 		feetSource.clip = dodgeSound;
 		feetSource.Play();
@@ -50,15 +58,13 @@ public class PlayerSoundController : MonoBehaviour
 //		feetSource.clip = runSound;
 	}
 	
-	public void attack()
-	{
+	public void attack() {
 		feetSource.Stop();
 		feetSource.clip = attackSound;
 		feetSource.Play();
 	}
 	
-	public void parry()
-	{
+	public void parry() {
 		feetSource.Stop();
 		feetSource.clip = parrySound;
 		feetSource.Play();
