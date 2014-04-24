@@ -15,7 +15,7 @@ public class CalculateActionPriority : RAINAction
 	private HealthController aiHealthControl;
 	private GameObject self;
 	private GhostWorldController ghostController;
-	private DebugAP gui;
+	//private DebugAP gui;
 	private Random rand;
 	protected float selfAtkRng;
 
@@ -31,7 +31,7 @@ public class CalculateActionPriority : RAINAction
 		aiHealthControl = self.GetComponent<HealthController>();
 		ghostController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GhostWorldController>();
 		lastHealth = aiHealthControl.getCurrentHealth();
-		gui = self.GetComponent<DebugAP>();
+		//gui = self.GetComponent<DebugAP>();
 		var eCont = self.GetComponent<EquipmentController>();
 		if (eCont != null)
 			selfAtkRng = eCont.GetWeaponRange();
@@ -45,7 +45,7 @@ public class CalculateActionPriority : RAINAction
 
 		actionVector = DecisionParameters(ai, actionVector);
 
-		gui.SetAPVals(actionVector);
+		//gui.SetAPVals(actionVector);
 
 		double max = actionVector.Values.Max();
 		List<KeyValuePair<ActionType, double>> highest = actionVector.Where(e => Math.Abs(e.Value - max) < 0.001).ToList();
@@ -177,7 +177,7 @@ public class CalculateActionPriority : RAINAction
 
 		lastHealth = aiHealthControl.getCurrentHealth();
 
-		gui.SetCurrentParameters(sitB.ToString());
+		//gui.SetCurrentParameters(sitB.ToString());
 
 		/*foreach (ActionType at in actionVector.Keys.ToList())
         {

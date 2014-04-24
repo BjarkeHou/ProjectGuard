@@ -9,7 +9,7 @@
                             {"speaker": "luna", "text": "Okay, you still have some time, you are not far from your body. That weird tingling feeling you have now, that is the stone taking over your body. If you can get to your body, I can help you reclaim it.", "voicefile": "ghostintro_4"},
 							{"speaker": "luna", "text": "But first, you should to disarm the trap that took you down, since that it should possible even from the spirit world where it can't hurt you.", "voicefile": "ghostintro_5"},
                             {"speaker": "liam", "text": "Okay okay. which way should I go?", "voicefile": "ghostintro_6"},
-							{"speaker": "luna", "text": "You have just been here, try to remember your way back.", "voicefile": "ghostintro_7"},
+							{"speaker": "luna", "text": "You have just been here, try to remember your way back.", "voicefile": "ghostintro_7"}
 
                     ],
 					"BackToLife" :
@@ -40,26 +40,26 @@
                             {"speaker": "nicolai", "text": "If I can´t get you to turn back, I can at least help you. Beware in the next room, it´s not only Iphrael that will challenge you, he has many soldiers by his side and the room is full of traps. Be careful in there, and end Iphrael for me.", "voicefile": "brotherinfo_7"},
                             {"speaker": "liam", "text": "Nicolai, I can´t believe how it must be to be trapped like you, and I will do my best to end Iphrael!", "voicefile": "brotherinfo_8"},
                             {"speaker": "nicolai", "text": "Before you go, I must ask you a last big favor… please kill me… end my suffering. I don´t want to contribute to the evil things going on here, there is too much evil in the world already.", "voicefile": "brotherinfo_9"},
-                            {"speaker": "luna", "text": "If that is your wish brother, I support you…", "voicefile": "brotherinfo_10"},
+                            {"speaker": "luna", "text": "If that is your wish brother, I support you…", "voicefile": "brotherinfo_10"}
 					],
 					"IphrealStart" :
                     [
                             {"speaker": "iphreal", "text": "Go no further Liam! You should consider it a miracle that you have gotten this far already. You will not get past me, this hell is not something that can be stopped, when it has already begun. I can sense your fear, I can TASTE IT!", "voicefile": "iphrealstart_0"},
-                            {"speaker": "iphreal", "text": "This is your last warning: turn around Liam, as you will get no further, I will end your pathetic life, and enslave you for eternity, while the world is turned to stone for good.", "voicefile": "iphrealstart_1"},
+                            {"speaker": "iphreal", "text": "This is your last warning: turn around Liam, as you will get no further, I will end your pathetic life, and enslave you for eternity, while the world is turned to stone for good.", "voicefile": "iphrealstart_1"}
 					],
 					"LostSpiritHelper" :
                     [
-                            {"speaker": "spirit", "text": "Continue straight ahead down the narrow path, resistance will be low, but there will be no help to find. Go left and you will be challenged to your limits, but wisdom is there to be found.", "voicefile": "lostspirithelper_0"},
+                            {"speaker": "spirit", "text": "Continue straight ahead down the narrow path, resistance will be low, but there will be no help to find. Go left and you will be challenged to your limits, but wisdom is there to be found.", "voicefile": "lostspirithelper_0"}
 					],
 					"LostSpiritWisdom" :
                     [
                             {"speaker": "spirit", "text": "I was once told that it was the stone God Iphrael that started the mythical stone age, and he haunts these very halls. I don’t believe them though, a god… here? Everything seems so normal…", "voicefile": "lostspiritwisdom_0"},
-                            {"speaker": "spirit", "text": "The big Stone Elementals is the oldest generations of boys and men send into the stone halls. They were the strongest and fiercest of all the citizens of Brell. But they too succumbed to the power of stone, and now they wander mindlessly around only to crush the next sacrifice.", "voicefile": "lostspiritwisdom_0"},
+                            {"speaker": "spirit", "text": "The big Stone Elementals is the oldest generations of boys and men send into the stone halls. They were the strongest and fiercest of all the citizens of Brell. But they too succumbed to the power of stone, and now they wander mindlessly around only to crush the next sacrifice.", "voicefile": "lostspiritwisdom_0"}
 							
 					],
 					"WallText2":
 					[
-                            {"speaker": "info", "text": "Symbols that shows there is a Stone Elemental in the next room and that they can throw rocks to attack at range.", "voicefile": "walltext2_0"},
+                            {"speaker": "info", "text": "Symbols that shows there is a Stone Elemental in the next room and that they can throw rocks to attack at range.", "voicefile": "walltext2_0"}
 					]
             },
 			
