@@ -10,33 +10,40 @@ public class CameraController : MonoBehaviour
 	private Vector3 deciredPos;
 	public float lerpSpeed;
 	public float scrollSpeed;
+	
+	private GameController game;
 	// Use this for initialization
-	void Start ()
+	void Start()
 	{
+		game = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 		deciredPos = this.transform.position;
-		this.transform.rotation = Quaternion.Euler (70, 0, 0);
+		this.transform.rotation = Quaternion.Euler(70, 0, 0);
 	}
 
 	// Update is called once per frame
-	void Update ()
+	void Update()
 	{
-		if (Input.GetAxis ("Mouse ScrollWheel") != 0) {
-			distanceAbovePlayer += Input.GetAxis ("Mouse ScrollWheel") *scrollSpeed;
+		if (!game.isPaused && !game.isInDialogMode)
+		{
+			if (Input.GetAxis("Mouse ScrollWheel") != 0)
+			{
+				distanceAbovePlayer += Input.GetAxis("Mouse ScrollWheel") * scrollSpeed;
 			
-			if (distanceAbovePlayer < minDistanceAbovePlayer)
+				if (distanceAbovePlayer < minDistanceAbovePlayer)
 					distanceAbovePlayer = minDistanceAbovePlayer;
-			if (distanceAbovePlayer > maxDistanceAbovePlayer)
+				if (distanceAbovePlayer > maxDistanceAbovePlayer)
 					distanceAbovePlayer = maxDistanceAbovePlayer;
+			}
+			UpdatePosition();
 		}
-		UpdatePosition ();
 	}
 	
-	void UpdatePosition ()
+	void UpdatePosition()
 	{
-		Transform t = GameObject.FindGameObjectWithTag ("Player").transform;
-		deciredPos = new Vector3 (t.position.x, t.position.y + distanceAbovePlayer, t.position.z - distanceBehindPlayer);
-		float lerpY = Mathf.Lerp(transform.position.y, deciredPos.y, Time.deltaTime *scrollSpeed);
+		Transform t = GameObject.FindGameObjectWithTag("Player").transform;
+		deciredPos = new Vector3(t.position.x, t.position.y + distanceAbovePlayer, t.position.z - distanceBehindPlayer);
+		float lerpY = Mathf.Lerp(transform.position.y, deciredPos.y, Time.deltaTime * scrollSpeed);
 		this.transform.position = new Vector3(deciredPos.x, lerpY, deciredPos.z);
-		this.transform.LookAt (t.position);
+		this.transform.LookAt(t.position);
 	}
 }

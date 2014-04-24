@@ -33,7 +33,7 @@ public class InputController : MonoBehaviour
 				game.PauseGame();
 			}
 		}
-		if (!game.isPaused)
+		if (!game.isPaused && !game.isInDialogMode)
 		{
 			// Move Player
 			v = Input.GetAxisRaw("Vertical");

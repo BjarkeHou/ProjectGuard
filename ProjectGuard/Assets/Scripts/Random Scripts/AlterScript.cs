@@ -3,11 +3,13 @@ using System.Collections;
 
 public class AlterScript : MonoBehaviour
 {
-
+	
+	private GameController game;
+	
 	// Use this for initialization
 	void Start()
 	{
-	
+		game = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 	}
 	
 	// Update is called once per frame
@@ -18,6 +20,7 @@ public class AlterScript : MonoBehaviour
 	
 	void OnTriggerEnter(Collider other)
 	{
-		Application.LoadLevel("MainMenu");
+		if (!game.isInGhostMode)
+			Application.LoadLevel("MainMenu");
 	}
 }

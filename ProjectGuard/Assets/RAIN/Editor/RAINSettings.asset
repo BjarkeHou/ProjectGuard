@@ -20,9 +20,9 @@ MonoBehaviour:
   _btInspectorFieldWidth: 120
   _navMeshGenerationThreads: 4
   _useSkin: 1
-  _skin: {fileID: 11400000, guid: a284bcd7ccc08e442a03e55846119e2c, type: 2}
+  _skin: {fileID: 0}
   _showAdvanced: 0
-  _allowAutoUpdateCheck: 1
-  _lastUpdateCheck: 4/24/2014 2:40:26 AM
+  _allowAutoUpdateCheck: 0
+  _lastUpdateCheck: 
   _updateFrequencyHours: 24
   _updateMetaformRequired: 0

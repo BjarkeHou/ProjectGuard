@@ -167,18 +167,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guiSkin: {fileID: 11400000, guid: 49c7d18afcfee4ef4ae02f66852d6706, type: 2}
-  background: {fileID: 2800000, guid: b0f2491ddcfa14857b418a8cf0978982, type: 3}
-  playButton: {fileID: 2800000, guid: 647e32da3b098438e97b56be60d6cdea, type: 3}
-  settingsButton: {fileID: 2800000, guid: 13f41ef64843f4fdabbc4f327f288924, type: 3}
-  tutorialButton: {fileID: 2800000, guid: a391a8703b044448b8bc08653fe4f9b2, type: 3}
-  playButtonX: 45
-  playButtonY: 30
-  settingsButtonX: 45
-  settingsButtonY: 40
-  tutorialButtonX: 45
-  tutorialButtonY: 50
-  buttonWidth: 150
-  buttonHeight: 30
+  background: {fileID: 2800000, guid: 78d5815e4fab74370b77e0010b3e68c7, type: 3}
+  logo: {fileID: 2800000, guid: 116c36692919a46fd80d83320f642c9f, type: 3}
+  logoX: 15
+  logoY: 1
+  logoWidth: 70
+  logoHeight: 40
+  playButtonX: 35
+  playButtonY: 40
+  settingsButtonX: 35
+  settingsButtonY: 59
+  tutorialButtonX: 35
+  tutorialButtonY: 79
+  buttonWidth: 30
+  buttonHeight: 18
 --- !u!1 &2022817083
 GameObject:
   m_ObjectHideFlags: 0
