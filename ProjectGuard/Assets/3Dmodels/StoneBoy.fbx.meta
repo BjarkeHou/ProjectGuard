@@ -1,0 +1,243 @@
+fileFormatVersion: 2
+guid: e28ea6787a423e24d9573ee886ab8456
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: BackJoint01
+    100002: ChestJoint01
+    100004: GlobalControl01
+    100006: HeadJoint01
+    100008: HipJoint01
+    100010: Left_ArmJoint01
+    100012: Left_ElbowJoint01
+    100014: Left_FootControl01
+    100016: Left_IndexJoint_A01
+    100018: Left_IndexJoint_B01
+    100020: Left_IndexJoint_C01
+    100022: Left_KneeJoint01
+    100024: Left_RL_BallJoint01
+    100026: Left_RL_HeelJoint01
+    100028: Left_RL_ToeJoint01
+    100030: Left_ThighJoint01
+    100032: Left_ThumbJoint_A01
+    100034: Left_ThumbJoint_B01
+    100036: Left_ThumbJoint_C01
+    100038: Left_WristJoint01
+    100040: //RootNode
+    100042: Liam_Clone
+    100044: NeckJoint01
+    100046: Right_ArmJoint01
+    100048: Right_ElbowJoint01
+    100050: Right_FootControl01
+    100052: Right_IndexJoint_A01
+    100054: Right_IndexJoint_B01
+    100056: Right_IndexJoint_C01
+    100058: Right_KneeJoint01
+    100060: Right_RL_BallJoint01
+    100062: Right_RL_HeelJoint01
+    100064: Right_RL_ToeJoint01
+    100066: Right_ThighJoint01
+    100068: Right_ThumbJoint_A01
+    100070: Right_ThumbJoint_B01
+    100072: Right_ThumbJoint_C01
+    100074: Right_WristJoint01
+    100076: RootJoint01
+    400000: BackJoint01
+    400002: ChestJoint01
+    400004: GlobalControl01
+    400006: HeadJoint01
+    400008: HipJoint01
+    400010: Left_ArmJoint01
+    400012: Left_ElbowJoint01
+    400014: Left_FootControl01
+    400016: Left_IndexJoint_A01
+    400018: Left_IndexJoint_B01
+    400020: Left_IndexJoint_C01
+    400022: Left_KneeJoint01
+    400024: Left_RL_BallJoint01
+    400026: Left_RL_HeelJoint01
+    400028: Left_RL_ToeJoint01
+    400030: Left_ThighJoint01
+    400032: Left_ThumbJoint_A01
+    400034: Left_ThumbJoint_B01
+    400036: Left_ThumbJoint_C01
+    400038: Left_WristJoint01
+    400040: Liam_Clone
+    400042: //RootNode
+    400044: NeckJoint01
+    400046: Right_ArmJoint01
+    400048: Right_ElbowJoint01
+    400050: Right_FootControl01
+    400052: Right_IndexJoint_A01
+    400054: Right_IndexJoint_B01
+    400056: Right_IndexJoint_C01
+    400058: Right_KneeJoint01
+    400060: Right_RL_BallJoint01
+    400062: Right_RL_HeelJoint01
+    400064: Right_RL_ToeJoint01
+    400066: Right_ThighJoint01
+    400068: Right_ThumbJoint_A01
+    400070: Right_ThumbJoint_B01
+    400072: Right_ThumbJoint_C01
+    400074: Right_WristJoint01
+    400076: RootJoint01
+    4300000: Liam_Clone
+    7400000: StoneBoy_RunForward
+    9500000: //RootNode
+    13700000: Liam_Clone
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: StoneBoy_RunForward
+      takeName: Take 001
+      firstFrame: 2
+      lastFrame: 27
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GlobalControl01
+        weight: 1
+      - path: GlobalControl01/Left_FootControl01
+        weight: 1
+      - path: GlobalControl01/Left_FootControl01/Left_RL_HeelJoint01
+        weight: 1
+      - path: GlobalControl01/Left_FootControl01/Left_RL_HeelJoint01/Left_RL_ToeJoint01
+        weight: 1
+      - path: GlobalControl01/Left_FootControl01/Left_RL_HeelJoint01/Left_RL_ToeJoint01/Left_RL_BallJoint01
+        weight: 1
+      - path: GlobalControl01/Right_FootControl01
+        weight: 1
+      - path: GlobalControl01/Right_FootControl01/Right_RL_HeelJoint01
+        weight: 1
+      - path: GlobalControl01/Right_FootControl01/Right_RL_HeelJoint01/Right_RL_ToeJoint01
+        weight: 1
+      - path: GlobalControl01/Right_FootControl01/Right_RL_HeelJoint01/Right_RL_ToeJoint01/Right_RL_BallJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_IndexJoint_A01/Left_IndexJoint_B01/Left_IndexJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Left_ArmJoint01/Left_ElbowJoint01/Left_WristJoint01/Left_ThumbJoint_A01/Left_ThumbJoint_B01/Left_ThumbJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/NeckJoint01/HeadJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_IndexJoint_A01/Right_IndexJoint_B01/Right_IndexJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/BackJoint01/ChestJoint01/Right_ArmJoint01/Right_ElbowJoint01/Right_WristJoint01/Right_ThumbJoint_A01/Right_ThumbJoint_B01/Right_ThumbJoint_C01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Left_ThighJoint01/Left_KneeJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01
+        weight: 1
+      - path: GlobalControl01/RootJoint01/HipJoint01/Right_ThighJoint01/Right_KneeJoint01
+        weight: 1
+      - path: Liam_Clone
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  userData: 

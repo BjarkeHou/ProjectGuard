@@ -3,6 +3,8 @@ using System.Collections;
 
 public class HealthController : MonoBehaviour {
 
+	private bool kill; //HACK
+
 	public const int maxHealth = 100;
 	public const int minHealth = 0;
 	public int curHealth;
@@ -26,7 +28,12 @@ public class HealthController : MonoBehaviour {
  
 	void Update() {
 		if (!stillAlive() && tag != "Player") {
-			Destroy(gameObject);
+			GameObject deathSmoke = (GameObject)Instantiate(Resources.Load("Prefabs/DeathSmoke")) as GameObject;
+			deathSmoke.transform.position = transform.position;
+			if (kill) {
+				Destroy(gameObject);
+			}
+			kill = true;
 		}
 	}
 
