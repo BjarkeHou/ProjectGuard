@@ -27,9 +27,11 @@ public class DialogController : MonoBehaviour
 		showDialogLabel = false;
 		dialogIDCounter = 0;
 		game = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
-		dialogLoader = GameObject.FindGameObjectWithTag("GameController").GetComponent<DialogueLoader>();
-		print(this.gameObject.name);
-		dialog = dialogLoader.GetDialogueNode(this.gameObject.name);
+        dialogLoader = GameObject.FindGameObjectWithTag("GameController").GetComponent<DialogueLoader>();
+
+        print(this.gameObject.name);
+        print(dialogLoader.DialogueNodeExists(gameObject.name));
+        dialog = dialogLoader.GetDialogueNode(this.gameObject.name);
 		
 	}
 	
@@ -97,7 +99,7 @@ public class DialogController : MonoBehaviour
 	
 	void OnGUI()
 	{
-		GUI.skin = gui_Skin;
+        GUI.skin = gui_Skin;
 		
 		// Vis mouseover på at ham kan man snakke med
 		if (game.isInGhostMode && !game.isPaused && showDialogLabel && !game.isInDialogMode)
