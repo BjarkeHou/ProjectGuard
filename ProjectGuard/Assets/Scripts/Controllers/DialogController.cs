@@ -5,27 +5,32 @@ public class DialogController : MonoBehaviour
 {
 	public GUISkin gui_Skin;
 	public float dialogRange;
-	public int dialogID;
-	public bool onlyInGhostMode;
+	public bool onlyInGhostMode = true;
 
 	private GameController game;
-	private DialogueLoader dialog;
+	private DialogueLoader dialogLoader;
 	private GameObject player;
 	private int dialogIDCounter;
 	
 	private bool showDialogLabel;
 	private bool isTrigger;
+	
+	private DialogueNode[] dialog;
 
 	// Use this for initialization
 	void Start()
 	{
 		isTrigger = this.gameObject.tag != "Enemy";
-		showDialogLabel = false;
-		game = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
-		dialog = GameObject.FindGameObjectWithTag("GameController").GetComponent<DialogueLoader>();
-		player = GameObject.FindGameObjectWithTag("Player");
+		if (!isTrigger)
+			player = GameObject.FindGameObjectWithTag("Player");
 		
+		showDialogLabel = false;
 		dialogIDCounter = 0;
+		game = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+		dialogLoader = GameObject.FindGameObjectWithTag("GameController").GetComponent<DialogueLoader>();
+		print(this.gameObject.name);
+		dialog = dialogLoader.GetDialogueNode(this.gameObject.name);
+		
 	}
 	
 	void OnMouseEnter()
@@ -56,6 +61,10 @@ public class DialogController : MonoBehaviour
 	{
 		if (!isTrigger)
 		{
+			Debug.Log(player);
+			print(Vector3.Distance(this.transform.position, player.transform.position)); // null?
+			
+
 			if (((onlyInGhostMode && game.isInGhostMode) || 
 				!onlyInGhostMode) &&
 				!game.isInDialogMode && 
@@ -98,21 +107,26 @@ public class DialogController : MonoBehaviour
 		
 		if (game.isInDialogMode)
 		{
-			GUI.Label(new Rect(Screen.width * 0.1f, Screen.height * 0.5f, Screen.width * 0.8f, Screen.height * 0.45f), CompileDialogString(this.gameObject.name));
+			GUI.Label(new Rect(Screen.width * 0.1f, Screen.height * 0.5f, Screen.width * 0.8f, Screen.height * 0.45f), CompileDialogString());
 			
-			if (GUI.Button(new Rect(Screen.width * 0.8f, Screen.height * 0.8f, Screen.width * 0.15f, Screen.height * 0.15f), "NEXT"))
+			string s = dialogIDCounter < dialog.Length - 1 ? "NEXT" : "FINISH";
+			if (GUI.Button(new Rect(Screen.width * 0.8f, Screen.height * 0.8f, Screen.width * 0.15f, Screen.height * 0.15f), s))
 			{
 				dialogIDCounter++;	
+				if (dialogIDCounter == dialog.Length)
+				{
+					game.isInDialogMode = false;
+					dialogIDCounter = 0;
+				}
 			}
 		}
 	}
 	
-	string CompileDialogString(string id)
+	string CompileDialogString()
 	{
 		string s = "";
-		s += dialog.GetDialogueNode(id).SpeakerName + ":\n";
-		s += "\"" + dialog.GetDialogueNode(id).Text + "\"\n";
-		print(s);
+		s += dialog [dialogIDCounter].SpeakerName + ":\n";
+		s += "\"" + dialog [dialogIDCounter].Text + "\"\n";
 		return s;
 	}	
 }
