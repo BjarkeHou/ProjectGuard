@@ -109,7 +109,7 @@ public class GameController : MonoBehaviour
 							GameObject.FindWithTag("Player").transform.position = GameObject.FindWithTag("ActiveCheckpoint").transform.Find("Spawn").position;
 						} else
 						{
-							print("GAME FUCKING OVER MAN!");
+							// Your dead!
 						}
 
 						//wait for screen to finish showing

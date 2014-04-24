@@ -8,14 +8,14 @@ using UnityEngine;
 
 public class DialogueLoader : MonoBehaviour
 {
-    private JObject json;
+	private JObject json;
 
-    void Awake()
-    {
-        StreamReader sr = File.OpenText("Assets/Dialogs/dialogue.json");
-        //string all = sr.ReadToEnd();
-        json = (JObject)JToken.ReadFrom(new JsonTextReader(sr));
-    }
+	void Awake()
+	{
+		StreamReader sr = File.OpenText("Assets/Dialogs/dialogue.json");
+		//string all = sr.ReadToEnd();
+		json = (JObject)JToken.ReadFrom(new JsonTextReader(sr));
+	}
 
 	// Use this for initialization
 	void Start()
@@ -41,37 +41,37 @@ public class DialogueLoader : MonoBehaviour
 
 	public DialogueNode[] GetDialogueNode(string dialogueId)
 	{
-        if (json != null)
-        {
-            JArray relevantDialogue = (JArray)json["dialogs"][dialogueId];
-            JArray speakers = (JArray)json["speakers"];
+		if (json != null)
+		{
+			JArray relevantDialogue = (JArray)json ["dialogs"] [dialogueId];
+			JArray speakers = (JArray)json ["speakers"];
 
-            List<DialogueNode> dialogue = new List<DialogueNode>();
+			List<DialogueNode> dialogue = new List<DialogueNode>();
 
-            foreach (JToken line in relevantDialogue)
-            {
-                JToken speaker = speakers.First(e => e["name"].Value<string>() == line["speaker"].Value<string>());
+			foreach (JToken line in relevantDialogue)
+			{
+				JToken speaker = speakers.First(e => e ["name"].Value<string>() == line ["speaker"].Value<string>());
 
-                DialogueNode node = new DialogueNode(line["text"].Value<string>(), speaker["appearname"].Value<string>(), line["voicefile"].Value<string>(), speaker["picture"].Value<string>());
+				DialogueNode node = new DialogueNode(line ["text"].Value<string>(), speaker ["appearname"].Value<string>(), line ["voicefile"].Value<string>(), speaker ["picture"].Value<string>());
 
-                dialogue.Add(node);
-            }
+				dialogue.Add(node);
+			}
 
-            return dialogue.ToArray();
-        }
+			return dialogue.ToArray();
+		}
 
-        throw new NullReferenceException("json not loaded in GetDialogueNode");
+		throw new NullReferenceException("json not loaded in GetDialogueNode");
 	}
 
-    public bool DialogueNodeExists(string dialogueId)
-    {
-        if (json != null)
-        {
-            JArray relevantDialogue = (JArray)json["dialogs"][dialogueId];
-            return json["dialogs"][dialogueId].Any();
-        }
+	public bool DialogueNodeExists(string dialogueId)
+	{
+		if (json != null)
+		{
+			JArray relevantDialogue = (JArray)json ["dialogs"] [dialogueId];
+			return json ["dialogs"] [dialogueId].Any();
+		}
 
 
-        throw new NullReferenceException("json not loaded in DialogueNodeExists");
-    }
+		throw new NullReferenceException("json not loaded in DialogueNodeExists");
+	}
 }
