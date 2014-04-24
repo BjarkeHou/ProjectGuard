@@ -103,6 +103,7 @@ public class MovementController : MonoBehaviour {
 		pLook.playerCanRotate = true;
 		SetCanDodge(true);
 		SetCanMove(true);
+		anim.SetBool("CanAttack", true);
 
 		Debug.Log("Dodge performed!!");
 
