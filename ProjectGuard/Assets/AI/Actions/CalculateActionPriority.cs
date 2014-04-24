@@ -183,7 +183,7 @@ public class CalculateActionPriority : RAINAction
 
         lastHealth = aiHealthControl.getCurrentHealth();
 
-        gui.SetCurrentParameters(sitB.ToString());
+        //gui.SetCurrentParameters(sitB.ToString());
 
         /*foreach (ActionType at in actionVector.Keys.ToList())
         {
