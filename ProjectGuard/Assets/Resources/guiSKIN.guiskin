@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 12001, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: guiSKIN
   m_EditorClassIdentifier: 
-  m_Font: {fileID: 12800000, guid: dcd7aecb5729a4db6bb88d7d700685a1, type: 3}
+  m_Font: {fileID: 12800000, guid: e3ec5f70005b241c0af97674893d5d93, type: 3}
   m_box:
     m_Name: box
     m_Normal:
@@ -74,25 +74,25 @@ MonoBehaviour:
   m_button:
     m_Name: button
     m_Normal:
-      m_Background: {fileID: 2800000, guid: b5e481aec3bda455fb6c3768f5247865, type: 3}
-      m_TextColor: {r: .815686285, g: .13333334, b: .121568628, a: 1}
+      m_Background: {fileID: 2800000, guid: 86da048054f9749c5bc49d57e0417a93, type: 3}
+      m_TextColor: {r: 1, g: .635294139, b: 0, a: 1}
     m_Hover:
-      m_Background: {fileID: 2800000, guid: b5e481aec3bda455fb6c3768f5247865, type: 3}
-      m_TextColor: {r: 1, g: .513725519, b: .513725519, a: 1}
+      m_Background: {fileID: 2800000, guid: 7efd0be01a45e4ea4af3a16e9ead82f8, type: 3}
+      m_TextColor: {r: .968627453, g: .7283324, b: .370750517, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b5e481aec3bda455fb6c3768f5247865, type: 3}
-      m_TextColor: {r: .899999976, g: .899999976, b: .899999976, a: 1}
+      m_Background: {fileID: 2800000, guid: a8a5c2234f7984cea8404c578917259b, type: 3}
+      m_TextColor: {r: .941176474, g: .783982217, b: .561460435, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_OnNormal:
-      m_Background: {fileID: 11005, guid: 0000000000000000e000000000000000, type: 0}
+      m_Background: {fileID: 0}
       m_TextColor: {r: .90196079, g: .90196079, b: .90196079, a: 1}
     m_OnHover:
-      m_Background: {fileID: 11004, guid: 0000000000000000e000000000000000, type: 0}
+      m_Background: {fileID: 0}
       m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_OnActive:
-      m_Background: {fileID: 11002, guid: 0000000000000000e000000000000000, type: 0}
+      m_Background: {fileID: 0}
       m_TextColor: {r: .899999976, g: .899999976, b: .899999976, a: 1}
     m_OnFocused:
       m_Background: {fileID: 0}
@@ -192,8 +192,8 @@ MonoBehaviour:
   m_label:
     m_Name: label
     m_Normal:
-      m_Background: {fileID: 2800000, guid: e2da1980c2b58413896fabb66afb68e6, type: 3}
-      m_TextColor: {r: .899999976, g: .170689657, b: .170689657, a: 1}
+      m_Background: {fileID: 2800000, guid: 5c0603cdde5064c1c9ffbbcd070a758a, type: 3}
+      m_TextColor: {r: 1, g: .635294139, b: 0, a: 1}
     m_Hover:
       m_Background: {fileID: 0}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
@@ -236,8 +236,8 @@ MonoBehaviour:
       m_Top: 0
       m_Bottom: 0
     m_Font: {fileID: 0}
-    m_FontSize: 20
-    m_FontStyle: 0
+    m_FontSize: 50
+    m_FontStyle: 1
     m_Alignment: 4
     m_WordWrap: 1
     m_RichText: 1
