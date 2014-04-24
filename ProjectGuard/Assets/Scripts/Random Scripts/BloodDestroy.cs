@@ -6,11 +6,11 @@ public class BloodDestroy : MonoBehaviour {
 	private float startTimer;
 	private float particles;
 	public float bleedOutSpeed;
-	public float offset;
+	public Vector3 origin;
 	
 	// Use this for initialization
 	void Start() {
-		transform.localPosition = Vector3.up * offset;
+		transform.position = origin;
 		startTimer = Time.time;
 		particles = transform.GetComponent<ParticleSystem>().maxParticles;
 	}
