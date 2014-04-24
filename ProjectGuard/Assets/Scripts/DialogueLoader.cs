@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Newtonsoft.Json;
@@ -20,11 +21,9 @@ public class DialogueLoader : MonoBehaviour
             Debug.Log(speechelement["text"].InnerText);
         }
         */
-        StreamReader sr = File.OpenText("test.json");
+        StreamReader sr = File.OpenText("dialogue.json");
         //string all = sr.ReadToEnd();
         json = (JObject)JToken.ReadFrom(new JsonTextReader(sr));
-
-        GetDialogueNode(0);
 
     }
 	
@@ -33,22 +32,27 @@ public class DialogueLoader : MonoBehaviour
 	    
     }
 
-    public DialogueNode GetDialogueNode(int id)
+    public DialogueNode[] GetDialogueNode(string dialogueId)
     {
-        JArray nodes = (JArray) json["speechelements"];
+        JArray relevantDialogue = (JArray) json[dialogueId];
         JArray speakers = (JArray) json["speakers"];
 
-        JToken correctNode = nodes.First(e => e["id"].Value<int>() == id);
 
-        JToken speaker = speakers.First(e => e["name"].Value<string>() == correctNode["speaker"].Value<string>());
 
-        DialogueNode node = new DialogueNode(correctNode["text"].Value<string>(), speaker["appearname"].Value<string>(), correctNode["voicefile"].Value<string>(), speaker["picture"].Value<string>());
+        List<DialogueNode> dialogue = new List<DialogueNode>();
 
-        //Debug.Log(node.SpeakerImage);
-        //Debug.Log(node.SpeakerName);
-        //Debug.Log(node.Text);
-        //Debug.Log(node.AudioName);
+        foreach (JToken line in relevantDialogue)
+        {
+            JToken speaker = speakers.First(e => e["name"].Value<string>() == line["speaker"].Value<string>());
 
-        return node;
+            DialogueNode node = new DialogueNode(line["text"].Value<string>(), speaker["appearname"].Value<string>(), line["voicefile"].Value<string>(), speaker["picture"].Value<string>());
+
+            dialogue.Add(node);
+        }
+
+        return dialogue.ToArray();
+
+        //BJARKE check this out: l 44 - 51 som one-liner
+        //dialogue.AddRange(from line in relevantDialogue let speaker = speakers.First(e => e["name"].Value<string>() == line["speaker"].Value<string>()) select new DialogueNode(line["text"].Value<string>(), speaker["appearname"].Value<string>(), line["voicefile"].Value<string>(), speaker["picture"].Value<string>()));
     }
 }
