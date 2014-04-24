@@ -54,7 +54,7 @@ public class PlayerSoundController : MonoBehaviour
 	{
 		feetSource.Stop();
 		feetSource.clip = attackSound;
-		feetSource.Play();
+		feetSource.PlayDelayed(1);
 	}
 	
 	public void parry()
