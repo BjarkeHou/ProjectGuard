@@ -40,7 +40,7 @@ public class GameController : MonoBehaviour
 	
 	void Update()
 	{
-		if (isInGhostMode)
+		if (isInGhostMode && !isInDialogMode)
 		{
 			m_timeLeftToReviveFromGhostMode -= Time.deltaTime;
 			if (m_timeLeftToReviveFromGhostMode < 0)

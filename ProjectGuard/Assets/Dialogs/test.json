@@ -1,0 +1,14 @@
+{
+	"speechelements":
+	[
+		{"id": "0", "speaker": "luna_init", "text": "Welcome to the Mines", "voicefile": "intro_0"},
+		{"id": "1", "speaker": "luna_init", "text": "Please familiarize yourself with your surroundings", "voicefile": "intro_1"},
+		{"id": "2", "speaker": "liam", "text": "This looks dangerous", "voicefile": "intro_2"},
+
+	],
+	"speakers":
+	[
+		{"name": "luna_init", "picture": "luna_unknown_picture", "appearname": "Mysterious Voice"},
+		{"name": "liam", "picture": "liam_picture", "appearname": "Liam"}
+	]
+}

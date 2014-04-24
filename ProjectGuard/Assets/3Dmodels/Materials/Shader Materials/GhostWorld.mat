@@ -31,7 +31,7 @@ Material:
       data:
         first:
           name: _Transition
-        second: 0
+        second: 1
       data:
         first:
           name: _BlueShift
