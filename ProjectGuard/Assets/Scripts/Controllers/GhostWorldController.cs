@@ -75,7 +75,7 @@ public class GhostWorldController : MonoBehaviour {
 			enemy.transform.Find("Model").GetComponent<Animator>().speed = 1 - normalModelAlphaValue;
 			Renderer[] renderes = enemy.transform.FindChild("Model").GetComponentsInChildren<Renderer>();
 			foreach (Renderer r in renderes) {
-				r.material.shader = Shader.Find("Transparent/Diffuse");
+				r.material.shader = Shader.Find("Transparent/Bumped Specular");
 				Color c = r.material.color;
 				c.a = 1 - normalModelAlphaValue;
 				r.material.color = c;
@@ -85,7 +85,7 @@ public class GhostWorldController : MonoBehaviour {
 			enemy.transform.Find("GhostModel").GetComponent<Animator>().speed = liamModelAlphaValue;
 			renderes = enemy.transform.FindChild("GhostModel").GetComponentsInChildren<Renderer>();
 			foreach (Renderer r in renderes) {
-				r.material.shader = Shader.Find("Transparent/Diffuse");
+				r.material.shader = Shader.Find("Transparent/Bumped Specular");
 				Color c = r.material.color;
 				c.a = liamModelAlphaValue;
 				r.material.color = c;
@@ -104,7 +104,7 @@ public class GhostWorldController : MonoBehaviour {
 				renderes = enemy.transform.FindChild("Model").GetComponentsInChildren<Renderer>();
 				foreach (Renderer r in renderes) {
 					if (r.tag != "IgnoreGhostTrans") {
-						r.material.shader = Shader.Find("Diffuse");
+						r.material.shader = Shader.Find("Bumped Specular");
 					}
 				}
 			} else {
@@ -113,7 +113,7 @@ public class GhostWorldController : MonoBehaviour {
 				renderes = enemy.transform.FindChild("GhostModel").GetComponentsInChildren<Renderer>();
 				foreach (Renderer r in renderes) {
 					if (r.tag != "IgnoreGhostTrans") {
-						r.material.shader = Shader.Find("Diffuse");
+						r.material.shader = Shader.Find("Bumped Specular");
 					}
 				}
 			}

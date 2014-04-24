@@ -56,7 +56,8 @@ public class AnimationScripts_SEle : AnimationScripts {
 		ammo.rigidbody.useGravity = true;
 		ammo.transform.parent = null;
 		ammo.AddComponent<AmmoDestroy>();
-		ammo.rigidbody.AddForce(transform.forward * 10, ForceMode.Impulse);
+		Vector3 dir = GameObject.Find("Player").transform.position - rockSpot.transform.position;
+		ammo.rigidbody.AddForce(dir.normalized * 10, ForceMode.Impulse);
 	}
 
 	void ResetBools() {
