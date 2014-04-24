@@ -8,6 +8,7 @@ public class CheckPoint : MonoBehaviour {
 	private HealthController hCont;
 	private GhostWorldController ghostCtrl;
 	private ParticleSystem[] particles;
+	private Light[] lights;
 
 	// Use this for initialization
 	void Start() {
@@ -16,12 +17,18 @@ public class CheckPoint : MonoBehaviour {
 		activateSource.playOnAwake = false;
 		ghostCtrl = GameObject.FindGameObjectWithTag("GameController").GetComponent<GhostWorldController>();
 		particles = transform.GetComponentsInChildren<ParticleSystem>();
+		lights = transform.GetComponentsInChildren<Light>();
 	}
 	
 	// Update is called once per frame
 	void Update() {
 		if (tag == "ActiveCheckpoint") {
+			foreach (Light light in lights) { 
+				light.enabled = true;
+			}
+
 			if (ghostCtrl.deathTransition >= 1) {
+
 				foreach (ParticleSystem part in particles) {
 					if (part.gameObject.name == "GhostParticles") {
 						part.enableEmission = true;
@@ -41,6 +48,9 @@ public class CheckPoint : MonoBehaviour {
 		} else {
 			foreach (ParticleSystem part in particles) {
 				part.enableEmission = false;
+				foreach (Light light in lights) { 
+					light.enabled = false;
+				}
 			}
 		}
 	}

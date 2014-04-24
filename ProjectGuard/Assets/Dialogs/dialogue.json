@@ -1,12 +1,12 @@
 {
 	"dialogs" : {
-		"PortVogter" : 
+		"GateKeeper" : 
 		[
 			{"speaker": "luna_init", "text": "Welcome to the Mines", "voicefile": "intro_0"},
 			{"speaker": "luna_init", "text": "Please familiarize yourself with your surroundings", "voicefile": "intro_1"},
 			{"speaker": "liam", "text": "This looks dangerous", "voicefile": "intro_2"}
 		],
-		"TriggerTest" : 
+		"DialogTrigger" : 
 		[
 			{"speaker": "luna_init", "text": "Din Mor", "voicefile": "intro_0"},
 			{"speaker": "luna_init", "text": "Din Far", "voicefile": "intro_1"},

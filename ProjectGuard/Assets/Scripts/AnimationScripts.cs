@@ -71,6 +71,7 @@ public class AnimationScripts : MonoBehaviour {
 		isAttacking = false;
 		//reset bools
 		ResetBools();
+
 		//can't move or rotate
 		animated.GetComponent<MovementController>().SetCanMove(false);
 		animated.GetComponent<MovementController>().SetCanDodge(false);

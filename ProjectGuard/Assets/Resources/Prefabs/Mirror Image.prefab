@@ -5853,9 +5853,9 @@ MonoBehaviour:
       type="RAIN.Core.AI" refcount="1" id="0"><field value="True" type="System.Boolean"
       id="_isActive" /><field type="UnityEngine.GameObject" id="_body" gameobject="0"
       /><field type="RAIN.Memory.BasicMemory" reference="1" id="_workingMemory" childrenvisible="False"
-      /><field type="RAIN.Minds.BasicMind" reference="2" id="_mind" childrenvisible="False"
+      /><field type="RAIN.Minds.BasicMind" reference="2" id="_mind" childrenvisible="True"
       /><field type="RAIN.Motion.CharacterControllerMotor" reference="3" id="_motor"
-      childrenvisible="True" /><field type="RAIN.Animation.BasicAnimator" reference="6"
+      childrenvisible="False" /><field type="RAIN.Animation.BasicAnimator" reference="6"
       id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
       reference="7" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
       reference="8" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
@@ -5874,7 +5874,8 @@ MonoBehaviour:
       reference="14" id="element3" /><field type="RAIN.BehaviorTrees.BTAssetBinding"
       reference="15" id="element4" /><field type="RAIN.BehaviorTrees.BTAssetBinding"
       reference="16" id="element5" /><field type="RAIN.BehaviorTrees.BTAssetBinding"
-      reference="17" id="element6" /></field></reference><reference type="RAIN.Motion.CharacterControllerMotor"
+      reference="17" id="element6" /><field type="RAIN.BehaviorTrees.BTAssetBinding"
+      reference="18" id="element7" /></field></reference><reference type="RAIN.Motion.CharacterControllerMotor"
       refcount="1" id="3"><field type="RAIN.Motion.MoveLookTarget" reference="4" id="moveTarget"
       /><field type="RAIN.Motion.MoveLookTarget" reference="5" id="faceTarget" /><field
       value="1" type="System.Single" id="defaultSpeed" /><field value="180" type="System.Single"
@@ -5931,23 +5932,25 @@ MonoBehaviour:
       id="_range" /><field value="True" type="System.Boolean" id="_requireLineOfSight"
       /><field value="-5" type="UnityEngine.LayerMask" id="_lineOfSightMask" /><field
       value="True" type="System.Boolean" id="_lineOfSightIgnoresSelf" /></reference><reference
-      type="RAIN.BehaviorTrees.BTAssetBinding" refcount="1" id="11"><field value="Engage"
+      type="RAIN.BehaviorTrees.BTAssetBinding" refcount="1" id="11"><field value="AP"
       type="System.String" id="binding" /><field type="RAIN.BehaviorTrees.BTAsset"
-      id="behaviorTree" gameobject="4" /></reference><reference type="RAIN.BehaviorTrees.BTAssetBinding"
-      refcount="1" id="12"><field value="Dodge" type="System.String" id="binding"
-      /><field type="RAIN.BehaviorTrees.BTAsset" id="behaviorTree" gameobject="11"
+      id="behaviorTree" gameobject="17" /></reference><reference type="RAIN.BehaviorTrees.BTAssetBinding"
+      refcount="1" id="12"><field value="Engage" type="System.String" id="binding"
+      /><field type="RAIN.BehaviorTrees.BTAsset" id="behaviorTree" gameobject="4"
       /></reference><reference type="RAIN.BehaviorTrees.BTAssetBinding" refcount="1"
-      id="13"><field value="Attack" type="System.String" id="binding" /><field type="RAIN.BehaviorTrees.BTAsset"
-      id="behaviorTree" gameobject="12" /></reference><reference type="RAIN.BehaviorTrees.BTAssetBinding"
-      refcount="1" id="14"><field value="Search" type="System.String" id="binding"
-      /><field type="RAIN.BehaviorTrees.BTAsset" id="behaviorTree" gameobject="13"
+      id="13"><field value="Dodge" type="System.String" id="binding" /><field type="RAIN.BehaviorTrees.BTAsset"
+      id="behaviorTree" gameobject="11" /></reference><reference type="RAIN.BehaviorTrees.BTAssetBinding"
+      refcount="1" id="14"><field value="Attack" type="System.String" id="binding"
+      /><field type="RAIN.BehaviorTrees.BTAsset" id="behaviorTree" gameobject="12"
       /></reference><reference type="RAIN.BehaviorTrees.BTAssetBinding" refcount="1"
-      id="15"><field value="StandStill" type="System.String" id="binding" /><field
-      type="RAIN.BehaviorTrees.BTAsset" id="behaviorTree" gameobject="14" /></reference><reference
-      type="RAIN.BehaviorTrees.BTAssetBinding" refcount="1" id="16"><field value="Wander"
-      type="System.String" id="binding" /><field type="RAIN.BehaviorTrees.BTAsset"
+      id="15"><field value="Search" type="System.String" id="binding" /><field type="RAIN.BehaviorTrees.BTAsset"
+      id="behaviorTree" gameobject="13" /></reference><reference type="RAIN.BehaviorTrees.BTAssetBinding"
+      refcount="1" id="16"><field value="StandStill" type="System.String" id="binding"
+      /><field type="RAIN.BehaviorTrees.BTAsset" id="behaviorTree" gameobject="14"
+      /></reference><reference type="RAIN.BehaviorTrees.BTAssetBinding" refcount="1"
+      id="17"><field value="Wander" type="System.String" id="binding" /><field type="RAIN.BehaviorTrees.BTAsset"
       id="behaviorTree" gameobject="15" /></reference><reference type="RAIN.BehaviorTrees.BTAssetBinding"
-      refcount="1" id="17"><field value="Return" type="System.String" id="binding"
+      refcount="1" id="18"><field value="Return" type="System.String" id="binding"
       /><field type="RAIN.BehaviorTrees.BTAsset" id="behaviorTree" gameobject="16"
       /></reference></references></component>
     _serializedGameObjects:
@@ -5968,6 +5971,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 79d9bba643bbce24da771f08e428da7b, type: 2}
     - {fileID: 11400000, guid: a3170898881dc4544b5f4b2426cb8c98, type: 2}
     - {fileID: 11400000, guid: b3e768f7cbc3b3441827c0075604f295, type: 2}
+    - {fileID: 11400000, guid: febb44320336bda4d97c55dc397b827f, type: 2}
     _serializedCustomData: []
 --- !u!114 &11400004
 MonoBehaviour:

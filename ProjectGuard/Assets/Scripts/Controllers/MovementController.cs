@@ -57,7 +57,6 @@ public class MovementController : MonoBehaviour {
 	}
 
 	public virtual void Dodge(float v, float h) {
-		transform.Find("Model").GetComponent<Animator>().SetBool("Attack", false);
 
 		// Test if player is trying to dodge
 		if (playerCanDodge && Time.time > dodgeDelayTimer) {
