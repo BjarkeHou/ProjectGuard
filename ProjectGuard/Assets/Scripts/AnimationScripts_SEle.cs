@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class AnimationScripts_SEle : AnimationScripts {
-
+	
 	public GameObject rock;
 	private GameObject ammo;
 	public GameObject rockSpot;
@@ -41,8 +41,11 @@ public class AnimationScripts_SEle : AnimationScripts {
 		animated.GetComponent<MovementController>().SetCanMove(false);
 		//no damage
 		animated.GetComponent<AttackController>().doesDamage = false;
+	}
 
+	void SpawnRock() {
 		ammo = (GameObject)Instantiate(rock) as GameObject;
+		ammo.GetComponent<RockAmmo>().Thrower = gameObject.transform.parent.gameObject;
 		ammo.transform.parent = rockSpot.transform;
 		ammo.transform.localPosition = Vector3.zero;
 		ammo.transform.localRotation = Quaternion.Euler(Vector3.zero);

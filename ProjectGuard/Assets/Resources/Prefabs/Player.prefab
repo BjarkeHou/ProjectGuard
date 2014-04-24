@@ -3117,14 +3117,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07163de953b574bafa61a0bf199f8b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSound: {fileID: 8300000, guid: b127a1a17c8de4c49870407850768f3b, type: 3}
-  runSoundSpeed: 0
-  dodgeSound: {fileID: 8300000, guid: cc76e511e2a6540499b39ca119439229, type: 3}
-  dodgeSoundSpeed: 0
+  runSound:
+  - {fileID: 8300000, guid: d1378d1176d014eaca87163cefa9280a, type: 3}
+  - {fileID: 8300000, guid: 6b7e24dae8b0f4f0f890be5bce587f64, type: 3}
+  - {fileID: 8300000, guid: b8f8a3c51706b47479444269cac8927b, type: 3}
+  dodgeSound: {fileID: 8300000, guid: 56ffaf6ed8fc94df0a6d0dabf3378451, type: 3}
   attackSound: {fileID: 0}
-  attackSoundSpeed: 0
   parrySound: {fileID: 0}
-  parrySoundSpeed: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3198,6 +3197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 344bd4ae0f44342528bec260b20f9e6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curHealth: 100
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3302,9 +3302,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6659ca3d03c05430082a75e725b52009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guiSkin: {fileID: 0}
-  barCol: {r: .227941155, g: .456896514, b: 1, a: 1}
+  guiSkin: {fileID: 11400000, guid: 49c7d18afcfee4ef4ae02f66852d6706, type: 2}
+  barCol: {r: .852941155, g: .852941155, b: .852941155, a: 1}
   spentCol: {r: .427450985, g: .216239914, b: .216239914, a: 1}
+  damageCol: {r: 1, g: .183823526, b: .183823526, a: 1}
   bgCol: {r: 0, g: 0, b: 0, a: 1}
   borderCol: {r: 1, g: 1, b: 1, a: 1}
   PauseMenuButtonHeight: 0

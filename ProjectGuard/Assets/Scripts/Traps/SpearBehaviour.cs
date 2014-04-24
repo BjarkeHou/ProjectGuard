@@ -6,16 +6,20 @@ public class SpearBehaviour : MonoBehaviour {
 	private TrapDeadlyPart deadlyPart;
 	private bool isTriggered;
 	public float triggerDelay;
-	private float timer;
+	private float triggerTimer;
 
 	public bool isRepeatable;
+	public float repeatDelay;
+	private float repeatTimer;
 	private bool canTrigger;
 
 	void Start() {
 		deadlyPart = GetComponentInChildren<TrapDeadlyPart>();
 
-		timer = 0;
+		triggerTimer = 0;
 		canTrigger = true;
+
+		repeatTimer = -repeatDelay;
 	}
 
 	void Update() {
@@ -26,17 +30,17 @@ public class SpearBehaviour : MonoBehaviour {
 	}
 
 	public void Trigger () {
-		if (canTrigger) {
+		if (canTrigger && Time.time > repeatTimer + repeatDelay) {
 			isTriggered = true;
 		}
 	}
 
 	void Behave() {
-		if (timer == 0) {
-			timer = Time.time;
+		if (triggerTimer == 0) {
+			triggerTimer = Time.time;
 		}
 
-		if (Time.time > timer + triggerDelay) {
+		if (Time.time > triggerTimer + triggerDelay) {
 			GetComponent<Animator>().SetBool("Trigger", true);
 		}
 	}
@@ -44,7 +48,8 @@ public class SpearBehaviour : MonoBehaviour {
 	void Reset() {
 		GetComponent<Animator>().SetBool("Trigger", false);
 		isTriggered = false;
-		timer = 0;
+		triggerTimer = 0;
+		repeatTimer = Time.time;
 
 		if (isRepeatable) {
 			deadlyPart.targetsHit.Clear();

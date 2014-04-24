@@ -117,7 +117,6 @@ public class Interface : MonoBehaviour
 		GUI.DrawTexture(new Rect(anchor.x, anchor.y, width, dimension.y), barTex);
 
 		//Damage taken
-		print(prevHealth);
 		if (hCtrl.getCurrentHealth() != prevHealth) {
 			if (hCtrl.getCurrentHealth() < prevHealth) {
 				damageTaken = hCtrl.LastDamageTaken;
