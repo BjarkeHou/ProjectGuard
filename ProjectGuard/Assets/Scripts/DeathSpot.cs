@@ -33,7 +33,7 @@ public class DeathSpot : MonoBehaviour {
 	}
 
 	void OnTriggerStay(Collider other) {
-		if (Input.GetKeyDown(KeyCode.E)) {
+		if (Input.GetKeyDown(KeyCode.R)) {
 			spawn = true;
 
 		}
