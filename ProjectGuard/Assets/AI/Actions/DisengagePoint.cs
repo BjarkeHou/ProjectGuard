@@ -23,7 +23,6 @@ public class DisengagePoint : RAINAction
 
     public override ActionResult Execute(AI ai)
     {
-        float degreeToPlayer = 0f;
         GameObject self = ai.WorkingMemory.GetItem<GameObject>("self");
         GameObject target = ai.WorkingMemory.GetItem<GameObject>("detectTarget");
         Vector3 vecToPlayer = target.transform.position - self.transform.position;

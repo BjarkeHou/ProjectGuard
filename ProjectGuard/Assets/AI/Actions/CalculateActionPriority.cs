@@ -17,6 +17,7 @@ public class CalculateActionPriority : RAINAction
     private GhostWorldController ghostController;
     private DebugAP gui;
     private Random rand;
+    protected float selfAtkRng;
 
     public CalculateActionPriority()
     {
@@ -31,7 +32,9 @@ public class CalculateActionPriority : RAINAction
         ghostController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GhostWorldController>();
         lastHealth = aiHealthControl.getCurrentHealth();
         gui = self.GetComponent<DebugAP>();
-        rand = new Random();
+        var eCont = self.GetComponent<EquipmentController>();
+        if(eCont != null) selfAtkRng = eCont.GetWeaponRange();
+        //rand = new Random();
     }
 
     public override ActionResult Execute(AI ai)
@@ -69,7 +72,7 @@ public class CalculateActionPriority : RAINAction
 
         StringBuilder sitB = new StringBuilder();
 
-        Debug.LogWarning("ActionPriority Calculated");
+        //Debug.LogWarning("ActionPriority Calculated");
         
         if (player != null)
         {
@@ -89,7 +92,6 @@ public class CalculateActionPriority : RAINAction
             // - distance from player
             float distToPlayer = Vector3.Distance(self.transform.position, player.transform.position);
             float playerAtkRng = player.GetComponent<EquipmentController>().GetWeaponRange();
-            float selfAtkRng = self.GetComponent<EquipmentController>().GetWeaponRange();
 
             if (distToPlayer <= selfAtkRng && distToPlayer > playerAtkRng)
             {
