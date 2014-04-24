@@ -18,8 +18,8 @@
             [
                     {"name": "liam", "picture": "liam_picture", "appearname": "Liam"},
                     {"name": "luna_init", "picture": "luna_unknown_picture", "appearname": "Mysterious Voice"},
-                    {"name": "luna_init", "picture": "luna_unknown_picture", "appearname": "Mysterious Voice"},
-                    {"name": "luna_init", "picture": "luna_unknown_picture", "appearname": "Mysterious Voice"}
+                    {"name": "luna", "picture": "luna_picture", "appearname": "Luna"},
+                    {"name": "spirit", "picture": "spirit_picture", "appearname": "Lost Spirit"}
             ]
     }
 

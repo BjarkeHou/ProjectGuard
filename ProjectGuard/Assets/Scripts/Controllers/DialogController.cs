@@ -118,7 +118,7 @@ public class DialogController : MonoBehaviour
 				if (dialogIDCounter == dialog.Length)
 				{
 					game.isInDialogMode = false;
-					dialogIDCounter = 0;
+                    dialogIDCounter = 0;
 				}
 			}
 		}
