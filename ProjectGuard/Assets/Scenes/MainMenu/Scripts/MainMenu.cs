@@ -40,7 +40,7 @@ public class MainMenu : MonoBehaviour
 		if (GUI.Button(new Rect(Screen.width * playButtonX * 0.01f, Screen.height * playButtonY * 0.01f, Screen.width * buttonWidth * 0.01f, Screen.height * buttonHeight * 0.01f), "PLAY"))
 		{
 			print("Play Game!");
-			Application.LoadLevel(1);
+			Application.LoadLevel("alphaScreen");
 		}
 		
 		if (GUI.Button(new Rect(Screen.width * settingsButtonX * 0.01f, Screen.height * settingsButtonY * 0.01f, Screen.width * buttonWidth * 0.01f, Screen.height * buttonHeight * 0.01f), "SETTINGS"))
