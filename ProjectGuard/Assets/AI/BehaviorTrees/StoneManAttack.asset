@@ -20,9 +20,9 @@ MonoBehaviour:
       closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;mecparam
       valueexpression=&quot;true&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
       parametertype=&quot;boolean&quot; parametername=&quot;Attack&quot; name=&quot;attack&quot;
-      damptime=&quot;0&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
+      damptime=&quot;0&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;&gt;&lt;timer
-      waitforsec=&quot;0.9&quot; returnvalue=&quot;success&quot; name=&quot;attack
+      waitforsec=&quot;1.2&quot; returnvalue=&quot;success&quot; name=&quot;attack
       time&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
       repeatuntil=&quot;success&quot; name=&quot;parallel&quot; fail=&quot;any&quot;&gt;&lt;expression
       returnvalue=&quot;evaluate&quot; repeatuntil=&quot;&quot; name=&quot;expression&quot;

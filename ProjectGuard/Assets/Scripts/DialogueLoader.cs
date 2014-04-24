@@ -8,14 +8,15 @@ using UnityEngine;
 
 public class DialogueLoader : MonoBehaviour
 {
+    private JObject json;
+
     void Awake()
     {
-
         StreamReader sr = File.OpenText("Assets/Dialogs/dialogue.json");
         //string all = sr.ReadToEnd();
         json = (JObject)JToken.ReadFrom(new JsonTextReader(sr));
     }
-	private JObject json;
+
 	// Use this for initialization
 	void Start()
 	{

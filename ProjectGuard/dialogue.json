@@ -1,11 +1,34 @@
     {
             "dialogs" : {
-                    "PortVogter" :
+                    "GhostWorldIntroduction" :
                     [
-                            {"speaker": "luna_init", "text": "Welcome to the Mines", "voicefile": "intro_0"},
-                            {"speaker": "luna_init", "text": "Please familiarize yourself with your surroundings", "voicefile": "intro_1"},
-                            {"speaker": "liam", "text": "This looks dangerous", "voicefile": "intro_2"}
+                            {"speaker": "luna", "text": "LIAM! Can you hear me?", "voicefile": "ghostintro_0"},
+                            {"speaker": "liam", "text": "Sure, but where are you? You sound far away?", "voicefile": "ghostintro_1"},
+                            {"speaker": "luna", "text": "I am right next to you, but you have crossed into the spirit world. You got hit by a trap, and a rather devious one at that. If you don’t get out fast, you will die, and succomb to the stone as the rest of the Tributes!", "voicefile": "ghostintro_2"},
+                            {"speaker": "liam", "text": "Get out? Of what? Spirit world? Where am I?", "voicefile": "ghostintro_3"},
+                            {"speaker": "luna", "text": "Okay, you still have some time, you are not far from your body. That weird tingling feeling you have now, that is the stone taking over your body. If you can get to your body, I can help you reclaim it.", "voicefile": "ghostintro_4"},
+							{"speaker": "luna", "text": "But first, you should to disarm the trap that took you down, since that it should possible even from the spirit world where it can't hurt you.", "voicefile": "ghostintro_5"},
+                            {"speaker": "liam", "text": "Okay okay. which way should I go?", "voicefile": "ghostintro_6"},
+							{"speaker": "luna", "text": "You have just been here, try to remember your way back.", "voicefile": "ghostintro_7"},
+
                     ],
+					"BackToLife" :
+                    [
+                            {"speaker": "luna", "text": "Liam… i think there is something nastier than traps up ahead.", "voicefile": "backtolife_0"},
+                            {"speaker": "liam", "text": "Okay… But there are others, stone looking things. They look like… me.", "voicefile": "backtolife_1"},
+                            {"speaker": "luna", "text": "They were once called 'Tributes', but they were really just sacrificial sheep to keep Iphrael happy. Some are much like you, sent in here to die, but some are of much older generations when it was an honor to take the steps into the Halls of Stone.", "voicefile": "backtolife_2"},
+
+                    ],
+					"BrotherAhead" :
+                    [
+                            {"speaker": "luna", "text": "Stop Liam! Wait, wait! …. I think… I know, thats my brother up ahead.", "voicefile": "brotherahead_0"},
+                            {"speaker": "liam", "text": "What are you talking about? A Brother?", "voicefile": "brotherahead_1"},
+                            {"speaker": "luna", "text": "Let me try something, I think we can talk to him. I can take you back into the spirit world!", "voicefile": "brotherahead_2"},
+                            {"speaker": "liam", "text": "And why would I do that?", "voicefile": "brotherahead_3"},
+                            {"speaker": "luna", "text": "Please, I beg you, I can get you back before anything bad happens, and he might have some valuable information about this place.", "voicefile": "brotherahead_4"},
+							{"speaker": "info", "text": "*Press ( R ) to enter the spirit world, or ignore Lunas request*", "voicefile": "none"}
+					],
+					
                     "TriggerTest" :
                     [
                             {"speaker": "luna_init", "text": "Din Mor", "voicefile": "intro_0"},
@@ -18,8 +41,9 @@
             [
                     {"name": "liam", "picture": "liam_picture", "appearname": "Liam"},
                     {"name": "luna_init", "picture": "luna_unknown_picture", "appearname": "Mysterious Voice"},
-                    {"name": "luna_init", "picture": "luna_unknown_picture", "appearname": "Mysterious Voice"},
-                    {"name": "luna_init", "picture": "luna_unknown_picture", "appearname": "Mysterious Voice"}
+                    {"name": "luna", "picture": "luna_picture", "appearname": "Luna"},
+                    {"name": "spirit", "picture": "spirit_picture", "appearname": "Lost Spirit"}
+                    {"name": "info", "picture": "none", "appearname": ""}
             ]
     }
 
