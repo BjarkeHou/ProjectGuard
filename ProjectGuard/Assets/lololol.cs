@@ -28,6 +28,6 @@ public class lololol : MonoBehaviour
 	
 	void GoAway()
 	{
-		Application.LoadLevel(1);
+		Application.LoadLevel("Boss");
 	}
 }

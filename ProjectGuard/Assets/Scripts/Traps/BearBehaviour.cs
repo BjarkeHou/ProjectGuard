@@ -50,7 +50,7 @@ public class BearBehaviour : MonoBehaviour {
 	}
 
 	void OnTriggerStay(Collider other) {
-		if (other.tag == "Player" && !game.isInGhostMode) {
+		if (other.tag == "Player" /*&& !game.isInGhostMode*/) {
 			if (catchPlayer) {
 				other.gameObject.GetComponent<MovementController>().SetCanMove(false);
 			} else {
