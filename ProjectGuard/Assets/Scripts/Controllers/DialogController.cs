@@ -15,6 +15,7 @@ public class DialogController : MonoBehaviour
 	
 	private bool showDialogLabel;
 	private bool isTrigger;
+	private bool isTriggered;
 	
 	private DialogueNode[] dialog;
 
@@ -33,9 +34,10 @@ public class DialogController : MonoBehaviour
 			dialogLoader = GameObject.FindGameObjectWithTag("GameController").GetComponent<DialogueLoader>();
 
 			print(this.gameObject.name);
-			print(dialogLoader);//.DialogueNodeExists(gameObject.name));
+			print(dialogLoader.DialogueNodeExists(gameObject.name));
 		
 			dialog = dialogLoader.GetDialogueNode(this.gameObject.name);
+			print(dialog [dialogIDCounter].SpeakerName);
 		}
 	}
 	
@@ -85,10 +87,11 @@ public class DialogController : MonoBehaviour
 		}
 	}
 	
-	void OnTriggerEnter()
+	void OnTriggerEnter(Collider other)
 	{
-		if (isTrigger)
+		if (other.tag == "Player")
 		{
+			isTriggered = true;
 			if (((onlyInGhostMode && game.isInGhostMode) || 
 				!onlyInGhostMode) && 
 				!game.isInDialogMode && 
@@ -113,7 +116,7 @@ public class DialogController : MonoBehaviour
 				GUI.Label(new Rect(Input.mousePosition.x + 20, Screen.height - Input.mousePosition.y, 300, 200), "Click to speak with " + this.gameObject.name);
 			}
 		
-			if (game.isInDialogMode)
+			if (game.isInDialogMode && (isTrigger && isTriggered))
 			{
 				GUI.Label(new Rect(Screen.width * 0.1f, Screen.height * 0.5f, Screen.width * 0.8f, Screen.height * 0.45f), CompileDialogString());
 			
@@ -123,6 +126,7 @@ public class DialogController : MonoBehaviour
 					dialogIDCounter++;	
 					if (dialogIDCounter == dialog.Length)
 					{
+						isTriggered = false;
 						game.isInDialogMode = false;
 						dialogIDCounter = 0;
 						if (!isRepeatable)
@@ -141,6 +145,7 @@ public class DialogController : MonoBehaviour
 	string CompileDialogString()
 	{
 		string s = "";
+		print (dialog [dialogIDCounter].SpeakerName);
 		s += "\n" + dialog [dialogIDCounter].SpeakerName + ":\n";
 		s += "\"" + dialog [dialogIDCounter].Text + "\"\n";
 		return s;

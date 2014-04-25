@@ -3,7 +3,7 @@ using System.Collections;
 
 public class lololol : MonoBehaviour
 {
-
+	public string levelToLoad;
 
 	public Texture background;
 	// Use this for initialization
@@ -28,6 +28,6 @@ public class lololol : MonoBehaviour
 	
 	void GoAway()
 	{
-		Application.LoadLevel("Boss");
+		Application.LoadLevel(levelToLoad);
 	}
 }

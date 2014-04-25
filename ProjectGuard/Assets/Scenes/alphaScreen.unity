@@ -166,4 +166,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b76fcbfef1b410c8ddef280834c7b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelToLoad: Boss
   background: {fileID: 2800000, guid: 43b0d6e48d19040f0bce05e3cc71471e, type: 3}
