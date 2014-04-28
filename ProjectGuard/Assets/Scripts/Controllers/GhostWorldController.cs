@@ -58,6 +58,7 @@ public class GhostWorldController : MonoBehaviour {
 			TransitionLOL();
 		} else if (!shaderSet) {
 			ResetShaders();
+			shaderSet = true;
 		}
 		gWorld.transition = deathTransition;
 	}
@@ -75,7 +76,7 @@ public class GhostWorldController : MonoBehaviour {
 			enemy.transform.Find("Model").GetComponent<Animator>().speed = 1 - normalModelAlphaValue;
 			Renderer[] renderes = enemy.transform.FindChild("Model").GetComponentsInChildren<Renderer>();
 			foreach (Renderer r in renderes) {
-				r.material.shader = Shader.Find("Transparent/Bumped Specular");
+				r.material.shader = Shader.Find("Transparent/Diffuse");
 				Color c = r.material.color;
 				c.a = 1 - normalModelAlphaValue;
 				r.material.color = c;
@@ -85,7 +86,7 @@ public class GhostWorldController : MonoBehaviour {
 			enemy.transform.Find("GhostModel").GetComponent<Animator>().speed = liamModelAlphaValue;
 			renderes = enemy.transform.FindChild("GhostModel").GetComponentsInChildren<Renderer>();
 			foreach (Renderer r in renderes) {
-				r.material.shader = Shader.Find("Transparent/Bumped Specular");
+				r.material.shader = Shader.Find("Transparent/Diffuse");
 				Color c = r.material.color;
 				c.a = liamModelAlphaValue;
 				r.material.color = c;
@@ -104,7 +105,7 @@ public class GhostWorldController : MonoBehaviour {
 				renderes = enemy.transform.FindChild("Model").GetComponentsInChildren<Renderer>();
 				foreach (Renderer r in renderes) {
 					if (r.tag != "IgnoreGhostTrans") {
-						r.material.shader = Shader.Find("Bumped Specular");
+						r.material.shader = Shader.Find("Custom/Self-Illumin/Bumped Specular");
 					}
 				}
 			} else {
@@ -113,7 +114,7 @@ public class GhostWorldController : MonoBehaviour {
 				renderes = enemy.transform.FindChild("GhostModel").GetComponentsInChildren<Renderer>();
 				foreach (Renderer r in renderes) {
 					if (r.tag != "IgnoreGhostTrans") {
-						r.material.shader = Shader.Find("Bumped Specular");
+						r.material.shader = Shader.Find("Custom/Self-Illumin/Bumped Specular");
 					}
 				}
 			}
