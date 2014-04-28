@@ -14,6 +14,8 @@ public class NoThroughGround : MonoBehaviour {
 	void Update() {
 		if (transform.position.y < y) {
 			transform.position = new Vector3 (transform.position.x, y, transform.position.z);
+		} else if (transform.position.y > y + 0.5f) {
+			transform.position = new Vector3 (transform.position.x, y, transform.position.z);
 		}
 	}
 }
