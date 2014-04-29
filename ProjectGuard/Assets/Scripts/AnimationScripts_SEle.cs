@@ -4,6 +4,7 @@ using System.Collections;
 public class AnimationScripts_SEle : AnimationScripts {
 	
 	public GameObject rock;
+	private Vector3 attackSpot;
 	private GameObject ammo;
 	public GameObject rockSpot;
 
@@ -44,11 +45,19 @@ public class AnimationScripts_SEle : AnimationScripts {
 	}
 
 	void SpawnRock() {
-		ammo = (GameObject)Instantiate(rock) as GameObject;
+		if (rockSpot.transform.Find("RockAmme") == null) {
+			ammo = (GameObject)Instantiate(rock) as GameObject;
+		} else {
+			ammo = rockSpot.transform.Find("RockAmmo").gameObject;
+		}
 		ammo.GetComponent<RockAmmo>().Thrower = gameObject.transform.parent.gameObject;
 		ammo.transform.parent = rockSpot.transform;
 		ammo.transform.localPosition = Vector3.zero;
 		ammo.transform.localRotation = Quaternion.Euler(Vector3.zero);
+	}
+
+	void SelectTarget() {
+		attackSpot = GameObject.Find("Player").transform.position;
 	}
 
 	void ThrowRock() {
@@ -56,7 +65,7 @@ public class AnimationScripts_SEle : AnimationScripts {
 		ammo.rigidbody.useGravity = true;
 		ammo.transform.parent = null;
 		ammo.AddComponent<AmmoDestroy>();
-		Vector3 dir = GameObject.Find("Player").transform.position - rockSpot.transform.position;
+		Vector3 dir = attackSpot - rockSpot.transform.position;
 		ammo.rigidbody.AddForce(dir.normalized * 10, ForceMode.Impulse);
 	}
 

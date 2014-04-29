@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerWillController : MonoBehaviour
-{
+public class PlayerWillController : MonoBehaviour {
 
 	private HealthController hCtrl;
 	private Animator anim;
@@ -28,8 +27,7 @@ public class PlayerWillController : MonoBehaviour
 	private int prevHealth;
 
 	// Use this for initialization
-	void Start()
-	{
+	void Start() {
 		hCtrl = GetComponent<HealthController>();
 		anim = transform.Find("Model").GetComponent<Animator>();
 
@@ -42,8 +40,7 @@ public class PlayerWillController : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update()
-	{
+	void Update() {
 		//if there is a change in health, check if the player has gone below the current will
 		if (hCtrl.getCurrentHealth() != prevHealth) {
 			if (hCtrl.getCurrentHealth() < prevHealth && curWill + hCtrl.LastDamageTaken < 0) {
@@ -54,8 +51,7 @@ public class PlayerWillController : MonoBehaviour
 			prevHealth = hCtrl.getCurrentHealth();
 		}
 
-		if (Time.time > regenTimer + regenCD && curWill < curMaxWill)
-		{
+		if (Time.time > regenTimer + regenCD && curWill < curMaxWill) {
 			curWill += regenSpeed * Time.deltaTime;
 		}
 
@@ -63,50 +59,40 @@ public class PlayerWillController : MonoBehaviour
 		curMaxWill = hCtrl.getCurrentHealth();
 
 		//regen current will
-		if (curWill > curMaxWill)
-		{
+		if (curWill > curMaxWill) {
 			curWill = curMaxWill;
-		} else if (curWill < 0)
-		{
+		} else if (curWill < 0) {
 			curWill = 0;
 		}
 
 		//adjust cd timer
 		regenCD = 0.5f * Mathf.InverseLerp(0, maxWill, curWill);
 
-		anim.SetFloat("curWill", 1 - Mathf.InverseLerp(0, maxWill, curWill));
+		//anim.SetFloat("curWill", 1 - Mathf.InverseLerp(0, maxWill, curWill));
 	}
 
-	public void Attack()
-	{
-		if (Time.time > depleteTimer)
-		{
+	public void Attack() {
+		if (Time.time > depleteTimer) {
 			depleteTimer = Time.time + 0.1f;
-			if (GetComponentInChildren<Weapon>())
-			{
+			if (GetComponentInChildren<Weapon>()) {
 				curWill += GetComponentInChildren<Weapon>().attackWillCost; 
-			} else
-			{
+			} else {
 				curWill += handAttackAdj;
 			}
 			regenTimer = Time.time;
 		}
 	}
 
-	public void Parry()
-	{
-		if (Time.time > depleteTimer)
-		{
+	public void Parry() {
+		if (Time.time > depleteTimer) {
 			depleteTimer = Time.time + 0.1f;
 			curWill += parryAdj;
 			regenTimer = Time.time;
 		}
 	}
 
-	public void Dodge()
-	{
-		if (Time.time > depleteTimer)
-		{
+	public void Dodge() {
+		if (Time.time > depleteTimer) {
 			depleteTimer = Time.time + 0.1f;
 			curWill += dodgeAdj;
 			regenTimer = Time.time;

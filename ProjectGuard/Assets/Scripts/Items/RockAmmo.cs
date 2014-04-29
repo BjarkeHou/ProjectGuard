@@ -33,11 +33,15 @@ public class RockAmmo : MonoBehaviour {
 				//Instantiate blood
 				GameObject blood = (GameObject)Instantiate(Resources.Load("Prefabs/Blood"));
 				blood.transform.parent = transform;
-				blood.GetComponent<BloodDestroy>().origin = other.contacts[0].point;
+				blood.GetComponent<BloodDestroy>().origin = other.contacts [0].point;
 				
 				print("HIT on " + obj.name);
 			} else if (hitType == 0) {
-				//print("PARRY by " + obj.name);
+				print("PARRY by " + obj.name);
+				//Instantiate sparks
+				GameObject spark = (GameObject)Instantiate(Resources.Load("Prefabs/Sparks"));
+				spark.transform.position = transform.position;
+				spark.transform.rotation = Quaternion.Euler(other.contacts [0].normal);
 			} else if (hitType == 2) {
 				//print("Friendly Fire");
 			}
