@@ -49,6 +49,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400004}
   - 114: {fileID: 11400004}
+  - 65: {fileID: 6500004}
   m_Layer: 0
   m_Name: SpearTrap
   m_TagString: Untagged
@@ -1316,8 +1317,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.1164665, y: 0, z: 18.0868015}
+  m_LocalRotation: {x: 0, y: -.707106829, z: 0, w: .707106829}
+  m_LocalPosition: {x: 130.801804, y: 0, z: 183.740295}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400160}
@@ -2514,6 +2515,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .699999988, y: .699999988, z: 1}
   m_Center: {x: 0, y: 0, z: .5}
+--- !u!65 &6500004
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: .5, z: 1.5}
+  m_Center: {x: .600000024, y: 0, z: .300000012}
 --- !u!82 &8200000
 AudioSource:
   m_ObjectHideFlags: 1
@@ -2727,9 +2740,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f3c9a3b3fefd374686701604bfdd089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerDelay: 1.5
-  isRepeatable: 1
-  repeatDelay: 3
+  triggerDelay: 1
+  isRepeatable: 0
+  repeatDelay: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2741,7 +2754,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55df5a798cb77714caba3d538dcf9476, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  disarmTime: 2
+  disarmTime: 666
+  disarmRange: 2
   trapTrigger: {fileID: 8300000, guid: 77a929b92b60a2e438ade5cf7cd25dc2, type: 3}
   trapDisarm: {fileID: 8300000, guid: 82e9c1e31c989aa459583599c0a7ff13, type: 3}
 --- !u!114 &11400004
@@ -2755,6 +2769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76dd6baa7b832d1459bc7e21c6851818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gui_Skin: {fileID: 11400000, guid: 49c7d18afcfee4ef4ae02f66852d6706, type: 2}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2767,7 +2782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetsHit: []
-  damage: 100
+  damage: 666
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2780,7 +2795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerDelay: .100000001
-  holdTime: 2
+  holdTime: 3
   isRepeatable: 1
   repeatDelay: 3
 --- !u!131 &13100002
