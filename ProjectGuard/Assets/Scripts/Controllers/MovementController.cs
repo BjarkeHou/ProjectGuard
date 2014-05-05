@@ -58,9 +58,11 @@ public class MovementController : MonoBehaviour {
 
 	public virtual void Dodge(float v, float h) {
 
+		transform.Find("Model").GetComponent<Animator>().SetBool("Attack", false);
+
 		// Test if player is trying to dodge
 		if (playerCanDodge && Time.time > dodgeDelayTimer) {
-			playerSound.dodge();
+
 			if (GetComponent<PlayerWillController>() != null) {
 				GetComponent<PlayerWillController>().Dodge();
 			}
@@ -89,6 +91,7 @@ public class MovementController : MonoBehaviour {
 		}
 		dodgeDelayTimer = Time.time + dodgeDelay;
 		SetCanDodge(false);
+		playerSound.dodge();
 
 		while (progress < 1.0f) {
 			progress = Mathf.InverseLerp(0, dodgeDist, dodgedDistance);
