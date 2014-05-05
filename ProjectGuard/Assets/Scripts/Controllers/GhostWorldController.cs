@@ -70,26 +70,32 @@ public class GhostWorldController : MonoBehaviour {
 		GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 		foreach (GameObject enemy in enemies) {
 			enemy.transform.FindChild("GhostModel").gameObject.SetActive(true);
-			enemy.transform.FindChild("Model").gameObject.SetActive(true);
+			if (enemy.GetComponent<HealthController>().stillAlive()) {
+				enemy.transform.FindChild("Model").gameObject.SetActive(true);
+			}
 
 			//set live model
 			enemy.transform.Find("Model").GetComponent<Animator>().speed = 1 - normalModelAlphaValue;
 			Renderer[] renderes = enemy.transform.FindChild("Model").GetComponentsInChildren<Renderer>();
 			foreach (Renderer r in renderes) {
-				r.material.shader = Shader.Find("Transparent/Diffuse");
-				Color c = r.material.color;
-				c.a = 1 - normalModelAlphaValue;
-				r.material.color = c;
+				if (r.tag != "IgnoreGhostTrans") {
+					r.material.shader = Shader.Find("Transparent/Bumped Specular");
+					Color c = r.material.color;
+					c.a = 1 - normalModelAlphaValue;
+					r.material.color = c;
+				}
 			}
 
 			//set ghost model
 			enemy.transform.Find("GhostModel").GetComponent<Animator>().speed = liamModelAlphaValue;
 			renderes = enemy.transform.FindChild("GhostModel").GetComponentsInChildren<Renderer>();
 			foreach (Renderer r in renderes) {
-				r.material.shader = Shader.Find("Transparent/Diffuse");
-				Color c = r.material.color;
-				c.a = liamModelAlphaValue;
-				r.material.color = c;
+				if (r.tag != "IgnoreGhostTrans") {
+					r.material.shader = Shader.Find("Transparent/Bumped Specular");
+					Color c = r.material.color;
+					c.a = liamModelAlphaValue;
+					r.material.color = c;
+				}
 			}
 		}
 	}
@@ -99,7 +105,11 @@ public class GhostWorldController : MonoBehaviour {
 		GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 		Renderer[] renderes;
 		foreach (GameObject enemy in enemies) {
-			if (!screenIsInGhostMode) {
+			if (!screenIsInGhostMode) { //if is in living world
+				if (!enemy.GetComponent<HealthController>().stillAlive()) {
+					enemy.layer = LayerMask.NameToLayer("DeadEnemies");
+				}
+
 				enemy.transform.FindChild("GhostModel").gameObject.SetActive(false);
 				//set live model
 				renderes = enemy.transform.FindChild("Model").GetComponentsInChildren<Renderer>();
@@ -108,7 +118,9 @@ public class GhostWorldController : MonoBehaviour {
 						r.material.shader = Shader.Find("Custom/Self-Illumin/Bumped Specular");
 					}
 				}
-			} else {
+			} else { //if is in ghost world
+				enemy.layer = LayerMask.NameToLayer("Default");
+
 				enemy.transform.FindChild("Model").gameObject.SetActive(false);
 				//set ghost model
 				renderes = enemy.transform.FindChild("GhostModel").GetComponentsInChildren<Renderer>();

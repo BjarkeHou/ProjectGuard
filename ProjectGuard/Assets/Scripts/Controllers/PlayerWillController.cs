@@ -4,7 +4,6 @@ using System.Collections;
 public class PlayerWillController : MonoBehaviour {
 
 	private HealthController hCtrl;
-	private Animator anim;
 
 	public float handAttackAdj;
 	public float dodgeAdj;
@@ -29,7 +28,6 @@ public class PlayerWillController : MonoBehaviour {
 	// Use this for initialization
 	void Start() {
 		hCtrl = GetComponent<HealthController>();
-		anim = transform.Find("Model").GetComponent<Animator>();
 
 		regenTimer = Time.time;
 		maxWill = hCtrl.getMaxHealth();

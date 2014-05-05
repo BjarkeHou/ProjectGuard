@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class AttackController : MonoBehaviour
-{
+public class AttackController : MonoBehaviour {
 
 	public GameObject playerModel;
 
@@ -16,28 +15,23 @@ public class AttackController : MonoBehaviour
 	public float rangeForAttack;
 
 	// Use this for initialization
-	void Start()
-	{
+	void Start() {
 		playerSound = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSoundController>();
 		game = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 		doesDamage = false;
-		targetsHit = new List<GameObject>();
+		targetsHit = new List<GameObject> ();
 		anim = playerModel.GetComponent<Animator>();
 	}
 
-	void Update()
-	{
-		if (!game.isInGhostMode)
-		{
+	void Update() {
+		if (!game.isInGhostMode) {
 			//TEMP SOLUTION
 			ThereIsSpaceForNormalAttack();
 		}
 	}
 
-	public void DeclareAttack()
-	{
-		if (!game.isInGhostMode)
-		{
+	public void DeclareAttack() {
+		if (!game.isInGhostMode) {
 			playerSound.attack();
 			inAnAttack = true;
 			//if (ThereIsSpaceForNormalAttack()) {
@@ -48,74 +42,59 @@ public class AttackController : MonoBehaviour
 		}
 	}
 
-	public void DeclareParry()
-	{
-		if (!game.isInGhostMode)
-		{
+	public void DeclareParry() {
+		if (!game.isInGhostMode) {
 			playerSound.parry();
 			anim.SetBool("Parry", true);
 		}
 	}
 
 	//called from the equiped weapon
-	public int Hit(GameObject obj, float damage)
-	{
-		if (!targetsHit.Contains(obj))
-		{
-			if (obj.tag != gameObject.tag)
-			{ 
+	public int Hit(GameObject obj, float damage) {
+		if (!targetsHit.Contains(obj)) {
+			if (obj.tag != gameObject.tag) { 
 				//add enemy to list of hit stuff
 				targetsHit.Add(obj);
 				//check if the character is parrying
-				if (obj.GetComponent<HealthController>().IsParrying)
-				{
+				if (obj.GetComponent<HealthController>().IsParrying) {
 					Rebound();
 					return 0;
-				} else
-				{
+				} else {
 					//withdraw health
 					obj.GetComponent<HealthController>().adjustCurrentHealth(-(int)damage);
 					return 1;
 				}
-			} else
-			{
+			} else {
 				return 2;
 			}
-		} else
-		{
+		} else {
 			return -1;
 		}
 	}
 	//called from the equiped weapon
-	public void Rebound()
-	{
+	public void Rebound() {
 		//change animation
 		anim.SetBool("Rebound", true);
 	}
 	
-	public bool inAnAttack
-	{
+	public bool inAnAttack {
 		get { return m_inAnAttack;}
 		set { m_inAnAttack = value;}
 	}
 	
-	private void ThereIsSpaceForNormalAttack()
-	{
+	private void ThereIsSpaceForNormalAttack() {
 		//bool returnValue = true;
 		
 		RaycastHit hit;
 		
-		if (Physics.Raycast(this.transform.position, this.transform.right, out hit, rangeForAttack))
-		{
-			if (hit.transform.gameObject.layer == LayerMask.NameToLayer("LightMap"))
-			{
+		if (Physics.Raycast(this.transform.position, this.transform.right, out hit, rangeForAttack)) {
+			if (hit.transform.gameObject.layer == LayerMask.NameToLayer("LightMap")) {
 				//returnValue = false;
 
 				//TEMP SOLUTION
-				anim.SetBool("Stab", true);
+				//anim.SetBool("Stab", true);
 			}
-		} else
-		{
+		} else {
 			//anim.SetBool("Stab", false);
 		}
 	}
