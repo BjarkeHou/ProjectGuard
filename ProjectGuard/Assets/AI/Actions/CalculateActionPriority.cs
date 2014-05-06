@@ -45,7 +45,7 @@ public class CalculateActionPriority : RAINAction
 
 		actionVector = DecisionParameters(ai, actionVector);
 
-		gui.SetAPVals(actionVector); //TODO
+        if(gui != null) gui.SetAPVals(actionVector); //TODO
 
 		double max = actionVector.Values.Max();
 		List<KeyValuePair<ActionType, double>> highest = actionVector.Where(e => Math.Abs(e.Value - max) < 0.001).ToList();
@@ -189,7 +189,7 @@ public class CalculateActionPriority : RAINAction
 
 		lastHealth = aiHealthControl.getCurrentHealth();
 
-		gui.SetCurrentParameters(sitB.ToString()); //TODO
+        if(gui != null) gui.SetCurrentParameters(sitB.ToString()); //TODO
 
 		/*foreach (ActionType at in actionVector.Keys.ToList())
         {

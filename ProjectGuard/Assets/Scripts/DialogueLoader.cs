@@ -13,8 +13,8 @@ public class DialogueLoader : MonoBehaviour
 	void Awake()
 	{
 		StreamReader sr = File.OpenText("Assets/Dialogs/dialogue.json");
-		//string all = sr.ReadToEnd();
-		json = (JObject)JToken.ReadFrom(new JsonTextReader(sr));
+		string all = sr.ReadToEnd();
+		json = (JObject)JToken.Parse(all);
 	}
 
 	// Use this for initialization
@@ -30,6 +30,7 @@ public class DialogueLoader : MonoBehaviour
             Debug.Log(speechelement["text"].InnerText);
         }
         */
+        //Debug.Log(GetDialogueNode("BrotherAhead").First().Text);
 
 	}
 	
