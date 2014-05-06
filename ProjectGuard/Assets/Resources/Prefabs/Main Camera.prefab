@@ -96,9 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60cc41c24916ac949bf825f526d694fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  matLos: {fileID: 2100000, guid: c0c4ae382ce16574e8cbe02f5d351c35, type: 2}
+  matLos: {fileID: 2100000, guid: 7ad9078093f123940bdcc4a674c97584, type: 2}
   player: {fileID: 0}
-  sightRange: 50
+  sightRange: 100
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,7 +116,7 @@ MonoBehaviour:
   blueshift: .25
   waveCount: 15
   waveSize: 5
-  overlayAlpha: 0
+  overlayAlpha: 1
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1

@@ -31673,21 +31673,21 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.20833337
+  - time: 1.125
     functionName: CanRotate
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.25
+  - time: 1.16666663
     functionName: CanAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.33333337
+  - time: 1.20833337
     functionName: CanMove
     data: 
     objectReferenceParameter: {fileID: 0}

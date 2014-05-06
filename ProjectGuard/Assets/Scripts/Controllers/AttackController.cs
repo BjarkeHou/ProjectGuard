@@ -92,10 +92,10 @@ public class AttackController : MonoBehaviour {
 				//returnValue = false;
 
 				//TEMP SOLUTION
-				anim.SetBool("Stab", true);
+				//anim.SetBool("Stab", true);
 			}
 		} else {
-			anim.SetBool("Stab", false);
+			//anim.SetBool("Stab", false);
 		}
 	}
 }

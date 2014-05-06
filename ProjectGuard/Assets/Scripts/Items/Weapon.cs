@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 
 public class Weapon : Item {
-	private AttackController playerAtkCont;
+	private AttackController atkCtrl;
+	private GameController game;
 	
 	private Transform skinPoint;
 	private Transform tipPoint;
@@ -21,6 +22,8 @@ public class Weapon : Item {
 
 	// Use this for initialization
 	void Start() {
+		game = GameObject.FindWithTag("GameController").GetComponent<GameController>();
+
 		ResizeBoxCollider();
 		if (transform.parent != null) {
 			if (transform.parent.tag == "Player" || transform.parent.tag == "Enemy") {
@@ -67,7 +70,7 @@ public class Weapon : Item {
 	void TryToEquip(GameObject wielder) {
 		if (!equipped) {
 			equipped = true;
-			playerAtkCont = wielder.GetComponent<AttackController>();
+			atkCtrl = wielder.GetComponent<AttackController>();
 			wielder.GetComponent<EquipmentController>().Equip(this.gameObject);
 		}
 	}
@@ -91,11 +94,15 @@ public class Weapon : Item {
 		Ray charles = new Ray (holdPoint.position, tipPoint.position - holdPoint.position);
 		float dist = (tipPoint.position - holdPoint.position).magnitude;
 		
-		if (Physics.Raycast(charles, out hit, dist) && playerAtkCont.doesDamage) {
+		if (Physics.Raycast(charles, out hit, dist) &&
+		    atkCtrl.doesDamage &&
+		    game.GetComponent<GhostWorldController>().deathTransition <= 0 &&
+		    hit.collider.gameObject.layer != LayerMask.NameToLayer("DeadEnemies")) {
+
 			GameObject obj = hit.collider.gameObject;
 			//if an enemy is hit
-			if (obj.tag == "Enemy" || obj.tag == "Player") {
-				int hitType = playerAtkCont.Hit(obj, damage);
+			if ((obj.tag == "Enemy" || obj.tag == "Player")) {
+				int hitType = atkCtrl.Hit(obj, damage);
 				if (hitType == 1) {
 					//Instantiate blood
 					GameObject blood = (GameObject)Instantiate(Resources.Load("Prefabs/Blood"));
@@ -125,8 +132,42 @@ public class Weapon : Item {
 				//If collision is within skin depth
 				if ((hit.point - holdPoint.position).magnitude < (skinPoint.position - holdPoint.position).magnitude) {
 					print("REBOUND on " + obj.name);
-					playerAtkCont.Rebound();
+					atkCtrl.Rebound();
 				}
+			}
+		}
+	}
+
+	//HACK
+	//in case hand hits before blade
+	void OnTriggerEnter(Collider other) {
+		GameObject obj = other.gameObject;
+		//if an enemy is hit
+		if (atkCtrl.doesDamage && !game.isInGhostMode && obj.layer != LayerMask.NameToLayer("DeadEnemies")) {
+			if ((obj.tag == "Enemy" || obj.tag == "Player")) {
+				int hitType = atkCtrl.Hit(obj, damage);
+				if (hitType == 1) {
+					//Instantiate blood
+					GameObject blood = (GameObject)Instantiate(Resources.Load("Prefabs/Blood"));
+					blood.GetComponent<BloodDestroy>().origin = transform.position;
+					blood.transform.parent = transform;
+					
+					print("HIT on " + obj.name);
+				} else if (hitType == 0) {
+					print("PARRY by " + obj.name);
+					//Instantiate sparks
+					GameObject spark = (GameObject)Instantiate(Resources.Load("Prefabs/Sparks"));
+					spark.transform.position = transform.position;
+				} else if (hitType == 2) {
+					//print("Friendly Fire");
+				}
+				
+				//if an object is hit
+
+			} else {
+				//Instantiate sparks
+				GameObject spark = (GameObject)Instantiate(Resources.Load("Prefabs/Sparks"));
+				spark.transform.position = transform.position;
 			}
 		}
 	}

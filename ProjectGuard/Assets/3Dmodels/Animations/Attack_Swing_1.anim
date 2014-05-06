@@ -31813,21 +31813,21 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: .875
+  - time: 1
     functionName: CanRotate
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: .916666687
+  - time: 1.04166663
     functionName: CanAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.20833337
+  - time: 1.125
     functionName: CanMove
     data: 
     objectReferenceParameter: {fileID: 0}

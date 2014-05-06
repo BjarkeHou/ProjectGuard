@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BearBehaviour : MonoBehaviour {
 
-	private GameController game;
+	//private GameController game;
 	private bool isTriggered;
 	public float triggerDelay;
 	private float triggerTimer;
@@ -19,7 +19,7 @@ public class BearBehaviour : MonoBehaviour {
 	private bool catchPlayer;
 	
 	void Start() {
-		game = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+		//game = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 		
 		triggerTimer = 0;
 		canTrigger = true;

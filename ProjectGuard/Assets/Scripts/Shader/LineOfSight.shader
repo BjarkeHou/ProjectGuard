@@ -1,4 +1,4 @@
-﻿Shader "Hidden/Light Map" {
+﻿Shader "Custom/LineOfSight" {
 Properties {
 	_MainTex ("View", 2D) = "View" {}
 	_LightTex ("Light Map", 2D) = "Light Map" {}
