@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public class Weapon : Item {
 	private AttackController atkCtrl;
+	private GameController game;
 	
 	private Transform skinPoint;
 	private Transform tipPoint;
@@ -21,6 +22,8 @@ public class Weapon : Item {
 
 	// Use this for initialization
 	void Start() {
+		game = GameObject.FindWithTag("GameController").GetComponent<GameController>();
+
 		ResizeBoxCollider();
 		if (transform.parent != null) {
 			if (transform.parent.tag == "Player" || transform.parent.tag == "Enemy") {
@@ -91,10 +94,14 @@ public class Weapon : Item {
 		Ray charles = new Ray (holdPoint.position, tipPoint.position - holdPoint.position);
 		float dist = (tipPoint.position - holdPoint.position).magnitude;
 		
-		if (Physics.Raycast(charles, out hit, dist) && atkCtrl.doesDamage) {
+		if (Physics.Raycast(charles, out hit, dist) &&
+		    atkCtrl.doesDamage &&
+		    game.GetComponent<GhostWorldController>().deathTransition <= 0 &&
+		    hit.collider.gameObject.layer != LayerMask.NameToLayer("DeadEnemies")) {
+
 			GameObject obj = hit.collider.gameObject;
 			//if an enemy is hit
-			if (obj.tag == "Enemy" || obj.tag == "Player") {
+			if ((obj.tag == "Enemy" || obj.tag == "Player")) {
 				int hitType = atkCtrl.Hit(obj, damage);
 				if (hitType == 1) {
 					//Instantiate blood
@@ -136,32 +143,32 @@ public class Weapon : Item {
 	void OnTriggerEnter(Collider other) {
 		GameObject obj = other.gameObject;
 		//if an enemy is hit
-		if (obj.tag == "Enemy" || obj.tag == "Player") {
-			int hitType = atkCtrl.Hit(obj, damage);
-			if (hitType == 1) {
-				//Instantiate blood
-				GameObject blood = (GameObject)Instantiate(Resources.Load("Prefabs/Blood"));
-				blood.GetComponent<BloodDestroy>().origin = transform.position;
-				blood.transform.parent = transform;
+		if (atkCtrl.doesDamage && !game.isInGhostMode && obj.layer != LayerMask.NameToLayer("DeadEnemies")) {
+			if ((obj.tag == "Enemy" || obj.tag == "Player")) {
+				int hitType = atkCtrl.Hit(obj, damage);
+				if (hitType == 1) {
+					//Instantiate blood
+					GameObject blood = (GameObject)Instantiate(Resources.Load("Prefabs/Blood"));
+					blood.GetComponent<BloodDestroy>().origin = transform.position;
+					blood.transform.parent = transform;
+					
+					print("HIT on " + obj.name);
+				} else if (hitType == 0) {
+					print("PARRY by " + obj.name);
+					//Instantiate sparks
+					GameObject spark = (GameObject)Instantiate(Resources.Load("Prefabs/Sparks"));
+					spark.transform.position = transform.position;
+				} else if (hitType == 2) {
+					//print("Friendly Fire");
+				}
 				
-				print("HIT on " + obj.name);
-			} else if (hitType == 0) {
-				print("PARRY by " + obj.name);
+				//if an object is hit
+
+			} else {
 				//Instantiate sparks
 				GameObject spark = (GameObject)Instantiate(Resources.Load("Prefabs/Sparks"));
 				spark.transform.position = transform.position;
-			} else if (hitType == 2) {
-				//print("Friendly Fire");
 			}
-			
-			//if an object is hit
-		} else {
-			/*
-			//Instantiate sparks
-			GameObject spark = (GameObject)Instantiate(Resources.Load("Prefabs/Sparks"));
-			spark.transform.position = other.contacts[0].point;
-			spark.transform.rotation = Quaternion.LookRotation(other.contacts[0].normal);
-			*/
 		}
 	}
 }

@@ -110,19 +110,16 @@ public class GameController : MonoBehaviour
 						} else
 						{
 							// Your dead!
-							print ("lol");
 						}
 
 						//wait for screen to finish showing
-						print (timer);
-						if (timer <= 0)
+						if (timer <= 0) //timer is -1 before deathspot has been initialized
 						{
-
 							//create respawn point where the player died
 							GameObject respawnPoint = (GameObject)Instantiate(Resources.Load("Prefabs/DeathSpot")) as GameObject;
 							respawnPoint.transform.position = new Vector3(deathSpot.x, -0.3811884f, deathSpot.z);
-							print ("OMGOMGOMOMGOMGOMGOMOGMGOMGOMOMDGOMDOSMGM");
-							timer = Time.time;
+							respawnPoint.name = "DeathSpot";
+							timer = Time.time; //deathspot has been initialized
 						}
 						if (Time.time > timer + screenTime)
 						{
