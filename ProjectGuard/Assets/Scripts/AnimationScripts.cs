@@ -3,12 +3,19 @@ using System.Collections;
 
 public class AnimationScripts : MonoBehaviour {
 
-	private GameObject animated;
+	private Animator anim;
+	private PlayerWillController pWillCtrl;
+	private GameObject parryEffect;
+
+	protected GameObject animated;
 	public bool isAttacking;
-	private PlayerLook pLook;
+	protected PlayerLook pLook;
 
 	// Use this for initialization
 	void Start() {
+		anim = GetComponent<Animator>();
+		pWillCtrl = GameObject.FindWithTag("Player").GetComponent<PlayerWillController>();
+
 		animated = this.transform.parent.gameObject;
 		pLook = animated.GetComponent<PlayerLook>();
 	}
@@ -20,6 +27,10 @@ public class AnimationScripts : MonoBehaviour {
 
 	//called form animations
 	void IniAttack() {
+		if (animated.tag == "Player") {
+			anim.SetFloat("curWill", 1 - Mathf.InverseLerp(0, pWillCtrl.MaxWill, pWillCtrl.CurWill));
+			//print("curWill = " + (1 - Mathf.InverseLerp(0, pWillCtrl.MaxWill, pWillCtrl.CurWill)));
+		}
 		isAttacking = true;
 		//clear hits
 		animated.GetComponent<AttackController>().targetsHit.Clear();
@@ -71,6 +82,7 @@ public class AnimationScripts : MonoBehaviour {
 		isAttacking = false;
 		//reset bools
 		ResetBools();
+
 		//can't move or rotate
 		animated.GetComponent<MovementController>().SetCanMove(false);
 		animated.GetComponent<MovementController>().SetCanDodge(false);
@@ -80,15 +92,37 @@ public class AnimationScripts : MonoBehaviour {
 		animated.GetComponent<AttackController>().doesDamage = false;
 	}
 	void Damage() {
+		if (animated.tag == "Player") {
+			anim.SetFloat("curWill", 1);
+			//print("curWill = 1");
+		}
+
 		animated.GetComponent<AttackController>().doesDamage = true;
+
+		if (transform.GetComponentInChildren<Weapon>() != null) { 
+			transform.GetComponentInChildren<Weapon>().gameObject.audio.Play();
+		}
 	}
 	void NoDamage() {
+		if (animated.tag == "Player") {
+			anim.SetFloat("curWill", 1 - Mathf.InverseLerp(0, pWillCtrl.MaxWill, pWillCtrl.CurWill));
+			//print("curWill = " + (1 - Mathf.InverseLerp(0, pWillCtrl.MaxWill, pWillCtrl.CurWill)));
+		}
 		animated.GetComponent<AttackController>().doesDamage = false;
 	}
 	void Parry() {
+		if (parryEffect == null) {
+			parryEffect = (GameObject)Instantiate(Resources.Load("Prefabs/Parry_Effect")) as GameObject;
+			parryEffect.transform.parent = animated.transform;
+			parryEffect.transform.localPosition = Vector3.zero;
+			parryEffect.transform.localRotation = Quaternion.Euler(Vector3.zero);
+		}
 		animated.GetComponent<HealthController>().IsParrying = true;
 	}
 	void NoParry() {
+		if (parryEffect != null) {
+			Destroy(parryEffect);
+		}
 		animated.GetComponent<HealthController>().IsParrying = false;
 	}
 	void CanRotate() {
@@ -97,7 +131,7 @@ public class AnimationScripts : MonoBehaviour {
 	}
 	void CanAttack() {
 		animated.GetComponent<MovementController>().SetCanDodge(true);
-		GetComponent<Animator>().SetBool("CanAttack", true);
+		anim.SetBool("CanAttack", true);
 		animated.GetComponent<AttackController>().inAnAttack = false;
 		isAttacking = false;
 	}
@@ -109,17 +143,17 @@ public class AnimationScripts : MonoBehaviour {
 
 	void ResetBools() {
 		//don't attack again
-		GetComponent<Animator>().SetBool("Attack", false);
+		anim.SetBool("Attack", false);
 		//don't stab again
-		GetComponent<Animator>().SetBool("Stab", false);
+		anim.SetBool("Stab", false);
 		//don't parry again
-		GetComponent<Animator>().SetBool("Parry", false);
+		anim.SetBool("Parry", false);
 		//don't rebound again
-		GetComponent<Animator>().SetBool("Rebound", false);
+		anim.SetBool("Rebound", false);
 		//don't dodge again
-		GetComponent<Animator>().SetBool("Dodge_Forward", false);
-		GetComponent<Animator>().SetBool("Dodge_Backwards", false);
+		anim.SetBool("Dodge_Forward", false);
+		anim.SetBool("Dodge_Backwards", false);
 		//can't attack
-		GetComponent<Animator>().SetBool("CanAttack", false);
+		anim.SetBool("CanAttack", false);
 	}
 }

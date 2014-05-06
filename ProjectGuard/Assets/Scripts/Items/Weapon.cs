@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 public class Weapon : Item {
-	private AttackController playerAtkCont;
+	private AttackController atkCtrl;
 	
 	private Transform skinPoint;
 	private Transform tipPoint;
@@ -67,7 +67,7 @@ public class Weapon : Item {
 	void TryToEquip(GameObject wielder) {
 		if (!equipped) {
 			equipped = true;
-			playerAtkCont = wielder.GetComponent<AttackController>();
+			atkCtrl = wielder.GetComponent<AttackController>();
 			wielder.GetComponent<EquipmentController>().Equip(this.gameObject);
 		}
 	}
@@ -91,39 +91,77 @@ public class Weapon : Item {
 		Ray charles = new Ray (holdPoint.position, tipPoint.position - holdPoint.position);
 		float dist = (tipPoint.position - holdPoint.position).magnitude;
 		
-		if (Physics.Raycast(charles, out hit, dist) && playerAtkCont.doesDamage) {
+		if (Physics.Raycast(charles, out hit, dist) && atkCtrl.doesDamage) {
 			GameObject obj = hit.collider.gameObject;
 			//if an enemy is hit
 			if (obj.tag == "Enemy" || obj.tag == "Player") {
-				int hitType = playerAtkCont.Hit(obj, damage);
+				int hitType = atkCtrl.Hit(obj, damage);
 				if (hitType == 1) {
 					//Instantiate blood
 					GameObject blood = (GameObject)Instantiate(Resources.Load("Prefabs/Blood"));
 					blood.transform.parent = transform;
-					blood.GetComponent<BloodDestroy>().offset = (hit.point - transform.position).magnitude;
+					blood.GetComponent<BloodDestroy>().origin = hit.point;
 					
 					print("HIT on " + obj.name);
 				} else if (hitType == 0) {
 					//Instantiate sparks
-					GameObject spark = (GameObject)Instantiate(Resources.Load("Prefabs/Sparks"), hit.point, Quaternion.LookRotation(hit.normal));
+					GameObject spark = (GameObject)Instantiate(Resources.Load("Prefabs/Sparks"));
+					spark.transform.position = hit.point;
+					spark.transform.rotation = Quaternion.LookRotation(hit.normal);
 					
 					print("PARRY by " + obj.name);
 				} else if (hitType == 2) {
 					//in case of friendly fire
-					print ("Friendly Fire");
+					print("Friendly Fire");
 				}
 				
 				//if an object is hit
 			} else {
 				//Instantiate sparks
-				GameObject spark = (GameObject)Instantiate(Resources.Load("Prefabs/Sparks"), hit.point, Quaternion.LookRotation(hit.normal));
+				GameObject spark = (GameObject)Instantiate(Resources.Load("Prefabs/Sparks"));
+				spark.transform.position = hit.point;
+				spark.transform.rotation = Quaternion.LookRotation(hit.normal);
 				
 				//If collision is within skin depth
 				if ((hit.point - holdPoint.position).magnitude < (skinPoint.position - holdPoint.position).magnitude) {
 					print("REBOUND on " + obj.name);
-					playerAtkCont.Rebound();
+					atkCtrl.Rebound();
 				}
 			}
+		}
+	}
+
+	//HACK
+	//in case hand hits before blade
+	void OnTriggerEnter(Collider other) {
+		GameObject obj = other.gameObject;
+		//if an enemy is hit
+		if (obj.tag == "Enemy" || obj.tag == "Player") {
+			int hitType = atkCtrl.Hit(obj, damage);
+			if (hitType == 1) {
+				//Instantiate blood
+				GameObject blood = (GameObject)Instantiate(Resources.Load("Prefabs/Blood"));
+				blood.GetComponent<BloodDestroy>().origin = transform.position;
+				blood.transform.parent = transform;
+				
+				print("HIT on " + obj.name);
+			} else if (hitType == 0) {
+				print("PARRY by " + obj.name);
+				//Instantiate sparks
+				GameObject spark = (GameObject)Instantiate(Resources.Load("Prefabs/Sparks"));
+				spark.transform.position = transform.position;
+			} else if (hitType == 2) {
+				//print("Friendly Fire");
+			}
+			
+			//if an object is hit
+		} else {
+			/*
+			//Instantiate sparks
+			GameObject spark = (GameObject)Instantiate(Resources.Load("Prefabs/Sparks"));
+			spark.transform.position = other.contacts[0].point;
+			spark.transform.rotation = Quaternion.LookRotation(other.contacts[0].normal);
+			*/
 		}
 	}
 }

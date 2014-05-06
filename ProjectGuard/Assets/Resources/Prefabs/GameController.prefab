@@ -11,6 +11,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400004}
+  - 114: {fileID: 11400006}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -41,6 +42,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToReviveInGhostMode: 30
+  deathScreen: {fileID: 2800000, guid: d5f8c4a405a8d92418f60f31d6dfe146, type: 3}
+  fadeInSpeed: .5
+  screenTime: 0
+  fadeOutSpeed: 1
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -63,6 +68,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b55114f62a7024b2b884c46f696207c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f7f14020950b04d8ecceb6860e4729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &100100000

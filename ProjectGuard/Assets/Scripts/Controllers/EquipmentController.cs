@@ -1,15 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum ItemType
-{
+public enum ItemType {
 	Weapon,
 	Helm
 }
 ;
 
-public class EquipmentController : MonoBehaviour
-{
+public class EquipmentController : MonoBehaviour {
 	public GameObject currentWeapon;
 	private GameObject currentHelm;
 	public Transform hand;
@@ -19,13 +17,12 @@ public class EquipmentController : MonoBehaviour
 
 	void Start() {
 		if (hand == null) {
-			hand = transform.Find ("Model").Find("Hand");
+			hand = transform.Find("Model").Find("Hand");
 		}
 	}
 	
 	// Update is called once per frame
-	void LateUpdate ()
-	{
+	void LateUpdate() {
 		/*if (hasWeaponEquipped) {
 			currentWeapon.transform.position = hand.position + (currentWeapon.transform.position - holdPoint.position);
 			currentWeapon.transform.rotation = hand.rotation;
@@ -33,13 +30,12 @@ public class EquipmentController : MonoBehaviour
 		}*/
 	}
 		
-	public void Equip (GameObject weapon)
-	{
+	public void Equip(GameObject weapon) {
 		currentWeapon = weapon;
-		currentWeapon.rigidbody.isKinematic = true;
+		//currentWeapon.rigidbody.isKinematic = true;
 		currentWeapon.rigidbody.useGravity = false;
 		currentWeapon.transform.parent = hand;
-		holdPoint = weapon.transform.Find ("HoldPoint");
+		holdPoint = weapon.transform.Find("HoldPoint");
 
 
 		//currentWeapon.transform.rotation = Quaternion.Euler(Vector3.zero);
@@ -47,22 +43,20 @@ public class EquipmentController : MonoBehaviour
 		//currentWeapon.transform.position = Vector3.zero;
 		currentWeapon.transform.position = hand.position + (currentWeapon.transform.position - holdPoint.position);
 		
-		Invoke ("InvokedWeaponEquipFlag", 0.1f);
+		Invoke("InvokedWeaponEquipFlag", 0.1f);
 	}
 	
-	private void InvokedWeaponEquipFlag ()
-	{
+	private void InvokedWeaponEquipFlag() {
 		hasWeaponEquipped = true;
 	}
 		
-	public void Drop (ItemType type)
-	{
+	public void Drop(ItemType type) {
 		// If there is a weapon equipped, and player is not in the middle of an attack
 		if (type == ItemType.Weapon && hasWeaponEquipped &&
-			!this.GetComponent<AttackController> ().inAnAttack) {
+			!this.GetComponent<AttackController>().inAnAttack) {
 		    		
-			currentWeapon.GetComponent<Weapon> ().Dropped ();
-			currentWeapon.rigidbody.isKinematic = false;
+			currentWeapon.GetComponent<Weapon>().Dropped();
+			//currentWeapon.rigidbody.isKinematic = false;
 			currentWeapon.rigidbody.useGravity = true;
 			hasWeaponEquipped = false;
 			currentWeapon = null;
@@ -83,13 +77,11 @@ public class EquipmentController : MonoBehaviour
 		set { m_hasHelmEquipped = value;}
 	}
 
-    public float GetWeaponRange()
-    {
-        if (hasWeaponEquipped)
-        {
-            //HACK
-            return 2.4f;
-        }
-        return 0f;
-    }
+	public float GetWeaponRange() {
+		if (hasWeaponEquipped) {
+			//HACK
+			return 2.4f;
+		}
+		return 0f;
+	}
 }
