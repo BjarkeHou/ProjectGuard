@@ -15,7 +15,7 @@ public class CalculateActionPriority : RAINAction
 	private HealthController aiHealthControl;
 	private GameObject self;
 	private GhostWorldController ghostController;
-	//private DebugAP gui;
+	private DebugAP gui; //TODO
 	private Random rand;
 	protected float selfAtkRng;
 
@@ -31,7 +31,7 @@ public class CalculateActionPriority : RAINAction
 		aiHealthControl = self.GetComponent<HealthController>();
 		ghostController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GhostWorldController>();
 		lastHealth = aiHealthControl.getCurrentHealth();
-		//gui = self.GetComponent<DebugAP>();
+		gui = self.GetComponent<DebugAP>(); //TODO
 		var eCont = self.GetComponent<EquipmentController>();
 		if (eCont != null)
 			selfAtkRng = eCont.GetWeaponRange();
@@ -45,7 +45,7 @@ public class CalculateActionPriority : RAINAction
 
 		actionVector = DecisionParameters(ai, actionVector);
 
-		//gui.SetAPVals(actionVector);
+		gui.SetAPVals(actionVector); //TODO
 
 		double max = actionVector.Values.Max();
 		List<KeyValuePair<ActionType, double>> highest = actionVector.Where(e => Math.Abs(e.Value - max) < 0.001).ToList();
@@ -77,17 +77,29 @@ public class CalculateActionPriority : RAINAction
 		if (player != null)
 		{
 			// Player Dependant Parameters:
-			//Player Situation
+            //Player Situation
+            PlayerAspect aspect = player.GetComponent<PlayerAspect>();
 			// - moving
-			//TODO PA Moving
-			// - standing still
-			//TODO PA Standing Still
-			// - attacking
-			//TODO PA Attacking
+		    if (aspect.IsPlayerMoving())
+            {
+                PlayerMoving(actionVector);
+                sitB.Append("Player Moving\n");
+            }
+            // - standing still
+		    else
+            {
+                PlayerStandStill(actionVector);
+                sitB.Append("Player Standing Still\n");
+            }
+
+            // - attacking
+		    if (aspect.IsPlayerAttacking())
+            {
+                PlayerAttacking(actionVector);
+                sitB.Append("Player Is Attacking\n");
+            }
 			// - Player Health
-			//TODO PA Player Health
-			// - Cannot detect
-			//TODO PA Cannot Detect
+			//TODO PA Player Health - In doubt as to whether to include
 
 			// - distance from player
 			float distToPlayer = Vector3.Distance(self.transform.position, player.transform.position);
@@ -177,7 +189,7 @@ public class CalculateActionPriority : RAINAction
 
 		lastHealth = aiHealthControl.getCurrentHealth();
 
-		//gui.SetCurrentParameters(sitB.ToString());
+		gui.SetCurrentParameters(sitB.ToString()); //TODO
 
 		/*foreach (ActionType at in actionVector.Keys.ToList())
         {
@@ -189,7 +201,40 @@ public class CalculateActionPriority : RAINAction
 		return actionVector;
 	}
 
-	protected virtual void AtOrigin(Dictionary<ActionType, double> actionVector)
+    private void PlayerAttacking(Dictionary<ActionType, double> actionVector)
+    {
+        actionVector[ActionType.Engage] /= 8;
+        actionVector[ActionType.Dodge] *= 16;
+        actionVector[ActionType.Attack] /= 4;
+        actionVector[ActionType.Search] *= 1;
+        actionVector[ActionType.StandStill] /= 32;
+        actionVector[ActionType.Wander] /= 4;
+        actionVector[ActionType.Return] *= 1;
+    }
+
+    private void PlayerStandStill(Dictionary<ActionType, double> actionVector)
+    {
+        actionVector[ActionType.Engage] *= 1;
+        actionVector[ActionType.Dodge] *= 2;
+        actionVector[ActionType.Attack] *= 4;
+        actionVector[ActionType.Search] *= 8;
+        actionVector[ActionType.StandStill] /= 4;
+        actionVector[ActionType.Wander] /= 4;
+        actionVector[ActionType.Return] /= 8;
+    }
+
+    private void PlayerMoving(Dictionary<ActionType, double> actionVector)
+    {
+        actionVector[ActionType.Engage] *= 2;
+        actionVector[ActionType.Dodge] *= 1;
+        actionVector[ActionType.Attack] /= 2;
+        actionVector[ActionType.Search] *= 4;
+        actionVector[ActionType.StandStill] /= 2;
+        actionVector[ActionType.Wander] /= 4;
+        actionVector[ActionType.Return] /= 8;
+    }
+
+    protected virtual void AtOrigin(Dictionary<ActionType, double> actionVector)
 	{
 		actionVector [ActionType.Engage] *= 1.5;
 		actionVector [ActionType.Dodge] *= 1;

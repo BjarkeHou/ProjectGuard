@@ -14,23 +14,24 @@ MonoBehaviour:
   _dataSerializer:
     _serializedData: <scriptableobject version="1.0" type="RAIN.BehaviorTrees.BTAsset"><fields><field
       value="&lt;behaviortree version=&quot;1.1&quot; repeatuntil=&quot;&quot; name=&quot;StoneManDodge&quot;&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;sequencer&quot;&gt;&lt;action
-      repeatuntil=&quot;&quot; priority=&quot;&quot; parametervalues=&quot;&quot;
-      parameters=&quot;&quot; namespace=&quot;(global)&quot; name=&quot;Choose Dodge
-      Endpoint&quot; classname=&quot;DisengagePoint&quot; /&gt;&lt;mecparam valueexpression=&quot;true&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; parametertype=&quot;boolean&quot;
-      parametername=&quot;Dodge_Backwards&quot; name=&quot;mecparam&quot; damptime=&quot;0&quot;
-      /&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;&gt;&lt;move
-      turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;move&quot; movetarget=&quot;moveTarget&quot;
-      movespeed=&quot;5&quot; facetarget=&quot;&quot; closeenoughdistance=&quot;&quot;
-      closeenoughangle=&quot;&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot;
-      succeed=&quot;all&quot; repeatuntil=&quot;success&quot; name=&quot;parallel&quot;
-      fail=&quot;any&quot;&gt;&lt;expression returnvalue=&quot;evaluate&quot; repeatuntil=&quot;&quot;
-      name=&quot;expression&quot; expression=&quot;canMove&quot; /&gt;&lt;/parallel&gt;&lt;timer
-      waitforsec=&quot;0.9&quot; returnvalue=&quot;success&quot; name=&quot;Dodge
-      Timer&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/behaviortree&gt;" type="System.String"
-      id="treeData" /><field type="System.Array" id="treeBindings" elementtype="System.String"
-      /></fields><references /></scriptableobject>
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;sequencer&quot;
+      /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
+      name=&quot;sequencer&quot;&gt;&lt;action repeatuntil=&quot;&quot; priority=&quot;&quot;
+      parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;(global)&quot;
+      name=&quot;Choose Dodge Endpoint&quot; classname=&quot;DisengagePoint&quot;
+      /&gt;&lt;mecparam valueexpression=&quot;true&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; parametertype=&quot;boolean&quot; parametername=&quot;Dodge_Backwards&quot;
+      name=&quot;mecparam&quot; damptime=&quot;0&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;any&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
+      fail=&quot;any&quot;&gt;&lt;move turnspeed=&quot;1000&quot; repeatuntil=&quot;&quot;
+      name=&quot;move&quot; movetarget=&quot;moveTarget&quot; movespeed=&quot;5&quot;
+      facetarget=&quot;&quot; closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot;
+      /&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot; repeatuntil=&quot;success&quot;
+      name=&quot;parallel&quot; fail=&quot;any&quot;&gt;&lt;expression returnvalue=&quot;evaluate&quot;
+      repeatuntil=&quot;&quot; name=&quot;expression&quot; expression=&quot;canMove&quot;
+      /&gt;&lt;/parallel&gt;&lt;timer waitforsec=&quot;0.9&quot; returnvalue=&quot;success&quot;
+      name=&quot;Dodge Timer&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/behaviortree&gt;"
+      type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
+      elementtype="System.String" /></fields><references /></scriptableobject>
     _serializedGameObjects: []
     _serializedCustomData: []
