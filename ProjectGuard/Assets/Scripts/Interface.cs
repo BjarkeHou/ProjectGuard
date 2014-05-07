@@ -3,9 +3,6 @@ using System.Collections;
 
 public class Interface : MonoBehaviour
 {
-
-	private PlayerWillController pWill;
-	private HealthController hCtrl;
 	private GameController game;
 	private Camera mainCam;
 
@@ -25,21 +22,14 @@ public class Interface : MonoBehaviour
 	public float SettingsButtonY;
 	public float CreditsButtonY;
 
-	private int prevHealth;
-	private float barAlpha;
-
 	public GameObject rezzSpot;
 	public GameObject RezzSpot { set { rezzSpot = value; } }
 
 	// Use this for initialization
 	void Start()
 	{
-		pWill = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerWillController>();
-		hCtrl = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>();
 		game = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 		mainCam = GameObject.FindWithTag("MainCamera").camera;
-
-		prevHealth = hCtrl.getCurrentHealth();
 
 		rezzSpot = GameObject.FindWithTag("Player");
 	}
