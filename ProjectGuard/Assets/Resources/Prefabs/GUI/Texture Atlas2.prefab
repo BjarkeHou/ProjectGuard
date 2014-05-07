@@ -48,8 +48,8 @@ MonoBehaviour:
       width: .275390625
       height: .0693359375
     border:
-      m_Left: 0
-      m_Right: 0
+      m_Left: 32
+      m_Right: 32
       m_Top: 0
       m_Bottom: 0
     rotated: 0
@@ -82,8 +82,8 @@ MonoBehaviour:
       width: .275390625
       height: .0693359375
     border:
-      m_Left: 0
-      m_Right: 0
+      m_Left: 32
+      m_Right: 32
       m_Top: 0
       m_Bottom: 0
     rotated: 0
@@ -99,8 +99,8 @@ MonoBehaviour:
       width: .275390625
       height: .0693359375
     border:
-      m_Left: 0
-      m_Right: 0
+      m_Left: 32
+      m_Right: 32
       m_Top: 0
       m_Bottom: 0
     rotated: 0
