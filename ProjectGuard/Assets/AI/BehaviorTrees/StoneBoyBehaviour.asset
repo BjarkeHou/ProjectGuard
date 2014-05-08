@@ -73,13 +73,21 @@ MonoBehaviour:
       /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
       priority=&quot;&quot; name=&quot;Search&quot; constraint=&quot;ActionPriority
       == 3&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
-      name=&quot;TODO - TODO - TODO&quot;&gt;&lt;timer waitforsec=&quot;0.3&quot;
-      returnvalue=&quot;success&quot; priority=&quot;&quot; name=&quot;timer&quot;
-      /&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;Stand Still&quot; constraint=&quot;ActionPriority
-      == 4&quot;&gt;&lt;timer waitforsec=&quot;0.3&quot; returnvalue=&quot;success&quot;
-      name=&quot;timer&quot; /&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;Wander&quot; constraint=&quot;ActionPriority
+      name=&quot;TODO - TODO - TODO&quot; /&gt;&lt;selector usepriorities=&quot;False&quot;
+      repeatuntil=&quot;&quot; name=&quot;selector&quot;&gt;&lt;constraint repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;not at location, timer not up&quot; constraint=&quot;&quot;
+      /&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;at
+      location, timer not up&quot; constraint=&quot;&quot; /&gt;&lt;constraint repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;timer up&quot; constraint=&quot;&quot; /&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;no last known location
+      found&quot; constraint=&quot;&quot;&gt;&lt;timer waitforsec=&quot;0.3&quot;
+      returnvalue=&quot;success&quot; name=&quot;timer&quot; /&gt;&lt;/constraint&gt;&lt;timer
+      waitforsec=&quot;0.3&quot; returnvalue=&quot;success&quot; priority=&quot;&quot;
+      name=&quot;timer&quot; /&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;Stand Still&quot;
+      constraint=&quot;ActionPriority == 4&quot;&gt;&lt;timer waitforsec=&quot;0.3&quot;
+      returnvalue=&quot;success&quot; name=&quot;timer&quot; /&gt;&lt;/constraint&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;Wander&quot; constraint=&quot;ActionPriority
       == 5&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
       name=&quot;parallel&quot;&gt;&lt;action repeatuntil=&quot;&quot; priority=&quot;&quot;
       parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;(global)&quot;

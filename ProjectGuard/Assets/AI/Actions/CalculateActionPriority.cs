@@ -42,7 +42,6 @@ public class CalculateActionPriority : RAINAction
 	{
 		Dictionary<ActionType, double> actionVector = Enum.GetValues(typeof(ActionType)).Cast<ActionType>().ToDictionary(at => at, at => 1.0);
 
-
 		actionVector = DecisionParameters(ai, actionVector);
 
         if(gui != null) gui.SetAPVals(actionVector); //TODO
@@ -62,6 +61,8 @@ public class CalculateActionPriority : RAINAction
 			ai.WorkingMemory.SetItem("ActionPriority", (int)highest [rVal].Key);
 
 		}
+
+        
         
 		return ActionResult.SUCCESS;
 	}
