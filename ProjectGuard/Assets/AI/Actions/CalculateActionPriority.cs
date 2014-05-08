@@ -77,7 +77,6 @@ public class CalculateActionPriority : RAINAction
 		if (player != null)
 		{
 			// Player Dependant Parameters:
-		    PlayerProfile playerProfile = player.getProfile();
             //Player Situation
             PlayerAspect aspect = player.GetComponent<PlayerAspect>();
 			// - moving
@@ -171,7 +170,7 @@ public class CalculateActionPriority : RAINAction
 		}
 
 		// - In Ghost World
-		if (ghostController.deathTransition > 0.5)
+		if (ghostController.deathTransition > 0.5 || !aiHealthControl.stillAlive())
 		{
 			InGhostWorld(actionVector);
 			sitB.Append("Ghost World\n");

@@ -57,8 +57,8 @@ MonoBehaviour:
       /&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot; repeatuntil=&quot;success&quot;
       name=&quot;parallel&quot; fail=&quot;any&quot;&gt;&lt;expression returnvalue=&quot;evaluate&quot;
       repeatuntil=&quot;&quot; name=&quot;expression&quot; expression=&quot;canMove&quot;
-      /&gt;&lt;/parallel&gt;&lt;timer waitforsec=&quot;0.9&quot; returnvalue=&quot;success&quot;
-      name=&quot;Dodge Timer&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;constraint
+      /&gt;&lt;/parallel&gt;&lt;timer waitforsec=&quot;0.5&quot; returnvalue=&quot;success&quot;
+      name=&quot;timer&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;Attack&quot; constraint=&quot;ActionPriority
       == 2&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
       name=&quot;Attack&quot;&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
@@ -67,13 +67,11 @@ MonoBehaviour:
       /&gt;&lt;mecparam valueexpression=&quot;true&quot; repeatuntil=&quot;&quot;
       priority=&quot;&quot; parametertype=&quot;boolean&quot; parametername=&quot;Attack&quot;
       name=&quot;attack&quot; damptime=&quot;0&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot;
-      succeed=&quot;any&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
-      fail=&quot;any&quot;&gt;&lt;timer waitforsec=&quot;1.2&quot; returnvalue=&quot;success&quot;
-      name=&quot;attack time&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
-      repeatuntil=&quot;success&quot; name=&quot;parallel&quot; fail=&quot;any&quot;&gt;&lt;expression
-      returnvalue=&quot;evaluate&quot; repeatuntil=&quot;&quot; name=&quot;expression&quot;
-      expression=&quot;canMove&quot; /&gt;&lt;/parallel&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;constraint
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;Search&quot; constraint=&quot;ActionPriority
+      succeed=&quot;all&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
+      name=&quot;parallel&quot; fail=&quot;any&quot;&gt;&lt;expression returnvalue=&quot;evaluate&quot;
+      repeatuntil=&quot;&quot; name=&quot;expression&quot; expression=&quot;canMove&quot;
+      /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;Search&quot; constraint=&quot;ActionPriority
       == 3&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
       name=&quot;TODO - TODO - TODO&quot;&gt;&lt;timer waitforsec=&quot;0.3&quot;
       returnvalue=&quot;success&quot; priority=&quot;&quot; name=&quot;timer&quot;
@@ -94,16 +92,18 @@ MonoBehaviour:
       /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
       name=&quot;root&quot;&gt;&lt;mecparam valueexpression=&quot;3.0&quot; repeatuntil=&quot;&quot;
       priority=&quot;&quot; parametertype=&quot;float&quot; parametername=&quot;RunForward&quot;
-      name=&quot;StartRunning&quot; damptime=&quot;0.51&quot; /&gt;&lt;move turnspeed=&quot;&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;move&quot; movetarget=&quot;moveTarget&quot;
-      movespeed=&quot;1&quot; facetarget=&quot;moveTarget&quot; closeenoughdistance=&quot;1.5&quot;
-      closeenoughangle=&quot;&quot; /&gt;&lt;mecparam valueexpression=&quot;0.0&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; parametertype=&quot;float&quot;
-      parametername=&quot;RunForward&quot; name=&quot;Stop Running&quot; damptime=&quot;0&quot;
-      /&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;timer waitforsec=&quot;1&quot;
-      returnvalue=&quot;success&quot; priority=&quot;&quot; name=&quot;Don't Wander&quot;
-      /&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;Return&quot; constraint=&quot;ActionPriority
+      name=&quot;StartRunning&quot; damptime=&quot;0.51&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;any&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
+      fail=&quot;any&quot;&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
+      name=&quot;move&quot; movetarget=&quot;moveTarget&quot; movespeed=&quot;1&quot;
+      facetarget=&quot;moveTarget&quot; closeenoughdistance=&quot;1.5&quot; closeenoughangle=&quot;&quot;
+      /&gt;&lt;timer waitforsec=&quot;1&quot; returnvalue=&quot;success&quot; name=&quot;timer&quot;
+      /&gt;&lt;/parallel&gt;&lt;mecparam valueexpression=&quot;0.0&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; parametertype=&quot;float&quot; parametername=&quot;RunForward&quot;
+      name=&quot;Stop Running&quot; damptime=&quot;0&quot; /&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;timer
+      waitforsec=&quot;1&quot; returnvalue=&quot;success&quot; priority=&quot;&quot;
+      name=&quot;Don't Wander&quot; /&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;Return&quot; constraint=&quot;ActionPriority
       == 6&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
       name=&quot;sequencer&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;expression&quot; expression=&quot;moveTarget
