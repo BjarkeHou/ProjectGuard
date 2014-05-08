@@ -31,7 +31,7 @@ Material:
       data:
         first:
           name: _Transition
-        second: .945551932
+        second: 0
       data:
         first:
           name: _BlueShift
@@ -47,11 +47,11 @@ Material:
       data:
         first:
           name: _OverlayAlpha
-        second: 1.0000726
+        second: .5
       data:
         first:
           name: _DeathTimer
-        second: 1
+        second: 0
       data:
         first:
           name: _RevivalRange
