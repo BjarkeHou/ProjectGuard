@@ -43,10 +43,10 @@ MonoBehaviour:
   - name: bar-blood
     region:
       serializedVersion: 2
-      x: 0
-      y: .875976562
+      x: .243652344
+      y: .631835938
       width: .275390625
-      height: .0693359375
+      height: .0346679688
     border:
       m_Left: 32
       m_Right: 32
@@ -60,10 +60,10 @@ MonoBehaviour:
   - name: bar-seperator
     region:
       serializedVersion: 2
-      x: .704101562
-      y: .55859375
+      x: .243652344
+      y: .588867188
       width: .0239257812
-      height: .0625
+      height: .03125
     border:
       m_Left: 0
       m_Right: 0
@@ -77,10 +77,10 @@ MonoBehaviour:
   - name: bar-spirit_world
     region:
       serializedVersion: 2
-      x: .460449219
-      y: .700195312
+      x: .520019531
+      y: .631835938
       width: .275390625
-      height: .0693359375
+      height: .0346679688
     border:
       m_Left: 32
       m_Right: 32
@@ -94,10 +94,10 @@ MonoBehaviour:
   - name: bar-will
     region:
       serializedVersion: 2
-      x: .276367188
-      y: .875976562
+      x: 0
+      y: .667480469
       width: .275390625
-      height: .0693359375
+      height: .0346679688
     border:
       m_Left: 32
       m_Right: 32
@@ -111,10 +111,10 @@ MonoBehaviour:
   - name: button_hovered
     region:
       serializedVersion: 2
-      x: .282226562
-      y: .416992188
+      x: .500976562
+      y: .561035156
       width: .242675781
-      height: .139648438
+      height: .0698242188
     border:
       m_Left: 95
       m_Right: 95
@@ -128,10 +128,10 @@ MonoBehaviour:
   - name: button_normal
     region:
       serializedVersion: 2
-      x: .460449219
-      y: .55859375
+      x: .744628906
+      y: .561035156
       width: .242675781
-      height: .139648438
+      height: .0698242188
     border:
       m_Left: 95
       m_Right: 95
@@ -145,10 +145,10 @@ MonoBehaviour:
   - name: button_pressed
     region:
       serializedVersion: 2
-      x: .525878906
-      y: .416992188
+      x: 0
+      y: .588867188
       width: .242675781
-      height: .139648438
+      height: .0698242188
     border:
       m_Left: 95
       m_Right: 95
@@ -162,10 +162,10 @@ MonoBehaviour:
   - name: dialogue-box2
     region:
       serializedVersion: 2
-      x: 0
-      y: .564453125
+      x: .500976562
+      y: .282226562
       width: .459472656
-      height: .309570312
+      height: .154785156
     border:
       m_Left: 0
       m_Right: 0
@@ -179,10 +179,10 @@ MonoBehaviour:
   - name: Game_Logo3
     region:
       serializedVersion: 2
-      x: .282226562
-      y: 0
+      x: 0
+      y: .380371094
       width: .5
-      height: .220703125
+      height: .110351562
     border:
       m_Left: 0
       m_Right: 0
@@ -196,10 +196,10 @@ MonoBehaviour:
   - name: test2_0
     region:
       serializedVersion: 2
-      x: 0
+      x: .500976562
       y: 0
       width: .28125
-      height: .5625
+      height: .28125
     border:
       m_Left: 0
       m_Right: 0
@@ -208,6 +208,57 @@ MonoBehaviour:
     rotated: 0
     sizeInPixels: {x: 576, y: 576}
     textureGUID: 035facf5fe9644de1a8e9f0221bd283f
+    deleted: 0
+    texture: {fileID: 0}
+  - name: text-hover
+    region:
+      serializedVersion: 2
+      x: .500976562
+      y: .437988281
+      width: .302734375
+      height: .122070312
+    border:
+      m_Left: 112
+      m_Right: 92
+      m_Top: 73
+      m_Bottom: 79
+    rotated: 0
+    sizeInPixels: {x: 620, y: 250}
+    textureGUID: bc7d62b6b3efd4987929c7a2e981bd43
+    deleted: 0
+    texture: {fileID: 0}
+  - name: text-large
+    region:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: .5
+      height: .215332031
+    border:
+      m_Left: 103
+      m_Right: 93
+      m_Top: 83
+      m_Bottom: 92
+    rotated: 0
+    sizeInPixels: {x: 1024, y: 441}
+    textureGUID: cb9652ea511f848c2b033bff92d9ec65
+    deleted: 0
+    texture: {fileID: 0}
+  - name: text-medium
+    region:
+      serializedVersion: 2
+      x: 0
+      y: .216308594
+      width: .5
+      height: .163085938
+    border:
+      m_Left: 100
+      m_Right: 91
+      m_Top: 80
+      m_Bottom: 80
+    rotated: 0
+    sizeInPixels: {x: 1024, y: 334}
+    textureGUID: 94c55f356d2df4e91ae9ae0659e34ec4
     deleted: 0
     texture: {fileID: 0}
   - name: will-interface
@@ -230,10 +281,10 @@ MonoBehaviour:
   - name: will-interface2
     region:
       serializedVersion: 2
-      x: .282226562
-      y: .22265625
+      x: 0
+      y: .491699219
       width: .5
-      height: .192382812
+      height: .0961914062
     border:
       m_Left: 0
       m_Right: 0

@@ -5,8 +5,7 @@ public class TrapDisarm : MonoBehaviour
 {
 
 	private GameController game;
-	public GUISkin gui_Skin;
-	public bool showTrapPrompt = false;
+	private GUIController gui;
 	private bool canBeDisarmed = false;
 	public bool CanBeDisarmed { get { return canBeDisarmed; } }
 	
@@ -14,27 +13,28 @@ public class TrapDisarm : MonoBehaviour
 	void Start()
 	{
 		game = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+		gui = GameObject.Find("UI Root").GetComponent<GUIController>();
 	}
 	
 	// Update is called once per frame
 	void Update()
 	{
 		if (!game.isInGhostMode || game.isPaused || game.isInDialogMode)
-			showTrapPrompt = canBeDisarmed = false;
+			gui.showDisarmTrapPrompt = canBeDisarmed = false;
 	}
 	
 	void OnMouseEnter()
 	{
 		if (game.isInGhostMode && !game.isPaused && !game.isInDialogMode)
 		{
-			showTrapPrompt = true;
+			gui.showDisarmTrapPrompt = true;
 			canBeDisarmed = true;
 		}
 	}
 	
 	void OnMouseExit()
 	{
-		showTrapPrompt = false;
+		gui.showDisarmTrapPrompt = false;
 		canBeDisarmed = false;
 	}
 }

@@ -83,7 +83,7 @@ public class TrapTrigger : MonoBehaviour
 	{
 		if (disarm.CanBeDisarmed)
 		{	
-			disarm.showTrapPrompt = false;
+			GameObject.Find("UI Root").GetComponent<GUIController>().showDisarmTrapPrompt = false;
 			isDisarmed = true;
 			collider.enabled = false;
 			print("Trap disarmed");
