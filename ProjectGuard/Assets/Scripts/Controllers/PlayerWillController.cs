@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerWillController : MonoBehaviour {
+public class PlayerWillController : MonoBehaviour
+{
 
 	private HealthController hCtrl;
 
@@ -17,7 +18,7 @@ public class PlayerWillController : MonoBehaviour {
 	private float regenTimer;
 	private float maxWill;
 	private float curMaxWill;
-	private float curWill;
+	public float curWill;
 
 	public float MaxWill { get { return maxWill; } }
 	public float CurMaxWill { get { return curMaxWill; } }
@@ -26,7 +27,8 @@ public class PlayerWillController : MonoBehaviour {
 	private int prevHealth;
 
 	// Use this for initialization
-	void Start() {
+	void Start()
+	{
 		hCtrl = GetComponent<HealthController>();
 
 		regenTimer = Time.time;
@@ -38,18 +40,23 @@ public class PlayerWillController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update() {
+	void Update()
+	{
 		//if there is a change in health, check if the player has gone below the current will
-		if (hCtrl.getCurrentHealth() != prevHealth) {
-			if (hCtrl.getCurrentHealth() < prevHealth && curWill + hCtrl.LastDamageTaken < 0) {
+		if (hCtrl.getCurrentHealth() != prevHealth)
+		{
+			if (hCtrl.getCurrentHealth() < prevHealth && curWill + hCtrl.LastDamageTaken < 0)
+			{
 				hCtrl.adjustCurrentHealth(-hCtrl.getMaxHealth());
-			} else {
+			} else
+			{
 				//curWill += hCtrl.LastDamageTaken;
 			}
 			prevHealth = hCtrl.getCurrentHealth();
 		}
 
-		if (Time.time > regenTimer + regenCD && curWill < curMaxWill) {
+		if (Time.time > regenTimer + regenCD && curWill < curMaxWill)
+		{
 			curWill += regenSpeed * Time.deltaTime;
 		}
 
@@ -57,9 +64,11 @@ public class PlayerWillController : MonoBehaviour {
 		curMaxWill = hCtrl.getCurrentHealth();
 
 		//regen current will
-		if (curWill > curMaxWill) {
+		if (curWill > curMaxWill)
+		{
 			curWill = curMaxWill;
-		} else if (curWill < 0) {
+		} else if (curWill < 0)
+		{
 			curWill = 0;
 		}
 
@@ -69,28 +78,36 @@ public class PlayerWillController : MonoBehaviour {
 		//anim.SetFloat("curWill", 1 - Mathf.InverseLerp(0, maxWill, curWill));
 	}
 
-	public void Attack() {
-		if (Time.time > depleteTimer) {
+	public void Attack()
+	{
+		if (Time.time > depleteTimer)
+		{
 			depleteTimer = Time.time + 0.1f;
-			if (GetComponentInChildren<Weapon>()) {
+			if (GetComponentInChildren<Weapon>())
+			{
 				curWill += GetComponentInChildren<Weapon>().attackWillCost; 
-			} else {
+			} else
+			{
 				curWill += handAttackAdj;
 			}
 			regenTimer = Time.time;
 		}
 	}
 
-	public void Parry() {
-		if (Time.time > depleteTimer) {
+	public void Parry()
+	{
+		if (Time.time > depleteTimer)
+		{
 			depleteTimer = Time.time + 0.1f;
 			curWill += parryAdj;
 			regenTimer = Time.time;
 		}
 	}
 
-	public void Dodge() {
-		if (Time.time > depleteTimer) {
+	public void Dodge()
+	{
+		if (Time.time > depleteTimer)
+		{
 			depleteTimer = Time.time + 0.1f;
 			curWill += dodgeAdj;
 			regenTimer = Time.time;

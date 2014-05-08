@@ -5,16 +5,16 @@ public class TrapTrigger : MonoBehaviour
 {
 
 	private TrapController trapCtrl;
+	private TrapDisarm disarm;
 	private GhostWorldController ghostCtrl;
 	private GameObject player;
 	
 	private bool isDisarmed = false;
-	
+
 	public float disarmTime;
 	public float disarmRange;
 
 	public AudioClip trapTrigger;
-	public AudioClip trapDisarm;
 
 	// Use this for initialization
 	void Start()
@@ -23,6 +23,8 @@ public class TrapTrigger : MonoBehaviour
 		ghostCtrl = GameObject.Find("GameController").GetComponent<GhostWorldController>();
 
 		player = GameObject.FindGameObjectWithTag("Player");
+
+		disarm = transform.Find("Disarm").GetComponent<TrapDisarm>();
 	}
 	
 	void Update()
@@ -34,7 +36,7 @@ public class TrapTrigger : MonoBehaviour
 //			print(isDisarmed);
 //			print(Vector3.Distance(this.transform.position, player.transform.position));
 		}
-		if (trapCtrl.canBeDisarmed && Input.GetKey(KeyCode.E) && !isDisarmed && Vector3.Distance(this.transform.position, player.transform.position) < disarmRange)
+		if (disarm.CanBeDisarmed && Input.GetKey(KeyCode.E) && !isDisarmed && Vector3.Distance(this.transform.position, player.transform.position) < disarmRange)
 		{
 			Disarm();
 		}
@@ -72,23 +74,23 @@ public class TrapTrigger : MonoBehaviour
 		}
 	}
 
+	void OnMouseEnter()
+	{
+		print("weeee");
+	}
+
 	public void Disarm()
 	{
-		if (trapCtrl.canBeDisarmed)
+		if (disarm.CanBeDisarmed)
 		{	
+			disarm.showTrapPrompt = false;
 			isDisarmed = true;
 			collider.enabled = false;
-			audio.clip = trapDisarm;
-			audio.Play();
 			print("Trap disarmed");
 			
 			// Make particles here
-			GameObject deathSmoke = (GameObject)Instantiate(Resources.Load("Prefabs/DeathSmoke")) as GameObject;
-			deathSmoke.GetComponent<AudioSource>().enabled = false;
-			deathSmoke.transform.position = transform.position;
-			
-			trapCtrl.GetComponent<BoxCollider>().enabled = false;
-	
+			GameObject disarmSmoke = (GameObject)Instantiate(Resources.Load("Prefabs/DisarmSmoke")) as GameObject;
+			disarmSmoke.transform.position = transform.position;
 			Destroy(gameObject);
 		}
 	}

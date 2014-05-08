@@ -30,7 +30,7 @@ public class DialogueLoader : MonoBehaviour
             Debug.Log(speechelement["text"].InnerText);
         }
         */
-        //Debug.Log(GetDialogueNode("BrotherAhead").First().Text);
+		//Debug.Log(GetDialogueNode("BrotherAhead").First().Text);
 
 	}
 	
@@ -68,7 +68,6 @@ public class DialogueLoader : MonoBehaviour
 	{
 		if (json != null)
 		{
-			JArray relevantDialogue = (JArray)json ["dialogs"] [dialogueId];
 			return json ["dialogs"] [dialogueId].Any();
 		}
 

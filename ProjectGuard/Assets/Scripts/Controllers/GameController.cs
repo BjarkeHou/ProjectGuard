@@ -5,11 +5,12 @@ public class GameController : MonoBehaviour
 {
 	
 	public float timeToReviveInGhostMode;
+	public float timeLeftToReviveFromGhostMode;
 	
 	private bool m_isPaused = false;
 	private bool m_isInGhostMode = false;
 	private bool m_isInDialogMode = false;
-	private float m_timeLeftToReviveFromGhostMode;
+
 	private bool lunaChange = false;
 	public bool LunaChange { set { lunaChange = value; } }
 
@@ -41,14 +42,8 @@ public class GameController : MonoBehaviour
 		set
 		{ 
 			m_isInGhostMode = value;
-			m_timeLeftToReviveFromGhostMode = timeToReviveInGhostMode;
+			timeLeftToReviveFromGhostMode = timeToReviveInGhostMode;
 		}
-	}
-	
-	public float timeLeftToReviveFromGhostMode
-	{
-		get{ return m_timeLeftToReviveFromGhostMode;}
-		set{ m_timeLeftToReviveFromGhostMode = value; }
 	}
 
 	void Start()
@@ -68,8 +63,8 @@ public class GameController : MonoBehaviour
 			{
 				factor = 0.2f;
 			}
-			m_timeLeftToReviveFromGhostMode -= Time.deltaTime * factor;
-			if (m_timeLeftToReviveFromGhostMode < 0)
+			timeLeftToReviveFromGhostMode -= Time.deltaTime * factor;
+			if (timeLeftToReviveFromGhostMode < 0)
 			{
 				print("GAME FUCKING OVER!");
 				Time.timeScale = 0;
@@ -128,7 +123,7 @@ public class GameController : MonoBehaviour
 						}
 					}
 
-					m_timeLeftToReviveFromGhostMode = timeToReviveInGhostMode;
+					timeLeftToReviveFromGhostMode = timeToReviveInGhostMode;
 				} else if (alpha > 0)
 				{
 					//fade out
