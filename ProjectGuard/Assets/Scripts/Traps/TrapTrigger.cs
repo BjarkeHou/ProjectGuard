@@ -33,7 +33,6 @@ public class TrapTrigger : MonoBehaviour {
 //			print(Vector3.Distance(this.transform.position, player.transform.position));
 		}
 		if (disarm.CanBeDisarmed && Input.GetKey(KeyCode.E) && !isDisarmed && Vector3.Distance(this.transform.position, player.transform.position) < disarmRange) {
-			print("wee");
 			Disarm();
 		}
 	}
