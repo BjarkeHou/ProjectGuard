@@ -11,7 +11,7 @@ public class DeathSpot : MonoBehaviour {
 	// Use this for initialization
 	void Start() {
 		game = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
-		GameObject.Find ("GUI").GetComponent<Interface>().RezzSpot = gameObject;
+		GameObject.Find("GUI").GetComponent<Interface>().RezzSpot = gameObject;
 	}
 
 	void Update() {
