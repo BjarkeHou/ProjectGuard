@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1227330239, guid: 0afa4843f495f6b4690c9bab57d33da6, type: 3}
+  m_Name: BasicStructure
+  m_EditorClassIdentifier: 
+  _dataSerializer:
+    _serializedData: <scriptableobject version="1.0" type="RAIN.BehaviorTrees.BTAsset"><fields><field
+      value="&lt;behaviortree version=&quot;1.1&quot; repeatuntil=&quot;&quot; name=&quot;BasicStructure&quot;&gt;&lt;parallel
+      tiebreaker=&quot;succeed&quot; succeed=&quot;all&quot; repeatuntil=&quot;&quot;
+      name=&quot;root&quot; fail=&quot;any&quot;&gt;&lt;action repeatuntil=&quot;&quot;
+      parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;(global)&quot;
+      name=&quot;setInitPos&quot; classname=&quot;InitAI&quot; /&gt;&lt;detect sensor=&quot;&amp;quot;TargetSensor&amp;quot;&quot;
+      repeatuntil=&quot;running&quot; name=&quot;DetectPlayer&quot; entityobjectvariable=&quot;detectTarget&quot;
+      aspectvariable=&quot;&quot; aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;Player&amp;quot;&quot;
+      /&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot; repeatuntil=&quot;running&quot;
+      name=&quot;sequencer&quot; fail=&quot;any&quot;&gt;&lt;treebinding repeatuntil=&quot;&quot;
+      name=&quot;ActionPriority&quot; binding=&quot;AP&quot; /&gt;&lt;selector usepriorities=&quot;False&quot;
+      repeatuntil=&quot;&quot; name=&quot;SelectAction&quot;&gt;&lt;constraint repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;Engage&quot; constraint=&quot;ActionPriority
+      == 0&quot;&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;Engage Behaviour&quot;
+      binding=&quot;Engage&quot; /&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;Dodge&quot; constraint=&quot;ActionPriority
+      == 1&quot;&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;Dodge Behaviour&quot;
+      binding=&quot;Dodge&quot; /&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;Attack&quot; constraint=&quot;ActionPriority
+      == 2&quot;&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;Attack Behaviour&quot;
+      binding=&quot;Attack&quot; /&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;Search&quot; constraint=&quot;ActionPriority
+      == 3&quot;&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;Search Behaviour&quot;
+      binding=&quot;Search&quot; /&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;Stand Still&quot; constraint=&quot;ActionPriority
+      == 4&quot;&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;Stand Still
+      Behaviour&quot; binding=&quot;StandStill&quot; /&gt;&lt;/constraint&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;Wander&quot; constraint=&quot;ActionPriority
+      == 5&quot;&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;Wander Behaviour&quot;
+      binding=&quot;Wander&quot; /&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;Return&quot; constraint=&quot;ActionPriority
+      == 6&quot;&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;Return Behaviour&quot;
+      binding=&quot;Return&quot; /&gt;&lt;/constraint&gt;&lt;timer waitforsec=&quot;0.3&quot;
+      returnvalue=&quot;success&quot; priority=&quot;&quot; name=&quot;timer&quot;
+      /&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
+      type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
+      elementtype="System.String"><field value="AP" type="System.String" id="element0"
+      /><field value="Engage" type="System.String" id="element1" /><field value="Dodge"
+      type="System.String" id="element2" /><field value="Attack" type="System.String"
+      id="element3" /><field value="Search" type="System.String" id="element4" /><field
+      value="StandStill" type="System.String" id="element5" /><field value="Wander"
+      type="System.String" id="element6" /><field value="Return" type="System.String"
+      id="element7" /></field></fields><references /></scriptableobject>
+    _serializedGameObjects: []
+    _serializedCustomData: []
