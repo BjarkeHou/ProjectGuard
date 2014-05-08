@@ -45,7 +45,7 @@ public class CalculateActionPriority : RAINAction
 
 		actionVector = DecisionParameters(ai, actionVector);
 
-		gui.SetAPVals(actionVector); //TODO
+        if(gui != null) gui.SetAPVals(actionVector); //TODO
 
 		double max = actionVector.Values.Max();
 		List<KeyValuePair<ActionType, double>> highest = actionVector.Where(e => Math.Abs(e.Value - max) < 0.001).ToList();
@@ -77,6 +77,7 @@ public class CalculateActionPriority : RAINAction
 		if (player != null)
 		{
 			// Player Dependant Parameters:
+		    PlayerProfile playerProfile = player.getProfile();
             //Player Situation
             PlayerAspect aspect = player.GetComponent<PlayerAspect>();
 			// - moving
@@ -189,7 +190,7 @@ public class CalculateActionPriority : RAINAction
 
 		lastHealth = aiHealthControl.getCurrentHealth();
 
-		gui.SetCurrentParameters(sitB.ToString()); //TODO
+        if(gui != null) gui.SetCurrentParameters(sitB.ToString()); //TODO
 
 		/*foreach (ActionType at in actionVector.Keys.ToList())
         {
@@ -236,12 +237,12 @@ public class CalculateActionPriority : RAINAction
 
     protected virtual void AtOrigin(Dictionary<ActionType, double> actionVector)
 	{
-		actionVector [ActionType.Engage] *= 1.5;
+		actionVector [ActionType.Engage] *= 2;
 		actionVector [ActionType.Dodge] *= 1;
 		actionVector [ActionType.Attack] *= 1;
-		actionVector [ActionType.Search] *= 1.5;
-		actionVector [ActionType.StandStill] /= 1.5;
-		actionVector [ActionType.Wander] *= 4;
+		actionVector [ActionType.Search] *= 2;
+		actionVector [ActionType.StandStill] /= 2;
+		actionVector [ActionType.Wander] *= 8;
 		actionVector [ActionType.Return] *= 0;
 	}
 
@@ -252,81 +253,81 @@ public class CalculateActionPriority : RAINAction
 		actionVector [ActionType.Attack] *= 0;
 		actionVector [ActionType.Search] *= 0;
 		actionVector [ActionType.StandStill] *= 1;
-		actionVector [ActionType.Wander] *= 16;
-		actionVector [ActionType.Return] *= 32;
+		actionVector [ActionType.Wander] *= 32;
+		actionVector [ActionType.Return] *= 64;
 	}
 
 	protected virtual void LunaBlasted(Dictionary<ActionType, double> actionVector)
 	{
 		actionVector [ActionType.Engage] *= 0;
 		actionVector [ActionType.Dodge] *= 0;
-		actionVector [ActionType.Attack] /= 8;
+		actionVector [ActionType.Attack] /= 16;
 		actionVector [ActionType.Search] *= 0;
-		actionVector [ActionType.StandStill] *= 4;
-		actionVector [ActionType.Wander] *= 32;
+		actionVector [ActionType.StandStill] *= 8;
+		actionVector [ActionType.Wander] *= 64;
 		actionVector [ActionType.Return] *= 0;
 	}
 
 	protected virtual void TookDamage(Dictionary<ActionType, double> actionVector)
 	{
-		actionVector [ActionType.Engage] /= 1.5;
-		actionVector [ActionType.Dodge] *= 8;
+		actionVector [ActionType.Engage] /= 2;
+		actionVector [ActionType.Dodge] *= 16;
 		actionVector [ActionType.Attack] *= 1;
 		actionVector [ActionType.Search] *= 1;
-		actionVector [ActionType.StandStill] /= 8;
-		actionVector [ActionType.Wander] /= 8;
+		actionVector [ActionType.StandStill] /= 16;
+		actionVector [ActionType.Wander] /= 16;
 		actionVector [ActionType.Return] *= 1;
 	}
 
 	protected virtual void OutsideBothAttackRange(Dictionary<ActionType, double> actionVector)
 	{
-		actionVector [ActionType.Engage] *= 4;
-		actionVector [ActionType.Dodge] /= 2;
-		actionVector [ActionType.Attack] /= 8;
+		actionVector [ActionType.Engage] *= 8;
+		actionVector [ActionType.Dodge] /= 4;
+		actionVector [ActionType.Attack] /= 16;
 		actionVector [ActionType.Search] *= 0;
-		actionVector [ActionType.StandStill] /= 2;
-		actionVector [ActionType.Wander] /= 8;
+		actionVector [ActionType.StandStill] /= 4;
+		actionVector [ActionType.Wander] /= 16;
 		actionVector [ActionType.Return] *= 1;
 	}
 
 	protected virtual void InBothAttackRange(Dictionary<ActionType, double> actionVector)
 	{
-		actionVector [ActionType.Engage] /= 8;
-		actionVector [ActionType.Dodge] *= 1.5;
-		actionVector [ActionType.Attack] *= 2;
+		actionVector [ActionType.Engage] /= 16;
+		actionVector [ActionType.Dodge] *= 2;
+		actionVector [ActionType.Attack] *= 4;
 		actionVector [ActionType.Search] *= 0;
-		actionVector [ActionType.StandStill] /= 1.5;
-		actionVector [ActionType.Wander] /= 8;
-		actionVector [ActionType.Return] /= 2;
+		actionVector [ActionType.StandStill] /= 2;
+		actionVector [ActionType.Wander] /= 16;
+		actionVector [ActionType.Return] /= 4;
 	}
 
 	protected virtual void InPlayerAttackRange(Dictionary<ActionType, double> actionVector)
 	{
-		actionVector [ActionType.Engage] *= 2;
-		actionVector [ActionType.Dodge] *= 4;
-		actionVector [ActionType.Attack] /= 8;
+		actionVector [ActionType.Engage] *= 4;
+		actionVector [ActionType.Dodge] *= 8;
+		actionVector [ActionType.Attack] /= 16;
 		actionVector [ActionType.Search] *= 0;
-		actionVector [ActionType.StandStill] /= 4;
-		actionVector [ActionType.Wander] /= 8;
-		actionVector [ActionType.Return] /= 2;
+		actionVector [ActionType.StandStill] /= 8;
+		actionVector [ActionType.Wander] /= 16;
+		actionVector [ActionType.Return] /= 4;
 	}
 
 	protected virtual void InSelfAttackRange(Dictionary<ActionType, double> actionVector)
 	{
-		actionVector [ActionType.Engage] /= 8;
-		actionVector [ActionType.Dodge] /= 4;
-		actionVector [ActionType.Attack] *= 4;
+		actionVector [ActionType.Engage] /= 16;
+		actionVector [ActionType.Dodge] /= 8;
+		actionVector [ActionType.Attack] *= 8;
 		actionVector [ActionType.Search] *= 0;
-		actionVector [ActionType.StandStill] *= 1.5;
-		actionVector [ActionType.Wander] /= 8;
-		actionVector [ActionType.Return] /= 8;
+		actionVector [ActionType.StandStill] *= 2;
+		actionVector [ActionType.Wander] /= 16;
+		actionVector [ActionType.Return] /= 16;
 	}
 
 	protected virtual void LowHealth(Dictionary<ActionType, double> actionVector)
 	{
-		actionVector [ActionType.Engage] /= 1.5;
-		actionVector [ActionType.Dodge] *= 2;
-		actionVector [ActionType.Attack] *= 1.5;
+		actionVector [ActionType.Engage] /= 2;
+		actionVector [ActionType.Dodge] *= 4;
+		actionVector [ActionType.Attack] *= 2;
 		actionVector [ActionType.Search] *= 1;
 		actionVector [ActionType.StandStill] *= 1;
 		actionVector [ActionType.Wander] *= 1;
@@ -335,24 +336,24 @@ public class CalculateActionPriority : RAINAction
 
 	protected virtual void MediumHealth(Dictionary<ActionType, double> actionVector)
 	{
-		actionVector [ActionType.Engage] *= 1.5;
+		actionVector [ActionType.Engage] *= 2;
 		actionVector [ActionType.Dodge] *= 1;
-		actionVector [ActionType.Attack] *= 2;
+		actionVector [ActionType.Attack] *= 4;
 		actionVector [ActionType.Search] *= 1;
-		actionVector [ActionType.StandStill] /= 1.5;
+		actionVector [ActionType.StandStill] /= 2;
 		actionVector [ActionType.Wander] *= 1;
-		actionVector [ActionType.Return] /= 1.5;
+		actionVector [ActionType.Return] /= 2;
 	}
 
 	protected virtual void HighHealth(Dictionary<ActionType, double> actionVector)
 	{
-		actionVector [ActionType.Engage] *= 2;
-		actionVector [ActionType.Dodge] /= 1.5;
-		actionVector [ActionType.Attack] *= 4;
-		actionVector [ActionType.Search] *= 1.5;
-		actionVector [ActionType.StandStill] /= 2;
+		actionVector [ActionType.Engage] *= 4;
+		actionVector [ActionType.Dodge] /= 2;
+		actionVector [ActionType.Attack] *= 8;
+		actionVector [ActionType.Search] *= 2;
+		actionVector [ActionType.StandStill] /= 4;
 		actionVector [ActionType.Wander] *= 1;
-		actionVector [ActionType.Return] /= 2;
+		actionVector [ActionType.Return] /= 4;
 	}
 
 	protected virtual void CannotSeePlayer(Dictionary<ActionType, double> actionVector)
@@ -360,10 +361,10 @@ public class CalculateActionPriority : RAINAction
 		actionVector [ActionType.Engage] *= 0;
 		actionVector [ActionType.Dodge] *= 0;
 		actionVector [ActionType.Attack] *= 0;
-		actionVector [ActionType.Search] *= 4;
-		actionVector [ActionType.StandStill] *= 2;
-		actionVector [ActionType.Wander] *= 1.5;
-		actionVector [ActionType.Return] *= 2;
+		actionVector [ActionType.Search] *= 8;
+		actionVector [ActionType.StandStill] *= 4;
+		actionVector [ActionType.Wander] *= 2;
+		actionVector [ActionType.Return] *= 4;
 	}
 
 	public override void Stop(AI ai)

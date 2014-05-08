@@ -27,12 +27,12 @@ public class HealthController : MonoBehaviour {
 	}
  
 	void Update() {
-		if (!stillAlive() && tag != "Player") {
+		if (!stillAlive() && tag != "Player" && !kill) {
 			GameObject deathSmoke = (GameObject)Instantiate(Resources.Load("Prefabs/DeathSmoke")) as GameObject;
 			deathSmoke.transform.position = transform.position;
-			if (kill) {
-				Destroy(gameObject);
-			}
+			transform.Find("Model").gameObject.SetActive(false);
+			transform.Find("Spotlight").gameObject.SetActive(false);
+			gameObject.layer = LayerMask.NameToLayer ("DeadEnemies");
 			kill = true;
 		}
 	}
