@@ -74,24 +74,15 @@ public class TrapTrigger : MonoBehaviour
 		}
 	}
 
-	void OnMouseEnter()
-	{
-		print("weeee");
-	}
-
 	public void Disarm()
-	{
-		if (disarm.CanBeDisarmed)
-		{	
-			GameObject.Find("UI Root").GetComponent<GUIController>().showDisarmTrapPrompt = false;
-			isDisarmed = true;
-			collider.enabled = false;
-			print("Trap disarmed");
+	{	
+		GameObject.Find("UI Root").GetComponent<GUIController>().showDisarmTrapPrompt = false;
+		isDisarmed = true;
+		collider.enabled = false;
+		print("Trap disarmed");
 			
-			// Make particles here
-			GameObject disarmSmoke = (GameObject)Instantiate(Resources.Load("Prefabs/DisarmSmoke")) as GameObject;
-			disarmSmoke.transform.position = transform.position;
-			Destroy(gameObject);
-		}
+		// Make particles here
+		GameObject disarmSmoke = (GameObject)Instantiate(Resources.Load("Prefabs/DisarmSmoke")) as GameObject;
+		disarmSmoke.transform.position = transform.position;
 	}
 }
