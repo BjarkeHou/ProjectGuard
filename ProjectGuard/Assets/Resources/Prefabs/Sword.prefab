@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 65: {fileID: 6500002}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HoldPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,7 +24,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400002}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TipPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400004}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SkinPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ GameObject:
   - 65: {fileID: 6500000}
   - 82: {fileID: 8200000}
   - 54: {fileID: 5400000}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sword
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -106,9 +106,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
-  m_LocalRotation: {x: .708742738, y: .705467105, z: -4.21468513e-08, w: -8.42937027e-08}
-  m_LocalPosition: {x: 112.66201, y: 1.0901041, z: 198.315567}
-  m_LocalScale: {x: .800000012, y: 1.25000012, z: 1}
+  m_LocalRotation: {x: .501156807, y: .4988406, z: .501156747, w: .498840481}
+  m_LocalPosition: {x: 38.4756889, y: .986457348, z: 19.1730289}
+  m_LocalScale: {x: .800000131, y: 1.25000012, z: 1}
   m_Children:
   - {fileID: 400000}
   - {fileID: 400004}
@@ -156,7 +156,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &6500000
 BoxCollider:
   m_ObjectHideFlags: 1

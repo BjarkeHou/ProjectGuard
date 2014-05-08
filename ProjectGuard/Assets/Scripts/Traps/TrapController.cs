@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
 public class TrapController : MonoBehaviour {
-
 	private SpearBehaviour[] spearBehav;
 	private BearBehaviour[] bearBehav;
 

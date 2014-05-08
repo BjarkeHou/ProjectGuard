@@ -48,6 +48,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 81: {fileID: 8100000}
   - 114: {fileID: 11400020}
+  - 114: {fileID: 11400022}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -2945,7 +2946,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &6500000
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -3216,6 +3217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 344bd4ae0f44342528bec260b20f9e6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   curHealth: 100
 --- !u!114 &11400010
 MonoBehaviour:
@@ -3304,12 +3306,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handAttackAdj: -10
-  dodgeAdj: 10
-  parryAdj: -20
+  dodgeAdj: 15
+  parryAdj: -15
   minAtkSp: 0
   maxAtkSp: 0
   regenCD: .300000012
   regenSpeed: 15
+  curWill: 0
 --- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3319,6 +3322,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6271be240a621e42ac8617c760790cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11400022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8403a43619318b4dbc6b5622349a4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!137 &13700000
