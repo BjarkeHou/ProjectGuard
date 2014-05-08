@@ -249,17 +249,17 @@ BlendTree:
   m_PrefabInternal: {fileID: 0}
   m_Name: Blend Tree
   m_Childs:
-  - m_Motion: {fileID: 7400000, guid: a8224bc4ce2efc746bf99854725b930e, type: 2}
+  - m_Motion: {fileID: 7400000, guid: bed863d4c02439a44b933726ba5ff569, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
-    m_TimeScale: .75
+    m_TimeScale: .25
     m_CycleOffset: 0
     m_IsAnim: 1
     m_Mirror: 0
-  - m_Motion: {fileID: 7400000, guid: a8224bc4ce2efc746bf99854725b930e, type: 2}
+  - m_Motion: {fileID: 7400000, guid: bed863d4c02439a44b933726ba5ff569, type: 2}
     m_Threshold: 1
     m_Position: {x: 0, y: 0}
-    m_TimeScale: 1.5
+    m_TimeScale: .5
     m_CycleOffset: 0
     m_IsAnim: 1
     m_Mirror: 0
@@ -369,17 +369,17 @@ BlendTree:
   m_PrefabInternal: {fileID: 0}
   m_Name: Blend Tree
   m_Childs:
-  - m_Motion: {fileID: 7400000, guid: 83f1c68df7dc6f34c82c551b7e7fd15e, type: 2}
+  - m_Motion: {fileID: 7400000, guid: d44a7e43f7cc86f44b6c8d870f53ca6f, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
-    m_TimeScale: .75
+    m_TimeScale: .5
     m_CycleOffset: 0
     m_IsAnim: 1
     m_Mirror: 0
-  - m_Motion: {fileID: 7400000, guid: 83f1c68df7dc6f34c82c551b7e7fd15e, type: 2}
+  - m_Motion: {fileID: 7400000, guid: d44a7e43f7cc86f44b6c8d870f53ca6f, type: 2}
     m_Threshold: 1
     m_Position: {x: 0, y: 0}
-    m_TimeScale: 1.5
+    m_TimeScale: .899999976
     m_CycleOffset: 0
     m_IsAnim: 1
     m_Mirror: 0
@@ -1651,10 +1651,10 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Idle
-  m_Speed: 1
+  m_Speed: .5
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 8bb0564ba20ce9e4a90ef1ce8725e531, type: 2}
+  - {fileID: 7400000, guid: 910f74e79726dab41a57f982f46263d9, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: 72, y: 48, z: 0}
   m_IKOnFeet: 0
@@ -1762,10 +1762,10 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Parry
-  m_Speed: 1
+  m_Speed: .75
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 86fb1d8628c97454bbc311e6dc8b63a3, type: 2}
+  - {fileID: 7400000, guid: 2d5d05e95ddfb2e449bae2b709176f56, type: 2}
   - {fileID: 0}
   m_ParentStateMachine: {fileID: 110758549}
   m_Position: {x: 516, y: 96, z: 0}

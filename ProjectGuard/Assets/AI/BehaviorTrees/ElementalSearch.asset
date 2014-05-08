@@ -13,11 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dataSerializer:
     _serializedData: <scriptableobject version="1.0" type="RAIN.BehaviorTrees.BTAsset"><fields><field
-      value="&lt;behaviortree version=&quot;1.1&quot; repeatuntil=&quot;&quot; name=&quot;ElementalSearch&quot;&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;root&quot;&gt;&lt;timer
-      waitforsec=&quot;0.3&quot; returnvalue=&quot;success&quot; priority=&quot;&quot;
-      name=&quot;timer&quot; /&gt;&lt;/sequencer&gt;&lt;/behaviortree&gt;" type="System.String"
-      id="treeData" /><field type="System.Array" id="treeBindings" elementtype="System.String"
-      /></fields><references /></scriptableobject>
+      value="&lt;behaviortree version=&quot;1.1&quot; repeatuntil=&quot;&quot; name=&quot;ElementalSearch&quot;
+      /&gt;" type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
+      elementtype="System.String" /></fields><references /></scriptableobject>
     _serializedGameObjects: []
     _serializedCustomData: []

@@ -2,6 +2,7 @@
 Properties {
 	_MainTex ("View", 2D) = "View" {}
 	_LightTex ("Light Map", 2D) = "Light Map" {}
+	_BGTex ("BackGround", 2D) = "Light Map" {}
 }
 
 SubShader {
@@ -17,6 +18,7 @@ SubShader {
 
 		uniform sampler2D _MainTex;
 		uniform sampler2D _LightTex;
+		uniform sampler2D _BGTex;
 		uniform float alpha;
 		
 		v2f_img vert (appdata_base v) {
@@ -30,7 +32,8 @@ SubShader {
 		{
 			fixed4 original = tex2D(_MainTex, i.uv);
 			fixed4 input = tex2D(_LightTex, i.uv);
-			original.rgb = original.rgb *input.g;
+			fixed4 BG = tex2D(_BGTex, i.uv);
+			original.rgb = (original.rgb *input.g) + (BG.rgb * (1 - input.g));
 			
 			return original;
 		}

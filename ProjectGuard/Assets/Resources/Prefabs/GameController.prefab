@@ -42,9 +42,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToReviveInGhostMode: 30
+  timeLeftToReviveFromGhostMode: 0
   deathScreen: {fileID: 2800000, guid: d5f8c4a405a8d92418f60f31d6dfe146, type: 3}
   fadeInSpeed: .5
-  screenTime: 0
+  screenTime: 2
   fadeOutSpeed: 1
 --- !u!114 &11400002
 MonoBehaviour:
