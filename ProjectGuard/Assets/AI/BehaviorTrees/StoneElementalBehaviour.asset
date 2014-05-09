@@ -23,8 +23,10 @@ MonoBehaviour:
       /&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot; repeatuntil=&quot;running&quot;
       name=&quot;sequencer&quot; fail=&quot;any&quot;&gt;&lt;action repeatuntil=&quot;&quot;
       parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;(global)&quot;
-      name=&quot;action&quot; classname=&quot;ElementalActionPriority&quot; /&gt;&lt;selector
-      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;SelectAction&quot;&gt;&lt;constraint
+      name=&quot;Action Priority&quot; classname=&quot;ElementalActionPriority&quot;
+      /&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;&quot;
+      namespace=&quot;(global)&quot; name=&quot;Perception Memory Module&quot; classname=&quot;PerceptionMemory&quot;
+      /&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;SelectAction&quot;&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;Engage&quot; constraint=&quot;ActionPriority
       == 0&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
       name=&quot;Engagement&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
@@ -53,27 +55,41 @@ MonoBehaviour:
       facetarget=&quot;detectTarget&quot; closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot;
       /&gt;&lt;action repeatuntil=&quot;&quot; priority=&quot;&quot; parametervalues=&quot;&quot;
       parameters=&quot;&quot; namespace=&quot;(global)&quot; name=&quot;In Melee Range&quot;
-      classname=&quot;CalculateActionPriority&quot; /&gt;&lt;constraint repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;constraint&quot; constraint=&quot;InMeleeRange
+      classname=&quot;InMeleeRange&quot; /&gt;&lt;selector usepriorities=&quot;False&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;selector&quot;&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;constraint&quot; constraint=&quot;InMeleeRange
       != true&quot;&gt;&lt;mecparam valueexpression=&quot;true&quot; repeatuntil=&quot;&quot;
       parametertype=&quot;boolean&quot; parametername=&quot;Throw&quot; name=&quot;Throw&quot;
-      damptime=&quot;0&quot; /&gt;&lt;/constraint&gt;&lt;mecparam valueexpression=&quot;true&quot;
+      damptime=&quot;0&quot; /&gt;&lt;/constraint&gt;&lt;yield priority=&quot;&quot;
+      name=&quot;yield&quot; /&gt;&lt;/selector&gt;&lt;mecparam valueexpression=&quot;true&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; parametertype=&quot;boolean&quot;
       parametername=&quot;Attack&quot; name=&quot;attack&quot; damptime=&quot;0&quot;
       /&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;&gt;&lt;timer
-      waitforsec=&quot;1.2&quot; returnvalue=&quot;success&quot; name=&quot;attack
-      time&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
-      repeatuntil=&quot;success&quot; name=&quot;parallel&quot; fail=&quot;any&quot;&gt;&lt;expression
-      returnvalue=&quot;evaluate&quot; repeatuntil=&quot;&quot; name=&quot;expression&quot;
-      expression=&quot;canMove&quot; /&gt;&lt;/parallel&gt;&lt;/parallel&gt;&lt;mecparam
-      valueexpression=&quot;false&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      parametertype=&quot;boolean&quot; parametername=&quot;Throw&quot; name=&quot;mecparam&quot;
-      damptime=&quot;0&quot; /&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;constraint
+      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;all&quot; repeatuntil=&quot;success&quot;
+      name=&quot;parallel&quot; fail=&quot;any&quot;&gt;&lt;expression returnvalue=&quot;evaluate&quot;
+      repeatuntil=&quot;&quot; name=&quot;expression&quot; expression=&quot;canMove&quot;
+      /&gt;&lt;/parallel&gt;&lt;/parallel&gt;&lt;mecparam valueexpression=&quot;false&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; parametertype=&quot;boolean&quot;
+      parametername=&quot;Throw&quot; name=&quot;mecparam&quot; damptime=&quot;0&quot;
+      /&gt;&lt;timer waitforsec=&quot;2&quot; returnvalue=&quot;success&quot; priority=&quot;&quot;
+      name=&quot;timer&quot; /&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;Search&quot; constraint=&quot;ActionPriority
-      == 3&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
-      name=&quot;TODO TODO TODO&quot;&gt;&lt;timer waitforsec=&quot;0.3&quot; returnvalue=&quot;success&quot;
-      priority=&quot;&quot; name=&quot;timer&quot; /&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;constraint
+      == 3&quot;&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
+      name=&quot;selector&quot;&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;no last known location found&quot; constraint=&quot;lastKnownPos
+      == null&quot;&gt;&lt;timer waitforsec=&quot;0.3&quot; returnvalue=&quot;success&quot;
+      name=&quot;timer&quot; /&gt;&lt;/constraint&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;not at location, timer
+      not up&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;&gt;&lt;move
+      turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;move to last known
+      location&quot; movetarget=&quot;lastKnownPos&quot; movespeed=&quot;&quot; facetarget=&quot;&quot;
+      closeenoughdistance=&quot;1.5&quot; closeenoughangle=&quot;&quot; /&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;success&quot; name=&quot;refound
+      player&quot; expression=&quot;detectTarget != null&quot; /&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;success&quot; name=&quot;timer
+      up&quot; expression=&quot;detectTimerOut&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;Stand Still&quot;
       constraint=&quot;ActionPriority == 4&quot;&gt;&lt;timer waitforsec=&quot;0.3&quot;
       returnvalue=&quot;success&quot; name=&quot;timer&quot; /&gt;&lt;/constraint&gt;&lt;constraint
