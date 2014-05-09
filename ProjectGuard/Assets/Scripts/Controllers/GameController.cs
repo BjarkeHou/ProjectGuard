@@ -1,14 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GameController : MonoBehaviour
-{
+public class GameController : MonoBehaviour {
 	
 	public float timeToReviveInGhostMode;
 	public float timeLeftToReviveFromGhostMode;
 
-	private float deathPenalty;
-	private float deathTimer;
+	public float deathPenalty;
+	public float deathTimer;
 	public float deathPenaltyPCT;
 	public float minimumPenalty;
 	public float additionalLunaPenalty;
@@ -29,50 +28,40 @@ public class GameController : MonoBehaviour
 	public float fadeOutSpeed;
 	private AudioSource audioS;
 	
-	public bool isPaused
-	{
+	public bool isPaused {
 		get { return m_isPaused; }
 		set { m_isPaused = value; }
 	}
-	
 
-	public bool isInDialogMode
-	{
+	public bool isInDialogMode {
 		get { return m_isInDialogMode; }
 		set { m_isInDialogMode = value; }
 	}
 	
-	public bool isInGhostMode
-	{
+	public bool isInGhostMode {
 		get { return m_isInGhostMode;}
-		set
-		{ 
+		set { 
 			m_isInGhostMode = value;
 			timeLeftToReviveFromGhostMode = timeToReviveInGhostMode - deathPenalty;
-		}
+		} 
 	}
 
-	void Start()
-	{
+	void Start() {
 		deathPenalty = 0;
 		fadeIn = true;
 		alpha = -1;
 		timer = 0;
 	}
 	
-	void Update()
-	{
+	void Update() {
 		//game over timer
-		if (isInGhostMode && !isInDialogMode)
-		{
+		if (isInGhostMode && !isInDialogMode) {
 			float factor = 1;
-			if (GameObject.FindWithTag("Player").GetComponent<CharacterController>().velocity == Vector3.zero)
-			{
+			if (GameObject.FindWithTag("Player").GetComponent<CharacterController>().velocity == Vector3.zero) {
 				factor = 0.2f;
 			}
 			timeLeftToReviveFromGhostMode -= Time.deltaTime * factor;
-			if (timeLeftToReviveFromGhostMode < 0)
-			{
+			if (timeLeftToReviveFromGhostMode < 0) {
 				print("GAME FUCKING OVER!");
 				Time.timeScale = 0;
 				Application.LoadLevel("MainMenu");
@@ -81,80 +70,66 @@ public class GameController : MonoBehaviour
 	}
 
 	//death screen
-	void OnGUI()
-	{
-		if (isInGhostMode && alpha == -1)
-		{
+	void OnGUI() {
+		if (isInGhostMode && alpha == -1) {
 			alpha = 0;							//if alpha is -1 it means that we are in the living world
 			deathTimer = Time.time;
 		}
-		if (alpha >= 0)
-		{
-			if (!lunaChange)
-			{
-				GUI.color = new Color(1, 1, 1, alpha);
-				GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), deathScreen);
-				GUI.color = new Color(1, 1, 1, 1);
+		if (alpha >= 0) {
+			if (!lunaChange) {
+				GUI.color = new Color (1, 1, 1, alpha);
+				GUI.DrawTexture(new Rect (0, 0, Screen.width, Screen.height), deathScreen);
+				GUI.color = new Color (1, 1, 1, 1);
 
-				if (fadeIn)
-				{
+				if (fadeIn) {
 					//lock player
 					GameObject.FindWithTag("Player").GetComponent<MovementController>().SetCanMove(false);
 
 					//fade screen in
 					alpha += fadeInSpeed * Time.deltaTime;
-					if (alpha >= 1)
-					{
+					if (alpha >= 1) {
 						Vector3 deathSpot = GameObject.FindWithTag("Player").transform.position;
 						//move player to checkPoint
-						if (GameObject.FindWithTag("ActiveCheckpoint") != null)
-						{
+						if (GameObject.FindWithTag("ActiveCheckpoint") != null) {
 							GameObject.FindWithTag("Player").transform.position = GameObject.FindWithTag("ActiveCheckpoint").transform.Find("Spawn").position;
-						} else
-						{
+						} else {
 							// Your dead!
 						}
 
 						//wait for screen to finish showing
-						if (timer <= 0)
-						{ //timer is -1 before deathspot has been initialized
+						if (timer <= 0) { //timer is -1 before deathspot has been initialized
 							//create respawn point where the player died
 							GameObject respawnPoint = (GameObject)Instantiate(Resources.Load("Prefabs/DeathSpot")) as GameObject;
-							respawnPoint.transform.position = new Vector3(deathSpot.x, -0.3811884f, deathSpot.z);
+							respawnPoint.transform.position = new Vector3 (deathSpot.x, -0.3811884f, deathSpot.z);
 							respawnPoint.name = "DeathSpot";
 							timer = Time.time; //deathspot has been initialized
 						}
-						if (Time.time > timer + screenTime)
-						{
+						if (Time.time > timer + screenTime) {
 							fadeIn = false;
 							timer = -1;
 						}
 					}
 
 					timeLeftToReviveFromGhostMode = timeToReviveInGhostMode - deathPenalty;
-				} else if (alpha > 0)
-				{
+					deathTimer = Time.time;
+				} else if (alpha > 0) {
 					//fade out
 					GameObject.FindWithTag("Player").GetComponent<MovementController>().SetCanMove(true);
 					alpha -= fadeOutSpeed * Time.deltaTime;
 				}
-			} else
-			{
+			} else {
 				GameObject respawnPoint = (GameObject)Instantiate(Resources.Load("Prefabs/DeathSpot")) as GameObject;
 				Transform playerSpot = GameObject.FindWithTag("Player").transform;
-				respawnPoint.transform.position = new Vector3(playerSpot.position.x, -0.3811884f, playerSpot.position.z);
+				respawnPoint.transform.position = new Vector3 (playerSpot.position.x, -0.3811884f, playerSpot.position.z);
 				alpha = -0.1f;
 			}
 
-		} else if (!isInGhostMode && alpha != -1)
-		{
+		} else if (!isInGhostMode && alpha != -1) {
 			float timeInGW = Time.time - deathTimer;
 			float penalty = timeInGW * (deathPenaltyPCT / 100);
-			if (penalty < minimumPenalty)
-			{
+			if (penalty < minimumPenalty) {
 				penalty = minimumPenalty;
-				if (lunaChange)
-				{
+				if (lunaChange) {
 					penalty += additionalLunaPenalty;
 				}
 			}
@@ -167,14 +142,12 @@ public class GameController : MonoBehaviour
 		}
 	}
 
-	public void PauseGame()
-	{
+	public void PauseGame() {
 		isPaused = true;
 		Time.timeScale = 0;
 	}
 	
-	public void UnPauseGame()
-	{
+	public void UnPauseGame() {
 		isPaused = false;
 		Time.timeScale = 1;
 	}
