@@ -38,6 +38,10 @@ public class PerceptionMemory : RAINAction
         ai.WorkingMemory.SetItem("detectTimerOut", missingTimer <= 0);
         ai.WorkingMemory.SetItem("lastKnownPos", lastKnownPosition);
 
+        //check whether the player is in dialogue
+        GameController GCont = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+        ai.WorkingMemory.SetItem("dialogue",GCont.isInDialogMode);
+
         return ActionResult.SUCCESS;
     }
 
