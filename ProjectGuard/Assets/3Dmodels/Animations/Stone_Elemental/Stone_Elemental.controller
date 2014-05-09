@@ -62,15 +62,15 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Attack
-    m_EventTreshold: 0
-    m_ExitTime: .812500119
-  - m_ConditionMode: 1
     m_ConditionEvent: Throw
     m_EventTreshold: 0
     m_ExitTime: .812500119
   - m_ConditionMode: 1
     m_ConditionEvent: CanAttack
+    m_EventTreshold: 0
+    m_ExitTime: .812500119
+  - m_ConditionMode: 2
+    m_ConditionEvent: Attack
     m_EventTreshold: 0
     m_ExitTime: .812500119
   m_Atomic: 1
@@ -181,12 +181,12 @@ Transition:
     m_ConditionEvent: Attack
     m_EventTreshold: 0
     m_ExitTime: .90625
-  - m_ConditionMode: 2
-    m_ConditionEvent: Throw
-    m_EventTreshold: 0
-    m_ExitTime: .90625
   - m_ConditionMode: 1
     m_ConditionEvent: CanAttack
+    m_EventTreshold: 0
+    m_ExitTime: .90625
+  - m_ConditionMode: 2
+    m_ConditionEvent: Throw
     m_EventTreshold: 0
     m_ExitTime: .90625
   m_Atomic: 1
