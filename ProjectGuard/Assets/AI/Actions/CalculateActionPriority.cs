@@ -44,7 +44,7 @@ public class CalculateActionPriority : RAINAction
 
 		actionVector = DecisionParameters(ai, actionVector);
 
-        if(gui != null) gui.SetAPVals(actionVector); //TODO
+		if(gui != null) gui.SetAPVals(actionVector); //TODO
 
 		double max = actionVector.Values.Max();
 		List<KeyValuePair<ActionType, double>> highest = actionVector.Where(e => Math.Abs(e.Value - max) < 0.001).ToList();
@@ -72,31 +72,31 @@ public class CalculateActionPriority : RAINAction
 		StringBuilder sitB = new StringBuilder();
 
 		//Debug.LogWarning("ActionPriority Calculated");
-        
+		
 		if (player != null)
 		{
 			// Player Dependant Parameters:
-            //Player Situation
-            PlayerAspect aspect = player.GetComponent<PlayerAspect>();
+			//Player Situation
+			PlayerAspect aspect = player.GetComponent<PlayerAspect>();
 			// - moving
-		    if (aspect.IsPlayerMoving())
-            {
-                PlayerMoving(actionVector);
-                sitB.Append("Player Moving\n");
-            }
-            // - standing still
-		    else
-            {
-                PlayerStandStill(actionVector);
-                sitB.Append("Player Standing Still\n");
-            }
+			if (aspect.IsPlayerMoving())
+			{
+				PlayerMoving(actionVector);
+				sitB.Append("Player Moving\n");
+			}
+			// - standing still
+			else
+			{
+				PlayerStandStill(actionVector);
+				sitB.Append("Player Standing Still\n");
+			}
 
-            // - attacking
-		    if (aspect.IsPlayerAttacking())
-            {
-                PlayerAttacking(actionVector);
-                sitB.Append("Player Is Attacking\n");
-            }
+			// - attacking
+			if (aspect.IsPlayerAttacking())
+			{
+				PlayerAttacking(actionVector);
+				sitB.Append("Player Is Attacking\n");
+			}
 			// - Player Health
 			//TODO PA Player Health - In doubt as to whether to include
 
@@ -122,18 +122,18 @@ public class CalculateActionPriority : RAINAction
 				sitB.Append("Outside Attack Ranges \n");
 			}
 		}
-        // - cant see player
-        else
+		// - cant see player
+		else
 		{
 			CannotSeePlayer(actionVector);
 			sitB.Append("Cannot See Player \n");
 
-            if (ai.WorkingMemory.GetItem<bool>("detectTimerOut"))
-            {
-                SearchTimerRunOut(actionVector);
-                sitB.Append("Search Timer Is Out \n");
-            }
-            
+			if (ai.WorkingMemory.GetItem<bool>("detectTimerOut"))
+			{
+				SearchTimerRunOut(actionVector);
+				sitB.Append("Search Timer Is Out \n");
+			}
+			
 		}
 
 		#region AI situation
@@ -194,63 +194,63 @@ public class CalculateActionPriority : RAINAction
 
 		lastHealth = aiHealthControl.getCurrentHealth();
 
-        if(gui != null) gui.SetCurrentParameters(sitB.ToString()); //TODO
+		if(gui != null) gui.SetCurrentParameters(sitB.ToString()); //TODO
 
 		/*foreach (ActionType at in actionVector.Keys.ToList())
-        {
-            Debug.Log(actionVector[at]);
-        }*/
+		{
+			Debug.Log(actionVector[at]);
+		}*/
 		//Debug.LogWarning(actionVector[ActionType.Engage]);
 
 		//throw new NotImplementedException();
 		return actionVector;
 	}
 
-    protected virtual void SearchTimerRunOut(Dictionary<ActionType, double> actionVector)
-    {
-        actionVector[ActionType.Engage] *= 1;
-        actionVector[ActionType.Dodge] *= 1;
-        actionVector[ActionType.Attack] *= 1;
-        actionVector[ActionType.Search] *= 0;
-        actionVector[ActionType.StandStill] *= 1;
-        actionVector[ActionType.Wander] *= 1;
-        actionVector[ActionType.Return] *= 8;
-    }
+	protected virtual void SearchTimerRunOut(Dictionary<ActionType, double> actionVector)
+	{
+		actionVector[ActionType.Engage] *= 1;
+		actionVector[ActionType.Dodge] *= 1;
+		actionVector[ActionType.Attack] *= 1;
+		actionVector[ActionType.Search] *= 0;
+		actionVector[ActionType.StandStill] *= 1;
+		actionVector[ActionType.Wander] *= 1;
+		actionVector[ActionType.Return] *= 8;
+	}
 
-    protected virtual void PlayerAttacking(Dictionary<ActionType, double> actionVector)
-    {
-        actionVector[ActionType.Engage] /= 8;
-        actionVector[ActionType.Dodge] *= 16;
-        actionVector[ActionType.Attack] /= 4;
-        actionVector[ActionType.Search] *= 1;
-        actionVector[ActionType.StandStill] /= 32;
-        actionVector[ActionType.Wander] /= 4;
-        actionVector[ActionType.Return] *= 1;
-    }
+	protected virtual void PlayerAttacking(Dictionary<ActionType, double> actionVector)
+	{
+		actionVector[ActionType.Engage] /= 8;
+		actionVector[ActionType.Dodge] *= 16;
+		actionVector[ActionType.Attack] /= 4;
+		actionVector[ActionType.Search] *= 1;
+		actionVector[ActionType.StandStill] /= 32;
+		actionVector[ActionType.Wander] /= 4;
+		actionVector[ActionType.Return] *= 1;
+	}
 
-    protected virtual void PlayerStandStill(Dictionary<ActionType, double> actionVector)
-    {
-        actionVector[ActionType.Engage] *= 1;
-        actionVector[ActionType.Dodge] *= 2;
-        actionVector[ActionType.Attack] *= 4;
-        actionVector[ActionType.Search] *= 8;
-        actionVector[ActionType.StandStill] /= 4;
-        actionVector[ActionType.Wander] /= 4;
-        actionVector[ActionType.Return] /= 8;
-    }
+	protected virtual void PlayerStandStill(Dictionary<ActionType, double> actionVector)
+	{
+		actionVector[ActionType.Engage] *= 1;
+		actionVector[ActionType.Dodge] *= 2;
+		actionVector[ActionType.Attack] *= 4;
+		actionVector[ActionType.Search] *= 8;
+		actionVector[ActionType.StandStill] /= 4;
+		actionVector[ActionType.Wander] /= 4;
+		actionVector[ActionType.Return] /= 8;
+	}
 
-    protected virtual void PlayerMoving(Dictionary<ActionType, double> actionVector)
-    {
-        actionVector[ActionType.Engage] *= 2;
-        actionVector[ActionType.Dodge] *= 1;
-        actionVector[ActionType.Attack] /= 2;
-        actionVector[ActionType.Search] *= 4;
-        actionVector[ActionType.StandStill] /= 2;
-        actionVector[ActionType.Wander] /= 4;
-        actionVector[ActionType.Return] /= 8;
-    }
+	protected virtual void PlayerMoving(Dictionary<ActionType, double> actionVector)
+	{
+		actionVector[ActionType.Engage] *= 2;
+		actionVector[ActionType.Dodge] *= 1;
+		actionVector[ActionType.Attack] /= 2;
+		actionVector[ActionType.Search] *= 4;
+		actionVector[ActionType.StandStill] /= 2;
+		actionVector[ActionType.Wander] /= 4;
+		actionVector[ActionType.Return] /= 8;
+	}
 
-    protected virtual void AtOrigin(Dictionary<ActionType, double> actionVector)
+	protected virtual void AtOrigin(Dictionary<ActionType, double> actionVector)
 	{
 		actionVector [ActionType.Engage] *= 2;
 		actionVector [ActionType.Dodge] *= 1;
