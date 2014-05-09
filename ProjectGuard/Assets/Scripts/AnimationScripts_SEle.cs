@@ -9,7 +9,7 @@ public class AnimationScripts_SEle : AnimationScripts {
 	public GameObject rockSpot;
 
 	//called form animations
-	void IniAttack() {
+    protected override void IniAttack() {
 		isAttacking = true;
 		//clear hits
 		animated.GetComponent<AttackController>().targetsHit.Clear();
@@ -69,7 +69,7 @@ public class AnimationScripts_SEle : AnimationScripts {
 		ammo.rigidbody.AddForce(dir.normalized * 10, ForceMode.Impulse);
 	}
 
-	void ResetBools() {
+    protected override void ResetBools() {
 		//don't attack again
 		GetComponent<Animator>().SetBool("Attack", false);
 		//can't attack

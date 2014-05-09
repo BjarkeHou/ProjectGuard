@@ -31027,7 +31027,14 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.5333333
+  - time: 1.56666672
+    functionName: CanMove
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.56666672
     functionName: CanRotate
     data: 
     objectReferenceParameter: {fileID: 0}
@@ -31036,13 +31043,6 @@ AnimationClip:
     messageOptions: 0
   - time: 1.56666672
     functionName: CanAttack
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 1.60000002
-    functionName: CanMove
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
