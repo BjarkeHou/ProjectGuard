@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
 	
 	public void CreditsClicked()
 	{
-		Application.LoadLevel("Credits");
+		Application.LoadLevel("End");
 	}
 	
 	public void ExitClicked()
