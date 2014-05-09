@@ -43,9 +43,9 @@ MonoBehaviour:
   - name: 1-hovered
     region:
       serializedVersion: 2
-      x: .76953125
-      y: .922851562
-      width: .209472656
+      x: .741210938
+      y: .16015625
+      width: .104736328
       height: .0703125
     border:
       m_Left: 77
@@ -60,9 +60,9 @@ MonoBehaviour:
   - name: 1-normal
     region:
       serializedVersion: 2
-      x: .500976562
-      y: .329589844
-      width: .209472656
+      x: .846435547
+      y: .169433594
+      width: .104736328
       height: .0703125
     border:
       m_Left: 77
@@ -77,9 +77,9 @@ MonoBehaviour:
   - name: 1-pressed
     region:
       serializedVersion: 2
-      x: .500976562
-      y: .400878906
-      width: .209472656
+      x: .741210938
+      y: .231445312
+      width: .104736328
       height: .0703125
     border:
       m_Left: 77
@@ -94,9 +94,9 @@ MonoBehaviour:
   - name: 2-hovered
     region:
       serializedVersion: 2
-      x: .783203125
+      x: .642089844
       y: 0
-      width: .200195312
+      width: .100097656
       height: .0883789062
     border:
       m_Left: 60
@@ -111,9 +111,9 @@ MonoBehaviour:
   - name: 2-normal
     region:
       serializedVersion: 2
-      x: .783203125
-      y: .0893554688
-      width: .200195312
+      x: .742675781
+      y: 0
+      width: .100097656
       height: .0883789062
     border:
       m_Left: 60
@@ -128,9 +128,9 @@ MonoBehaviour:
   - name: 2-pressed
     region:
       serializedVersion: 2
-      x: .500976562
-      y: .123046875
-      width: .200195312
+      x: .843261719
+      y: 0
+      width: .100097656
       height: .0883789062
     border:
       m_Left: 60
@@ -145,9 +145,9 @@ MonoBehaviour:
   - name: 3-hovered
     region:
       serializedVersion: 2
-      x: .783203125
-      y: .249511719
-      width: .207519531
+      x: .532714844
+      y: .0971679688
+      width: .103759766
       height: .0791015625
     border:
       m_Left: 100
@@ -162,9 +162,9 @@ MonoBehaviour:
   - name: 3-normal
     region:
       serializedVersion: 2
-      x: .500976562
-      y: .249511719
-      width: .207519531
+      x: .885742188
+      y: .0893554688
+      width: .103759766
       height: .0791015625
     border:
       m_Left: 100
@@ -179,9 +179,9 @@ MonoBehaviour:
   - name: 3-pressed
     region:
       serializedVersion: 2
-      x: .783203125
-      y: .329589844
-      width: .207519531
+      x: .636962891
+      y: .16015625
+      width: .103759766
       height: .0791015625
     border:
       m_Left: 100
@@ -196,9 +196,9 @@ MonoBehaviour:
   - name: bar-blood
     region:
       serializedVersion: 2
-      x: .711425781
-      y: .409667969
-      width: .275390625
+      x: .846435547
+      y: .240722656
+      width: .137695312
       height: .0346679688
     border:
       m_Left: 32
@@ -213,9 +213,9 @@ MonoBehaviour:
   - name: bar-spirit_world
     region:
       serializedVersion: 2
-      x: .711425781
-      y: .4453125
-      width: .275390625
+      x: .846435547
+      y: .276367188
+      width: .137695312
       height: .0346679688
     border:
       m_Left: 32
@@ -231,8 +231,8 @@ MonoBehaviour:
     region:
       serializedVersion: 2
       x: .500976562
-      y: .480957031
-      width: .275390625
+      y: .291015625
+      width: .137695312
       height: .0346679688
     border:
       m_Left: 32
@@ -247,9 +247,9 @@ MonoBehaviour:
   - name: button_hovered
     region:
       serializedVersion: 2
-      x: .282226562
-      y: .922851562
-      width: .242675781
+      x: .642089844
+      y: .0893554688
+      width: .121337891
       height: .0698242188
     border:
       m_Left: 95
@@ -264,9 +264,9 @@ MonoBehaviour:
   - name: button_normal
     region:
       serializedVersion: 2
-      x: .525878906
-      y: .922851562
-      width: .242675781
+      x: .763916016
+      y: .0893554688
+      width: .121337891
       height: .0698242188
     border:
       m_Left: 95
@@ -281,9 +281,9 @@ MonoBehaviour:
   - name: button_pressed
     region:
       serializedVersion: 2
-      x: .702148438
-      y: .178710938
-      width: .242675781
+      x: .500976562
+      y: .220214844
+      width: .121337891
       height: .0698242188
     border:
       m_Left: 95
@@ -298,9 +298,9 @@ MonoBehaviour:
   - name: Game_Logo3
     region:
       serializedVersion: 2
-      x: .282226562
-      y: .714355469
-      width: .5
+      x: .250488281
+      y: .282226562
+      width: .25
       height: .110351562
     border:
       m_Left: 0
@@ -312,12 +312,29 @@ MonoBehaviour:
     textureGUID: c3b7a650cfcc24bd4ad8cc3ab41b3cab
     deleted: 0
     texture: {fileID: 0}
-  - name: test2_0
+  - name: screen-pause2
     region:
       serializedVersion: 2
       x: 0
-      y: .714355469
-      width: .28125
+      y: .333984375
+      width: .25
+      height: .28125
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 1024, y: 576}
+    textureGUID: 1018bb65c1e684baaad2622bf6fa1a2f
+    deleted: 0
+    texture: {fileID: 0}
+  - name: test2_0
+    region:
+      serializedVersion: 2
+      x: .250488281
+      y: 0
+      width: .140625
       height: .28125
     border:
       m_Left: 0
@@ -332,9 +349,9 @@ MonoBehaviour:
   - name: text-hover
     region:
       serializedVersion: 2
-      x: .500976562
-      y: 0
-      width: .28125
+      x: .391601562
+      y: .0971679688
+      width: .140625
       height: .122070312
     border:
       m_Left: 80
@@ -350,8 +367,8 @@ MonoBehaviour:
     region:
       serializedVersion: 2
       x: 0
-      y: .333984375
-      width: .5
+      y: .616210938
+      width: .25
       height: .215332031
     border:
       m_Left: 103
@@ -367,8 +384,8 @@ MonoBehaviour:
     region:
       serializedVersion: 2
       x: 0
-      y: .550292969
-      width: .5
+      y: .832519531
+      width: .25
       height: .163085938
     border:
       m_Left: 100
@@ -385,7 +402,7 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 0
-      width: .5
+      width: .25
       height: .333007812
     border:
       m_Left: 0
@@ -417,9 +434,9 @@ MonoBehaviour:
   - name: will-interface2
     region:
       serializedVersion: 2
-      x: .282226562
-      y: .825683594
-      width: .5
+      x: .391601562
+      y: 0
+      width: .25
       height: .0961914062
     border:
       m_Left: 0
