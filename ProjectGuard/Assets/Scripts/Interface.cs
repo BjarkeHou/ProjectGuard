@@ -36,20 +36,20 @@ public class Interface : MonoBehaviour
 
 	void OnGUI()
 	{
-		GUI.skin = guiSkin;
-		if (game.isPaused)
+//		GUI.skin = guiSkin;
+//		if (game.isPaused)
+//		{
+//			ShowPauseMenu();
+//		} else
+//		{
+		if (!game.isInDialogMode)
 		{
-			ShowPauseMenu();
-		} else
-		{
-			if (!game.isInDialogMode)
+			if (game.isInGhostMode)
 			{
-				if (game.isInGhostMode)
-				{
-					UpdateCorpsePointer();
-				}
+				UpdateCorpsePointer();
 			}
 		}
+//		}
 	}
 	
 	void ShowPauseMenu()

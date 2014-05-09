@@ -178,4 +178,14 @@ public class GameController : MonoBehaviour
 		isPaused = false;
 		Time.timeScale = 1;
 	}
+	
+	public void SwitchToMainMenu()
+	{
+		Application.LoadLevel("MainMenu");
+	}
+	
+	public void ExitGame()
+	{
+		Application.Quit();
+	}
 }
