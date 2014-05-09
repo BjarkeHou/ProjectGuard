@@ -82,7 +82,7 @@ ModelImporter:
     400074: Right_WristJoint01
     400076: RootJoint01
     4300000: Liam_Clone
-    7400000: StoneBoy_RunForward
+    7400000: StoneBoy_Dodge_Backwards
     9500000: //RootNode
     13700000: Liam_Clone
   materials:
@@ -101,10 +101,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: StoneBoy_RunForward
+      name: StoneBoy_Dodge_Backwards
       takeName: Take 001
-      firstFrame: 2
-      lastFrame: 27
+      firstFrame: 144
+      lastFrame: 178
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

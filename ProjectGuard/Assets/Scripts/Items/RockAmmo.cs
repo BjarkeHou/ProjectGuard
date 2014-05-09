@@ -30,13 +30,13 @@ public class RockAmmo : MonoBehaviour {
 
 	void OnCollisionEnter(Collision other) {
 		GameObject obj = other.collider.gameObject;
-		//if an enemy is hit
-		if (thrower.GetComponent<AttackController>().doesDamage && !game.isInGhostMode && obj.layer != LayerMask.NameToLayer("DeadEnemies")) {
+		//if an enemy is hit 
+		if (!game.isInGhostMode) {
 			if ((obj.tag == "Enemy" || obj.tag == "Player")) {
 				int hitType = thrower.GetComponent<AttackController>().Hit(obj, damage);
 				if (hitType == 1) {
 					//Instantiate blood
-					print ("rock ammo on col ent");
+					print("rock ammo on col ent");
 					GameObject blood = (GameObject)Instantiate(Resources.Load("Prefabs/Blood"));
 					blood.transform.parent = transform;
 					blood.GetComponent<BloodDestroy>().origin = other.contacts [0].point;

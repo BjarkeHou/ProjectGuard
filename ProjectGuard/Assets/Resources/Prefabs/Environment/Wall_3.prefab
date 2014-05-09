@@ -26,7 +26,6 @@ GameObject:
   - 4: {fileID: 400002}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
-  - 95: {fileID: 9500002}
   - 64: {fileID: 6400000}
   m_Layer: 8
   m_Name: Wall_3
@@ -108,20 +107,6 @@ Animator:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 6198ffd33cd1d9b499f871a2f8f03fc1, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
---- !u!95 &9500002
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 9c193e83e3f9ab24fbe656bb941baae9, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_ApplyRootMotion: 1

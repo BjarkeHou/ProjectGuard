@@ -302,7 +302,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: -.00319266971, w: .999994934}
-  m_LocalPosition: {x: .255208343, y: -.134562179, z: 0}
+  m_LocalPosition: {x: .255208343, y: -.13458252, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
@@ -313,7 +313,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.551612854, y: -.0282211304, z: 0}
+  m_LocalPosition: {x: -.577613831, y: -.0204086304, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400020}
@@ -324,7 +324,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5634563, y: -.735076904, z: 0}
+  m_LocalPosition: {x: 1.56343079, y: -.706420898, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
@@ -362,7 +362,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .00130208337, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400012}
@@ -373,7 +373,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100018}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.551612854, y: -.0282211304, z: 0}
+  m_LocalPosition: {x: -.577613831, y: -.0204086304, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400020}
@@ -398,7 +398,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100022}
   m_LocalRotation: {x: 0, y: 0, z: -.000379888224, w: -.99999994}
-  m_LocalPosition: {x: -.551612854, y: -.0282211304, z: 0}
+  m_LocalPosition: {x: -.577613831, y: -.0204086304, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400020}
@@ -515,8 +515,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.25, y: .130208343, z: .00100000005}
-  m_Center: {x: .625, y: -.0651041716, z: 0}
+  m_Size: {x: 1.30208337, y: .135416672, z: .00100000005}
+  m_Center: {x: .651041687, y: -.0677083358, z: 0}
 --- !u!65 &6500006
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -527,8 +527,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .8359375, y: .3359375, z: .00100000005}
-  m_Center: {x: .41796875, y: -.16796875, z: 0}
+  m_Size: {x: .8359375, y: .364583343, z: .00100000005}
+  m_Center: {x: .41796875, y: -.182291672, z: 0}
 --- !u!65 &6500008
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -563,8 +563,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.25, y: .130208343, z: .00100000005}
-  m_Center: {x: .625, y: -.0651041716, z: 0}
+  m_Size: {x: 1.30208337, y: .135416672, z: .00100000005}
+  m_Center: {x: .651041687, y: -.0677083358, z: 0}
 --- !u!65 &6500014
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -575,8 +575,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.25, y: .130208343, z: .00100000005}
-  m_Center: {x: .625, y: -.0651041716, z: 0}
+  m_Size: {x: 1.30208337, y: .135416672, z: .00100000005}
+  m_Center: {x: .651041687, y: -.0677083358, z: 0}
 --- !u!65 &6500016
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -716,7 +716,7 @@ MonoBehaviour:
       right: 41
       bottom: 248
     owner: {fileID: 11400010}
-  renderOrder: 3
+  renderOrder: 5
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 1
@@ -767,7 +767,7 @@ MonoBehaviour:
   zindex: 0
   color:
     serializedVersion: 2
-    rgba: 4284545279
+    rgba: 4284940287
   disabledColor:
     serializedVersion: 2
     rgba: 4294967295
@@ -781,12 +781,12 @@ MonoBehaviour:
   layout:
     anchorStyle: 65
     margins:
-      left: 97.9960938
-      top: 51.671875
-      right: 98.0039062
-      bottom: 58.328125
+      left: 98.015625
+      top: 51.6796875
+      right: 97.984375
+      bottom: 58.3203125
     owner: {fileID: 11400014}
-  renderOrder: 4
+  renderOrder: 6
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 1
@@ -810,13 +810,13 @@ MonoBehaviour:
   charSpacing: 0
   colorizeSymbols: 0
   processMarkup: 0
-  outline: 1
+  outline: 0
   outlineWidth: 1
-  enableGradient: 1
+  enableGradient: 0
   outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  shadow: 0
+  shadow: 1
   shadowColor:
     serializedVersion: 2
     rgba: 4278190080
@@ -894,7 +894,7 @@ MonoBehaviour:
   disabledColor:
     serializedVersion: 2
     rgba: 4294967295
-  size: {x: 480, y: 50}
+  size: {x: 500, y: 52}
   minSize: {x: 0, y: 0}
   maxSize: {x: 0, y: 0}
   clipChildren: 0
@@ -904,12 +904,12 @@ MonoBehaviour:
   layout:
     anchorStyle: 66
     margins:
-      left: 272
-      top: 714
-      right: 272
-      bottom: 4
+      left: 262
+      top: 711
+      right: 262
+      bottom: 5
     owner: {fileID: 11400020}
-  renderOrder: 6
+  renderOrder: 4
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 1
@@ -1004,7 +1004,7 @@ MonoBehaviour:
   disabledColor:
     serializedVersion: 2
     rgba: 4294967295
-  size: {x: 321, y: 129}
+  size: {x: 321, y: 140}
   minSize: {x: 0, y: 0}
   maxSize: {x: 0, y: 0}
   clipChildren: 0
@@ -1014,22 +1014,22 @@ MonoBehaviour:
   layout:
     anchorStyle: 5
     margins:
-      left: 600.367188
-      top: 282.269531
-      right: 19.6328125
-      bottom: -137.269531
+      left: 600.375
+      top: 271.265625
+      right: 19.625
+      bottom: -137.265625
     owner: {fileID: 11400028}
-  renderOrder: 5
+  renderOrder: 7
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 1
   atlas: {fileID: 11400000, guid: 3c75cd2921d094ef3882c181526f1a08, type: 2}
-  backgroundSprite: button_normal
-  hoverSprite: button_hovered
+  backgroundSprite: 3-normal
+  hoverSprite: 3-hovered
   disabledSprite: 
   focusSprite: 
   font: {fileID: 11400000, guid: 0e83fb662920743958caeedac8dd1b3c, type: 2}
-  pressedSprite: button_pressed
+  pressedSprite: 3-pressed
   state: 0
   group: {fileID: 0}
   text: 
@@ -1040,19 +1040,19 @@ MonoBehaviour:
     rgba: 4294967295
   textColor:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4284940287
   hoverText:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4285593855
   pressedText:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4286182143
   focusText:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4286182143
   disabledText:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4286639615
   hoverColor:
     serializedVersion: 2
     rgba: 4294967295
@@ -1062,7 +1062,7 @@ MonoBehaviour:
   focusColor:
     serializedVersion: 2
     rgba: 4294967295
-  textScale: 1
+  textScale: .800000012
   textScaleMode: 0
   wordWrap: 0
   padding:
@@ -1070,7 +1070,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  textShadow: 0
+  textShadow: 1
   shadowColor:
     serializedVersion: 2
     rgba: 4278190080
@@ -1217,7 +1217,7 @@ MonoBehaviour:
   zindex: 0
   color:
     serializedVersion: 2
-    rgba: 4284281087
+    rgba: 4284940287
   disabledColor:
     serializedVersion: 2
     rgba: 4294967295
@@ -1236,7 +1236,7 @@ MonoBehaviour:
       right: 531
       bottom: 550
     owner: {fileID: 11400042}
-  renderOrder: 1
+  renderOrder: 2
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 0
@@ -1260,13 +1260,13 @@ MonoBehaviour:
   charSpacing: 0
   colorizeSymbols: 0
   processMarkup: 0
-  outline: 1
+  outline: 0
   outlineWidth: 1
-  enableGradient: 1
+  enableGradient: 0
   outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  shadow: 0
+  shadow: 1
   shadowColor:
     serializedVersion: 2
     rgba: 4278190080
@@ -1355,7 +1355,7 @@ MonoBehaviour:
   disabledColor:
     serializedVersion: 2
     rgba: 4294967295
-  size: {x: 480, y: 50}
+  size: {x: 500, y: 52}
   minSize: {x: 0, y: 0}
   maxSize: {x: 0, y: 0}
   clipChildren: 0
@@ -1365,12 +1365,12 @@ MonoBehaviour:
   layout:
     anchorStyle: 5
     margins:
-      left: 272
-      top: 714
-      right: 272
-      bottom: 4
+      left: 262
+      top: 711
+      right: 262
+      bottom: 5
     owner: {fileID: 11400050}
-  renderOrder: 7
+  renderOrder: 3
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 1
@@ -1467,7 +1467,7 @@ MonoBehaviour:
   disabledColor:
     serializedVersion: 2
     rgba: 4294967295
-  size: {x: 480, y: 50}
+  size: {x: 500, y: 52}
   minSize: {x: 0, y: 0}
   maxSize: {x: 0, y: 0}
   clipChildren: 0
@@ -1477,12 +1477,12 @@ MonoBehaviour:
   layout:
     anchorStyle: 66
     margins:
-      left: 272
-      top: 714
-      right: 272
-      bottom: 4
+      left: 262
+      top: 711
+      right: 262
+      bottom: 5
     owner: {fileID: 11400058}
-  renderOrder: 9
+  renderOrder: 8
   isLocalized: 1
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 1
@@ -1541,7 +1541,7 @@ MonoBehaviour:
       right: 0
       bottom: 0
     owner: {fileID: 11400060}
-  renderOrder: 2
+  renderOrder: 1
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 1
@@ -1571,7 +1571,7 @@ MonoBehaviour:
   zindex: 2
   color:
     serializedVersion: 2
-    rgba: 4282974160
+    rgba: 4284940287
   disabledColor:
     serializedVersion: 2
     rgba: 4294967295
@@ -1590,7 +1590,7 @@ MonoBehaviour:
       right: 149
       bottom: 553
     owner: {fileID: 11400064}
-  renderOrder: 8
+  renderOrder: 9
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 0
@@ -1614,13 +1614,13 @@ MonoBehaviour:
   charSpacing: 0
   colorizeSymbols: 0
   processMarkup: 0
-  outline: 1
+  outline: 0
   outlineWidth: 1
-  enableGradient: 1
+  enableGradient: 0
   outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  shadow: 0
+  shadow: 1
   shadowColor:
     serializedVersion: 2
     rgba: 4278190080
