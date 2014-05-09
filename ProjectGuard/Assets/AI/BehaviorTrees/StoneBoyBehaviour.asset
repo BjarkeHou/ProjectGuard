@@ -26,12 +26,14 @@ MonoBehaviour:
       name=&quot;Stone Man Action Priority&quot; classname=&quot;CalculateActionPriority&quot;
       /&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;&quot;
       namespace=&quot;(global)&quot; name=&quot;Perception Memory Module&quot; classname=&quot;PerceptionMemory&quot;
-      /&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;SelectAction&quot;&gt;&lt;constraint
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;Engage&quot; constraint=&quot;ActionPriority
-      == 0&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
-      name=&quot;Engagement&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;expression&quot; expression=&quot;moveTarget
-      = detectTarget&quot; /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
+      /&gt;&lt;constraint repeatuntil=&quot;&quot; name=&quot;constraint&quot; constraint=&quot;dialogue
+      == false&quot;&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
+      name=&quot;SelectAction&quot;&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;Engage&quot; constraint=&quot;ActionPriority == 0&quot;&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;Engagement&quot;&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;expression&quot; expression=&quot;moveTarget = detectTarget&quot;
+      /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
       priority=&quot;&quot; name=&quot;root&quot;&gt;&lt;mecparam valueexpression=&quot;3.0&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; parametertype=&quot;float&quot;
       parametername=&quot;RunForward&quot; name=&quot;StartRunning&quot; damptime=&quot;0&quot;
@@ -134,7 +136,7 @@ MonoBehaviour:
       parametername=&quot;RunForward&quot; name=&quot;Stop Running&quot; damptime=&quot;0&quot;
       /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;timer waitforsec=&quot;0.3&quot;
       returnvalue=&quot;success&quot; priority=&quot;&quot; name=&quot;timer&quot;
-      /&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
+      /&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;/parallel&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
       type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
       elementtype="System.String" /></fields><references /></scriptableobject>
     _serializedGameObjects: []

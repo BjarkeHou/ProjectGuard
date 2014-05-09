@@ -43,8 +43,8 @@ MonoBehaviour:
   - name: 1-hovered
     region:
       serializedVersion: 2
-      x: .709472656
-      y: .556152344
+      x: .76953125
+      y: .922851562
       width: .209472656
       height: .0703125
     border:
@@ -60,8 +60,8 @@ MonoBehaviour:
   - name: 1-normal
     region:
       serializedVersion: 2
-      x: 0
-      y: .588867188
+      x: .500976562
+      y: .329589844
       width: .209472656
       height: .0703125
     border:
@@ -77,8 +77,8 @@ MonoBehaviour:
   - name: 1-pressed
     region:
       serializedVersion: 2
-      x: .210449219
-      y: .588867188
+      x: .500976562
+      y: .400878906
       width: .209472656
       height: .0703125
     border:
@@ -128,8 +128,8 @@ MonoBehaviour:
   - name: 2-pressed
     region:
       serializedVersion: 2
-      x: .783203125
-      y: .178710938
+      x: .500976562
+      y: .123046875
       width: .200195312
       height: .0883789062
     border:
@@ -146,7 +146,7 @@ MonoBehaviour:
     region:
       serializedVersion: 2
       x: .783203125
-      y: .268066406
+      y: .249511719
       width: .207519531
       height: .0791015625
     border:
@@ -162,8 +162,8 @@ MonoBehaviour:
   - name: 3-normal
     region:
       serializedVersion: 2
-      x: .744628906
-      y: .476074219
+      x: .500976562
+      y: .249511719
       width: .207519531
       height: .0791015625
     border:
@@ -179,8 +179,8 @@ MonoBehaviour:
   - name: 3-pressed
     region:
       serializedVersion: 2
-      x: .500976562
-      y: .546875
+      x: .783203125
+      y: .329589844
       width: .207519531
       height: .0791015625
     border:
@@ -196,8 +196,8 @@ MonoBehaviour:
   - name: bar-blood
     region:
       serializedVersion: 2
-      x: .420898438
-      y: .626953125
+      x: .711425781
+      y: .409667969
       width: .275390625
       height: .0346679688
     border:
@@ -213,8 +213,8 @@ MonoBehaviour:
   - name: bar-spirit_world
     region:
       serializedVersion: 2
-      x: .697265625
-      y: .627441406
+      x: .711425781
+      y: .4453125
       width: .275390625
       height: .0346679688
     border:
@@ -230,8 +230,8 @@ MonoBehaviour:
   - name: bar-will
     region:
       serializedVersion: 2
-      x: 0
-      y: .66015625
+      x: .500976562
+      y: .480957031
       width: .275390625
       height: .0346679688
     border:
@@ -247,8 +247,8 @@ MonoBehaviour:
   - name: button_hovered
     region:
       serializedVersion: 2
-      x: .500976562
-      y: .405273438
+      x: .282226562
+      y: .922851562
       width: .242675781
       height: .0698242188
     border:
@@ -264,8 +264,8 @@ MonoBehaviour:
   - name: button_normal
     region:
       serializedVersion: 2
-      x: .744628906
-      y: .405273438
+      x: .525878906
+      y: .922851562
       width: .242675781
       height: .0698242188
     border:
@@ -281,8 +281,8 @@ MonoBehaviour:
   - name: button_pressed
     region:
       serializedVersion: 2
-      x: .500976562
-      y: .476074219
+      x: .702148438
+      y: .178710938
       width: .242675781
       height: .0698242188
     border:
@@ -298,8 +298,8 @@ MonoBehaviour:
   - name: Game_Logo3
     region:
       serializedVersion: 2
-      x: 0
-      y: .380371094
+      x: .282226562
+      y: .714355469
       width: .5
       height: .110351562
     border:
@@ -315,8 +315,8 @@ MonoBehaviour:
   - name: test2_0
     region:
       serializedVersion: 2
-      x: .500976562
-      y: 0
+      x: 0
+      y: .714355469
       width: .28125
       height: .28125
     border:
@@ -333,7 +333,7 @@ MonoBehaviour:
     region:
       serializedVersion: 2
       x: .500976562
-      y: .282226562
+      y: 0
       width: .28125
       height: .122070312
     border:
@@ -350,7 +350,7 @@ MonoBehaviour:
     region:
       serializedVersion: 2
       x: 0
-      y: 0
+      y: .333984375
       width: .5
       height: .215332031
     border:
@@ -367,7 +367,7 @@ MonoBehaviour:
     region:
       serializedVersion: 2
       x: 0
-      y: .216308594
+      y: .550292969
       width: .5
       height: .163085938
     border:
@@ -378,6 +378,23 @@ MonoBehaviour:
     rotated: 0
     sizeInPixels: {x: 1024, y: 334}
     textureGUID: 94c55f356d2df4e91ae9ae0659e34ec4
+    deleted: 0
+    texture: {fileID: 0}
+  - name: wallpaper
+    region:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: .5
+      height: .333007812
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 1024, y: 682}
+    textureGUID: 78d5815e4fab74370b77e0010b3e68c7
     deleted: 0
     texture: {fileID: 0}
   - name: will-interface
@@ -400,8 +417,8 @@ MonoBehaviour:
   - name: will-interface2
     region:
       serializedVersion: 2
-      x: 0
-      y: .491699219
+      x: .282226562
+      y: .825683594
       width: .5
       height: .0961914062
     border:
