@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class lololol : MonoBehaviour
+public class ClickToSwitchScene : MonoBehaviour
 {
 	public string levelToLoad;
+	public float delay = 10;
 
 	public Texture background;
 	// Use this for initialization
@@ -17,7 +18,7 @@ public class lololol : MonoBehaviour
 	{
 		if (Input.GetMouseButtonDown(0))
 		{
-			GoAway();
+			Invoke("GoAway", delay);
 		}
 	}
 	
