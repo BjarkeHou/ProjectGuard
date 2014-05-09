@@ -62,8 +62,6 @@ public class CalculateActionPriority : RAINAction
 
 		}
 
-        
-        
 		return ActionResult.SUCCESS;
 	}
 
@@ -129,8 +127,14 @@ public class CalculateActionPriority : RAINAction
 		{
 			CannotSeePlayer(actionVector);
 			sitB.Append("Cannot See Player \n");
-		}
 
+            if (ai.WorkingMemory.GetItem<bool>("detectTimerOut"))
+            {
+                SearchTimerRunOut(actionVector);
+                sitB.Append("Search Timer Is Out \n");
+            }
+            
+		}
 
 		#region AI situation
 
@@ -202,7 +206,18 @@ public class CalculateActionPriority : RAINAction
 		return actionVector;
 	}
 
-    private void PlayerAttacking(Dictionary<ActionType, double> actionVector)
+    protected virtual void SearchTimerRunOut(Dictionary<ActionType, double> actionVector)
+    {
+        actionVector[ActionType.Engage] *= 1;
+        actionVector[ActionType.Dodge] *= 1;
+        actionVector[ActionType.Attack] *= 1;
+        actionVector[ActionType.Search] *= 0;
+        actionVector[ActionType.StandStill] *= 1;
+        actionVector[ActionType.Wander] *= 1;
+        actionVector[ActionType.Return] *= 8;
+    }
+
+    protected virtual void PlayerAttacking(Dictionary<ActionType, double> actionVector)
     {
         actionVector[ActionType.Engage] /= 8;
         actionVector[ActionType.Dodge] *= 16;
@@ -213,7 +228,7 @@ public class CalculateActionPriority : RAINAction
         actionVector[ActionType.Return] *= 1;
     }
 
-    private void PlayerStandStill(Dictionary<ActionType, double> actionVector)
+    protected virtual void PlayerStandStill(Dictionary<ActionType, double> actionVector)
     {
         actionVector[ActionType.Engage] *= 1;
         actionVector[ActionType.Dodge] *= 2;
@@ -224,7 +239,7 @@ public class CalculateActionPriority : RAINAction
         actionVector[ActionType.Return] /= 8;
     }
 
-    private void PlayerMoving(Dictionary<ActionType, double> actionVector)
+    protected virtual void PlayerMoving(Dictionary<ActionType, double> actionVector)
     {
         actionVector[ActionType.Engage] *= 2;
         actionVector[ActionType.Dodge] *= 1;

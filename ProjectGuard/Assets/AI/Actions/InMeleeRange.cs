@@ -24,9 +24,9 @@ public class InMeleeRange : RAINAction
 
         var dist = Vector3.Distance(self.transform.position, target.transform.position);
 
-        Debug.Log(dist);
+        //Debug.Log(dist);
 
-        ai.WorkingMemory.SetItem("InMeleeRange", (dist < 4.1));
+        ai.WorkingMemory.SetItem("InMeleeRange", (dist < 2.5));
 
         return ActionResult.SUCCESS;
     }

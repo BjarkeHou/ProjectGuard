@@ -4083,12 +4083,12 @@ MonoBehaviour:
       type="RAIN.Core.AI" refcount="1" id="0"><field value="True" type="System.Boolean"
       id="_isActive" /><field type="UnityEngine.GameObject" id="_body" gameobject="0"
       /><field type="RAIN.Memory.BasicMemory" reference="1" id="_workingMemory" childrenvisible="False"
-      /><field type="RAIN.Minds.BasicMind" reference="2" id="_mind" childrenvisible="False"
+      /><field type="RAIN.Minds.BasicMind" reference="2" id="_mind" childrenvisible="True"
       /><field type="RAIN.Motion.CharacterControllerMotor" reference="3" id="_motor"
       childrenvisible="False" /><field type="RAIN.Animation.BasicAnimator" reference="6"
       id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
       reference="7" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-      reference="8" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
+      reference="8" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
       id="_customElements" elementtype="RAIN.Core.CustomAIElement" childrenvisible="False"
       /></reference><reference type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field
       type="System.Collections.Generic.List" id="_memoryItems" elementtype="System.String"><field
@@ -4278,6 +4278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115bbb85ca8e1af4a8c82487311cf719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: 50
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1

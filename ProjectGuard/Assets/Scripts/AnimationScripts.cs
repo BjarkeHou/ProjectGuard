@@ -26,7 +26,7 @@ public class AnimationScripts : MonoBehaviour {
 	}
 
 	//called form animations
-	void IniAttack() {
+    protected virtual void IniAttack() {
 		if (animated.tag == "Player") {
 			anim.SetFloat("curWill", 1 - Mathf.InverseLerp(0, pWillCtrl.MaxWill, pWillCtrl.CurWill));
 			//print("curWill = " + (1 - Mathf.InverseLerp(0, pWillCtrl.MaxWill, pWillCtrl.CurWill)));
@@ -91,7 +91,7 @@ public class AnimationScripts : MonoBehaviour {
 		//no damage
 		animated.GetComponent<AttackController>().doesDamage = false;
 	}
-	void Damage() {
+	protected void Damage() {
 		if (animated.tag == "Player") {
 			anim.SetFloat("curWill", 1);
 			//print("curWill = 1");
@@ -103,7 +103,7 @@ public class AnimationScripts : MonoBehaviour {
 			transform.GetComponentInChildren<Weapon>().gameObject.audio.Play();
 		}
 	}
-	void NoDamage() {
+	protected void NoDamage() {
 		if (animated.tag == "Player") {
 			anim.SetFloat("curWill", 1 - Mathf.InverseLerp(0, pWillCtrl.MaxWill, pWillCtrl.CurWill));
 			//print("curWill = " + (1 - Mathf.InverseLerp(0, pWillCtrl.MaxWill, pWillCtrl.CurWill)));
@@ -125,23 +125,23 @@ public class AnimationScripts : MonoBehaviour {
 		}
 		animated.GetComponent<HealthController>().IsParrying = false;
 	}
-	void CanRotate() {
+	protected void CanRotate() {
 		if (pLook != null)
 			pLook.playerCanRotate = true;
 	}
-	void CanAttack() {
+	protected void CanAttack() {
 		animated.GetComponent<MovementController>().SetCanDodge(true);
 		anim.SetBool("CanAttack", true);
 		animated.GetComponent<AttackController>().inAnAttack = false;
 		isAttacking = false;
 	}
-	void CanMove() {
+	protected void CanMove() {
 		if (!isAttacking) {
 			animated.GetComponent<MovementController>().SetCanMove(true);
 		}
 	}
 
-	void ResetBools() {
+	protected virtual void ResetBools() {
 		//don't attack again
 		anim.SetBool("Attack", false);
 		//don't stab again
