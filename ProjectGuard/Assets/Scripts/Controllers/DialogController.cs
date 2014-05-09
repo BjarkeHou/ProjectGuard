@@ -33,7 +33,6 @@ public class DialogController : MonoBehaviour
 			dialogLoader = GameObject.FindGameObjectWithTag("GameController").GetComponent<DialogueLoader>();
 
 			dialog = dialogLoader.GetDialogueNode(this.gameObject.name);
-			print(dialog.Length);
 		}
 	}
 	
