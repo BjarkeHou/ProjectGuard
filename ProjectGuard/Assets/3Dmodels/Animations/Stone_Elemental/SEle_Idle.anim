@@ -25880,21 +25880,35 @@ AnimationClip:
     classID: 4
     script: {fileID: 0}
   m_Events:
-  - time: .0666666701
-    functionName: CanMove
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: .0666666701
+  - time: .100000001
     functionName: CanRotate
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: .0666666701
+  - time: .13333334
+    functionName: CanAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: .166666672
+    functionName: CanMove
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 2.5666666
+    functionName: CanMove
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 2.5666666
     functionName: CanAttack
     data: 
     objectReferenceParameter: {fileID: 0}
@@ -25903,20 +25917,6 @@ AnimationClip:
     messageOptions: 0
   - time: 2.5666666
     functionName: CanRotate
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 2.5666666
-    functionName: CanAttack
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 2.5666666
-    functionName: CanMove
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
