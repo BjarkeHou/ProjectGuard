@@ -30,7 +30,6 @@ public class DisengagePoint : RAINAction
         vecToPlayer.y *= 0;
         vecToPlayer *= -1;
 
-
         //float degree = Random.Range(0f, 2*Mathf.PI);
 
         //Vector3 vec = new Vector3(Mathf.Cos(degree), 0, Mathf.Sin(degree))*SCALE;
