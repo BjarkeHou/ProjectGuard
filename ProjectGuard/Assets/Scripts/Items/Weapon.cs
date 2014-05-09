@@ -76,10 +76,11 @@ public class Weapon : Item {
 		Ray charles = new Ray (holdPoint.position, tipPoint.position - holdPoint.position);
 		float dist = (tipPoint.position - holdPoint.position).magnitude;
 		
-		if (Physics.Raycast(charles, out hit, dist, LayerMask.NameToLayer("WeaponPickUp")) &&
+		if (Physics.Raycast(charles, out hit, dist) &&
 			atkCtrl.doesDamage &&
 			game.GetComponent<GhostWorldController>().deathTransition <= 0 &&
-			hit.collider.gameObject.layer != LayerMask.NameToLayer("DeadEnemies")) {
+			hit.collider.gameObject.layer != LayerMask.NameToLayer("DeadEnemies") &&
+			hit.collider.gameObject.layer != LayerMask.NameToLayer("WeaponPickUp")) {
 
 			GameObject obj = hit.collider.gameObject;
 			//if an enemy is hit
