@@ -80,7 +80,7 @@ public class EquipmentController : MonoBehaviour {
 	public float GetWeaponRange() {
 		if (hasWeaponEquipped) {
 			//HACK
-			return 2.4f;
+			return 2.4f; 
 		}
 		return 0f;
 	}
