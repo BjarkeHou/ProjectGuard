@@ -16,6 +16,8 @@ public class DialogController : MonoBehaviour
 	private bool isTrigger;
 	private bool isTriggered;
 	
+	private AudioSource dialogSpeaker;
+	
 	private DialogueNode[] dialog;
 
 	// Use this for initialization
@@ -23,6 +25,7 @@ public class DialogController : MonoBehaviour
 	{
 		if (this.gameObject.name != "Mirror Image")
 		{
+			dialogSpeaker = GameObject.Find("Voices").GetComponent<AudioSource>();
 			gui = GameObject.Find("UI Root").GetComponent<GUIController>();
 			isTrigger = this.gameObject.tag != "Enemy";
 			if (!isTrigger)
@@ -115,13 +118,22 @@ public class DialogController : MonoBehaviour
 //				gui.showDialogPrompt = false;
 //				gui.dialogPromptText = "";
 //			}
-		
 			if (game.isInDialogMode && isTriggered)
 			{
+				print(2);
+				
+				if (dialogSpeaker.clip != Resources.Load("Dialogs/Audio/" + dialog [dialogIDCounter].AudioName) as AudioClip)
+				{
+					print(3);
+					dialogSpeaker.clip = Resources.Load("Dialogs/Audio/" + dialog [dialogIDCounter].AudioName) as AudioClip;
+					dialogSpeaker.Play();
+				}
+				
 				gui.showDialogPrompt = false;
 			
 				gui.dialogText = CompileDialogString();
-			
+				
+				
 				gui.dialogButtonText = dialogIDCounter < dialog.Length - 1 ? "NEXT" : "FINISH";
 			}
 		}
@@ -138,6 +150,8 @@ public class DialogController : MonoBehaviour
 			isTriggered = false;
 			game.isInDialogMode = false;
 			dialogIDCounter = 0;
+			dialogSpeaker.Stop();
+			dialogSpeaker.clip = null;
 			if (!isRepeatable)
 			{
 				if (isTrigger)
