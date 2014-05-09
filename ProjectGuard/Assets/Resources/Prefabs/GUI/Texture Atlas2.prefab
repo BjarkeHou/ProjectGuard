@@ -40,11 +40,164 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: a5a72e6dbe2db42b7b101a700b13527c, type: 2}
   items:
+  - name: 1-hovered
+    region:
+      serializedVersion: 2
+      x: .709472656
+      y: .556152344
+      width: .209472656
+      height: .0703125
+    border:
+      m_Left: 77
+      m_Right: 80
+      m_Top: 52
+      m_Bottom: 39
+    rotated: 0
+    sizeInPixels: {x: 429, y: 144}
+    textureGUID: 257d0329daca34b30b5f11535265183f
+    deleted: 0
+    texture: {fileID: 0}
+  - name: 1-normal
+    region:
+      serializedVersion: 2
+      x: 0
+      y: .588867188
+      width: .209472656
+      height: .0703125
+    border:
+      m_Left: 77
+      m_Right: 80
+      m_Top: 52
+      m_Bottom: 39
+    rotated: 0
+    sizeInPixels: {x: 429, y: 144}
+    textureGUID: d6a5e79bc679b4f71902c374b7b0626c
+    deleted: 0
+    texture: {fileID: 0}
+  - name: 1-pressed
+    region:
+      serializedVersion: 2
+      x: .210449219
+      y: .588867188
+      width: .209472656
+      height: .0703125
+    border:
+      m_Left: 77
+      m_Right: 80
+      m_Top: 52
+      m_Bottom: 39
+    rotated: 0
+    sizeInPixels: {x: 429, y: 144}
+    textureGUID: 25ce5dc26ad3d442389f9646c5dedf61
+    deleted: 0
+    texture: {fileID: 0}
+  - name: 2-hovered
+    region:
+      serializedVersion: 2
+      x: .783203125
+      y: 0
+      width: .200195312
+      height: .0883789062
+    border:
+      m_Left: 60
+      m_Right: 68
+      m_Top: 67
+      m_Bottom: 68
+    rotated: 0
+    sizeInPixels: {x: 410, y: 181}
+    textureGUID: e906b3c56e30647408b0391f2fca2974
+    deleted: 0
+    texture: {fileID: 0}
+  - name: 2-normal
+    region:
+      serializedVersion: 2
+      x: .783203125
+      y: .0893554688
+      width: .200195312
+      height: .0883789062
+    border:
+      m_Left: 60
+      m_Right: 68
+      m_Top: 67
+      m_Bottom: 68
+    rotated: 0
+    sizeInPixels: {x: 410, y: 181}
+    textureGUID: 1cc90b9c61c434b39a062e2d13154e9f
+    deleted: 0
+    texture: {fileID: 0}
+  - name: 2-pressed
+    region:
+      serializedVersion: 2
+      x: .783203125
+      y: .178710938
+      width: .200195312
+      height: .0883789062
+    border:
+      m_Left: 60
+      m_Right: 68
+      m_Top: 67
+      m_Bottom: 68
+    rotated: 0
+    sizeInPixels: {x: 410, y: 181}
+    textureGUID: 219b5665fc32c456e850e3a7fc9a360d
+    deleted: 0
+    texture: {fileID: 0}
+  - name: 3-hovered
+    region:
+      serializedVersion: 2
+      x: .783203125
+      y: .268066406
+      width: .207519531
+      height: .0791015625
+    border:
+      m_Left: 100
+      m_Right: 57
+      m_Top: 54
+      m_Bottom: 62
+    rotated: 0
+    sizeInPixels: {x: 425, y: 162}
+    textureGUID: 4c598e2a69f0d442097047aeafabd954
+    deleted: 0
+    texture: {fileID: 0}
+  - name: 3-normal
+    region:
+      serializedVersion: 2
+      x: .744628906
+      y: .476074219
+      width: .207519531
+      height: .0791015625
+    border:
+      m_Left: 100
+      m_Right: 57
+      m_Top: 54
+      m_Bottom: 62
+    rotated: 0
+    sizeInPixels: {x: 425, y: 162}
+    textureGUID: b317f56f891e04fa799cac3f3d8bf9ee
+    deleted: 0
+    texture: {fileID: 0}
+  - name: 3-pressed
+    region:
+      serializedVersion: 2
+      x: .500976562
+      y: .546875
+      width: .207519531
+      height: .0791015625
+    border:
+      m_Left: 100
+      m_Right: 57
+      m_Top: 54
+      m_Bottom: 62
+    rotated: 0
+    sizeInPixels: {x: 425, y: 162}
+    textureGUID: d9a0d3af7f9b44f6ba7cb1e36acdbac7
+    deleted: 0
+    texture: {fileID: 0}
   - name: bar-blood
     region:
       serializedVersion: 2
-      x: .243652344
-      y: .631835938
+      x: .420898438
+      y: .626953125
       width: .275390625
       height: .0346679688
     border:
@@ -57,28 +210,11 @@ MonoBehaviour:
     textureGUID: 49e0176a54e534522b575c66ab5891de
     deleted: 0
     texture: {fileID: 0}
-  - name: bar-seperator
-    region:
-      serializedVersion: 2
-      x: .243652344
-      y: .588867188
-      width: .0239257812
-      height: .03125
-    border:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    rotated: 0
-    sizeInPixels: {x: 49, y: 64}
-    textureGUID: e52f6176db28a43a1835b4ad17f97077
-    deleted: 0
-    texture: {fileID: 0}
   - name: bar-spirit_world
     region:
       serializedVersion: 2
-      x: .520019531
-      y: .631835938
+      x: .697265625
+      y: .627441406
       width: .275390625
       height: .0346679688
     border:
@@ -95,7 +231,7 @@ MonoBehaviour:
     region:
       serializedVersion: 2
       x: 0
-      y: .667480469
+      y: .66015625
       width: .275390625
       height: .0346679688
     border:
@@ -112,7 +248,7 @@ MonoBehaviour:
     region:
       serializedVersion: 2
       x: .500976562
-      y: .561035156
+      y: .405273438
       width: .242675781
       height: .0698242188
     border:
@@ -129,7 +265,7 @@ MonoBehaviour:
     region:
       serializedVersion: 2
       x: .744628906
-      y: .561035156
+      y: .405273438
       width: .242675781
       height: .0698242188
     border:
@@ -145,8 +281,8 @@ MonoBehaviour:
   - name: button_pressed
     region:
       serializedVersion: 2
-      x: 0
-      y: .588867188
+      x: .500976562
+      y: .476074219
       width: .242675781
       height: .0698242188
     border:
@@ -157,23 +293,6 @@ MonoBehaviour:
     rotated: 0
     sizeInPixels: {x: 497, y: 143}
     textureGUID: a8a5c2234f7984cea8404c578917259b
-    deleted: 0
-    texture: {fileID: 0}
-  - name: dialogue-box2
-    region:
-      serializedVersion: 2
-      x: .500976562
-      y: .282226562
-      width: .459472656
-      height: .154785156
-    border:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    rotated: 0
-    sizeInPixels: {x: 941, y: 317}
-    textureGUID: 5c0603cdde5064c1c9ffbbcd070a758a
     deleted: 0
     texture: {fileID: 0}
   - name: Game_Logo3
@@ -214,17 +333,17 @@ MonoBehaviour:
     region:
       serializedVersion: 2
       x: .500976562
-      y: .437988281
-      width: .302734375
+      y: .282226562
+      width: .28125
       height: .122070312
     border:
-      m_Left: 112
-      m_Right: 92
-      m_Top: 73
-      m_Bottom: 79
+      m_Left: 80
+      m_Right: 65
+      m_Top: 66
+      m_Bottom: 66
     rotated: 0
-    sizeInPixels: {x: 620, y: 250}
-    textureGUID: bc7d62b6b3efd4987929c7a2e981bd43
+    sizeInPixels: {x: 576, y: 250}
+    textureGUID: 643d508fe274b428886903e3fc8d8117
     deleted: 0
     texture: {fileID: 0}
   - name: text-large
