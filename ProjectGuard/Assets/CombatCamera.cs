@@ -24,8 +24,7 @@ public class CombatCamera : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate() {
-
-
+		
 		attackPos = GameObject.FindWithTag("Player").transform.position - transform.parent.position;
 		Vector3 localPoint = transform.InverseTransformPoint(transform.parent.position + (attackPos / 2));
 		curWillNorm = Mathf.InverseLerp(0, pWill.MaxWill, pWill.CurWill);

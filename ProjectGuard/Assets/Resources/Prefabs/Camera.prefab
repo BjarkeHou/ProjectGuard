@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   matLos: {fileID: 2100000, guid: 7ad9078093f123940bdcc4a674c97584, type: 2}
-  player: {fileID: 0}
+  player: {fileID: 100004, guid: e3bdc99c927a96845bd509172e5151e4, type: 2}
   sightRange: 100
 --- !u!124 &12400000
 Behaviour:

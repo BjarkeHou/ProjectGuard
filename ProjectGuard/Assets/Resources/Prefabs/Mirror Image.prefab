@@ -1824,7 +1824,6 @@ GameObject:
   - 114: {fileID: 11400006}
   - 114: {fileID: 11400004}
   - 114: {fileID: 11400014}
-  - 114: {fileID: 11400012}
   m_Layer: 8
   m_Name: Mirror Image
   m_TagString: Enemy
@@ -4268,18 +4267,6 @@ MonoBehaviour:
   doesDamage: 0
   targetsHit: []
   rangeForAttack: 1.29999995
---- !u!114 &11400012
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 115bbb85ca8e1af4a8c82487311cf719, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: 50
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4291,7 +4278,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd9a511f18394a3b8a0a73b4d719109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gui_Skin: {fileID: 11400000, guid: 49c7d18afcfee4ef4ae02f66852d6706, type: 2}
   dialogRange: 2
   onlyInGhostMode: 1
   isRepeatable: 1
