@@ -3,98 +3,108 @@ using System.Collections;
 
 public class DialogController : MonoBehaviour
 {
-		public float dialogRange = 2;
-		public bool onlyInGhostMode = true;
-		public bool isRepeatable = false;
+	public float dialogRange = 2;
+	public bool onlyInGhostMode = true;
+	public bool isRepeatable = false;
 
-		private GameController game;
-		private GUIController gui;
-		private DialogueLoader dialogLoader;
-		private GameObject player;
-		private int dialogIDCounter;
+	private GameController game;
+	private GUIController gui;
+	private DialogueLoader dialogLoader;
+	private GameObject player;
+	private int dialogIDCounter;
 	
-		private bool isTrigger;
-		private bool isTriggered;
+	private bool isTrigger;
+	private bool isTriggered;
 	
-		private DialogueNode[] dialog;
+	private DialogueNode[] dialog;
 
-		// Use this for initialization
-		void Start ()
+	// Use this for initialization
+	void Start()
+	{
+		if (this.gameObject.name != "Mirror Image")
 		{
-				if (this.gameObject.name != "Mirror Image") {
-						gui = GameObject.Find ("UI Root").GetComponent<GUIController> ();
-						isTrigger = this.gameObject.tag != "Enemy";
-						if (!isTrigger)
-								player = GameObject.FindGameObjectWithTag ("Player");
+			gui = GameObject.Find("UI Root").GetComponent<GUIController>();
+			isTrigger = this.gameObject.tag != "Enemy";
+			if (!isTrigger)
+				player = GameObject.FindGameObjectWithTag("Player");
 		
-						dialogIDCounter = 0;
-						game = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameController> ();
-						dialogLoader = GameObject.FindGameObjectWithTag ("GameController").GetComponent<DialogueLoader> ();
+			dialogIDCounter = 0;
+			game = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+			dialogLoader = GameObject.FindGameObjectWithTag("GameController").GetComponent<DialogueLoader>();
 
-						dialog = dialogLoader.GetDialogueNode (this.gameObject.name);
-				}
+			dialog = dialogLoader.GetDialogueNode(this.gameObject.name);
+			print(dialog.Length);
 		}
+	}
 	
-		void OnMouseEnter ()
+	void OnMouseEnter()
+	{
+		if (!isTrigger && this.gameObject.name != "Mirror Image")
 		{
-				if (!isTrigger && this.gameObject.name != "Mirror Image") {
-						if (game.isInGhostMode && !game.isPaused && !game.isInDialogMode) {
-								gui.showDialogPrompt = true;
-								gui.dialogPromptText = "Click to speak with " + dialog [dialogIDCounter].SpeakerName;
-						}
-				}
+			if (game.isInGhostMode && !game.isPaused && !game.isInDialogMode)
+			{
+				gui.showDialogPrompt = true;
+				gui.dialogPromptText = "Click to speak with " + dialog [dialogIDCounter].SpeakerName;
+			}
 		}
+	}
 	
-		void OnMouseExit ()
+	void OnMouseExit()
+	{
+		if (!isTrigger && this.gameObject.name != "Mirror Image")
 		{
-				if (!isTrigger && this.gameObject.name != "Mirror Image") {
 		
 		
-						gui.showDialogPrompt = false;
-						gui.dialogPromptText = "";
+			gui.showDialogPrompt = false;
+			gui.dialogPromptText = "";
 			
-				}
 		}
+	}
 	
-		void OnMouseDown ()
+	void OnMouseDown()
+	{
+		if (!isTrigger && this.gameObject.name != "Mirror Image")
 		{
-				if (!isTrigger && this.gameObject.name != "Mirror Image") {
 			
-						isTriggered = true;
+			isTriggered = true;
 
-						if (((onlyInGhostMode && game.isInGhostMode) || 
-								!onlyInGhostMode) &&
-								!game.isInDialogMode && 
-								!game.isPaused && 
-								dialogRange > Vector3.Distance (this.transform.position, player.transform.position)
-				) {
-								gui.dialogCtrl = this;
-								game.isInDialogMode = true;
-								// Lerp camera here....
-						}
-				}
+			if (((onlyInGhostMode && game.isInGhostMode) || 
+				!onlyInGhostMode) &&
+				!game.isInDialogMode && 
+				!game.isPaused && 
+				dialogRange > Vector3.Distance(this.transform.position, player.transform.position)
+				)
+			{
+				gui.dialogCtrl = this;
+				game.isInDialogMode = true;
+				// Lerp camera here....
+			}
 		}
+	}
 	
-		void OnTriggerEnter (Collider other)
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.tag == "Player")
 		{
-				if (other.tag == "Player") {
 			
-						isTriggered = true;
-						if (((onlyInGhostMode && game.isInGhostMode) || 
-								!onlyInGhostMode) && 
-								!game.isInDialogMode && 
-								!game.isPaused
-				) {
-								gui.dialogCtrl = this;
-								game.isInDialogMode = true;
-								// Lerp camera here....
-						}
-				}
+			isTriggered = true;
+			if (((onlyInGhostMode && game.isInGhostMode) || 
+				!onlyInGhostMode) && 
+				!game.isInDialogMode && 
+				!game.isPaused
+				)
+			{
+				gui.dialogCtrl = this;
+				game.isInDialogMode = true;
+				// Lerp camera here....
+			}
 		}
+	}
 	
-		void Update ()
+	void Update()
+	{
+		if (this.gameObject.name != "Mirror Image")
 		{
-				if (this.gameObject.name != "Mirror Image") {
 		
 //			// Vis mouseover på at ham kan man snakke med
 //			if (game.isInGhostMode && !game.isPaused && !game.isInDialogMode)
@@ -107,39 +117,43 @@ public class DialogController : MonoBehaviour
 //				gui.dialogPromptText = "";
 //			}
 		
-						if (game.isInDialogMode && isTriggered) {
-								gui.showDialogPrompt = false;
+			if (game.isInDialogMode && isTriggered)
+			{
+				gui.showDialogPrompt = false;
 			
-								gui.dialogText = CompileDialogString ();
+				gui.dialogText = CompileDialogString();
 			
-								gui.dialogButtonText = dialogIDCounter < dialog.Length - 1 ? "NEXT" : "FINISH";
-						}
-				}
+				gui.dialogButtonText = dialogIDCounter < dialog.Length - 1 ? "NEXT" : "FINISH";
+			}
 		}
+	}
 	
-		public void dialogButtonClicked ()
+	public void dialogButtonClicked()
+	{
+		print(dialog.Length);
+		print(dialogIDCounter);
+		dialogIDCounter++;	
+		if (dialogIDCounter == dialog.Length)
 		{
-				print ("Hent vand!");
-				dialogIDCounter++;	
-				if (dialogIDCounter == dialog.Length) {
-						gui.dialogCtrl = null;
-						isTriggered = false;
-						game.isInDialogMode = false;
-						dialogIDCounter = 0;
-						if (!isRepeatable) {
-								if (isTrigger)
-										Destroy (this.gameObject);
-								else
-										Destroy (this);
-						}	
-				}
+			gui.dialogCtrl = null;
+			isTriggered = false;
+			game.isInDialogMode = false;
+			dialogIDCounter = 0;
+			if (!isRepeatable)
+			{
+				if (isTrigger)
+					Destroy(this.gameObject);
+				else
+					Destroy(this);
+			}	
 		}
+	}
 	
-		string CompileDialogString ()
-		{
-				string s = "";
-				s += dialog [dialogIDCounter].SpeakerName + ":\n";
-				s += "\"" + dialog [dialogIDCounter].Text + "\"\n";
-				return s;
-		}	
+	string CompileDialogString()
+	{
+		string s = "";
+		s += dialog [dialogIDCounter].SpeakerName + ":\n";
+		s += "\"" + dialog [dialogIDCounter].Text + "\"\n";
+		return s;
+	}	
 }
