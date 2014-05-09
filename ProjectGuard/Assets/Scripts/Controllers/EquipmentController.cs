@@ -32,7 +32,7 @@ public class EquipmentController : MonoBehaviour {
 		
 	public void Equip(GameObject weapon) {
 		currentWeapon = weapon;
-		//currentWeapon.rigidbody.isKinematic = true;
+		currentWeapon.rigidbody.isKinematic = true;
 		currentWeapon.rigidbody.useGravity = false;
 		currentWeapon.transform.parent = hand;
 		holdPoint = weapon.transform.Find("HoldPoint");
@@ -56,7 +56,7 @@ public class EquipmentController : MonoBehaviour {
 			!this.GetComponent<AttackController>().inAnAttack) {
 		    		
 			currentWeapon.GetComponent<Weapon>().Dropped();
-			//currentWeapon.rigidbody.isKinematic = false;
+			currentWeapon.rigidbody.isKinematic = false;
 			currentWeapon.rigidbody.useGravity = true;
 			hasWeaponEquipped = false;
 			currentWeapon = null;
