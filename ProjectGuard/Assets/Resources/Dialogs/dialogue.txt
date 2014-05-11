@@ -1,24 +1,116 @@
     {
             "dialogs" : {
-                    "GhostWorldIntroduction" :
+					"RandomSpirit1" :
                     [
-                            {"speaker": "luna", "text": "LIAM! Can you hear me?", "voicefile": "ghostintro_0"},
-                            {"speaker": "liam", "text": "Sure, but where are you? You sound far away?", "voicefile": "ghostintro_1"},
-                            {"speaker": "luna", "text": "I am right next to you, but you have crossed into the spirit world. You got hit by a trap, and a rather devious one at that. If you don’t get out fast, you will die, and succomb to the stone as the rest of the Tributes!", "voicefile": "ghostintro_2"},
-                            {"speaker": "liam", "text": "Get out? Of what? Spirit world? Where am I?", "voicefile": "ghostintro_3"},
-                            {"speaker": "luna", "text": "Okay, you still have some time, you are not far from your body. That weird tingling feeling you have now, that is the stone taking over your body. If you can get to your body, I can help you reclaim it.", "voicefile": "ghostintro_4"},
-							{"speaker": "luna", "text": "But first, you should to disarm the trap that took you down, since that it should possible even from the spirit world where it can't hurt you.", "voicefile": "ghostintro_5"},
-                            {"speaker": "liam", "text": "Okay okay. which way should I go?", "voicefile": "ghostintro_6"},
-							{"speaker": "luna", "text": "You have just been here, try to remember your way back.", "voicefile": "ghostintro_7"}
+                            {"speaker": "spirit", "text": "Please relieve me from this nightmare, Ipharels voice is constantly in my head, forcing me to do things against my will. Please stop this nightmare, you are my only hope!", "voicefile": "randomspirit1_0"},
+                    ],
+					"RandomSpirit2" :
+                    [
+                            {"speaker": "spirit", "text": "*the spirit looks aimlessly out in the nothingness*", "voicefile": "randomspirit2_0"},
+                    ],
+					"RandomSpirit3" :
+                    [
+                            {"speaker": "spirit", "text": "I… think my name was… Arthur! Yes! Arthur… They told me i was to be honored as a hero, i was the best of the best, everyone…. everyone would be proud of me… Then stone, stone everywhere.", "voicefile": "randomspirit3_0"},
+                    ],
+					"RandomSpirit4" :
+                    [
+                            {"speaker": "spirit", "text": "Stone…? Stooooooonee! You have stone? Stone…", "voicefile": "randomspirit4_0"},
+                    ],
+					"RandomSpirit5" :
+                    [
+                            {"speaker": "spirit", "text": "...", "voicefile": "randomspirit5_0"},
+                    ],
+					"IntroLiam" :
+                    [
+                            {"speaker": "liam", "text": "Wow i can not believe that they would bestow such honor to me - the chosen one, the freaking sacrifice!", "voicefile": "introliam_0"},
+                            {"speaker": "liam", "text": "To save the world from the totally real Stone God Iphrael. ME! Liam the Great Stone conquerer!", "voicefile": "introliam_1"},
+                            {"speaker": "liam", "text": "Freaking Hilarious.", "voicefile": "introliam_2"},
+                    ],
+					"IntroLuna" :
+                    [
+                            {"speaker": "luna_init", "text": "Hello?.. Anyone there?", "voicefile": "introluna_0"},
+                            {"speaker": "liam", "text": "Hello!?!? Who is there?? Who is playing tricks on me, if it is you stonemen, I am not gonna fall for it!", "voicefile": "introluna_1"},
+                            {"speaker": "luna_init", "text": "No. No Stonemen, rather Stonegirl actually. I am over here!", "voicefile": "introluna_2"},
+                            {"speaker": "liam", "text": "Over where?", "voicefile": "introluna_3"},
+                            {"speaker": "luna_init", "text": "Here, by the alter! Look down, by the light", "voicefile": "introluna_4"},
+                            {"speaker": "liam", "text": "I do not see anything? I swear if you are trying to get me killed, I will not fall for it! I have you all figured out Stonemen!": "introluna_5"},
+                            {"speaker": "luna_init", "text": "Geeez, dumbwit look down, the glowing stone? magical, glowing, talking stone with a girl living inside of it, how can you not see me??! I am lighting up the whole damn room!", "voicefile": "introluna_6"},
+                            {"speaker": "liam", "text": "... Funny... So you are trying to tell me you live inside a stone? I know we love stone around these parts, but living in one? that might be taking it a bit too far.", "voicefile": "introluna_7"},
+                            {"speaker": "luna_init", "text": "Well… funny guy, it is a longer story. Listen I need you help, and you need mine! If you help me, I can help you get out of here alive.", "voicefile": "introluna_8"},
+                            {"speaker": "liam", "text": "It is not funny guy, but Liam… Little Stonegirl, and if I am correct, it is you who need my help, not the other way around.", "voicefile": "introluna_9"},
+                            {"speaker": "luna_init", "text": "Alright Liam, you are right, I do need your help, but as I said before I can return the favor of helping me, with my great knowledge of the place down here... oh, and I am Luna by the way.", "voicefile": "introluna_10"},
+                            {"speaker": "liam", "text": "Okay Luna, but before we go on with everything, can I just ask one question?", "voicefile": "introluna_11"},
+                            {"speaker": "luna", "text": "Of course Liam.", "voicefile": "introluna_12"},
+                            {"speaker": "liam", "text": "Are you like a fairy or something?", "voicefile": "introluna_13"},
+                            {"speaker": "luna", "text": "Are you kidding me? fairies? Are you 10 years old? I am a normal girl, kinda, but i know stuff. How all of this works down here. Listen carefully, and we might just survive it down here.", "voicefile": "introluna_14"},
+                    ],
+					"IntroWill1" :
+                    [
+                            {"speaker": "luna", "text": "Liam… i think there is someone up ahead.", "voicefile": "introwill1_0"},
+                            {"speaker": "liam", "text": "Someone bad?", "voicefile": "introwill1_1"},
+                            {"speaker": "luna", "text": "I think so, take that sword laying over there.", "voicefile": "introwill1_2"},
+                            {"speaker": "liam", "text": "Am I suppose to kill… kill it?", "voicefile": "introwill1_3"},
+                            {"speaker": "luna", "text": "Liam you must remember, these Stonemen are not who they once were, they are in terrible pain, and must follow Iphraels every order. Do you think that is a worthy existence?", "voicefile": "introwill1_4"},
+                            {"speaker": "liam", "text": "No… But I do not know how to fight, I have never really been in a fight before.", "voicefile": "introwill1_5"},
+                            {"speaker": "luna", "text": "Neither have they. Well, some have. They might look scary and strong, but they are still just shells of their former selves.", "voicefile": "introwill1_6"},
+                            {"speaker": "luna", "text": "Many of the boys who were sent down here had never been in fights, just like you. Liam, you just need to believe in yourself and be careful not to forget about defending yourself in the fight.", "voicefile": "introwill1_7"},
+                            {"speaker": "luna", "text": "Do not only use your sword to attack but also to defend, and use your body to defend as it can often get you out of a tight spot in a fight. At least that is what my father taught me before i went up down here.", "voicefile": "introwill1_8"},
+                            {"speaker": "liam", "text": "And look at how that went… haha trapped in a stone helpless.", "voicefile": "introwill1_9"},
+                            {"speaker": "luna", "text": "HEY!... I did very well for myself in the fights I got into, before magic trapped me in a stone. It was not one of those stupid Stonemen that you are so afraid of right now, that did this to me.", "voicefile": "introwill1_10"},
+                            {"speaker": "liam", "text": "Sorry… It just seems dumb to run straight into a fight with sharp swords and scary looking stone monsters, as your first fight ever.", "voicefile": "introwill1_11"},
+                            {"speaker": "luna", "text": "Everything down here is different from up there, you must believe me Liam. The magic in this place does not fight your physical form, but your will to survive.", "voicefile": "introwill1_12"},
+                            {"speaker": "luna", "text": "It cuts through your physical shell and right into your soul. So no matter how physically strong or talented at swordsmanship you are up there, you are only as strong as your mind and your will to survive down here.", "voicefile": "introwill1_13"},
+                            {"speaker": "liam", "text": "I am not sure i fully understand Luna…", "voicefile": "introwill1_14"},
+                            {"speaker": "luna", "text": "Take some swings with your sword, and you will feel your speed and strength increase, but you will at the same time make yourself vulnerable. You will have to balance your rage and your will, fight smart and you can defeat every single obstacle down here.", "voicefile": "introwill1_15"},
+                            {"speaker": "liam", "text": "Alright Luna… Let us do this!", "voicefile": "introwill1_15"},
+                    ],
+					"IntroWill2" :
+                    [
+                            {"speaker": "liam", "text": "huh...uhhh… Whoa, that guy was way tougher than he looked, but I did it… I really did it, maybe you were right about this will thing Luna.", "voicefile": "introwill2_0"},
+                            {"speaker": "luna", "text": "Do not take this victory for granted Liam, many more lies ahead, and be careful down here, these fights is not the only dangerous thing down here.", "voicefile": "introwill2_1"},
+                    ],
+                    "IntroSpiritWorld" :
+                    [
+                            {"speaker": "luna", "text": "LIAM! Can you hear me?", "voicefile": "introspiritworld_0"},
+                            {"speaker": "liam", "text": "Sure, but where are you? You sound far away?", "voicefile": "introspiritworld_1"},
+                            {"speaker": "luna", "text": "I am right next to you, but you have crossed into the spirit world, if you do not get out fast you will be stuck here forever, and succumb to the stone as the rest of the tributes down here!", "voicefile": "introspiritworld_2"},
+                            {"speaker": "liam", "text": "Get out? Of what? Spirit world? Where am I?? You said you were not a fairy, Luna! But this sure does not feel like something a normal girl would be able to do.", "voicefile": "introspiritworld_3"},
+                            {"speaker": "luna", "text": "Calm down Liam, you still have some time, you are not far from your body. You feel that weird tingling feeling, that is the stone taking over your body. If you can get to your body, I can help you get back.", "voicefile": "introspiritworld_4"},
+                            {"speaker": "liam", "text": "Okay… But there are others, ghost looking things. They look like… oh god... me.", "voicefile": "introspiritworld_5"},
+							{"speaker": "luna", "text": "That is the former “tributes” as they called them, but really just sacrificial sheep to keep Iphrael happy.", "voicefile": "introspiritworld_6"}
+							{"speaker": "luna", "text": "Some are much like you, sent in here to die, but some are of much older generations where it was an honor to take the steps into the Halls of Stone. I will explain all of this to you, now get back in a hurry.", "voicefile": "introspiritworld_7"}
+                            {"speaker": "liam", "text": "Okay okay. which way will i go?", "voicefile": "introspiritworld_8"},
+                            {"speaker": "luna", "text": "You have just been here, try to remember the way back to your body.", "voicefile": "introspiritworld_9"},
+                    ],
+                    "IntroSpiritWorld2" :
+                    [
+                            {"speaker": "liam", "text": "Wow… that was weird… Just a normal girl huh… Guess I owe you a thanks though.", "voicefile": "introspiritworld2_0"},
+                            {"speaker": "luna", "text": "You should not be scared of the spirit world Liam, as long as you are careful in it, you will not be in danger. Actually it might help us in our journey down here, as the spirits are stuck in that other world, just as you were before.", "voicefile": "introspiritworld2_1"},
+                            {"speaker": "luna", "text": "They might be able to help us with valuable information and guidance, but some of the tributes down here, have been trapped in the spirit world so long, that they might have gone mad.", "voicefile": "introspiritworld2_2"},
+                            {"speaker": "liam", "text": "So you are telling me that I should almost kill myself every time I want some information from these tributes!? That does not sound like a stable plan, to be honest.", "voicefile": "introspiritworld2_3"},
+                            {"speaker": "luna", "text": "I might actually be able to help with that Liam. My accident has given me some powers beside being able to talk to you while in the spirit world.", "voicefile": "introspiritworld2_4"},
+                            {"speaker": "luna", "text": "I think I can figure out a way to take you there whenever you want. With lower risk and much closer to your physical body.", "voicefile": "introspiritworld2_5"},
+							{"speaker": "info", "text": "*Press ( R ) to enter the spirit world*", "voicefile": "none"}
+                            {"speaker": "liam", "text": "Awesome Luna, this partnership might actually work out in the end.", "voicefile": "introspiritworld2_6"},
 
                     ],
-					"BackToLife" :
+                    "IntroElemental" :
                     [
-                            {"speaker": "luna", "text": "Liam… i think there is something nastier than traps up ahead.", "voicefile": "backtolife_0"},
-                            {"speaker": "liam", "text": "Okay… But there are others, stone looking things. They look like… me.", "voicefile": "backtolife_1"},
-                            {"speaker": "luna", "text": "They were once called 'Tributes', but they were really just sacrificial sheep to keep Iphrael happy. Some are much like you, sent in here to die, but some are of much older generations when it was an honor to take the steps into the Halls of Stone.", "voicefile": "backtolife_2"},
-
+                            {"speaker": "liam", "text": "WHAT? How… How am i even…. even supposed to do ANYTHING to that. It is insanely massive! Whelp...", "voicefile": "introelemental_0"},
                     ],
+                    "IntroElemental2" :
+                    [
+                            {"speaker": "spirit", "text": "Let me help you warrior, I had to go through much of the same challenges you have faced, and a little help would have done wonders for my journey before it ended.", "voicefile": "introelemental2_0"},
+                            {"speaker": "spirit", "text": "The two paths behind me leads to the same place, but before you reach that place, to the right there will be a sword of fire, and to the left a sword of ice.", "voicefile": "introelemental2_1"},
+                            {"speaker": "spirit", "text": "Once you have chosen a path the other one will not be available so choose carefully… And good luck on your journey further down the mines, just be careful as it is only going to get tougher from here on out.", "voicefile": "introelemental2_2"},
+                    ],
+					"IntroBoss":
+					[
+                            {"speaker": "luna", "text": "Liam, I think something much stronger is up ahead. Much stronger than we have ever faced before.", "voicefile": "introboss_0"},
+                            {"speaker": "liam", "text": "We have done fine so far, I believe in us!", "voicefile": "introboss_1"},
+                            {"speaker": "luna", "text": "Your optimism is greatly appreciated, but this Liam, this is Iphrael I can feel, the same power that sealed me in here.", "voicefile": "introboss_2"},
+                            {"speaker": "liam", "text": "Well… We can not go back now. Maybe i will join you inside the stone. heh…", "voicefile": "introboss_3"},
+					],
 					"BrotherAhead" :
                     [
                             {"speaker": "luna", "text": "Stop Liam! Wait, wait! …. I think… I know, thats my brother up ahead.", "voicefile": "brotherahead_0"},
@@ -31,7 +123,7 @@
 					"BrotherInfo" :
                     [
                             {"speaker": "liam", "text": "Hey! You there!", "voicefile": "brotherinfo_0"},
-                            {"speaker": "nicolai", "text": "Huh… What… Who´s there?", "voicefile": "brotherinfo_1"},
+                            {"speaker": "spirit", "text": "Huh… What… Who´s there?", "voicefile": "brotherinfo_1"},
                             {"speaker": "luna", "text": "It’s me Luna! Oh... Nicolai, how i missed you!", "voicefile": "brotherinfo_2"},
                             {"speaker": "nicolai", "text": "Luna… Luna… LUNA! I remember now, by the stone god, how could I forget?", "voicefile": "brotherinfo_3"},
                             {"speaker": "luna", "text": "Don´t worry brother. I´m sad, this sorry fate has been laid upon you.", "voicefile": "brotherinfo_4"},
@@ -47,14 +139,14 @@
                             {"speaker": "iphreal", "text": "Go no further Liam! You should consider it a miracle that you have gotten this far already. You will not get past me, this hell is not something that can be stopped, when it has already begun. I can sense your fear, I can TASTE IT!", "voicefile": "iphrealstart_0"},
                             {"speaker": "iphreal", "text": "This is your last warning: turn around Liam, as you will get no further, I will end your pathetic life, and enslave you for eternity, while the world is turned to stone for good.", "voicefile": "iphrealstart_1"}
 					],
-					"LostSpiritHelper" :
+					"SpiritHelper" :
                     [
-                            {"speaker": "spirit", "text": "Continue straight ahead down the narrow path, resistance will be low, but there will be no help to find. Go left and you will be challenged to your limits, but wisdom is there to be found.", "voicefile": "lostspirithelper_0"}
+                            {"speaker": "spirit", "text": "Continue straight ahead down the narrow path, resistance will be low, but there will be no help to find. Go left and you will be challenged to your limits, but wisdom is there to be found.", "voicefile": "spirithelper_0"}
 					],
-					"LostSpiritWisdom" :
+					"SpiritWisdom" :
                     [
-                            {"speaker": "spirit", "text": "I was once told that it was the stone God Iphrael that started the mythical stone age, and he haunts these very halls. I don’t believe them though, a god… here? Everything seems so normal…", "voicefile": "lostspiritwisdom_0"},
-                            {"speaker": "spirit", "text": "The big Stone Elementals is the oldest generations of boys and men send into the stone halls. They were the strongest and fiercest of all the citizens of Brell. But they too succumbed to the power of stone, and now they wander mindlessly around only to crush the next sacrifice.", "voicefile": "lostspiritwisdom_0"}
+                            {"speaker": "spirit", "text": "I was once told that it was the stone God Iphrael that started the mythical stone age, and he haunts these very halls. I don’t believe them though, a god… here? Everything seems so normal…", "voicefile": "spiritwisdom_0"},
+                            {"speaker": "spirit", "text": "The big Stone Elementals is the oldest generations of boys and men send into the stone halls. They were the strongest and fiercest of all the citizens of Brell. But they too succumbed to the power of stone, and now they wander mindlessly around only to crush the next sacrifice.", "voicefile": "spiritwisdom_1"}
 							
 					],
 					"WallText2":
