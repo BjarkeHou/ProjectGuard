@@ -494,6 +494,13 @@
                 "text": "Symbols that shows there is a Stone Elemental in the next room and that they can throw rocks to attack at range.",
                 "voicefile": "walltext2_0"
             }
+        ],
+        "Error": [
+            {
+                "speaker": "info",
+                "text": "Error loading text, have you typed the name correctly?",
+                "voicefile": "walltext2_0"
+            }
         ]
     },
     "speakers": [
