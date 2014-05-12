@@ -495,6 +495,12 @@
                 "voicefile": "walltext2_0"
             }
         ]
+		"Error": [
+			{
+				"speaker": "info",
+				"text": "Error: could not find dialogue",
+				"voicefile": ""
+		]
     },
     "speakers": [
         {
