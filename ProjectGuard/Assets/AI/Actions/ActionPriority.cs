@@ -296,8 +296,8 @@ public class CalculateActionPriority : RAINAction
 
 	protected virtual void OutsideBothAttackRange(Dictionary<ActionType, double> actionVector)
 	{
-		actionVector [ActionType.Engage] *= 8;
-		actionVector [ActionType.Dodge] /= 16;
+		actionVector [ActionType.Engage] *= 16;
+		actionVector [ActionType.Dodge] /= 32;
 		actionVector [ActionType.Attack] /= 16;
 		actionVector [ActionType.Search] *= 0;
 		actionVector [ActionType.StandStill] /= 4;
