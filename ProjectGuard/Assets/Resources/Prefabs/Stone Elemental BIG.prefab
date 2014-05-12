@@ -242,6 +242,7 @@ GameObject:
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400014}
+  - 114: {fileID: 11400006}
   m_Layer: 8
   m_Name: Stone Elemental BIG
   m_TagString: Enemy
@@ -3942,6 +3943,21 @@ MonoBehaviour:
   doesDamage: 0
   targetsHit: []
   rangeForAttack: 1.29999995
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bd9a511f18394a3b8a0a73b4d719109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogRange: 2
+  onlyInGhostMode: 1
+  isRepeatable: 0
+  speakerName: 
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1

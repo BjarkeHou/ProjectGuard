@@ -44,7 +44,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: .57357651, y: 0, z: 0, w: .819151998}
-  m_LocalPosition: {x: 23.5671654, y: 6.92760658, z: 10.8261032}
+  m_LocalPosition: {x: 277.519379, y: 12.8099947, z: 78.6772919}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400010}
@@ -84,7 +84,7 @@ Camera:
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294966271
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_HDR: 0
@@ -127,37 +127,7 @@ MonoBehaviour:
   movLerpSpeed: 0
   curvy:
     serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-    - time: .189160764
-      value: .956725597
-      inSlope: -.0476480462
-      outSlope: -.0476480462
-      tangentMode: 0
-    - time: .36910224
-      value: -.994012833
-      inSlope: .19296582
-      outSlope: .19296582
-      tangentMode: 0
-    - time: .597650349
-      value: .508732259
-      inSlope: .0783675313
-      outSlope: .0783675313
-      tangentMode: 0
-    - time: .86174047
-      value: -.489247859
-      inSlope: .295245409
-      outSlope: .295245409
-      tangentMode: 0
-    - time: .996437073
-      value: 1.1920929e-07
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+    m_Curve: []
     m_PreInfinity: 2
     m_PostInfinity: 2
   multiplier: 0
