@@ -4,6 +4,13 @@ using System.Collections;
 public class MainMenu : MonoBehaviour
 {
 	public Texture background;
+	public AudioClip theme;
+
+	void Start()
+	{
+		this.audio.clip = theme;
+		this.audio.Play();
+	}
 
 	public void PlayClicked()
 	{
