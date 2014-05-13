@@ -168,6 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToLoad: MainMenu
   delay: 5
+  loadingLabel: {fileID: 2800000, guid: ea1aea4c7924449fc8d57fe5449d2fa1, type: 3}
   background:
   - {fileID: 2800000, guid: f27281263ac544ae1a547d57880de822, type: 3}
   - {fileID: 2800000, guid: 6fccd44aed78048a4a74078d758d1365, type: 3}

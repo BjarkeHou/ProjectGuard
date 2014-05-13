@@ -5,6 +5,7 @@ public class ClickToSwitchScene : MonoBehaviour
 {
 	public string levelToLoad;
 	public float delay = 10;
+	public Texture loadingLabel;
 	int id = 0;
 	
 	private bool clicked = false;
@@ -34,10 +35,12 @@ public class ClickToSwitchScene : MonoBehaviour
 	
 	void OnGUI()
 	{
+		
+		
 		GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), background [id]);
 		if (clicked)
 		{
-			GUI.Label(new Rect(Screen.width * .4f, Screen.height * .8f, Screen.width * .2f, Screen.height * .1f), "Loading...");
+			GUI.Label(new Rect(Screen.width * .4f, Screen.height * .8f, Screen.width * .2f, Screen.height * .1f), loadingLabel);
 		}
 	}
 	
