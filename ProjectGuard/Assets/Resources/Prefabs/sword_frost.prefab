@@ -61,7 +61,7 @@ GameObject:
   - 54: {fileID: 5400000}
   - 64: {fileID: 6400000}
   m_Layer: 0
-  m_Name: Sword
+  m_Name: Sword_Frost
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
