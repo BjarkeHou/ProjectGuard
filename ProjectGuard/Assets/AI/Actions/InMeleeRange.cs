@@ -21,6 +21,7 @@ public class InMeleeRange : RAINAction
     {
         GameObject self = ai.WorkingMemory.GetItem<GameObject>("self");
         GameObject target = ai.WorkingMemory.GetItem<GameObject>("detectTarget");
+        if(target == null) return ActionResult.FAILURE;
 
         var dist = Vector3.Distance(self.transform.position, target.transform.position);
 

@@ -41,7 +41,7 @@ MonoBehaviour:
       priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;&gt;&lt;move
       turnspeed=&quot;1000&quot; repeatuntil=&quot;&quot; name=&quot;move&quot; movetarget=&quot;moveTarget&quot;
       movespeed=&quot;3&quot; facetarget=&quot;moveTarget&quot; closeenoughdistance=&quot;2&quot;
-      closeenoughangle=&quot;&quot; /&gt;&lt;timer waitforsec=&quot;1&quot; returnvalue=&quot;success&quot;
+      closeenoughangle=&quot;&quot; /&gt;&lt;timer waitforsec=&quot;0.5&quot; returnvalue=&quot;success&quot;
       name=&quot;timer&quot; /&gt;&lt;/parallel&gt;&lt;mecparam valueexpression=&quot;0.0&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; parametertype=&quot;float&quot;
       parametername=&quot;RunForward&quot; name=&quot;Stop Running&quot; damptime=&quot;0&quot;
@@ -54,7 +54,7 @@ MonoBehaviour:
       /&gt;&lt;mecparam valueexpression=&quot;true&quot; repeatuntil=&quot;&quot;
       priority=&quot;&quot; parametertype=&quot;boolean&quot; parametername=&quot;Dodge_Backwards&quot;
       name=&quot;Dodge backwards&quot; damptime=&quot;0&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot;
-      succeed=&quot;any&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
+      succeed=&quot;all&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
       fail=&quot;any&quot;&gt;&lt;move turnspeed=&quot;1000&quot; repeatuntil=&quot;&quot;
       name=&quot;move&quot; movetarget=&quot;moveTarget&quot; movespeed=&quot;5&quot;
       facetarget=&quot;&quot; closeenoughdistance=&quot;&quot; closeenoughangle=&quot;180&quot;
