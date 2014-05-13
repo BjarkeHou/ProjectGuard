@@ -60,7 +60,7 @@
             },
             {
                 "speaker": "liam",
-                "text": "Hello!?!? Who is there?? Who is playing tricks on me, if it is you stonemen, I am not gonna fall for it!",
+                "text": "Hello!?!? Who is there?? Who is playing tricks on me, if it is you Stonemen, I am not gonna fall for it!",
                 "voicefile": "introluna_1"
             },
             {
@@ -213,7 +213,7 @@
             {
                 "speaker": "liam",
                 "text": "Alright Luna… Let us do this!",
-                "voicefile": "introwill1_15"
+                "voicefile": "introwill1_16"
             }
         ],
         "IntroWill2": [
