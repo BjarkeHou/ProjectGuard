@@ -4,7 +4,9 @@ using System.Collections.Generic;
 public class Weapon : Item {
 	private AttackController atkCtrl;
 	private GameController game;
-	
+
+	public Vector3 rotationOffset;
+
 	private Transform skinPoint;
 	private Transform tipPoint;
 	public float damage;

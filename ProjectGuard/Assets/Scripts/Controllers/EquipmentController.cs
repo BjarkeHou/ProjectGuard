@@ -39,7 +39,7 @@ public class EquipmentController : MonoBehaviour {
 
 
 		//currentWeapon.transform.rotation = Quaternion.Euler(Vector3.zero);
-		currentWeapon.transform.localRotation = Quaternion.Euler(-100.5f, 2.5f, -15f);
+		currentWeapon.transform.localRotation = Quaternion.Euler(-100.5f + currentWeapon.GetComponent<Weapon>().rotationOffset.x, 2.5f + currentWeapon.GetComponent<Weapon>().rotationOffset.y, -15f + currentWeapon.GetComponent<Weapon>().rotationOffset.z);
 		//currentWeapon.transform.position = Vector3.zero;
 		currentWeapon.transform.position = hand.position + (currentWeapon.transform.position - holdPoint.position);
 		
