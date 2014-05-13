@@ -315,7 +315,7 @@ MonoBehaviour:
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 1
   atlas: {fileID: 11400000, guid: 3c75cd2921d094ef3882c181526f1a08, type: 2}
-  spriteName: Game_Logo3
+  spriteName: Game_Logo5
   flip: 0
   fillDirection: 0
   fillAmount: 1
