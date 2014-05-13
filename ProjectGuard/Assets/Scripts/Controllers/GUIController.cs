@@ -17,6 +17,11 @@ public class GUIController : MonoBehaviour
 	
 	public DialogController dialogCtrl;
 	
+	
+	void Start()
+	{
+	}
+	
 	public void DialogButtonClicked()
 	{
 		if (dialogCtrl == null)
