@@ -48,7 +48,7 @@
             },
             {
                 "speaker": "liam",
-                "text": "Freaking Hilarious.",
+                "text": "*sigh* Freaking Hilarious.",
                 "voicefile": "introliam_2"
             }
         ],
@@ -401,6 +401,11 @@
             }
         ],
         "BrotherInfo": [
+        	{
+                "speaker": "spirit",
+                "text": "...",
+                "voicefile": ""
+            },
             {
                 "speaker": "liam",
                 "text": "Hey! You there!",
@@ -418,43 +423,73 @@
             },
             {
                 "speaker": "nicolai",
-                "text": "Luna… Luna… LUNA! I remember now, by the stone god, how could I forget?",
+                "text": "Who?",
                 "voicefile": "brotherinfo_3"
             },
             {
-                "speaker": "luna",
-                "text": "Don´t worry brother. I´m sad, this sorry fate has been laid upon you.",
+                "speaker": "liam",
+                "text": "Do you not remember your sister? It is Luna!",
                 "voicefile": "brotherinfo_4"
             },
             {
                 "speaker": "nicolai",
-                "text": "Sister, I´m so sorry that things did not go as hoped. I´m trapped in this nightmare and I´m starting to forget things from before. You must turn back! Iphrael is in the next room, and is much stronger than anything you have faced to get here.",
+                "text": "Luna… Luna… LUNA! I remember now, by the stone god, how could I forget?",
                 "voicefile": "brotherinfo_5"
             },
             {
                 "speaker": "luna",
-                "text": "It´s to late to turn around, Liam must finish this for all you boys down here, for you brother.",
+                "text": "Don´t worry brother. I´m sad, this sorry fate has been laid upon you.",
                 "voicefile": "brotherinfo_6"
             },
             {
                 "speaker": "nicolai",
-                "text": "If I can´t get you to turn back, I can at least help you. Beware in the next room, it´s not only Iphrael that will challenge you, he has many soldiers by his side and the room is full of traps. Be careful in there, and end Iphrael for me.",
+                "text": "Sister, I´m so sorry that things did not go as hoped. I´m trapped in this nightmare and I´m starting to forget things from before. You must turn back! Iphrael is in the next room, and is much stronger than anything you have faced to get here.",
                 "voicefile": "brotherinfo_7"
             },
             {
-                "speaker": "liam",
-                "text": "Nicolai, I can´t believe how it must be to be trapped like you, and I will do my best to end Iphrael!",
+                "speaker": "luna",
+                "text": "It´s to late to turn around, Liam must finish this for all you boys down here, for you brother.",
                 "voicefile": "brotherinfo_8"
             },
             {
                 "speaker": "nicolai",
-                "text": "Before you go, I must ask you a last big favor… please kill me… end my suffering. I don´t want to contribute to the evil things going on here, there is too much evil in the world already.",
+                "text": "If I can´t get you to turn back, I can at least help you. Beware in the next room, it´s not only Iphrael that will challenge you, he has many soldiers by his side and the room is full of traps. Be careful in there, and end Iphrael for me.",
                 "voicefile": "brotherinfo_9"
+            },
+            {
+                "speaker": "liam",
+                "text": "Nicolai, I can´t believe how it must be to be trapped like you, and I will do my best to end Iphrael!",
+                "voicefile": "brotherinfo_10"
+            },
+            {
+                "speaker": "nicolai",
+                "text": "Before you go, I must ask you a last big favor… please kill me… end my suffering. I don´t want to contribute to the evil things going on here, there is too much evil in the world already.",
+                "voicefile": "brotherinfo_11"
             },
             {
                 "speaker": "luna",
                 "text": "If that is your wish brother, I support you…",
-                "voicefile": "brotherinfo_10"
+                "voicefile": "brotherinfo_12"
+            },
+            {
+                "speaker": "liam",
+                "text": "Is there really no way for us to save you somehow... Luna?",
+                "voicefile": "brotherinfo_13"
+            },
+            {
+                "speaker": "luna",
+                "text": "No Liam. Sadly there is nothing we can do but grant him his last wish.",
+                "voicefile": "brotherinfo_14"
+            },
+            {
+                "speaker": "nicolai",
+                "text": "Please Liam just do it. Even though it might not seem like a favor, it is the biggest one you could give me.",
+                "voicefile": "brotherinfo_15"
+            },
+            {
+                "speaker": "liam",
+                "text": "If it is really what you want, then I will do it for you.. Farewell Nicolai",
+                "voicefile": "brotherinfo_13"
             }
         ],
         "IphrealStart": [

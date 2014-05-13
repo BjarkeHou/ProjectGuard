@@ -477,7 +477,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: .00130208337, y: .00130208337, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400012}
@@ -870,13 +870,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a88209db597bc4ded986ecca19234b90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToReviveInGhostMode: 300
+  timeToReviveInGhostMode: 200
   timeLeftToReviveFromGhostMode: 0
   deathPenalty: 0
   deathTimer: 0
   deathPenaltyPCT: 50
-  minimumPenalty: 2
-  additionalLunaPenalty: 0
+  minimumPenalty: 5
+  additionalLunaPenalty: 5
   deathScreen: {fileID: 2800000, guid: d5f8c4a405a8d92418f60f31d6dfe146, type: 3}
   fadeInSpeed: .5
   screenTime: 2
@@ -976,7 +976,7 @@ MonoBehaviour:
       right: 41
       bottom: 248
     owner: {fileID: 11400010}
-  renderOrder: 7
+  renderOrder: 5
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 1
@@ -1046,7 +1046,7 @@ MonoBehaviour:
       right: 97.984375
       bottom: 58.3203125
     owner: {fileID: 11400014}
-  renderOrder: 8
+  renderOrder: 6
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 1
@@ -1065,7 +1065,7 @@ MonoBehaviour:
     rgba: 4294967295
   align: 0
   vertAlign: 0
-  textScale: .600000024
+  textScale: .400000006
   textScaleMode: 1
   charSpacing: 0
   colorizeSymbols: 0
@@ -1159,7 +1159,7 @@ MonoBehaviour:
       right: 262
       bottom: 5
     owner: {fileID: 11400020}
-  renderOrder: 3
+  renderOrder: 2
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 1
@@ -1269,7 +1269,7 @@ MonoBehaviour:
       right: 19.625
       bottom: -137.265625
     owner: {fileID: 11400028}
-  renderOrder: 9
+  renderOrder: 7
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 1
@@ -1487,7 +1487,7 @@ MonoBehaviour:
       right: 531
       bottom: 550
     owner: {fileID: 11400042}
-  renderOrder: 5
+  renderOrder: 9
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 0
@@ -1621,7 +1621,7 @@ MonoBehaviour:
       right: 262
       bottom: 5
     owner: {fileID: 11400050}
-  renderOrder: 2
+  renderOrder: 3
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 1
@@ -1733,7 +1733,7 @@ MonoBehaviour:
       right: 262
       bottom: 5
     owner: {fileID: 11400058}
-  renderOrder: 4
+  renderOrder: 8
   isLocalized: 1
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 1
@@ -1862,7 +1862,7 @@ MonoBehaviour:
       right: -689
       bottom: 723
     owner: {fileID: 11400064}
-  renderOrder: 6
+  renderOrder: 4
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 0
