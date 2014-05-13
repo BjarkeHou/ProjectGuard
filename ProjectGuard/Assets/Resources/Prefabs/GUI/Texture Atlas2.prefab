@@ -312,7 +312,7 @@ MonoBehaviour:
     textureGUID: a76fed5153ce942efbb46f5e8a74c3d4
     deleted: 0
     texture: {fileID: 0}
-  - name: screen-pause2
+  - name: screen-3
     region:
       serializedVersion: 2
       x: 0
@@ -326,7 +326,7 @@ MonoBehaviour:
       m_Bottom: 0
     rotated: 0
     sizeInPixels: {x: 1024, y: 576}
-    textureGUID: 1018bb65c1e684baaad2622bf6fa1a2f
+    textureGUID: 8795c2785ae3440f293100d64a231131
     deleted: 0
     texture: {fileID: 0}
   - name: test2_0
