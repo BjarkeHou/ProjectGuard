@@ -54,7 +54,7 @@ MonoBehaviour:
       /&gt;&lt;mecparam valueexpression=&quot;true&quot; repeatuntil=&quot;&quot;
       priority=&quot;&quot; parametertype=&quot;boolean&quot; parametername=&quot;Dodge_Backwards&quot;
       name=&quot;Dodge backwards&quot; damptime=&quot;0&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot;
-      succeed=&quot;all&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
+      succeed=&quot;any&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
       fail=&quot;any&quot;&gt;&lt;move turnspeed=&quot;1000&quot; repeatuntil=&quot;&quot;
       name=&quot;move&quot; movetarget=&quot;moveTarget&quot; movespeed=&quot;5&quot;
       facetarget=&quot;&quot; closeenoughdistance=&quot;&quot; closeenoughangle=&quot;180&quot;

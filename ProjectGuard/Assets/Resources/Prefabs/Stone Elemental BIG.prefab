@@ -3942,7 +3942,7 @@ MonoBehaviour:
   playerModel: {fileID: 100254}
   doesDamage: 0
   targetsHit: []
-  rangeForAttack: 1.29999995
+  rangeForAttack: 3
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
