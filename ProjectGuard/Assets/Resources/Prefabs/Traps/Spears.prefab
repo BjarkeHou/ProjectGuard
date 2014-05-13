@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetsHit: []
-  damage: 10
+  damage: 60
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

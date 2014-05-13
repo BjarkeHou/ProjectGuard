@@ -4125,7 +4125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogRange: 2
   onlyInGhostMode: 1
-  isRepeatable: 0
+  isRepeatable: 1
   speakerName: 
 --- !u!137 &13700000
 SkinnedMeshRenderer:

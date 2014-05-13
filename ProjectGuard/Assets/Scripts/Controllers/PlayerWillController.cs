@@ -24,7 +24,7 @@ public class PlayerWillController : MonoBehaviour
 		public float CurMaxWill { get { return curMaxWill; } }
 		public float CurWill { get { return curWill; } }
 
-		private int prevHealth;
+		private float prevHealth;
 
 		// Use this for initialization
 		void Start ()

@@ -7,10 +7,10 @@ public class HealthController : MonoBehaviour
 
 		public int maxHealth = 100;
 		public const int minHealth = 0;
-		public int curHealth;
+		public float curHealth;
 
-		private int lastDamageTaken;
-		public int LastDamageTaken { get { return lastDamageTaken; } }
+		private float lastDamageTaken;
+		public float LastDamageTaken { get { return lastDamageTaken; } }
 	
 		private GameController game;
 	
@@ -41,7 +41,7 @@ public class HealthController : MonoBehaviour
 
 		//Damage comes in minus, health comes in plus.
 		//If player/creep is still alive, method returns true.
-		public bool adjustCurrentHealth (int value)
+		public bool adjustCurrentHealth (float value)
 		{
 				if (value < 0) {
 						lastDamageTaken = value;
@@ -75,12 +75,12 @@ public class HealthController : MonoBehaviour
 						return true;
 		}
 		
-		public int getCurrentHealth ()
+		public float getCurrentHealth ()
 		{
 				return curHealth;
 		}
 		
-		public int getMaxHealth ()
+		public float getMaxHealth ()
 		{
 				return maxHealth;
 		}
