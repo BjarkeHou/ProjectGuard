@@ -12,7 +12,6 @@ GameObject:
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400004}
   - 114: {fileID: 11400006}
-  - 114: {fileID: 11400090}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -889,7 +888,7 @@ MonoBehaviour:
       right: 41
       bottom: 248
     owner: {fileID: 11400010}
-  renderOrder: 3
+  renderOrder: 5
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 1
@@ -959,7 +958,7 @@ MonoBehaviour:
       right: 97.984375
       bottom: 58.3203125
     owner: {fileID: 11400014}
-  renderOrder: 4
+  renderOrder: 6
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 1
@@ -1061,7 +1060,7 @@ MonoBehaviour:
       right: 262
       bottom: 5
     owner: {fileID: 11400020}
-  renderOrder: 6
+  renderOrder: 3
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 1
@@ -1171,7 +1170,7 @@ MonoBehaviour:
       right: 19.625
       bottom: -137.265625
     owner: {fileID: 11400028}
-  renderOrder: 5
+  renderOrder: 7
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 1
@@ -1388,7 +1387,7 @@ MonoBehaviour:
       right: 531
       bottom: 550
     owner: {fileID: 11400042}
-  renderOrder: 2
+  renderOrder: 1
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 0
@@ -1522,7 +1521,7 @@ MonoBehaviour:
       right: 262
       bottom: 5
     owner: {fileID: 11400050}
-  renderOrder: 7
+  renderOrder: 4
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 1
@@ -1634,7 +1633,7 @@ MonoBehaviour:
       right: 262
       bottom: 5
     owner: {fileID: 11400058}
-  renderOrder: 8
+  renderOrder: 9
   isLocalized: 1
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 1
@@ -1693,7 +1692,7 @@ MonoBehaviour:
       right: 0
       bottom: 0
     owner: {fileID: 11400060}
-  renderOrder: 1
+  renderOrder: 2
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 0
@@ -1763,7 +1762,7 @@ MonoBehaviour:
       right: -689
       bottom: 723
     owner: {fileID: 11400064}
-  renderOrder: 9
+  renderOrder: 8
   isLocalized: 0
   hotZoneScale: {x: 1, y: 1}
   allowSignalEvents: 0
@@ -2297,17 +2296,6 @@ MonoBehaviour:
   shadowOffset: {x: 1, y: -1}
   autoSize: 0
   clickWhenSpacePressed: 1
---- !u!114 &11400090
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1f7f14020950b04d8ecceb6860e4729, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

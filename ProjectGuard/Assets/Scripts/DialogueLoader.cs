@@ -6,17 +6,20 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 
-public class DialogueLoader : MonoBehaviour {
+public class DialogueLoader : MonoBehaviour
+{
 	private JObject json;
 
-	void Awake() {
+	void Awake()
+	{
 		TextAsset ta = (TextAsset)Resources.Load("Dialogs/dialogue", typeof(TextAsset));
 		string all = ta.text;
 		json = (JObject)JToken.Parse(all);
 	}
 
 	// Use this for initialization
-	void Start() {
+	void Start()
+	{
 		/*
 		XmlDocument doc = new XmlDocument();
 		doc.Load("test.xml");
@@ -32,24 +35,29 @@ public class DialogueLoader : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update() {
+	void Update()
+	{
 	    
 	}
 
-	public DialogueNode[] GetDialogueNode(string dialogueId) {
-		if (json != null) {
+	public DialogueNode[] GetDialogueNode(string dialogueId)
+	{
+		if (json != null)
+		{
 			JArray relevantDialogue = (JArray)json ["dialogs"] [dialogueId];
-			if (relevantDialogue == null) {
+			if (relevantDialogue == null)
+			{
 				relevantDialogue = (JArray)json ["dialogs"] ["Error"];
 			}
 			JArray speakers = (JArray)json ["speakers"];
 
-			List<DialogueNode> dialogue = new List<DialogueNode> ();
+			List<DialogueNode> dialogue = new List<DialogueNode>();
 
-			foreach (JToken line in relevantDialogue) {
+			foreach (JToken line in relevantDialogue)
+			{
 				JToken speaker = speakers.First(e => e ["name"].Value<string>() == line ["speaker"].Value<string>());
 
-				DialogueNode node = new DialogueNode (line ["text"].Value<string>(), speaker ["appearname"].Value<string>(), line ["voicefile"].Value<string>(), speaker ["picture"].Value<string>());
+				DialogueNode node = new DialogueNode(line ["text"].Value<string>(), speaker ["appearname"].Value<string>(), line ["voicefile"].Value<string>(), speaker ["picture"].Value<string>());
 
 				dialogue.Add(node);
 			}
@@ -57,15 +65,16 @@ public class DialogueLoader : MonoBehaviour {
 			return dialogue.ToArray();
 		}
 
-		throw new NullReferenceException ("json not loaded in GetDialogueNode");
+		throw new NullReferenceException("json not loaded in GetDialogueNode");
 	}
 
-	public bool DialogueNodeExists(string dialogueId) {
-		if (json != null) {
+	public bool DialogueNodeExists(string dialogueId)
+	{
+		if (json != null)
+		{
 			return json ["dialogs"] [dialogueId].Any();
 		}
 
-
-		throw new NullReferenceException ("json not loaded in DialogueNodeExists");
+		throw new NullReferenceException("json not loaded in DialogueNodeExists");
 	}
 }
