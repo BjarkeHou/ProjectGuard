@@ -6,6 +6,8 @@ public class GUIController : MonoBehaviour
 
 	public bool showDisarmTrapPrompt = false;
 	
+	public bool showControlScreen = false;
+	
 	public bool showDialogPrompt = false;
 	public string dialogPromptText = "";
 	
@@ -21,5 +23,10 @@ public class GUIController : MonoBehaviour
 			return;
 			
 		dialogCtrl.dialogButtonClicked();
+	}
+	
+	public void ControlsButtonClicked()
+	{
+		showControlScreen = !showControlScreen;
 	}
 }
