@@ -61,7 +61,7 @@ GameObject:
   - 54: {fileID: 5400000}
   - 64: {fileID: 6400000}
   m_Layer: 0
-  m_Name: Sword_Frost
+  m_Name: sword_frost
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -323,6 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxPickupRange: 3
+  rotationOffset: {x: 0, y: 0, z: 0}
   damage: 25
   weaponName: 
   age: 19
