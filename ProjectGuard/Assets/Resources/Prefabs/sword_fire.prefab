@@ -97,7 +97,7 @@ GameObject:
   - 199: {fileID: 19900000}
   m_Layer: 0
   m_Name: Flame
-  m_TagString: Untagged
+  m_TagString: IgnoreGhostTrans
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
