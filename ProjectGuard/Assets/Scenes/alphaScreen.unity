@@ -168,4 +168,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToLoad: TutorialLevel
   delay: 0
-  background: {fileID: 2800000, guid: b818e766194994d44a21b0c6faabcda4, type: 3}
+  background:
+  - {fileID: 2800000, guid: b818e766194994d44a21b0c6faabcda4, type: 3}
