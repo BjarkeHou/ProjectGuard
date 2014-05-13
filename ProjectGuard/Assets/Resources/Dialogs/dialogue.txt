@@ -147,7 +147,7 @@
             },
             {
                 "speaker": "liam",
-                "text": "Am I suppose to kill… kill it?",
+                "text": "Am I suppose to k… kill it?",
                 "voicefile": "introwill1_3"
             },
             {
