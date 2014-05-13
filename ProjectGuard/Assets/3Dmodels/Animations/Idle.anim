@@ -11596,22 +11596,22 @@ AnimationClip:
     classID: 4
     script: {fileID: 0}
   m_Events:
-  - time: 0
+  - time: .375
     functionName: CanMove
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0
-    functionName: CanRotate
+  - time: .375
+    functionName: CanAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0
-    functionName: CanAttack
+  - time: .375
+    functionName: CanRotate
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

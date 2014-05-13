@@ -83,6 +83,7 @@ public class MovementController : MonoBehaviour
 						}
 						anim.SetBool (animState, true);
 						SetCanMove (false);
+						SetCanDodge (false);
 						StartCoroutine (PerformDodge (sPoint, dodgeDirection, dodgeDist));
 				}
 	    
@@ -95,7 +96,6 @@ public class MovementController : MonoBehaviour
 						pLook.LockPlayerOnDirection (dodgeDir);
 				}
 				dodgeDelayTimer = Time.time + dodgeDelay;
-				SetCanDodge (false);
 				playerSound.dodge ();
 
 				while (progress < 1.0f) {

@@ -167,5 +167,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: MainMenu
-  delay: 10
-  background: {fileID: 2800000, guid: d84e3746096978f43917728828aa9fa8, type: 3}
+  delay: 5
+  background: {fileID: 2800000, guid: 7377afd71206b46838bbdd86ef5b9632, type: 3}
