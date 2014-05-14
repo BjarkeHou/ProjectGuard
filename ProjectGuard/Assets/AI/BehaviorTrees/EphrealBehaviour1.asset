@@ -9,11 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1227330239, guid: 0afa4843f495f6b4690c9bab57d33da6, type: 3}
-  m_Name: StoneElementalBehaviour
+  m_Name: EphrealBehaviour1
   m_EditorClassIdentifier: 
   _dataSerializer:
     _serializedData: <scriptableobject version="1.0" type="RAIN.BehaviorTrees.BTAsset"><fields><field
-      value="&lt;behaviortree version=&quot;1.1&quot; repeatuntil=&quot;&quot; name=&quot;StoneElementalBehaviour&quot;&gt;&lt;parallel
+      value="&lt;behaviortree version=&quot;1.1&quot; repeatuntil=&quot;&quot; name=&quot;EphrealBehaviour1&quot;&gt;&lt;parallel
       tiebreaker=&quot;succeed&quot; succeed=&quot;all&quot; repeatuntil=&quot;&quot;
       name=&quot;root&quot; fail=&quot;any&quot;&gt;&lt;action repeatuntil=&quot;&quot;
       parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;(global)&quot;
@@ -40,7 +40,7 @@ MonoBehaviour:
       /&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
       priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;&gt;&lt;move
       turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;move&quot; movetarget=&quot;moveTarget&quot;
-      movespeed=&quot;3&quot; facetarget=&quot;moveTarget&quot; closeenoughdistance=&quot;2&quot;
+      movespeed=&quot;7.5&quot; facetarget=&quot;moveTarget&quot; closeenoughdistance=&quot;5&quot;
       closeenoughangle=&quot;&quot; /&gt;&lt;timer waitforsec=&quot;0.5&quot; returnvalue=&quot;success&quot;
       name=&quot;timer&quot; /&gt;&lt;/parallel&gt;&lt;mecparam valueexpression=&quot;0.0&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; parametertype=&quot;float&quot;
@@ -56,8 +56,8 @@ MonoBehaviour:
       Moving&quot; damptime=&quot;0&quot; /&gt;&lt;sequencer usepriorities=&quot;False&quot;
       repeatuntil=&quot;&quot; name=&quot;Attack&quot;&gt;&lt;action repeatuntil=&quot;&quot;
       priority=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;(global)&quot;
-      name=&quot;In Melee Range&quot; classname=&quot;InMeleeRange&quot; /&gt;&lt;selector
-      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;In Melee Range&quot; classname=&quot;CalculateActionPriority&quot;
+      /&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;selector&quot;&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;constraint&quot; constraint=&quot;InMeleeRange != true&quot;&gt;&lt;mecparam
       valueexpression=&quot;false&quot; repeatuntil=&quot;&quot; parametertype=&quot;boolean&quot;
